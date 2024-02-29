@@ -1,15 +1,14 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import {
-  faPhone,
   faEnvelope,
   faMapMarkerAlt,
+  faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
   return (
@@ -70,17 +69,16 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
           <div className="flex items-center mb-2">
             <FontAwesomeIcon icon={faPhone} className="mr-2" />
-            <span>Phone - 8766613742</span>
+            <span>Phone - +91 70586 06885</span>
           </div>
           <div className="flex items-center mb-2">
             <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
             <span>Email: hr@greateway.com</span>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center mt-[-40px]">
             <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />
-            <span>
-              6th floor office no. 503 Stellar Spaces, opposite Zensar IT park
-              Kharadi Pune
+            <span className="mt-10">
+            Office No: 505, 06th  Floor, Stellar Spaces, Opposite Zensar IT Park, Kharadi, Pune 411014
             </span>
           </div>
         </div>

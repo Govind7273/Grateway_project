@@ -14,6 +14,7 @@ const ServiceComponent = lazy(() =>
 );
 
 import { Loading } from "./components/Loading";
+import BigDataService from "./components/Services/BigDataService";
 import SecondServiceComponent from "./components/Services/SecondServiceComponent";
 import { CRMServices, TestingAndQAServices } from "./components/Services/ServiceData/SecondDevServices";
 import {
@@ -68,6 +69,13 @@ function App() {
             exact
             path="/Service-crm"
             element={<SecondServiceComponent data={CRMServices} />}
+          ></Route>
+
+          {/* big data route */}
+          <Route
+            exact
+            path="/Service-bigData"
+            element={<BigDataService />}
           ></Route>
         </Routes>
       </Suspense>
