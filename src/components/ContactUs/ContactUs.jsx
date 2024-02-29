@@ -23,15 +23,14 @@ const ContactUs = () => {
           <div className=" flex flex-col gap-2 flex-wrap ">
             <p className="font-headingFont font-bold -mb-2 mt-4">Address:</p>
             <p className="font-navlistFont text-md text-slate-900">
-              6th floor office no. 503 Stellar Spaces, opposite Zensar it park
-              Kharadi Pune
+            Office No: 505, 06th  Floor, Stellar Spaces, Opposite Zensar IT Park, Kharadi, Pune 411014
             </p>
             <p className="font-headingFont font-bold -mb-2">Contact:</p>
             <span className="text-slate-900 font-headingFont">
-              8766613742
+            +91 70586 06885
             </span>
             <p className="font-headingFont font-bold -mb-2">Email:</p>
-            <span className="text-md font-semibold text-slate-900">
+            <span className="text-md text-blue-900">
               hr@greateway.com
             </span>
           </div>

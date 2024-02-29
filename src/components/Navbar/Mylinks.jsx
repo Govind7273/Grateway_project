@@ -36,7 +36,12 @@ export const links = [
             link: "/Service-devOps",
             desc: "Efficient development and collaboration.",
           },
-          
+          {
+            id: 6,
+            name: "Big Data Analytics",
+            link: "/Service-bigData",
+            desc: "Analytics extracts insights from data.",
+          },
         
           {
             id: 11,

@@ -1,4 +1,12 @@
 //data for the software development processes
+import SoftDevImage from "../Images/SoftDevImages/SoftDevImg.jpg";
+import AgileSoftDevImg from "../Images/SoftDevImages/agileSoftDev.jpg";
+import ApiSoftDevImg from "../Images/SoftDevImages/apiSoftDev.jpg";
+import CustomSoftDevImg from "../Images/SoftDevImages/customSoftDev.jpg";
+import EnterpriseSoftDevImg from '../Images/SoftDevImages/enterpriseSoftDev.jpg';
+import RequirementAnlysisSoftDevImg from "../Images/SoftDevImages/requirementSoftDev.jpg";
+import WebDesignSoftDevImg from "../Images/SoftDevImages/webDesignSoftDev.jpg";
+import WebDevSoftDevImg from "../Images/SoftDevImages/webDevSoftDev.jpg";
 export const SoftDevServices = 
   {
     first: {
@@ -8,37 +16,37 @@ export const SoftDevServices =
           "At Greateway Software Pvt. Ltd. , we provide comprehensive software development services to help businesses build robust, scalable, and customized software solutions that meet their unique needs and drive digital transformation.",
       },
       imageUrl:
-        "https://img.freepik.com/free-photo/technology-circuit-processor-innovation-network-concept_53876-124249.jpg?t=st=1708678196~exp=1708681796~hmac=dddd99ee7c7631021e884b62041f9ec5a6967c9355ec76dfd7afcfe7103876a0&w=900",
+        SoftDevImage,
       bgClass:'bg-[linear-gradient(to_top,_#fbc2eb_0%,_#a6c1ee_100%)]',
     },
     cards: [
       {
-        imageUrl:'https://img.freepik.com/free-photo/enterprise-campaign-corporation-establishment-concept_53876-165254.jpg?t=st=1708755356~exp=1708758956~hmac=d18ce1eba85d5e794fba832a026090c62cd683fc1a691d4b41817667e780d28c&w=740',
+        imageUrl:EnterpriseSoftDevImg,
         heading: "Enterprise Application Development",
         description:
           "We create powerful and scalable enterprise applications that streamline your business processes and improve operational efficiency. Our enterprise application development services cover a wide range of functionalities, including CRM, ERP, HR management, and more.",
       },
       {
-        imageUrl:'https://img.freepik.com/free-vector/web-development-isometric-concept-composition-illustration_1284-55922.jpg?t=st=1708755453~exp=1708759053~hmac=be674bc3243905f9438d7286343c2ed3d9a242ca6e7d9377c68b3015c488f365&w=740',
+        imageUrl:CustomSoftDevImg,
         heading: "Custom Software Development",
         description:
           "We specialize in developing tailored software solutions from scratch, designed to address your specific business requirements. Our experienced team follows an agile development approach to deliver high-quality software that aligns perfectly with your goals.",
       },
       {
-        imageUrl:'https://img.freepik.com/free-vector/hand-drawn-data-driven-illustration_23-2149676073.jpg?t=st=1708755596~exp=1708759196~hmac=64776cbc8a972338e4322bee77d25d97fa913f3f0e8592f2e215e4855062978d&w=740',
-        heading: "Requirement Analysis",
+        imageUrl:RequirementAnlysisSoftDevImg,
+        heading:'Requirement Analysis',
         description:
           "Requirement analysis is a crucial phase where stakeholders' needs are gathered, documented, and prioritized to define project scope accurately. Through meticulous documentation, prioritization, and validation, analysts ensure that the resulting solution aligns with business objectives.",
       },
       {
-        imageUrl:'https://img.freepik.com/free-vector/agile-method-concept-illustration_114360-9809.jpg?t=st=1708755673~exp=1708759273~hmac=813c23802f86c69dbda13fde7a7652194b2d7633672cfef34c199b15e8246e46&w=740',
-        heading: "Agile Development Methodologies",
+        imageUrl:AgileSoftDevImg,
+        heading:'Agile Development',
         description:
           "Agile development methodologies prioritize iterative, collaborative, and adaptive processes, fostering customer satisfaction and responsiveness to evolving project requirements effectively.",
       },
     ],
     third:{
-        imageUrl:'https://img.freepik.com/free-vector/cartoon-web-design-landing-page_52683-70880.jpg?t=st=1708756144~exp=1708759744~hmac=2d98268f328382eb19c3889a64610c5dcaa14620d2d8df9ec058f340837dfda2&w=826',
+        imageUrl:WebDesignSoftDevImg,
         content:{
             heading:'Web Designing Services',
             description:'Our professional web developers analyze your target audience and craft an engaging, frictionless, and superior user journey using aesthetic designs and trending UI components. We also test your prototypes under different situations to ensure a glitch-free experience over multiple platforms.',
@@ -46,7 +54,7 @@ export const SoftDevServices =
         }
     },
     fourth:{
-            imageUrl:'https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169839.jpg?t=st=1708692475~exp=1708696075~hmac=504f3f3ec3107a1d387c46176e4ab2d63a10b6aa667eeca6836c50085494fe07&w=740',
+            imageUrl:ApiSoftDevImg,
             content:{
                 heading:'Software Integration and API Development',
                 description:'We specialize in integrating different software systems and developing custom APIs to enhance connectivity and data exchange between applications. Our integration and API development services ensure seamless collaboration and efficiency across your software ecosystem.',
@@ -54,7 +62,7 @@ export const SoftDevServices =
         }
     },
     fifth:{
-        imageUrl:'https://img.freepik.com/free-vector/website-development-banner_33099-1687.jpg?t=st=1708752177~exp=1708755777~hmac=4c38eb131ec3f414cb9f5d27ce323595810fbc9da6e3cb9b7536589efb63c890&w=740',
+        imageUrl:WebDevSoftDevImg,
         content:{
             heading:'Web Application Development',
             description:'We design and develop secure and responsive web applications that cater to your specific business needs. Our web applications are built using cutting-edge technologies and frameworks, ensuring scalability, performance, and a smooth user experience.',
@@ -66,6 +74,7 @@ export const SoftDevServices =
 
 
 // data for the cloud computing processes
+
 export const CloudServices = 
   {
     first: {
