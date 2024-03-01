@@ -1,8 +1,7 @@
-import React from 'react'
 
 const Stars = () => {
   return (
-    <div className="flex-1">
+    <div className="">
     <div className="flex items-center">
       <svg
         className="w-5 h-5 text-[#FDB241]"
