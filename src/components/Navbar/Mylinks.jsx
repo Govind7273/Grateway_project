@@ -42,7 +42,12 @@ export const links = [
             link: "/Service-bigData",
             desc: "Analytics extracts insights from data.",
           },
-        
+          {
+            id: 7,
+            name: "Artificial Intelligence",
+            link: "/Service-AI",
+            desc: "We specialize in cutting-edge Artificial Intelligence services.",
+          },
           {
             id: 11,
             name: "Web Development",
