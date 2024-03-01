@@ -66,14 +66,12 @@ const AiAndMLService = () => {
       {/* First Section */}
       <div className="w-[100%] relative flex justify-center items-center ">
         {/* left */}
-        <div className=" absolute z-10 w-[100%] h-[100vh] gap-0 flex justify-center items-start flex-col ">
-          <h1 className="text-white text-[3rem] font-extrabold p-2">
+        <div className=" absolute z-10 w-[100%] h-[100vh] gap-0 flex justify-center items-start flex-col pt-20">
+          <h1 className="text-white md:text-[2.5rem]  text-md font-extrabold p-2">
             Artificial Intelligence (AI) Services
           </h1>
-          <p className="text-white text-md p-4 w-[50%]">
-            We provide cutting-edge Artificial Intelligence services tailored to
-            empower businesses across industries. From predictive analytics to
-            personalized customer experiences, our solutions unlock new
+          <p className="text-white md:text-md text-sm p-4 md:w-[50%]">
+            We provide cutting-edge Artificial Intelligence services tailored to empower businesses across industries. From predictive analytics to personalized customer experiences, our solutions unlock new
             possibilities for growth and efficiency, driving innovation and
             intelligent decision-making.
           </p>
