@@ -1,13 +1,12 @@
-import React from "react";
+import Finance from "./images/Finance.jpg";
 import bank from "./images/bank.jpg";
+import construction from "./images/construction.jpg";
 import education from "./images/education.jpg";
 import field from "./images/field.jpg";
 import health from "./images/health.jpg";
 import insurance from "./images/insurance.jpg";
 import pharma from "./images/pharma.jpg";
 import project from "./images/projects.jpg";
-import construction from "./images/construction.jpg";
-import Finance from "./images/Finance.jpg";
 import telecom from "./images/telecom.jpg";
 
 const Indrustry = () => {
@@ -61,16 +60,16 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
           <img
-            class="object-cover h-full w-full"
+            class="object-cover h-full w-full opacity-55"
             src={pharma}
             alt="Pharmaceutical"
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-black px-5 font-bold text-4xl md:text-5xl">
+          <h1 class="text-violet-200 px-5 font-extrabold text-[3rem] md:text-[4rem]">
             Pharmaceutical
           </h1>
-          <p class="text-md md:font-bold">
+          <p class="text-lg text-violet-200 md:font-bold">
             Our advanced IT solutions empower pharmaceutical companies to drive
             innovation and optimize operations
           </p>
@@ -90,13 +89,13 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
       {/* bank section */}
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
-          <img class="object-cover h-full w-full" src={bank} alt="Banking" />
+          <img class="object-cover h-full w-full opacity-55" src={bank} alt="Banking" />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-black px-5 font-bold text-4xl md:text-5xl">
+          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
             Banking
           </h1>
-          <p class="text-md md:font-bold">
+          <p class="text-lg text-violet-200 md:font-bold">
             Our innovative IT solutions empower banks to thrive in the digital
             era.
           </p>
@@ -117,16 +116,16 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
           <img
-            class="object-cover h-full w-full"
+            class="object-cover h-full w-full opacity-55"
             src={insurance}
             alt="Insurance"
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-black px-5 font-bold text-4xl md:text-5xl">
+          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
             Insurance
           </h1>
-          <p class="text-md md:font-bold">
+          <p class="text-lg text-violet-200 md:font-bold">
             Our cutting-edge IT solutions drive digital transformation in the
             insurance sector.
           </p>
@@ -147,16 +146,16 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
           <img
-            class="object-cover h-full w-full"
+            class="object-cover h-full w-full opacity-45"
             src={health}
             alt="Healthcare"
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-black px-5 font-bold text-4xl md:text-5xl">
+          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
             Healthcare
           </h1>
-          <p class="text-md md:font-bold">
+          <p class="text-lg text-violet-200 md:font-bold">
             Our cutting-edge IT solutions empower healthcare organizations to
             deliver exceptional patient care.
           </p>
@@ -177,16 +176,16 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
           <img
-            class="object-cover h-full w-full"
+            class="object-cover h-full w-full opacity-45"
             src={project}
             alt="Professional Services"
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-black px-5 font-bold text-4xl md:text-5xl">
+          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
             Professional Services
           </h1>
-          <p class="text-md md:font-bold">
+          <p class="text-lg text-violet-200 md:font-bold">
             Our tailored IT solutions empower professional service firms to
             streamline operations and deliver exceptional client experiences.
           </p>
@@ -207,16 +206,16 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
           <img
-            class="object-cover h-full w-full"
+            class="object-cover h-full w-full opacity-65"
             src={education}
             alt="Education"
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-black px-5 font-bold text-4xl md:text-5xl">
+          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
             Education
           </h1>
-          <p class="text-md md:font-bold">
+          <p class="text-lg text-violet-200 md:font-bold">
             Our transformative IT solutions empower educational institutions to
             enhance learning experiences.
           </p>
@@ -237,16 +236,16 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
           <img
-            class="object-cover h-full w-full"
+            class="object-cover h-full w-full opacity-55"
             src={field}
             alt="Field Services"
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-black px-5 font-bold text-4xl md:text-5xl">
+          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
             Field Services
           </h1>
-          <p class="text-md md:font-bold">
+          <p class="text-lg text-violet-200 md:font-bold">
             Our innovative IT solutions streamline field operations and drive
             efficiency.
           </p>
@@ -267,16 +266,16 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
           <img
-            class="object-cover h-full w-full"
+            class="object-cover h-full w-full opacity-55"
             src={telecom}
             alt="  Telecome Services"
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-black px-5 font-bold text-4xl md:text-5xl">
+          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
             Telecome Services
           </h1>
-          <p class="text-md md:font-bold">
+          <p class="text-lg text-violet-200 md:font-bold">
           AI-Powered Networks: Transforming Telecommunications with Smart Solutions
           </p>
           <div class="pharma_subs flex flex-wrap gap-3">
@@ -296,16 +295,16 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
           <img
-            class="object-cover h-full w-full"
+            class="object-cover h-full w-full opacity-55"
             src={construction}
             alt=" construction Services"
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-black px-5 font-bold text-4xl md:text-5xl">
+          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
           Construction Services
           </h1>
-          <p class="text-md md:font-bold">
+          <p class="text-lg text-violet-200 md:font-bold">
           Construction Revolution: How AI and Tech are Reshaping Telecom Infrastructure Deployment
           </p>
           <div class="pharma_subs flex flex-wrap gap-3">
@@ -325,16 +324,16 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
           <img
-            class="object-cover h-full w-full"
+            class="object-cover h-full w-full opacity-55"
             src={Finance}
             alt="Finance Services"
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-black px-5 font-bold text-4xl md:text-5xl">
+          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
           Finance Services
           </h1>
-          <p class="text-md md:font-bold">
+          <p class="text-lg text-violet-200 md:font-bold">
           Cyber-Finance Fusion: The Impact of AI and Tech on Financial Sector Evolution
           </p>
           <div class="pharma_subs flex flex-wrap gap-3">

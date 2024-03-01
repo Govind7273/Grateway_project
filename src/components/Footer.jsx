@@ -9,6 +9,7 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -17,7 +18,7 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">About Us</h3>
           <p className="mb-4">
-            Greateway Software INDIA Pvt. Ltd. is a comprehensive IT company
+          GREATEWAY SOFTWARE PVT LTD. is a comprehensive IT company
             offering end-to-end technology solutions. With expertise in software
             development, network infrastructure, cybersecurity, cloud services,
             and IT consulting, we empower businesses to thrive in the digital
@@ -52,16 +53,16 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Useful Links</h3>
           <ul>
             <li className="mb-2">
-              <a href="#">About Us</a>
+              <Link to={"/AboutUs"}>About Us</Link>
             </li>
             <li className="mb-2">
-              <a href="#">Services</a>
+            <Link to={"/Service-crm"}>Services</Link>
             </li>
             <li className="mb-2">
-              <a href="#">Contact Us</a>
+            <Link to={"/ContactUs"}>Contact Us</Link>
             </li>
             <li className="mb-2">
-              <a href="#">Career</a>
+            <Link to={"/Career"}>Career</Link>
             </li>
           </ul>
         </div>

@@ -2,7 +2,7 @@ import FounderImg from "./images/GovindRathod.jpg";
 import CoFounderImg from "./images/NilamRathod.jpeg";
 export const FoundersNote = () => {
   return (
-    <div className="w-[100vw] md:h-[100vh] overflow-hidden bg-opacity-100 bg-[linear-gradient(to_bottom,_#000428,_#004683)] animated-background pt-12 text-white flex justify-center items-center">
+    <div className="w-[100vw] md:h-[100vh] overflow-hidden bg-opacity-100 bg-[linear-gradient(to_bottom,_#000428,_#004683)] pt-12 text-white flex justify-center items-center">
       <div className="w[100%] flex flex-col gap-10">
         {/* first section */}
         <div className="flex w-[100%] justify-center items-center">
