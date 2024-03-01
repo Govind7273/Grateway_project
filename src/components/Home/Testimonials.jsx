@@ -52,7 +52,7 @@ const Testimonials = () => {
       <div className="flex p-5 justify-center text-white">
         <h1 className="text-4xl font-black">Review's</h1>
       </div>
-      <div className="container flex flex-wrap justify-center items-center gap-5 bg-gray-700 p-6">
+      <div className="relative z-10 container flex flex-wrap justify-center items-center gap-5 bg-transparent p-6">
         {reviews.map((review) => (
           <div className="box" key={review.id}>
             <div className="body">
@@ -70,6 +70,55 @@ const Testimonials = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* bubble animation background */}
+      <div className="wrapper z-0">
+        <div>
+          <span className="dot"></span>
+        </div>
+        <div>
+          <span className="dot"></span>
+        </div>
+        <div>
+          <span className="dot"></span>
+        </div>
+        <div>
+          <span className="dot"></span>
+        </div>
+        <div>
+          <span className="dot"></span>
+        </div>
+        <div>
+          <span className="dot"></span>
+        </div>
+        <div>
+          <span className="dot"></span>
+        </div>
+        <div>
+          <span className="dot"></span>
+        </div>
+        <div>
+          <span className="dot"></span>
+        </div>
+        <div>
+          <span className="dot"></span>
+        </div>
+        <div>
+          <span className="dot"></span>
+        </div>
+        <div>
+          <span className="dot"></span>
+        </div>
+        <div>
+          <span className="dot"></span>
+        </div>
+        <div>
+          <span className="dot"></span>
+        </div>
+        <div>
+          <span className="dot"></span>
+        </div>
       </div>
     </main>
   );
