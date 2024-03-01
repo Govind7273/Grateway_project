@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import dnatrim from "../../assets/videos/hand-trim.mp4";
 import robottrim from "../../assets/videos/robot-Trim.mp4";
 import vrtrim from "../../assets/videos/vr-Trim.mp4";
 import worktrim from "../../assets/videos/work-Trim.mp4";
 import Services from "./Services";
-import Testimonials from "./Testimonials";
 import Special from "./Special";
 import Tech from "./Tech";
+import Testimonials from "./Testimonials";
 
 const VideoComponent = ({ video, title, desc, link, isVisible }) => (
   <div className={`relative ${isVisible ? "" : "hidden"} h-screen md:h-full`}>
     <video
-      className="w-full h-full object-cover"
+      className="w-full h-full object-cover opacity-50"
       src={video}
       loop
       autoPlay
@@ -19,13 +19,13 @@ const VideoComponent = ({ video, title, desc, link, isVisible }) => (
     />
     <div className="absolute items-center left-1 h-full top-0 flex w-full p-2 md:p-5">
       <div className="md:max-w-[40rem] w-full flex-col space-y-3">
-        <h1 className="loop_video_title text-4xl md:text-6xl text-purple-600 max-w-[50rem] font-bold font-headingFont">
+        <h1 className="loop_video_title text-4xl md:text-6xl text-cyan-300 max-w-[50rem] font-bold font-headingFont">
           {title}
         </h1>
-        <p className="loop_video_desc max-w-[25rem] text-xs md:text-sm font-bold text-white font-navlistFont">
+        <p className="loop_video_desc max-w-[25rem] text-xl md:text-sm font-bold text-white font-navlistFont">
           {desc}
         </p>
-        <button className="loop_video_btn items-start bg-purple-600 p-1 md:p-3 rounded-lg font-bold text-white hover:bg-white hover:text-purple-400 transition-all 0.2 ease-out hover:border">
+        <button className="loop_video_btn items-start bg-cyan-300 px-3 py-1 md:px-4 md:py-2 rounded-lg font-bold text-slate-800 hover:bg-white hover:text-cyan-700 transition-all 0.2 ease-out hover:border">
           Explore with us
         </button>
       </div>
