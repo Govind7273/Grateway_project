@@ -55,7 +55,7 @@ const construction_list=["Energy Efficiency","Network Traffic Management","Predi
 const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Financial Inclusion","Cybersecurity"]
 
   return (
-    <main>
+    <main className="bg-black">
       {/* pharmacy section */}
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
