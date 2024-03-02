@@ -48,7 +48,7 @@ const BigDataService = () => {
   ];
 
   return (
-    <section className="w-[100vw] overflow-x-hidden pt-16 flex flex-col justify-center items-center">
+    <section className="w-[100vw] bg-black overflow-x-hidden pt-16 flex flex-col justify-center items-center">
       {/* section one */}
       <div className="w-[100%] relative flex justify-center items-center ">
         {/* left */}

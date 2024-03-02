@@ -5,7 +5,7 @@ import SectionTwo from "./SecondServiceSubComponent/SectionTwo";
 
 const SecondServiceComponent = ({data}) => {
   return (
-    <div className="w-[100vw] overflow-x-hidden pt-16">
+    <div className="w-[100vw] bg-black overflow-x-hidden pt-16">
          {/* Section one  code */}
          <SectionOne obj={data.first} />
 
