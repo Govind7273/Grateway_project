@@ -1,20 +1,20 @@
-import java_logo from "../Home/assets/svg/java-logo.svg";
-import javascript_logo from "../Home/assets/svg/javascript-logo.svg";
-import python_logo from "../Home/assets/svg/python-logo.svg";
-import oracle_logo from "../Home/assets/svg/oracle-logo.svg";
-import angular_logo from "../Home/assets/svg/angularjs-logo.svg";
-import react_logo from "../Home/assets/svg/react-logo.svg";
-import hadoop_logo from "../Home/assets/svg/hadoop-logo.svg";
-import spring_bbot_logo from "../Home/assets/svg/spring-boot-logo.svg";
-import mysql_logo from "../Home/assets/svg/mysql-logo.svg";
-import hibernate_logo from "../Home/assets/svg/hibernate-logo.svg";
-import wordpress_logo from "../Home/assets/svg/wordpress-logo.svg";
+import Ai_logo from "../Home/assets/svg/Ai-logo.png";
 import android_logo from "../Home/assets/svg/android-logo.svg";
+import angular_logo from "../Home/assets/svg/angularjs-logo.svg";
 import aws_logo from "../Home/assets/svg/aws-logo.svg";
 import cloud_logo from "../Home/assets/svg/cloud-logo.svg";
-import Ai_logo from "../Home/assets/svg/Ai-logo.svg";
-import salesforce_logo from "../Home/assets/svg/salesforce-logo.svg";
 import devops_logo from "../Home/assets/svg/devops-2.svg";
+import hadoop_logo from "../Home/assets/svg/hadoop-logo.svg";
+import hibernate_logo from "../Home/assets/svg/hibernate-logo.svg";
+import java_logo from "../Home/assets/svg/java-logo.svg";
+import javascript_logo from "../Home/assets/svg/javascript-logo.svg";
+import mysql_logo from "../Home/assets/svg/mysql-logo.svg";
+import oracle_logo from "../Home/assets/svg/oracle-logo.svg";
+import python_logo from "../Home/assets/svg/python-logo.svg";
+import react_logo from "../Home/assets/svg/react-logo.svg";
+import salesforce_logo from "../Home/assets/svg/salesforce-logo.svg";
+import spring_bbot_logo from "../Home/assets/svg/spring-boot-logo.svg";
+import wordpress_logo from "../Home/assets/svg/wordpress-logo.svg";
 
 const Tech = () => {
   const Tech_list = [
@@ -48,7 +48,7 @@ const Tech = () => {
             key={TechIcon.name}
             className="w-28 h-28 hover:scale-110 hover:cursor-pointer transition-all ease-out bg-white flex-col flex rounded-full justify-center items-center"
           >
-            <img src={TechIcon.logo} alt="logo" />
+            <img src={TechIcon.logo} width='50px' alt="logo" />
             {TechIcon.name}
           </div>
         ))}
