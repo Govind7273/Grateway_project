@@ -2,9 +2,11 @@ import { useRef, useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
+import { ContactScheama } from "../../Yupschema/ContactUsScheama";
 
 const ContactForm = () => {
   const ContactForm = useRef();
+  const [error, seterror] = useState({});
   const [ContactDetails, setContactDetails] = useState({
     name: "",
     email: "",
@@ -14,43 +16,49 @@ const ContactForm = () => {
   });
 
   // contact form funnction
-  const InputBox = (name) => {
+  const InputBox = (name, type, error) => {
     const placeholder = ("Enter Your " + name).toString().toUpperCase();
     return (
-      <input
-        type="text"
-        id="name"
-        name={name}
-        required
-        placeholder={placeholder}
-        value={ContactDetails[`${name.toLowerCase()}`]}
-        onChange={(e) =>
-          setContactDetails({
-            ...ContactDetails,
-            [e.target.name]: e.target.value,
-          })
-        }
-        className="mt-4  w-full p-2 bg-slate-600 bg-opacity-30 text-white rounded-md flex  border-violet-500 border-l-4 shadow-md"
-      />
+      <div>
+        <input
+          type={type}
+          id="name"
+          name={name}
+          required
+          placeholder={placeholder}
+          value={ContactDetails[`${name.toLowerCase()}`]}
+          onChange={(e) =>
+            setContactDetails({
+              ...ContactDetails,
+              [e.target.name]: e.target.value,
+            })
+          }
+          className="mt-4  w-full p-2 bg-slate-600 bg-opacity-30 text-white rounded-md flex  border-violet-500 border-l-4 shadow-md"
+        />
+        {error ? <div className="text-red-500 text-xs">{error}</div> : ""}
+      </div>
     );
   };
   // message are of the form
-  const Textarea = (message) => {
+  const Textarea = (message, error) => {
     return (
-      <textarea
-        id="message"
-        name={message}
-        rows="4"
-        value={ContactDetails[message]}
-        placeholder="DESCRIPTION"
-        onChange={(e) =>
-          setContactDetails({
-            ...ContactDetails,
-            [e.target.name]: e.target.value,
-          })
-        }
-        className=" mt-4 p-2 bg-slate-600 bg-opacity-30 text-white rounded-md border-violet-500 border-l-4 shadow-md"
-      ></textarea>
+      <>
+        <textarea
+          id="message"
+          name={message}
+          rows="4"
+          value={ContactDetails[message]}
+          placeholder="DESCRIPTION"
+          onChange={(e) =>
+            setContactDetails({
+              ...ContactDetails,
+              [e.target.name]: e.target.value,
+            })
+          }
+          className=" mt-4 p-2 bg-slate-600 bg-opacity-30 text-white rounded-md border-violet-500 border-l-4 shadow-md"
+        ></textarea>
+        {error ? <div className="text-red-500 text-xs">{error}</div> : ""}
+      </>
     );
   };
 
@@ -75,19 +83,33 @@ const ContactForm = () => {
         subject: "",
         message: "",
       });
+      seterror({});
     },
     onError: () => toast.error("something went wrong"),
   });
+
+  // handle sumbit for Contact Us
+  const handlesendQuery = async (e) => {
+    e.preventDefault();
+    try {
+      await ContactScheama.validate(ContactDetails, { abortEarly: false });
+      SendQuery();
+    } catch (validationError) {
+      toast.error("please cheack the form data");
+      const newError = {};
+      validationError.inner.forEach((err) => {
+        newError[err.path.toLowerCase()] = err.message;
+      });
+      seterror(newError);
+    }
+  };
 
   return (
     <>
       <Toaster />
       <form
         ref={ContactForm}
-        onSubmit={(e) => {
-          e.preventDefault();
-          SendQuery();
-        }}
+        onSubmit={(e) => handlesendQuery(e)}
         className=" md:w-[60%] justify-center flex gap-2 flex-col w-full font-navlistFont flex-1 px-10 py-6"
       >
         <h1 className="text-5xl font-headingFont  font-extrabold text-violet-600 flex justify-center mb-0 mt-4">
@@ -95,16 +117,18 @@ const ContactForm = () => {
         </h1>
         <div className="flex w-full md:gap-8 flex-col md:flex-row">
           {/* Your Full name input box */}
-          {InputBox("name")}
+          {InputBox("name", "text", error.name)}
           {/* Your Email name input box */}
-          {InputBox("email")}
+          {InputBox("email", "email", error.email)}
         </div>
         <div className="flex md:gap-8 w-full flex-col md:flex-row ">
           {/* phone number field */}
-          {InputBox("phone")}
-          {InputBox("subject")}
+          {InputBox("phone", "text", error.phone)}
+          {InputBox("subject", "text", error.subject)}
         </div>
-        <div className="flex flex-col">{Textarea("message")}</div>
+        <div className="flex flex-col">
+          {Textarea("message", error.message)}
+        </div>
         <button
           type="submit"
           className="md:w-[30%] w-[90%] bg-violet-500 transition-all duration-150 ease-linear hover:bg-white hover:text-violet-700 font-semibold shadow-[5px_5px_10px_3px] shadow-violet-900 text-white px-4 py-2 rounded-md mt-4"
