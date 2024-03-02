@@ -56,7 +56,7 @@ const Testimonials = () => {
         {reviews.map((review) => (
           <div className="box" key={review.id}>
             <div className="body">
-              <div className="front gap-10 rounded-tr-[53px] bg-[rgba(255,_255,_255,_0.06)] p-4">
+              <div className="front gap-10 rounded-tr-[53px] bg-white p-4">
                 <h1 className="text-[2.5rem] font-bold text-violet-500 text-center">
                   {review.name}
                 </h1>

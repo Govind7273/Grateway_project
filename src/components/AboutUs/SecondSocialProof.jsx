@@ -47,9 +47,9 @@ export const SecondSocialProof=()=>{
 
 ]
     return(
-        <div className="w-[100vw] p-8 flex bg-slate-900 flex-col border-t-[1px] gap-10 justify-center items-center">
+        <div className="w-[100vw] p-8 flex bg-white flex-col border-t-[1px] gap-10 justify-center items-center">
            <h3 className="text-[3rem] text-indigo-600 font-headingFont">Our Happy Customers</h3>
-            <div className="w-[80%] bg-slate-400 rounded-lg flex gap-5 flex-wrap justify-evenly items-center">
+            <div className="w-[80%] rounded-lg flex gap-5 flex-wrap justify-evenly items-center">
                {
                 imgLinks.map((image)=>(
                     <img className="w-[200px] bg-transparent cursor-pointer" src={image.links} key={image.id} alt="" />

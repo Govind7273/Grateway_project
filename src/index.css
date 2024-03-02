@@ -130,7 +130,7 @@ body::-webkit-scrollbar{
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(255,255,255,0.06);
+  background: #fff;
   top: 0;
   left: 0;
   backface-visibility: hidden;
@@ -143,7 +143,8 @@ body::-webkit-scrollbar{
   transform-style: preserve-3d;
   padding: 8px;
   border-radius: 5px;
-  background:  linear-gradient(45deg, #a32354,#a664cc);
+  color: #fff;
+  background:  linear-gradient(90deg, #f5a614,#c96cff);
   transform: translateZ(100px);
 }
 
