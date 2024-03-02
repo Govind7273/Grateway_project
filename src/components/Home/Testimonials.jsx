@@ -48,7 +48,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <main className="bg-gray-700 p-5 flex flex-col justify-center items-center min-h-lvh">
+    <main className="bg-gray-700 overflow-x-hidden p-5 flex flex-col justify-center items-center min-h-lvh">
       <div className="flex p-5 justify-center text-white">
         <h1 className="text-4xl font-black">Review's</h1>
       </div>
@@ -73,7 +73,7 @@ const Testimonials = () => {
       </div>
 
       {/* bubble animation background */}
-      <div className="wrapper z-0">
+      {/* <div className="wrapper z-0">
         <div>
           <span className="dot"></span>
         </div>
@@ -119,7 +119,7 @@ const Testimonials = () => {
         <div>
           <span className="dot"></span>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 };
