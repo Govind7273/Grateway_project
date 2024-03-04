@@ -9,7 +9,7 @@ import ContactForm from "./ContactForm";
 
 const ContactUs = () => {
   return (
-    <div className="w-[100vw] overflow-x-hidden pt-20 px-10  flex flex-col justify-center items-center gap-4 bg-slate-900 dark:text-white">
+    <div className="w-full overflow-x-hidden pt-20 px-3  flex flex-col justify-center items-center gap-4 bg-slate-900 dark:text-white">
       <div className="flex w-[100%] overflow-x-hidden mt-4 mb-10  md:flex-row flex-col flex-wrap justify-center  bg-slate-700 rounded-xl ">
         {/* left section */}
         <div className="flex  md:w-[40%] w-full flex-col flex-wrap gap-0 p-6 bg-[#FFDEE9] bg-[linear-gradient(0deg,_#FFDEE9_0%,_#B5FFFC_100%)]">

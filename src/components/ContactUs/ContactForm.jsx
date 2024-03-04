@@ -118,7 +118,7 @@ const ContactForm = () => {
       <form
         ref={ContactForm}
         onSubmit={(e) => handlesendQuery(e)}
-        className=" md:w-[60%] justify-center flex gap-2 flex-col w-full font-navlistFont flex-1 px-10 py-6"
+        className=" md:w-[60%] justify-center flex gap-2 flex-col w-full font-navlistFont flex-1 px-4 py-6"
       >
         <h1 className="text-5xl font-headingFont  font-extrabold text-violet-600 flex justify-center mb-0 mt-4">
           Get in touch with us
