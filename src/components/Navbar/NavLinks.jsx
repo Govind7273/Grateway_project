@@ -12,7 +12,7 @@ const NavLinks = () => {
         <div key={link.name}>
           <div className=" font-bold text-left my-2 md:my-0 md:bg-none md:cursor-pointer  group">
             <h1
-              className="flex justify-between items-center md:pr-0 pr-4 group  px-2 py-1 rounded-lg hover:bg-slate-500
+              className="flex justify-between items-center gap-2 group  px-6  py-1 rounded-full hover:bg-violet-200
               "
               onClick={() => {
                 heading !== link.name ? setHeading(link.name) : setHeading("");
@@ -47,7 +47,7 @@ const NavLinks = () => {
                     {link.sublinks.map((mysublinks) => (
                       <div key={mysublinks.name} className=" grid md:grid-cols-2 gap-2 md:p-2 my-2 ">
                         {mysublinks.sublink.map((slink) => (
-                          <span key={slink.name} className="text-sm text-gray-600 border-gray-800 hover:bg-slate-300 hover:bg-opacity-60 rounded-lg p-2">
+                          <span key={slink.name} className="text-sm text-gray-600 border-gray-800 hover:bg-violet-200 hover:bg-opacity-60 rounded-[8px] p-2">
                             <NavLink
                             style={({isActive})=>(isActive?{color:'violet'}:{color:"white"})} 
                               to={slink.link}

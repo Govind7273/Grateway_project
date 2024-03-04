@@ -87,54 +87,6 @@ const Testimonials = () => {
         ))}
       </div>
 
-      {/* bubble animation background */}
-      {/* <div className="wrapper z-0">
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-      </div> */}
     </main>
   );
 };
