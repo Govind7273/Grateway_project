@@ -12,12 +12,27 @@ const Indrustry = lazy(() => import("./components/Indrustry/Indrustry"));
 const ServiceComponent = lazy(() =>
   import("./components/Services/ServiceComponent")
 );
+const ServiceSupport = lazy(() =>
+  import("./components/Services/ServiceSupport")
+);
+const ServicesStaffing = lazy(() =>
+  import("./components/Services/ServicesStaffing")
+);
+const AiAndMLService = lazy(() =>
+  import("./components/Services/AiAndMLService")
+);
+const BigDataService = lazy(() =>
+  import("./components/Services/BigDataService")
+);
+const SecondServiceComponent = lazy(() =>
+  import("./components/Services/SecondServiceComponent")
+);
+import {
+  CRMServices,
+  TestingAndQAServices,
+} from "./components/Services/ServiceData/SecondDevServices";
 
 import { Loading } from "./components/Loading";
-import AiAndMLService from "./components/Services/AiAndMLService";
-import BigDataService from "./components/Services/BigDataService";
-import SecondServiceComponent from "./components/Services/SecondServiceComponent";
-import { CRMServices, TestingAndQAServices } from "./components/Services/ServiceData/SecondDevServices";
 import {
   CloudServices,
   DevOpsServices,
@@ -80,10 +95,17 @@ function App() {
           ></Route>
 
           {/* Ai And Ml route */}
+          <Route exact path="/Service-AI" element={<AiAndMLService />}></Route>
           <Route
-             exact
-             path="/Service-AI"
-             element={<AiAndMLService />}></Route>
+            exact
+            path="/Service-Support"
+            element={<ServiceSupport />}
+          ></Route>
+          <Route
+            exact
+            path="/Service-Staffing"
+            element={<ServicesStaffing />}
+          ></Route>
         </Routes>
       </Suspense>
       <Footer />
