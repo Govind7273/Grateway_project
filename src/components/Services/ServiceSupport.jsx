@@ -8,16 +8,16 @@ function Accordion(props) {
   return (
     <div className="border rounded-md mb-1">
       <button
-        className="w-full p-3 md:p-5 font-bold text-left bg-gray-200 hover:bg-gray-300 transition duration-300"
+        className="w-full flex gap-3 p-4 justify-center md:justify-between items-center md:p-5 font-bold text-left bg-gray-200 hover:bg-gray-300 transition duration-300"
         onClick={props.toggleAccordion}
       >
         {props.title}
         <span
           className={`float-right transform ${
-            props.isOpen ? "rotate-180" : "rotate-0"
+            props.isOpen ? "rotate-45" : "rotate-0"
           }    transition-transform duration-300`}
         >
-          &#11167;
+          &#10011;
         </span>
       </button>
       {props.isOpen && <div className="p-4 bg-white">{props.data}</div>}
@@ -104,8 +104,8 @@ const ServiceSupport = () => {
 
       {/* Accordion for FAQ */}
       <section>
-        <div className="p-2 m-8">
-          <h2 className=" text-xl md:text-2xl mb-2 mx-auto  text-black">
+        <div className="p-2 m-4 md:m-8">
+          <h2 className=" text-xl md:text-2xl mb-2 mx-auto font-bold p-2 text-center  text-black">
             Have questions? We have answers! Check out our FAQ
           </h2>
           {accordions.map((accordion) => (
@@ -120,9 +120,9 @@ const ServiceSupport = () => {
         </div>
       </section>
 
-      <div className="flex justify-center w-full items-center gap-3 flex-col md:flow-row md:gap-6 p-3 md:p-5">
+      <div className="flex justify-center w-full items-center gap-3 flex-col md:fl-row md:gap-6 p-3 md:p-5">
         <h1 className="text-xl w-full font-bold justify-center flex">Need more Assistant</h1>
-        <button className="p-3 w-full bg-blue-300 hover:bg-blue-500 transition-all ease-linear font-bold rounded-xl"><Link to={"/ContactUs"}>Contact Us</Link></button>
+        <button className="p-3 w-full md:w-fit bg-blue-300 hover:bg-blue-500 transition-all ease-linear font-bold rounded-xl"><Link to={"/ContactUs"}>Contact Us</Link></button>
       </div>
     </>
   );
