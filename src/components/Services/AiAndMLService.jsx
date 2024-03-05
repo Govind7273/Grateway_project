@@ -62,7 +62,7 @@ const AiAndMLService = () => {
     },
   ];
   return (
-    <section className="w-[100vw] overflow-x-hidden">
+    <section className="w-[100vw] overflow-x-hidden bg-black">
       {/* First Section */}
       <div className="w-[100%] relative flex justify-center items-center ">
         {/* left */}

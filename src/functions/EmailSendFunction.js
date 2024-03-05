@@ -7,7 +7,6 @@ const SendEmail = async ({ serviceId, templateId, form, publicId }) => {
         });
         return responce;
     } catch (error) {
-        console.error("Error sending email: ", error);
         return error;
     }
 };

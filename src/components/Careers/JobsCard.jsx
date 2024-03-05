@@ -75,7 +75,7 @@ const JobsCard = ({ setModal }) => {
       education: "Any Graduate",
     },
     {
-      position: "Software engineering",
+      position: "Software Engineering",
       jobDescription:
         "We're on the lookout for a self-motivated and enthusiastic Software Engineer, at the beginning of their career, to join our collaborative team. The right candidate will be passionate about coding and eager to learn and grow with us.",
       Requirement: [
@@ -116,7 +116,7 @@ const JobsCard = ({ setModal }) => {
       education: "Bachelor's degree in Journalism, English,or related field",
     },
     {
-      position: "Data Scientist",
+      position: "Data Engineer",
       jobDescription:
         " The ideal candidate will have a strong background in mathematics, statistics, and computer science, as well as a passion for leveraging data to solve complex problems,The Data Scientist will work closely with our analytics and engineering teams to develop and analyze data to uncover insights, and drive data-driven decision-making.",
       Requirement: [
@@ -129,7 +129,7 @@ const JobsCard = ({ setModal }) => {
       education: "Bachelor's degree in Computer Science",
     },
     {
-      position: " DevOps Engineer ",
+      position: "Cloud Computing",
       jobDescription:
         "We are seeking a motivated and proactive DevOps Engineer to join our fast-paced team. The ideal candidate will be passionate about streamlining processes, ensuring smooth deployments, and automating repetitive tasks,Collaborate with cross-functional teams to understand infrastructure needs and efficient development. ",
       Requirement: [
@@ -153,6 +153,34 @@ const JobsCard = ({ setModal }) => {
         "Location :Kharadi, Pune",
       ],
       education: "Bachelor's degree",
+    },
+    {
+      position: "Salesforce Administrator",
+      jobDescription:
+        "As a Salesforce Administrator, you will be responsible for the overall administration and ongoing maintenance of our Salesforce CRM platform. You will collaborate with various departments to ensure the successful implementation and optimization of Salesforce solutions. ",
+      Requirement: [
+        "Experience with integration tools like Mulesoft, Jitterbit, or Boomi is a plus.",
+        "Attention to detail and ability to work efficiently under tight deadlinesProficiency in Salesforce Lightning, Apex, Visualforce, and other Salesforce technologies.",
+        "Strong understanding of Salesforce configuration, customization, and development.",
+        "Experience: 2-4 year",
+        "Location :Kharadi, Pune",
+      ],
+      education: "Bachelor's degree,Salesforce Administrator Certification (ADM201) is bonus",
+    },
+    {
+      position: "SAP Consultant",
+      jobDescription:
+        "As an SAP Consultant, you will be responsible for providing technical and functional support for SAP systems. You will work closely with stakeholders to gather requirements, design solutions, and implement SAP modules,Collaborate with stakeholders to gather business requirements.",
+      Requirement: [
+        "Train end-users on SAP functionality.",
+        "Strong understanding of SAP modules such as SAP ECC, SAP S/4HANA, SAP BW, or SAP CRM.",
+        "Experience with SAP Fiori or SAP Cloud Platform is a plus.",
+        "Proficiency in SAP ABAP programming language is a plus.",
+        "Excellent communication, problem-solving, and teamwork skills.",
+        "Experience: 1-3 year",
+        "Location :Kharadi, Pune",
+      ],
+      education: "Bachelor's degree,SAP certification(s) is preferred",
     },
   ];
 

@@ -3,10 +3,13 @@ import { useMutation } from "@tanstack/react-query";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 import { ContactScheama } from "../../Yupschema/ContactUsScheama";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactForm = () => {
+  const captch = useRef();
   const ContactForm = useRef();
   const [error, seterror] = useState({});
+  const [CaptchValue, setCaptchaValue] = useState("");
   const [ContactDetails, setContactDetails] = useState({
     name: "",
     email: "",
@@ -84,6 +87,7 @@ const ContactForm = () => {
         message: "",
       });
       seterror({});
+      captch.current.reset();
     },
     onError: () => toast.error("something went wrong"),
   });
@@ -93,6 +97,10 @@ const ContactForm = () => {
     e.preventDefault();
     try {
       await ContactScheama.validate(ContactDetails, { abortEarly: false });
+      if (!CaptchValue) {
+        toast.error("Please fill the captcha");
+        return; // Do not continue if captcha is empty
+      }
       SendQuery();
     } catch (validationError) {
       toast.error("please cheack the form data");
@@ -110,7 +118,7 @@ const ContactForm = () => {
       <form
         ref={ContactForm}
         onSubmit={(e) => handlesendQuery(e)}
-        className=" md:w-[60%] justify-center flex gap-2 flex-col w-full font-navlistFont flex-1 px-10 py-6"
+        className=" md:w-[60%] justify-center flex gap-2 flex-col w-full font-navlistFont flex-1 px-4 py-6"
       >
         <h1 className="text-5xl font-headingFont  font-extrabold text-violet-600 flex justify-center mb-0 mt-4">
           Get in touch with us
@@ -129,6 +137,11 @@ const ContactForm = () => {
         <div className="flex flex-col">
           {Textarea("message", error.message)}
         </div>
+        <ReCAPTCHA
+          ref={captch}
+          sitekey={import.meta.env.VITE_RECAPTCHA_KEY}
+          onChange={(value) => setCaptchaValue(value)}
+        />
         <button
           type="submit"
           className="md:w-[30%] w-[90%] bg-violet-500 transition-all duration-150 ease-linear hover:bg-white hover:text-violet-700 font-semibold shadow-[5px_5px_10px_3px] shadow-violet-900 text-white px-4 py-2 rounded-md mt-4"

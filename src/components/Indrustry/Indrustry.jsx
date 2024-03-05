@@ -55,21 +55,21 @@ const construction_list=["Energy Efficiency","Network Traffic Management","Predi
 const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Financial Inclusion","Cybersecurity"]
 
   return (
-    <main>
+    <main className="bg-black">
       {/* pharmacy section */}
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
           <img
-            class="object-cover h-full w-full opacity-55"
+            class="object-cover h-full w-full opacity-45"
             src={pharma}
             alt="Pharmaceutical"
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-violet-200 px-5 font-extrabold text-[3rem] md:text-[4rem]">
+          <h1 class="text-[#ab9443] px-5 font-extrabold text-[3rem] md:text-[4rem]">
             Pharmaceutical
           </h1>
-          <p class="text-lg text-violet-200 md:font-bold">
+          <p class="text-lg text-[#ab9443] md:font-bold">
             Our advanced IT solutions empower pharmaceutical companies to drive
             innovation and optimize operations
           </p>
@@ -77,7 +77,7 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
             {pharma_list.map((name, index) => (
               <div
                 key={index}
-                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-yellow-500 rounded-md bg-yellow-400"
+                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-[#ab9443] rounded-md bg-[#ab9443]"
               >
                 <h1>{name}</h1>
               </div>
@@ -89,13 +89,13 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
       {/* bank section */}
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
-          <img class="object-cover h-full w-full opacity-55" src={bank} alt="Banking" />
+          <img class="object-cover h-full w-full opacity-45" src={bank} alt="Banking" />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
+          <h1 class="text-white px-5 font-bold text-[3rem] md:text-[4rem]">
             Banking
           </h1>
-          <p class="text-lg text-violet-200 md:font-bold">
+          <p class="text-lg text-white md:font-bold">
             Our innovative IT solutions empower banks to thrive in the digital
             era.
           </p>
@@ -103,7 +103,7 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
             {bank_list.map((name, index) => (
               <div
                 key={index}
-                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-green-500 rounded-md bg-green-400"
+                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-white rounded-md bg-white"
               >
                 <h1>{name}</h1>
               </div>
@@ -116,16 +116,16 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
           <img
-            class="object-cover h-full w-full opacity-55"
+            class="object-cover h-full w-full opacity-45"
             src={insurance}
             alt="Insurance"
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
+          <h1 class="text-cyan-500 px-5 font-bold text-[3rem] md:text-[4rem]">
             Insurance
           </h1>
-          <p class="text-lg text-violet-200 md:font-bold">
+          <p class="text-lg text-cyan-500 md:font-bold">
             Our cutting-edge IT solutions drive digital transformation in the
             insurance sector.
           </p>
@@ -133,7 +133,7 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
             {Insurace_list.map((name, index) => (
               <div
                 key={index}
-                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-blue-500 rounded-md bg-blue-400"
+                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-cyan-500 rounded-md bg-cyan-500"
               >
                 <h1>{name}</h1>
               </div>
@@ -152,10 +152,10 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
+          <h1 class="text-white px-5 font-bold text-[3rem] md:text-[4rem]">
             Healthcare
           </h1>
-          <p class="text-lg text-violet-200 md:font-bold">
+          <p class="text-lg text-white md:font-bold">
             Our cutting-edge IT solutions empower healthcare organizations to
             deliver exceptional patient care.
           </p>
@@ -163,7 +163,7 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
             {health_list.map((name, index) => (
               <div
                 key={index}
-                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-red-500 rounded-md bg-red-400"
+                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-white rounded-md bg-white"
               >
                 <h1>{name}</h1>
               </div>
@@ -182,10 +182,10 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
+          <h1 class="text-pink-300 px-5 font-bold text-[3rem] md:text-[4rem]">
             Professional Services
           </h1>
-          <p class="text-lg text-violet-200 md:font-bold">
+          <p class="text-lg text-pink-300 md:font-bold">
             Our tailored IT solutions empower professional service firms to
             streamline operations and deliver exceptional client experiences.
           </p>
@@ -193,7 +193,7 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
             {project_list.map((name, index) => (
               <div
                 key={index}
-                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-purple-500 rounded-md bg-purple-400"
+                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-pink-300 rounded-md bg-pink-300"
               >
                 <h1>{name}</h1>
               </div>
@@ -206,16 +206,16 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
           <img
-            class="object-cover h-full w-full opacity-65"
+            class="object-cover h-full w-full opacity-45"
             src={education}
             alt="Education"
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
+          <h1 class="text-yellow-200 px-5 font-bold text-[3rem] md:text-[4rem]">
             Education
           </h1>
-          <p class="text-lg text-violet-200 md:font-bold">
+          <p class="text-lg text-yellow-200 md:font-bold">
             Our transformative IT solutions empower educational institutions to
             enhance learning experiences.
           </p>
@@ -223,7 +223,7 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
             {education_list.map((name, index) => (
               <div
                 key={index}
-                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-cyan-500 rounded-md bg-cyan-400"
+                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-yellow-200 rounded-md bg-yellow-200"
               >
                 <h1>{name}</h1>
               </div>
@@ -236,16 +236,16 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
           <img
-            class="object-cover h-full w-full opacity-55"
+            class="object-cover h-full w-full opacity-45"
             src={field}
             alt="Field Services"
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
+          <h1 class="text-white px-5 font-bold text-[3rem] md:text-[4rem]">
             Field Services
           </h1>
-          <p class="text-lg text-violet-200 md:font-bold">
+          <p class="text-lg text-white md:font-bold">
             Our innovative IT solutions streamline field operations and drive
             efficiency.
           </p>
@@ -253,7 +253,7 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
             {field_list.map((name, index) => (
               <div
                 key={index}
-                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-orange-500 rounded-md bg-orange-400"
+                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-white rounded-md bg-white"
               >
                 <h1>{name}</h1>
               </div>
@@ -266,23 +266,23 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
           <img
-            class="object-cover h-full w-full opacity-55"
+            class="object-cover h-full w-full opacity-45"
             src={telecom}
             alt="  Telecome Services"
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
+          <h1 class="text-blue-300 px-5 font-bold text-[3rem] md:text-[4rem]">
             Telecome Services
           </h1>
-          <p class="text-lg text-violet-200 md:font-bold">
+          <p class="text-lg text-blue-300 md:font-bold">
           AI-Powered Networks: Transforming Telecommunications with Smart Solutions
           </p>
           <div class="pharma_subs flex flex-wrap gap-3">
             {telecom_list.map((name, index) => (
               <div
                 key={index}
-                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-[#FF3EA5] rounded-md bg-[#FF3EA5]"
+                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-blue-300 rounded-md bg-blue-300"
               >
                 <h1>{name}</h1>
               </div>
@@ -295,23 +295,23 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
           <img
-            class="object-cover h-full w-full opacity-55"
+            class="object-cover h-full w-full opacity-45"
             src={construction}
             alt=" construction Services"
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
+          <h1 class="text-white px-5 font-bold text-[3rem] md:text-[4rem]">
           Construction Services
           </h1>
-          <p class="text-lg text-violet-200 md:font-bold">
+          <p class="text-lg text-white md:font-bold">
           Construction Revolution: How AI and Tech are Reshaping Telecom Infrastructure Deployment
           </p>
           <div class="pharma_subs flex flex-wrap gap-3">
             {construction_list.map((name, index) => (
               <div
                 key={index}
-                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-[#B784B7] rounded-md bg-[#B784B7]"
+                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-white rounded-md bg-white"
               >
                 <h1>{name}</h1>
               </div>
@@ -324,23 +324,23 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
       <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         <div class="pharma_img h-full w-full">
           <img
-            class="object-cover h-full w-full opacity-55"
+            class="object-cover h-full w-full opacity-45"
             src={Finance}
             alt="Finance Services"
           />
         </div>
         <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-violet-200 px-5 font-bold text-[3rem] md:text-[4rem]">
+          <h1 class="text-pink-300 px-5 font-bold text-[3rem] md:text-[4rem]">
           Finance Services
           </h1>
-          <p class="text-lg text-violet-200 md:font-bold">
+          <p class="text-lg text-pink-300 md:font-bold">
           Cyber-Finance Fusion: The Impact of AI and Tech on Financial Sector Evolution
           </p>
           <div class="pharma_subs flex flex-wrap gap-3">
             {Finance_list.map((name, index) => (
               <div
                 key={index}
-                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-[#A3C9AA] rounded-md bg-[#A3C9AA]"
+                class="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-pink-300 rounded-md bg-pink-300"
               >
                 <h1>{name}</h1>
               </div>

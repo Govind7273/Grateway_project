@@ -18,8 +18,8 @@ module.exports = {
     },
     extend: {
       fontFamily:{
-          headingFont:"Gumela Regular",
-          navlistFont:"'Poppins', sans-serif",  
+          headingFont:"'Noto Sans', sans-serif",
+          navlistFont:"'Geologica', sans-serif"  
            },
       fontWeight:{
         500:"bold",

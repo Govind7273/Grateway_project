@@ -1,11 +1,14 @@
-import { Component, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import toast, { Toaster } from "react-hot-toast";
 import { SendEmail } from "../../functions/EmailSendFunction";
 import { JobScheama } from "../../Yupschema/JobApplicationScheama";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ModalForm = ({ setModal }) => {
   const form = useRef();
+  const captch = useRef();
+  const [CaptchValue, setCaptchaValue] = useState("");
   const [error, seterror] = useState({});
   const [contact, setContact] = useState({
     name: "",
@@ -56,6 +59,7 @@ const ModalForm = ({ setModal }) => {
         resume: "",
       });
       seterror({});
+      captch.current.reset();
     },
     onError: () => toast.error("Something went wrong"),
   });
@@ -65,6 +69,10 @@ const ModalForm = ({ setModal }) => {
     e.preventDefault();
     try {
       await JobScheama.validate(contact, { abortEarly: false });
+      if (!CaptchValue) {
+        toast.error("Please fill the captcha");
+        return; // Do not continue if captcha is empty
+      }
       mutate();
     } catch (validationError) {
       // Display validation error using toast
@@ -117,7 +125,11 @@ const ModalForm = ({ setModal }) => {
             <div className="flex gap-3 flex-wrap md:flex-nowrap">
               {InputField("Resume", "text", error.resume)}
             </div>
-
+            <ReCAPTCHA
+              ref={captch}
+              sitekey={import.meta.env.VITE_RECAPTCHA_KEY}
+              onChange={(value) => setCaptchaValue(value)}
+            />
             <div type="submit" className="flex justify-center items-center">
               <button className="bg-blue-600  py-2 px-4 font-headingFont font-bold text-white rounded-xl hover:bg-blue-700 transition-all duration-300 ease-linear">
                 {isPending ? "sending..." : "Apply"}

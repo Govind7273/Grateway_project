@@ -48,12 +48,12 @@ const BigDataService = () => {
   ];
 
   return (
-    <section className="w-[100vw] overflow-x-hidden pt-16 flex flex-col justify-center items-center">
+    <section className="w-[100vw] bg-black overflow-x-hidden md:pt-16 pt-0 flex flex-col justify-center items-center">
       {/* section one */}
       <div className="w-[100%] relative flex justify-center items-center ">
         {/* left */}
         <div className=" absolute z-10 w-[80%] h-[100vh] gap-0 flex justify-center items-center flex-col ">
-          <h1 className="text-white text-[4rem] font-extrabold p-4">
+          <h1 className="text-white text-[3rem] font-extrabold p-4">
             Big Data Analytics
           </h1>
           <p className="text-white text-xl p-4">
@@ -73,7 +73,7 @@ const BigDataService = () => {
 
         {/* right */}
         <img
-          className="md:h-[100vh] h-[65vh] sm:h-[70vh] w-[100%] z-0 opacity-50"
+          className="w-[100%] md:h-[100vh] h-[90vh] z-0 opacity-50"
           src={BigDataImage}
           alt=""
         />

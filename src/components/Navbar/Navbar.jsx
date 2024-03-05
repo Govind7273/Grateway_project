@@ -41,7 +41,7 @@ const Navbar = () => {
                 isActive ? { color: "violet" } : { color: "black" }
               }
               to="/"
-              className="hover:bg-slate-500 font-bold text-black px-2 py-1 rounded-lg "
+              className="hover:bg-violet-200  font-bold text-black px-6 py-1 rounded-full "
             >
               Home
             </NavLink>
@@ -50,7 +50,7 @@ const Navbar = () => {
               style={({ isActive }) =>
                 isActive ? { color: "violet" } : { color: "black" }
               }
-              className="hover:bg-slate-500 font-bold text-black px-2 py-1 rounded-lg "
+              className="hover:bg-violet-200 font-bold text-black px-6 py-1 rounded-full "
             >
               About Us
             </NavLink>
@@ -61,7 +61,7 @@ const Navbar = () => {
               style={({ isActive }) =>
                 isActive ? { color: "violet" } : { color: "black" }
               }
-              className="hover:bg-slate-500 font-bold text-black px-2 py-1 rounded-lg "
+              className="hover:bg-violet-200 font-bold text-black px-6 py-1 rounded-full "
             >
               Indrustry
             </NavLink>
@@ -71,7 +71,7 @@ const Navbar = () => {
               style={({ isActive }) =>
                 isActive ? { color: "violet" } : { color: "black" }
               }
-              className="hover:bg-slate-500 font-bold text-black px-2 py-1 rounded-lg"
+              className="hover:bg-violet-200 font-bold text-black px-6 py-1 rounded-full"
             >
               Career
             </NavLink>
@@ -80,7 +80,7 @@ const Navbar = () => {
               style={({ isActive }) =>
                 isActive ? { color: "violet" } : { color: "black" }
               }
-              className="hover:bg-slate-500 font-bold text-black px-2 py-1 rounded-lg "
+              className="hover:bg-violet-200 font-bold text-black px-6 py-1 rounded-full "
             >
               Contact
             </NavLink>

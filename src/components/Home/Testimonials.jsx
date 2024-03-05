@@ -45,6 +45,21 @@ const Testimonials = () => {
         "Greatway Software is recognized foe its good work culture and job stability. The organization provided me numerous opportunities to learn new things , to enhance my existing knowledge. That is all I felt.",
       stars: 5,
     },
+    {
+      id: 7,
+      name: "Yash Zore",
+      message:
+        "Greateway Software is one of the leading providers in IT Solutions offering Software Development, Web Development, DevOps, Cloud Computing, Artificial Intelligence and Testing and QA. It helps to digitally transform and grow your business.",
+      stars: 5,
+    },
+    {
+      id: 8,
+      name: "Swapnil Jadhav",
+      message:
+        "Greateway Software is one of the best Software company.Most amazing company when it comes to work life balance. Great management,  great infra and if you do will you will get visibility and opportunity.",
+      stars: 5,
+    },
+    
   ];
 
   return (
@@ -72,54 +87,6 @@ const Testimonials = () => {
         ))}
       </div>
 
-      {/* bubble animation background */}
-      {/* <div className="wrapper z-0">
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-        <div>
-          <span className="dot"></span>
-        </div>
-      </div> */}
     </main>
   );
 };

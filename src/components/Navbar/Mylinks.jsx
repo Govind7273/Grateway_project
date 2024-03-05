@@ -54,6 +54,18 @@ export const links = [
             link: "/Service-webDev",
             desc: "Engaging and user-friendly websites.",
           },
+          {
+            id: 13,
+            name: "IT Staffing",
+            link: "/Service-Staffing",
+            desc: "Comprehensive IT Staffing Solutions for Your Business.",
+          },
+          {
+            id: 12,
+            name: "Service Support",
+            link: "/Service-Support",
+            desc: "IT Support Solutions to Keep Your Business Running Smoothly.",
+          },
         ],
       },
     ],

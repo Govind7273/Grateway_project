@@ -73,7 +73,7 @@ const Home = () => {
   return (
     <>
       <main>
-        <section className="flex relative">
+        <section className="flex relative bg-black">
           {Video_Array.map((vid, idx) => (
             <VideoComponent
               key={vid.video}
