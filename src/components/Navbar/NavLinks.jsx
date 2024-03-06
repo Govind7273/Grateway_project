@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { links } from "./Mylinks";
 
 const NavLinks = () => {
@@ -19,7 +19,9 @@ const NavLinks = () => {
                 setSubHeading("");
               }}
             >
+              <Link to='/Service-SoftDev'>
               {link.name}
+              </Link>
 
               <span className="text-xl md:hidden  ">
                 {heading === link.name ? (

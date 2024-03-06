@@ -64,7 +64,7 @@ const Navbar = () => {
               className="hover:bg-violet-200 font-bold text-black px-6 py-1 rounded-full "
             >
               
-Industry
+              Industries
             </NavLink>
 
             <NavLink
