@@ -1,12 +1,13 @@
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Meta_Data from "./functions/Seo_Meta";
 
 const AboutUs = lazy(() => import("./components/AboutUs/AboutUs"));
 const CareersPage = lazy(() => import("./components/Careers/CareersPage"));
 const ContactUs = lazy(() => import("./components/ContactUs/ContactUs"));
 const Footer = lazy(() => import("./components/Footer"));
-const Home = lazy(() => import("./components/Home/Home"));
+import Home from "./components/Home/Home";
 const Navbar = lazy(() => import("./components/Navbar/Navbar"));
 const Indrustry = lazy(() => import("./components/Indrustry/Indrustry"));
 const ServiceComponent = lazy(() =>
@@ -46,65 +47,121 @@ function App() {
       <Navbar />
       <Suspense fallback={<Loading />}>
         <Routes>
-          <Route exact path="/" element={<Home />}></Route>
-          <Route exact path="/AboutUs" element={<AboutUs />}></Route>
-          <Route exact path="/ContactUs" element={<ContactUs />}></Route>
-          <Route exact path="/Career" element={<CareersPage />}></Route>
+          <Route
+            exact
+            path="/"
+            element={<Home Meta_Data={Meta_Data.home} />}
+          ></Route>
+          <Route
+            exact
+            path="/AboutUs"
+            element={<AboutUs Meta_Data={Meta_Data.aboutus} />}
+          ></Route>
+          <Route
+            exact
+            path="/ContactUs"
+            element={<ContactUs Meta_Data={Meta_Data.contactUs} />}
+          ></Route>
+          <Route
+            exact
+            path="/Career"
+            element={<CareersPage Meta_Data={Meta_Data.career} />}
+          ></Route>
 
-          <Route exact path="/Indrustry" element={<Indrustry />}></Route>
+          <Route
+            exact
+            path="/Indrustry"
+            element={<Indrustry Meta_Data={Meta_Data.indrustry} />}
+          ></Route>
           <Route
             exact
             path="/Service-softDev"
-            element={<ServiceComponent data={SoftDevServices} />}
+            element={
+              <ServiceComponent
+                data={SoftDevServices}
+                Meta_Data={Meta_Data.Service_softDev}
+              />
+            }
           ></Route>
           <Route
             exact
             path="/Service-cloud"
-            element={<ServiceComponent data={CloudServices} />}
+            element={
+              <ServiceComponent
+                data={CloudServices}
+                Meta_Data={Meta_Data.Service_cloud}
+              />
+            }
           ></Route>
           <Route
             exact
             path="/Service-devOps"
-            element={<ServiceComponent data={DevOpsServices} />}
+            element={
+              <ServiceComponent
+                data={DevOpsServices}
+                Meta_Data={Meta_Data.Service_devOps}
+              />
+            }
           ></Route>
           <Route
             exact
             path="/Service-webDev"
-            element={<ServiceComponent data={WebDevServices} />}
+            element={
+              <ServiceComponent
+                data={WebDevServices}
+                Meta_Data={Meta_Data.Service_webDev}
+              />
+            }
           ></Route>
 
           {/* addition of the another route for the second service section */}
           <Route
             exact
             path="/Service-testingAndQA"
-            element={<SecondServiceComponent data={TestingAndQAServices} />}
+            element={
+              <SecondServiceComponent
+                data={TestingAndQAServices}
+                Meta_Data={Meta_Data.Service_testingAndQA}
+              />
+            }
           ></Route>
 
           {/* addition of another route for crm services */}
           <Route
             exact
             path="/Service-crm"
-            element={<SecondServiceComponent data={CRMServices} />}
+            element={
+              <SecondServiceComponent
+                data={CRMServices}
+                Meta_Data={Meta_Data.Service_crm}
+              />
+            }
           ></Route>
 
           {/* big data route */}
           <Route
             exact
             path="/Service-bigData"
-            element={<BigDataService />}
+            element={<BigDataService Meta_Data={Meta_Data.Service_bigData} />}
           ></Route>
 
           {/* Ai And Ml route */}
-          <Route exact path="/Service-AI" element={<AiAndMLService />}></Route>
+          <Route
+            exact
+            path="/Service-AI"
+            element={<AiAndMLService Meta_Data={Meta_Data.Service_AI} />}
+          ></Route>
           <Route
             exact
             path="/Service-Support"
-            element={<ServiceSupport />}
+            element={<ServiceSupport Meta_Data={Meta_Data.Service_Support} />}
           ></Route>
           <Route
             exact
             path="/Service-Staffing"
-            element={<ServicesStaffing />}
+            element={
+              <ServicesStaffing Meta_Data={Meta_Data.Service_Staffing} />
+            }
           ></Route>
         </Routes>
       </Suspense>

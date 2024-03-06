@@ -4,6 +4,7 @@ import { MdOutlineSupportAgent } from "react-icons/md";
 import { BiMessageDots } from "react-icons/bi";
 import { IoTime } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 function Accordion(props) {
   return (
     <div className="border rounded-md mb-1">
@@ -25,7 +26,9 @@ function Accordion(props) {
   );
 }
 
-const ServiceSupport = () => {
+const ServiceSupport = ({Meta_Data}) => {
+  const { Title, Description, Link:link } = Meta_Data;
+
   const Supports = [
     { id: 1, logo: MdOutlineSupportAgent, text: "Customer Support" },
     { id: 2, logo: BiMessageDots, text: "features Queries" },
@@ -77,16 +80,21 @@ const ServiceSupport = () => {
   };
   return (
     <>
+       <Helmet>
+        <title>{Title}</title>
+        <meta name="description" content={Description} />
+        <link rel="canonical" href={link} />
+      </Helmet>
       {/* hero section */}
-      <section class="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
-        <div class="pharma_img h-full w-full">
-          <img class="h-full w-full" src={bg} alt="support_bg" />
+      <section className="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
+        <div className="pharma_img h-full w-full">
+          <img className="h-full w-full" src={bg} alt="support_bg" />
         </div>
-        <div class="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 class="text-white px-5 font-extrabold text-[3rem] md:text-[4rem]">
+        <div className="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
+          <h1 className="text-white px-5 font-extrabold text-[3rem] md:text-[4rem]">
             Welcome to GreateWay Support
           </h1>
-          <p class="text-lg text-white md:font-bold">
+          <p className="text-lg text-white md:font-bold">
             Need a hand? Our support team is just a click away!
           </p>
         </div>
