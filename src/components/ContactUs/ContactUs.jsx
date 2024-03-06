@@ -6,9 +6,19 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AddressMap from "./AddressMap";
 import ContactForm from "./ContactForm";
+import { Helmet } from "react-helmet-async";
 
-const ContactUs = () => {
+const ContactUs = ({Meta_Data}) => {
+  const { Title, Description, Link } = Meta_Data;
+
   return (
+    <>
+      <Helmet>
+        <title>{Title}</title>
+        <meta name="description" content={Description} />
+        <link rel="canonical" href={Link} />
+      </Helmet>
+  
     <div className="w-full overflow-x-hidden pt-20 px-3  flex flex-col justify-center items-center gap-4 bg-slate-900 dark:text-white">
       <div className="flex w-[100%] overflow-x-hidden mt-4 mb-10  md:flex-row flex-col flex-wrap justify-center  bg-slate-700 rounded-xl ">
         {/* left section */}
@@ -58,6 +68,7 @@ const ContactUs = () => {
       </div>
       <AddressMap />
     </div>
+    </>
   );
 };
 

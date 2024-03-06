@@ -1,10 +1,20 @@
 import { useState } from "react";
 import JobsCard from "./JobsCard";
 import ModalForm from "./ModalForm";
+import { Helmet } from "react-helmet-async";
 
-const CareersPage = () => {
+const CareersPage = ({Meta_Data}) => {
+  const { Title, Description, Link } = Meta_Data;
+
   const [isOpen,setIsOpen]=useState(false);
   return (
+    <>
+      <Helmet>
+        <title>{Title}</title>
+        <meta name="description" content={Description} />
+        <link rel="canonical" href={Link} />
+      </Helmet>
+  
     <div className="md:pt-16 text-white overflow-x-hidden bg-slate-800 ">
       
       {/* First header section */}
@@ -42,6 +52,7 @@ const CareersPage = () => {
         isOpen && <ModalForm setModal={setIsOpen} />
       }
     </div>
+    </>
   );
 };
 

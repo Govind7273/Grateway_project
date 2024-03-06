@@ -4,7 +4,11 @@ import faBrain from "./Images/brain.png";
 import faCogs from "./Images/cogs.png";
 import faRobot from "./Images/futuristic.png";
 import faServer from "./Images/server.png";
-const AiAndMLService = () => {
+import { Helmet } from "react-helmet-async";
+const AiAndMLService = ({Meta_Data}) => {
+  const { Title, Description, Link:link } = Meta_Data;
+
+
   const percentList = [
     {
       id: 1,
@@ -62,6 +66,12 @@ const AiAndMLService = () => {
     },
   ];
   return (
+    <>
+   <Helmet>
+        <title>{Title}</title>
+        <meta name="description" content={Description} />
+        <link rel="canonical" href={link} />
+      </Helmet>
     <section className="w-[100vw] overflow-x-hidden bg-black">
       {/* First Section */}
       <div className="w-[100%] relative flex justify-center items-center ">
@@ -149,6 +159,7 @@ const AiAndMLService = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

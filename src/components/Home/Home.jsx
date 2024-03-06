@@ -7,6 +7,8 @@ import Services from "./Services";
 import Special from "./Special";
 import Tech from "./Tech";
 import Testimonials from "./Testimonials";
+import { Helmet } from "react-helmet-async";
+import {Link} from "react-router-dom"
 
 const VideoComponent = ({ video, title, desc, link, isVisible }) => (
   <div className={`relative ${isVisible ? "" : "hidden"} h-screen md:h-full`}>
@@ -17,17 +19,17 @@ const VideoComponent = ({ video, title, desc, link, isVisible }) => (
       autoPlay
       muted
     />
-    <div className="absolute items-center left-1 h-full top-0 flex w-full p-2 md:p-5">
-      <div className="md:max-w-[40rem] w-full flex-col space-y-3">
+    <div className="absolute items-center left-1 h-full top-0 flex w-full  p-2 md:p-5">
+      <div className="md:max-w-[40rem] w-full flex flex-col gap-2  space-y-3">
         <h1 className="loop_video_title text-4xl md:text-6xl text-cyan-300 max-w-[50rem] font-bold font-headingFont">
           {title}
         </h1>
         <p className="loop_video_desc max-w-[25rem] text-xl md:text-sm font-bold text-white font-navlistFont">
           {desc}
         </p>
-        <button className="loop_video_btn items-start bg-cyan-300 px-3 py-1 md:px-4 md:py-2 rounded-lg font-bold text-slate-800 hover:bg-white hover:text-cyan-700 transition-all 0.2 ease-out hover:border">
+        <Link to={link} className="loop_video_btn items-start w-fit bg-cyan-300 px-3 py-1 mt-10 md:px-4 md:py-2 rounded-lg font-bold text-slate-800 hover:bg-white hover:text-cyan-700 transition-all 0.2 ease-out hover:border">
           Explore with us
-        </button>
+        </Link>
       </div>
     </div>
   </div>
@@ -38,29 +40,30 @@ const Video_Array = [
     video: dnatrim,
     title: "AI Revolutionizes Healthcare",
     desc: "Websites, apps that Transforming Diagnostics, Personalized Medicine, and Patient Care ",
-    link: "/pharma",
+    link: "/Service-AI",
   },
   {
     video: robottrim,
     title: "The Transformative Power of Machine Learning",
     desc: "Machine Learning (ML) is revolutionizing industries across the globe, and healthcare is no exception.",
-    link: "/artificial-intelligence",
+    link: "/Service-bigData",
   },
   {
     video: vrtrim,
     title: "Harnessing the Potential of Virtual Reality",
     desc: "Creating immersive gaming and movie experiences.",
-    link: "/big-data-analytics",
+    link: "/Service-cloud",
   },
   {
     video: worktrim,
     title: "Creates projects considering the future scope",
     desc: "AI algorithms analyze project data to provide insights, predictions, and recommendations",
-    link: "/project-management",
+    link: "//Service-crm",
   },
 ];
 
-const Home = () => {
+const Home = ({ Meta_Data }) => {
+  const { Title, Description, Link } = Meta_Data;
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -72,6 +75,11 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{Title}</title>
+        <meta name="description" content={Description} />
+        <link rel="canonical" href={Link} />
+      </Helmet>
       <main>
         <section className="flex relative bg-black">
           {Video_Array.map((vid, idx) => (
@@ -99,7 +107,6 @@ const Home = () => {
       <Tech />
 
       {/*reviews for the site */}
-      
 
       <Testimonials />
     </>
