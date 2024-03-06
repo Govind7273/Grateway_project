@@ -9,7 +9,7 @@ const ServiceComponent = ({data,Meta_Data}) => {
   const { Title, Description, Link } = Meta_Data;
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Helmet
       >
         <title>{Title}</title>
@@ -28,7 +28,7 @@ const ServiceComponent = ({data,Meta_Data}) => {
       {/* Fifth Section */}
         <Section5 obj={data.fifth} />
     </div>
-    </>
+    </div>
   );
 };
 

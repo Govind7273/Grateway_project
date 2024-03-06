@@ -282,7 +282,7 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
         </div>
         <div className="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
           <h1 className="text-blue-300 px-5 font-bold text-[3rem] md:text-[4rem]">
-            Telecome Services
+            Telecom Services
           </h1>
           <p className="text-lg text-blue-300 md:font-bold">
           AI-Powered Networks: Transforming Telecommunications with Smart Solutions

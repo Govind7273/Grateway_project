@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import BigDataImage from "./Images/BigDataAnalysis.jpg";
 import AiIcon from "./Images/BigDataIcons/artificial-intelligence.svg";
@@ -7,7 +8,6 @@ import DataSecurityIcon from "./Images/BigDataIcons/data-security.svg";
 import InternetOfThingsIcon from "./Images/BigDataIcons/internet-things.svg";
 import MachineLearningIcon from "./Images/BigDataIcons/machine-learning.svg";
 import DataCollectionImg from "./Images/DataCollection.jpg";
-import { Helmet } from "react-helmet-async";
 const BigDataService = ({ Meta_Data }) => {
   const { Title, Description,Link:link } = Meta_Data;
  
@@ -137,7 +137,7 @@ const BigDataService = ({ Meta_Data }) => {
             <h4 className="text-xl text-violet-300 font-bold">Storages:</h4>
             <ul className="list-disc ms-6 font-bold">
               <li>Google Cloud Storage</li>
-              <li>Amazon s3(Simple Storage service)</li>
+              <li>Amazon S3(Simple Storage service)</li>
               <li>Microsoft Azure Blob Storage</li>
               <li>IBM Cloud Object Storage</li>
             </ul>
