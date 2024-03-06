@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+
 const ServiceCard = ({ title, description, image }) => {
   return (
     <div className="bg-white rounded-[10px] shadow-lg shadow-violet-500">
@@ -7,8 +9,17 @@ const ServiceCard = ({ title, description, image }) => {
     </div>
   );
 };
-const ServicesStaffing = () => {
+const ServicesStaffing = ({Meta_Data}) => {
+  const { Title, Description, Link } = Meta_Data;
+
   return (
+    <>
+    <Helmet>
+        <title>{Title}</title>
+        <meta name="description" content={Description} />
+        <link rel="canonical" href={Link} />
+      </Helmet>
+
     <section className="w-[100vw] relative overflow-x-hidden pt-0 bg-black">
       {/* First Section */}
       <div className="w-full relative flex flex-wrap justify-center items-center bg-gray-100 min-h-screen">
@@ -94,6 +105,7 @@ const ServicesStaffing = () => {
            </div>
       </div>
     </section>
+    </>
   );
 };
 
