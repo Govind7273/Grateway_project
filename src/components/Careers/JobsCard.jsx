@@ -75,14 +75,15 @@ const JobsCard = ({ setModal }) => {
       education: "Any Graduate",
     },
     {
-      position: "Software Engineering",
+      position: "Software Tester",
       jobDescription:
-        "We're on the lookout for a self-motivated and enthusiastic Software Engineer, at the beginning of their career, to join our collaborative team. The right candidate will be passionate about coding and eager to learn and grow with us.",
+        "We're on the lookout for a self-motivated and enthusiastic Software Tester, at the beginning of their career, to join our collaborative team. The right candidate will be passionate about coding and eager to learn and grow with us.",
       Requirement: [
         "Experience with software development methodologies (Agile, Scrum).",
         "Proficiency in at least one programming language (Python, Java, C++, etc.).",
         "Strong problem-solving and analytical skills.",
-        "Experience: 0-5 year",
+        "should have knowledge of Selenium,Cypress",
+        "Experience: 2-5 year",
         "Location :Kharadi, Pune",
       ],
       education:

@@ -18,8 +18,8 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">About Us</h3>
           <p className="mb-4">
-          GREATEWAY SOFTWARE PVT LTD. is a comprehensive IT company
-            offering end-to-end technology solutions. With expertise in software
+            GREATEWAY SOFTWARE PVT LTD. is a comprehensive IT company offering
+            end-to-end technology solutions. With expertise in software
             development, network infrastructure, cybersecurity, cloud services,
             and IT consulting, we empower businesses to thrive in the digital
             era.
@@ -27,26 +27,39 @@ const Footer = () => {
           <div className="">
             <FontAwesomeIcon
               icon={faFacebook}
-              className="mr-4 size-10 bg-[#4267B2] rounded-full"
+              className="mr-4 size-10 bg-[#4267B2] hover:cursor-pointer rounded-full"
             />
             <FontAwesomeIcon
               icon={faInstagram}
-              className="mr-4 size-10 bg-pink-600 rounded-xl"
+              className="mr-4 size-10 bg-pink-600 hover:cursor-pointer  rounded-xl"
             />
             <FontAwesomeIcon
               icon={faLinkedin}
-              className="mr-4 size-10 bg-[#0A66C2]  rounded-md"
+              className="mr-4 size-10 bg-[#0A66C2] hover:cursor-pointer  rounded-md"
             />
           </div>
         </div>
         <div>
           <h3 className="text-lg font-semibold mb-4">Our Services</h3>
           <ul>
-            <li className="mb-2">Software Development</li>
-            <li className="mb-2">Web Development</li>
-            <li className="mb-2">Cloud Computing</li>
-            <li className="mb-2">Artificial Intelligence</li>
-            <li className="mb-2">DevOps</li>
+            <li className="mb-2">
+              <Link to={"/Service-softDev"}>Software Development</Link>
+            </li>
+            <li className="mb-2">
+              <Link to={"/Service-webDev"}>Web Development</Link>
+            </li>
+            <li className="mb-2">
+              {" "}
+              <Link to={"/Service-cloud"}>Cloud Computing</Link>
+            </li>
+            <li className="mb-2">
+              {" "}
+              <Link to={"/Service-AI"}>Artificial Intelligence</Link>
+            </li>
+            <li className="mb-2">
+              {" "}
+              <Link to={"/Service-devOps"}>DevOps</Link>
+            </li>
           </ul>
         </div>
         <div>
@@ -56,13 +69,13 @@ const Footer = () => {
               <Link to={"/AboutUs"}>About Us</Link>
             </li>
             <li className="mb-2">
-            <Link to={"/Service-crm"}>Services</Link>
+              <Link to={"/Service-crm"}>Services</Link>
             </li>
             <li className="mb-2">
-            <Link to={"/ContactUs"}>Contact Us</Link>
+              <Link to={"/ContactUs"}>Contact Us</Link>
             </li>
             <li className="mb-2">
-            <Link to={"/Career"}>Career</Link>
+              <Link to={"/Career"}>Career</Link>
             </li>
           </ul>
         </div>
@@ -79,7 +92,8 @@ const Footer = () => {
           <div className="flex items-center mt-[-40px]">
             <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />
             <span className="mt-10">
-            Office No: 505, 06th  Floor, Stellar Spaces, Opposite Zensar IT Park, Kharadi, Pune 411014
+              Office No: 505, 06th Floor, Stellar Spaces, Opposite Zensar IT
+              Park, Kharadi, Pune 411014
             </span>
           </div>
         </div>
