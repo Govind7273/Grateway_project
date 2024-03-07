@@ -40,12 +40,14 @@ import {
   SoftDevServices,
   WebDevServices,
 } from "./components/Services/ServiceData/SoftDevServices";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
     <>
       <Navbar />
       <Suspense fallback={<Loading />}>
+        <ScrollToTop/>
         <Routes>
           <Route
             exact
