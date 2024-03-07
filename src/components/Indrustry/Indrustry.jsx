@@ -75,10 +75,10 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
           />
         </div>
         <div className="pahrma_text absolute overflow-hidden top-0 w-full left-0 p-4 gap-5 flex-col h-full flex justify-center items-center">
-          <h1 className="text-[#ab9443] px-5 font-extrabold text-[3rem] md:text-[4rem]">
+          <h1 className="text-[#f2d66e] px-5 font-extrabold text-[3rem] md:text-[4rem]">
             Pharmaceutical
           </h1>
-          <p className="text-lg text-[#ab9443] md:font-bold">
+          <p className="text-lg text-[#f2d66e] md:font-bold">
             Our advanced IT solutions empower pharmaceutical companies to drive
             innovation and optimize operations
           </p>
@@ -86,7 +86,7 @@ const Finance_list=["Blockchain and Cryptocurrency","Algorithmic Trading","Finan
             {pharma_list.map((name, index) => (
               <div
                 key={index}
-                className="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-[#ab9443] rounded-md bg-[#ab9443]"
+                className="border md:text-xl w-full md:w-fit text-xs px-3 p-3 flex justify-center items-center hover:cursor-pointer hover:scale-125 transition-all ease-linear border-[#f2d66e] rounded-md bg-[#f2d66e]"
               >
                 <h1>{name}</h1>
               </div>
