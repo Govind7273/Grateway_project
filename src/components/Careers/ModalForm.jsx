@@ -29,10 +29,10 @@ const ModalForm = ({ setModal }) => {
           value={contact[`${name.toLowerCase()}`]}
           name={name.toLowerCase()}
           onChange={(e) =>
-            setContact({ ...contact, [e.target.name]: e.target.value.trim() })
+            setContact({ ...contact, [e.target.name]: e.target.value})
           }
           className="border outline-none w-full border-slate-300 rounded-[6px] mb-2 px-2 py-2"
-          placeholder={placeholder}
+          placeholder={name==="Resume"?"Enter your LinkedIn Link":placeholder}
         />
         {error ? <div className="text-red-500 text-xs">{error}</div> : ""}
       </div>

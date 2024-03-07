@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { links } from "./Mylinks";
 
 const NavLinks = () => {
@@ -19,16 +19,16 @@ const NavLinks = () => {
                 setSubHeading("");
               }}
             >
+              <Link to='/Service-SoftDev'>
               {link.name}
+              </Link>
 
               <span className="text-xl md:hidden  ">
-                {
-                  heading === link.name ? (
-                    <MdKeyboardArrowDown />
-                  ) : (
-                    <MdKeyboardArrowUp />
-                  )
-                }
+                {heading === link.name ? (
+                  <MdKeyboardArrowDown />
+                ) : (
+                  <MdKeyboardArrowUp />
+                )}
               </span>
               <span className="text-xl md:mt-1 md:ml-1  md:block hidden group-hover:rotate-180 transition-all duration-300 ease-linear group-hover:-mt-2">
                 <MdKeyboardArrowDown />
@@ -45,11 +45,21 @@ const NavLinks = () => {
                   </div>
                   <div className="bg-white rounded-lg p-2 text-black md:h-full h-[20rem] overflow-scroll md:overflow-hidden">
                     {link.sublinks.map((mysublinks) => (
-                      <div key={mysublinks.name} className=" grid md:grid-cols-2 gap-2 md:p-2 my-2 ">
+                      <div
+                        key={mysublinks.name}
+                        className=" grid md:grid-cols-2 gap-2 md:p-2 my-2 "
+                      >
                         {mysublinks.sublink.map((slink) => (
-                          <span key={slink.name} className="text-sm text-gray-600 border-gray-800 hover:bg-violet-200 hover:bg-opacity-60 rounded-[8px] p-2">
+                          <span
+                            key={slink.name}
+                            className="text-sm text-gray-600 border-gray-800 hover:bg-violet-200 hover:bg-opacity-60 rounded-[8px] p-2"
+                          >
                             <NavLink
-                            style={({isActive})=>(isActive?{color:'violet'}:{color:"white"})} 
+                              style={({ isActive }) =>
+                                isActive
+                                  ? { color: "violet" }
+                                  : { color: "white" }
+                              }
                               to={slink.link}
                               className="hover:text-purple-500"
                             >
@@ -74,8 +84,8 @@ const NavLinks = () => {
           `}
           >
             {/* sublinks */}
-            {link.sublinks.map((slinks) => (
-              <div>
+            {link.sublinks.map((slinks,index) => (
+              <div key={index}>
                 <div>
                   <h1
                     onClick={() =>
@@ -87,11 +97,7 @@ const NavLinks = () => {
                   >
                     {slinks.Head}
                   </h1>
-                  <div
-                 
-                  >
-                 
-                  </div>
+                
                 </div>
               </div>
             ))}

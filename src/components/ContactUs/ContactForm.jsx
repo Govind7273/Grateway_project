@@ -36,7 +36,7 @@ const ContactForm = () => {
               [e.target.name]: e.target.value,
             })
           }
-          className="mt-4  w-full p-2 bg-slate-600 bg-opacity-30 text-white rounded-md flex  border-violet-500 border-l-4 shadow-md"
+          className="mt-4 md:w-[20rem] w-full p-3 bg-slate-600 bg-opacity-30 text-white rounded-md flex  border-violet-500 border-l-4 shadow-md"
         />
         {error ? <div className="text-red-500 text-xs">{error}</div> : ""}
       </div>
@@ -87,6 +87,7 @@ const ContactForm = () => {
         message: "",
       });
       seterror({});
+      document.getElementById("subject").value = "";
       captch.current.reset();
     },
     onError: () => toast.error("something went wrong"),
@@ -132,8 +133,49 @@ const ContactForm = () => {
         <div className="flex md:gap-8 w-full flex-col md:flex-row ">
           {/* phone number field */}
           {InputBox("phone", "text", error.phone)}
-          {InputBox("subject", "text", error.subject)}
+          <div className="">
+            <div
+              className="flex flex-col p-3 mt-4 w-full md:w-[20rem]  bg-slate-600 bg-opacity-30 text-black rounded-md border-violet-500 border-l-4 shadow-md
+"
+            >
+              <select
+                onChange={(e) =>
+                  setContactDetails({
+                    ...ContactDetails,
+                    [e.target.name]: e.target.value,
+                  })
+                }
+                id="subject"
+                name="subject"
+                placeholder="enter subject"
+                className="bg-transparent text-white"
+                // value={ContactDetails.subject}
+              >
+                <option className="text-white hidden" value="">
+                 How can we Help ?
+                </option>
+                <option className="text-black" value="About Service">
+                  About Service
+                </option>
+                <option className="text-black" value="Technical Question">
+                  Technical Question
+                </option>
+                <option className="text-black" value="Career">
+                  Career
+                </option>
+                <option className="text-black" value="Something Else">
+                  Something Else
+                </option>
+              </select>
+            </div>
+            {error.subject ? (
+              <div className="text-red-500 text-xs">{error.subject}</div>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
+
         <div className="flex flex-col">
           {Textarea("message", error.message)}
         </div>
@@ -144,7 +186,7 @@ const ContactForm = () => {
         />
         <button
           type="submit"
-          className="md:w-[30%] w-[90%] bg-violet-500 transition-all duration-150 ease-linear hover:bg-white hover:text-violet-700 font-semibold shadow-[5px_5px_10px_3px] shadow-violet-900 text-white px-4 py-2 rounded-md mt-4"
+          className="md:w-[30%] w-full bg-violet-500 transition-all duration-150 ease-linear hover:bg-white hover:text-violet-700 font-semibold shadow-[5px_5px_10px_3px] shadow-violet-900 text-white px-4 py-2 rounded-md mt-4"
         >
           {isPending ? "sending..." : "Send Message"}
         </button>

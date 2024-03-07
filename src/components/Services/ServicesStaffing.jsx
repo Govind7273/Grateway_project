@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+
 const ServiceCard = ({ title, description, image }) => {
   return (
     <div className="bg-white rounded-[10px] shadow-lg shadow-violet-500">
@@ -7,16 +9,25 @@ const ServiceCard = ({ title, description, image }) => {
     </div>
   );
 };
-const ServicesStaffing = () => {
+const ServicesStaffing = ({Meta_Data}) => {
+  const { Title, Description, Link } = Meta_Data;
+
   return (
+    <>
+    <Helmet>
+        <title>{Title}</title>
+        <meta name="description" content={Description} />
+        <link rel="canonical" href={Link} />
+      </Helmet>
+
     <section className="w-[100vw] relative overflow-x-hidden pt-0 bg-black">
       {/* First Section */}
       <div className="w-full relative flex flex-wrap justify-center items-center bg-gray-100 min-h-screen">
-        <span className="absolute w-[200px] h-[100px] md:w-[450px] md:h-[450px] bg-gradient-to-tr from-violet-600 to-cyan-300 md:top-32 top-24 right-10 md:left-10 rounded-[10px] md:rounded-[0%_100%_31%_69%_/_46%_42%_58%_54%] flex justify-center items-center font-headingFont text-[5rem] z-10">
+        <span className="absolute w-[200px]  h-[100px] md:w-[450px] md:h-[450px] bg-gradient-to-tr from-violet-600 to-cyan-300 md:top-32 top-14 right-10 md:left-10 rounded-[10px] md:rounded-[0%_100%_31%_69%_/_46%_42%_58%_54%] flex justify-center items-center font-headingFont text-[5rem] z-10">
           &#x1F3C6;
         </span>
         {/* Left */}
-        <div className="absolute bottom-0 z-10 w-4/5 md:w-3/5 lg:w-2/5 p-8 bg-white shadow-lg rounded-[10px]">
+        <div className="absolute md:bottom-0 bottom-10 z-10 w-4/5 md:w-3/5 lg:w-2/5 p-8 bg-white shadow-lg rounded-[10px]">
           <h1 className="text-3xl font-extrabold text-gray-800 mb-4">
             IT Staffing Services
           </h1>
@@ -31,7 +42,7 @@ const ServicesStaffing = () => {
 
         {/* Right */}
         <img
-          className=" absolute right-0  md:w-1/2 md:h-[80vh] h-full w-full  object-cover"
+          className=" absolute right-0  md:w-1/2 md:h-[80vh] h-full w-full   object-cover"
           src="https://img.freepik.com/free-photo/programming-background-concept_23-2150170134.jpg?t=st=1709556007~exp=1709559607~hmac=ae084e82d4402819764b413586cde32cedbe659f6adc3250f3df6d0d21ce2732&w=740"
           alt="IT Staffing Image"
         />
@@ -73,16 +84,16 @@ const ServicesStaffing = () => {
            </div>
 
            {/* Right */}
-           <div className="col-span-1">
+           <div className="col-span-1 p-8">
               <img src="https://img.freepik.com/free-photo/man-sits-dark-room-front-blank-laptop-screen_169016-48879.jpg?t=st=1709558796~exp=1709562396~hmac=77e756c610e7e0de1bc30619b6380b2064c82a7dec915af251efc9bc118eaad6&w=740" alt="" />
            </div>
       </div>
 
      
 {/* Fourth section */}
-<div className="grid md:grid-cols-3 grid-cols-1 gap-8 bg-gray-200">
+<div className="grid md:grid-cols-2 grid-cols-1 gap-8 bg-gray-200">
            {/* left */}
-           <div className="col-span-2">
+           <div className="col-span-1 p-8">
               <img src="https://img.freepik.com/free-photo/smart-businesswoman-working-her-laptop_23-2148452634.jpg?t=st=1709558988~exp=1709562588~hmac=88111036d9f0476f616313d4daac176c2275550f41dbd5158b46172a33d40aea&w=740" alt="" />
            </div>
           
@@ -94,6 +105,7 @@ const ServicesStaffing = () => {
            </div>
       </div>
     </section>
+    </>
   );
 };
 

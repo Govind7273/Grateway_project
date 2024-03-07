@@ -3,7 +3,7 @@ export const FirstSocialProofSection = () => {
     {
       id: "1",
       count: '3.5+',
-      message: "Years Helping Business",
+      message: "Years In Helping Business",
     },
     {
       id: "2",

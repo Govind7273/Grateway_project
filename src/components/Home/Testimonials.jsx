@@ -6,7 +6,7 @@ const Testimonials = () => {
       id: 1,
       name: "Harhal Kharche",
       message:
-        "Greatway Software is not just a workplace; it's a community where your ideas are heard, your skills are honed. Proud to be a part of a company that not only excels in its industry but also cares deeply about its most valuable asset.",
+        "GreateWay Software is not just a workplace; it's a community where your ideas are heard, your skills are honed. Proud to be a part of a company that not only excels in its industry but also cares deeply about its most valuable asset.",
       stars: 5,
     },
     ,
@@ -14,49 +14,49 @@ const Testimonials = () => {
       id: 2,
       name: "Pankaj Bhagat",
       message:
-        "Working at Greatway Software has been a rewarding experience. The dynamic work environment, focus on learning, and collaborative spirit make it an excellent place for professional growth. While there are areas for improvement",
+        "Working at GreateWay Software has been a rewarding experience. The dynamic work environment, focus on learning, and collaborative spirit make it an excellent place for professional growth. While there are areas for improvement",
       stars: 5,
     },
     {
       id: 3,
       name: "Prashik kambale",
       message:
-        "My experience at Greatway Software India Pvt.Ltd was outstanding, thanks to its innovative culture, focus on employee development, and excellent work-life balance. Grateful for the enriching opportunities.",
+        "My experience at GreateWay Software India Pvt.Ltd was outstanding, thanks to its innovative culture, focus on employee development, and excellent work-life balance. Grateful for the enriching opportunities.",
       stars: 5,
     },
     {
       id: 4,
       name: "Shantanu Arvindekar",
       message:
-        "Serving DevOps role at Greatway Software, thanks to its cooperative culture, focus on employee development, and excellent work balance. Grateful for the enriching opportunities and collaborative environment.",
+        "Serving DevOps role at GreateWay Software, thanks to its cooperative culture, focus on employee development, and excellent work balance. Grateful for the enriching opportunities and collaborative environment.",
       stars: 5,
     },
     {
       id: 5,
       name: "Amol",
       message:
-        "Greatway Software fosters a vibrant company culture that values innovation. The work environment is dynamic, encouraging employees to bring their best ideas to the table, provides services in web development, Software development.",
+        "GreateWay Software fosters a vibrant company culture that values innovation. The work environment is dynamic, encouraging employees to bring their best ideas to the table, provides services in web development, Software development.",
       stars: 5,
     },
     {
       id: 6,
       name: "Vishnu Jadhav",
       message:
-        "Greatway Software is recognized foe its good work culture and job stability. The organization provided me numerous opportunities to learn new things , to enhance my existing knowledge. That is all I felt.",
+        "GreateWay Software is recognized foe its good work culture and job stability. The organization provided me numerous opportunities to learn new things , to enhance my existing knowledge. That is all I felt.",
       stars: 5,
     },
     {
       id: 7,
       name: "Yash Zore",
       message:
-        "Greateway Software is one of the leading providers in IT Solutions offering Software Development, Web Development, DevOps, Cloud Computing, Artificial Intelligence and Testing and QA. It helps to digitally transform and grow your business.",
+        "GreateWay Software is one of the leading providers in IT Solutions offering Software Development, Web Development, DevOps, Cloud Computing, Artificial Intelligence and Testing and QA. It helps to digitally transform and grow your business.",
       stars: 5,
     },
     {
       id: 8,
       name: "Swapnil Jadhav",
       message:
-        "Greateway Software is one of the best Software company.Most amazing company when it comes to work life balance. Great management,  great infra and if you do will you will get visibility and opportunity.",
+        "GreateWay Software is one of the best Software company.Most amazing company when it comes to work life balance. Great management,  great infra and if you do will you will get visibility and opportunity.",
       stars: 5,
     },
     

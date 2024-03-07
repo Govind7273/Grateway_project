@@ -35,7 +35,7 @@ const Navbar = () => {
             open ? "block" : "hidden"
           } md:flex flex-col pl-6 md:pl-0 z-50 p-5 bg-white md:bg-white gap-4 absolute top-16 w-full transition-all 0.2s ease-in md:w-fit md:top-0 md:static justify-center md:flex-row md:items-center md:gap-4`}
         >
-          <div className="flex flex-col md:flex-row md:gap-5">
+          <div className="flex flex-col md:flex-row justify-center">
             <NavLink
               style={({ isActive }) =>
                 isActive ? { color: "violet" } : { color: "black" }
@@ -63,7 +63,8 @@ const Navbar = () => {
               }
               className="hover:bg-violet-200 font-bold text-black px-6 py-1 rounded-full "
             >
-              Indrustry
+              
+              Industries
             </NavLink>
 
             <NavLink
