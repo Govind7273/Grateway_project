@@ -151,8 +151,8 @@ const ContactForm = () => {
                 className="bg-transparent text-white"
                 // value={ContactDetails.subject}
               >
-                <option className="text-white" value="">
-                  Select the Subject
+                <option className="text-white hidden" value="">
+                 How can we Help ?
                 </option>
                 <option className="text-black" value="About Service">
                   About Service
