@@ -2,7 +2,7 @@ import AIImage from './images/artai.jpg';
 
  export const  ServiceInfoSection=()=> {
     return (
-      <div className="flex w-full h-[80vh] overflow-x-hidden  flex-wrap gap-10 p-10 relative">
+      <div className="flex w-full h-[80vh]   flex-wrap gap-10 p-10 relative">
         {/* left side component*/}
         <div className="flex-1 flex justify-center flex-col gap-10 ">
           {/* heading of component */}
