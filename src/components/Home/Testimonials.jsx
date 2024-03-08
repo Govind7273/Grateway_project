@@ -4,7 +4,7 @@ const Testimonials = () => {
   const reviews = [
     {
       id: 1,
-      name: "Harhal Kharche",
+      name: "Harshal Kharche",
       message:
         "GreateWay Software is not just a workplace; it's a community where your ideas are heard, your skills are honed. Proud to be a part of a company that not only excels in its industry but also cares deeply about its most valuable asset.",
       stars: 5,
@@ -63,16 +63,17 @@ const Testimonials = () => {
   ];
 
   return (
-    <main className="bg-gray-700 overflow-x-hidden p-5 flex flex-col justify-center items-center min-h-lvh">
+    <main className="bg-gray-700  p-5 flex flex-col justify-center items-center min-h-lvh">
       <div className="flex p-5 justify-center text-white">
         <h1 className="text-4xl font-black">Review's</h1>
       </div>
-      <div className="relative z-10 container flex flex-wrap justify-center items-center gap-5 bg-transparent p-6">
+      <div className="relative z-10 container flex flex-wrap justify-center items-center gap-4 bg-transparent">
         {reviews.map((review) => (
           <div className="box" key={review.id}>
             <div className="body">
-              <div className="front gap-10 rounded-tr-[53px] bg-white p-4">
-                <h1 className="text-[2.5rem] font-bold text-violet-500 text-center">
+              <div className="front gap-4 rounded-tr-[53px] bg-white p-4">
+                <p className="text-start font-semibold text-violet-500 text-lg">Client Review</p>
+                <h1 className="text-[1.5rem] font-bold text-violet-500 text-center">
                   {review.name}
                 </h1>
                 <Stars />
