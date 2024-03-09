@@ -76,7 +76,7 @@ const ModalForm = ({ setModal }) => {
       mutate();
     } catch (validationError) {
       // Display validation error using toast
-      toast.error("please cheack the form data");
+      toast.error("please check the form data");
       const newError = {};
       validationError.inner.forEach((err) => {
         newError[err.path.toLowerCase()] = err.message;

@@ -77,6 +77,15 @@ const Navbar = () => {
               Career
             </NavLink>
             <NavLink
+              to="/Intership"
+              style={({ isActive }) =>
+                isActive ? { color: "violet" } : { color: "black" }
+              }
+              className="hover:bg-violet-200 font-bold text-black px-6 py-1 rounded-full"
+            >
+              Internship
+            </NavLink>
+            <NavLink
               to="/ContactUs"
               style={({ isActive }) =>
                 isActive ? { color: "violet" } : { color: "black" }

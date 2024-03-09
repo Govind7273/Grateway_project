@@ -28,6 +28,8 @@ const Meta_Data = {
     Service_Support: { Title: "IT Support Services - GreateWay Software Solution", Description: "Ensure smooth operations and minimize downtime with our reliable IT support services.", Link: "http://www.greateway/Service-Support" },
 
     Service_Staffing: { Title: "Staffing Solutions - GreateWay Software Solution", Description: "Find the right talent for your projects with our comprehensive staffing solutions.", Link: "http://www.greateway/Service-Staffing" }
+    ,
+    Internship: { Title: "Internship - GreateWay Software Solution", Description: "Discover exciting Internship opportunities at GreateWay Software Solution. Join our team of innovators, problem solvers, and technology enthusiasts", Link: "http://www.greateway/Internship" }
 };
 
 export default Meta_Data;
