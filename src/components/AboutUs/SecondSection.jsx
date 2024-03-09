@@ -1,6 +1,6 @@
  export const SecondSection = () => {
     return (
-      <div className="flex w-[90%] overflow-hidden secondSectionPT2:mt-[-80vh] secondSectionPT:mt-[40vh] mt-[2vh] md:mt-[10px] flex-wrap gap-10 p-6 ">
+      <div className="flex w-[90%]  flex-wrap gap-10 p-6 ">
         {/* first left part */}
         {/* <div className="flex-2 text-white">
           <img
@@ -10,9 +10,9 @@
           />
         </div> */}
         {/* right side part */}
-        <div className="flex-1 w-[50%] items-center flex justify-center flex-col gap-10 ">
+        <div className="flex-1 w-[50%] items-center flex justify-center flex-col gap-10  ">
           {/* heading of component */}
-          <h1 className="text-4xl text-start font-bold font-headingFont text-violet-400">
+          <h1 className="text-4xl text-center p-4 font-bold  font-headingFont text-violet-400">
             Our Corporate Social Responsibility
           </h1>
 

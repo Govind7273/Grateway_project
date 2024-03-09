@@ -2,9 +2,9 @@ import AIImage from './images/artai.jpg';
 
  export const  ServiceInfoSection=()=> {
     return (
-      <div className="flex w-full h-[80vh]   flex-wrap gap-10 p-10 relative">
+      <div className="grid md:grid-cols-2 grid-cols-1 w-[100vw] gap-10 p-4 relative">
         {/* left side component*/}
-        <div className="flex-1 flex justify-center flex-col gap-10 ">
+        <div className="col-span-1 w-[100%] flex justify-center flex-col gap-10 ">
           {/* heading of component */}
           <h1 className="text-2xl text-start font-bold font-headingFont text-violet-400">
             Providing your business with a quality IT service is our passion.
@@ -25,9 +25,9 @@ import AIImage from './images/artai.jpg';
         </div>
 
         {/* Right side component */}
-        <div className="flex-2 flex items-center justify-center">
+        <div className="col-span-1 flex items-center justify-center">
           <img
-            className="md:w-[100%]  h-[220px] md:h-[450px] cursor-pointer rounded-lg "
+            className="md:w-[100%]   cursor-pointer rounded-lg "
             src={AIImage}
             alt=""
           />

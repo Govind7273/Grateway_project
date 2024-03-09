@@ -190,39 +190,39 @@ const JobsCard = ({ setModal }) => {
   };
 
   return (
-    <div className="flex flex-col justify-center w-full items-center p-6 ">
+    <div className="flex flex-col justify-center w-full items-center p-6 bg-white ">
       {/* card page title */}
-      <h1 className="text-5xl font-headingFont font-extrabold text-violet-500">
+      <h1 className="text-5xl font-headingFont font-extrabold text-zinc-950">
         Recent Openings
       </h1>
 
       {/* Multiple Cards */}
-      <div className="w-[100%] flex flex-wrap mt-10 gap-10 justify-around items-center">
+      <div className="w-[100%] grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 flex-wrap mt-10 gap-x-14 gap-y-10 justify-around items-center">
         {/* card info */}
         {cardData.map((cardItem) => (
           <div
             key={cardItem.position}
-            className="md:w-[450px] w-full p-4 bg-opacity-20 bg-slate-300 rounded-xl flex flex-col gap-4 border-2 border-t-orange-500 border-l-violet-400 border-b-blue-700 border-r-pink-500 shadow-inner shadow-pink-500 hover:cursor-pointer hover:scale-105 transition-all duration-300 ease-linear"
+            className="p-4 bg-opacity-20 bg-slate-50 border rounded-xl flex flex-col gap-4 hover:cursor-pointer transition-all duration-300 shadow-lg ease-linear"
           >
             {/* Position section */}
-            <h2 className="text-2xl font-bold font-headingFont text-indigo-400 text-center">
+            <h2 className="text-2xl font-semibold font-headingFont text-zinc-950 text-center">
               {cardItem.position}
             </h2>
             {/* Description */}
-            <p className="text-slate-400 font-navlistFont text-sm">
+            <p className="text-slate-600 font-navlistFont text-sm">
               {cardItem.jobDescription}
             </p>
 
             {/* Requirent Types */}
             <div className="flex flex-col gap-2">
-              <h1 className="text-xl font-navlistFont font-bold text-indigo-400">
+              <h1 className="text-xl font-navlistFont font-semibold text-zinc-950">
                 Requirement:
               </h1>
               <ul className="list-disc p-3">
                 {cardItem.Requirement.map((reqList) => (
                   <li
                     key={reqList}
-                    className="text-slate-400 font-navlistFont text-sm"
+                    className="text-slate-600 font-navlistFont text-sm"
                   >
                     {reqList}
                   </li>
@@ -232,24 +232,26 @@ const JobsCard = ({ setModal }) => {
 
             {/* Education */}
             <div>
-              <h1 className="text-xl text-indigo-400 font-bold">Education</h1>
+              <h1 className="text-xl text-zinc-950 font-semibold">Education</h1>
               {/* Education Description */}
-              <p className="text-slate-400 text-sm font-navlistFont">
+              <p className="text-slate-600 text-sm font-navlistFont">
                 {cardItem.education}
               </p>
-              <h1 className="text-xl text-indigo-400 font-bold">
+              <h1 className="text-xl text-zinc-950 font-semibold">
                 {" "}
                 Positions : 5
               </h1>
             </div>
 
             {/* Apply Button */}
-            <button
+           <div className="flex justify-center items-center">
+           <button
               onClick={handleClick}
-              className="w-[100%] bg-gradient-to-tr text-lg from-green-300 to-blue-400 p-2 rounded-md text-violet-500 font-headingFont font-semibold hover:bg-gradient-to-r hover:from-slate-500 hover:to-slate-500 hover:text-green-500 transition-all duration-150 ease-linear"
+              className="bg-zinc-900 rounded-[7px] tex-white px-4 py-1 font-headingFont text-sm  transition-all duration-150 ease-linear hover:bg-zinc-700"
             >
               Apply Now
             </button>
+           </div>
           </div>
         ))}
       </div>

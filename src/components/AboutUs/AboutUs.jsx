@@ -20,7 +20,7 @@ const AboutUs = ({Meta_Data}) => {
     
     <div className="flex w-[100vw] relative  bg-black pt-12  justify-center items-center flex-col">
       {/* first section which will be to show the it service info */}
-      <h2 className="mt-10 text-2xl uppercase font-bold text-violet-400 font-headingFont">
+      <h2 className="mt-10 text-2xl uppercase font-bold text-violet-400 p-4 text-center font-headingFont">
         About Our Company
       </h2>
       {ServiceInfoSection()}
