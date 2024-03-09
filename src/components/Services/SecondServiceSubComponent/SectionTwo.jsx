@@ -1,7 +1,7 @@
 const SectionTwo = ({obj}) => {
   return (
     <section className="w-[100%] py-10 flex justify-center bg-blue-900/25 items-center">
-      <div className="w-[90%] relative flex flex-col p-10 gap-6 justify-between items-center text-white">
+      <div className="w-[100%] relative flex flex-col py-10 px-4 gap-6 justify-between items-center text-white">
         {/* first */}
         <h2 className="uppercase text-3xl font-headingFont font-bold text-violet-400">
           Why to choose us for premium {obj.titleName} Services
@@ -20,8 +20,8 @@ const SectionTwo = ({obj}) => {
             ))
           }
         </div>
-        <span className="absolute w-[200px] h-[200px] bg-green-400 top-0 left-0 rounded-full blur-[110px]"></span>
-        <span className="absolute w-[200px] h-[200px] bg-violet-400 top-40 right-0 rounded-full blur-[110px]"></span>
+        <span className="absolute w-[200px] h-[200px] bg-green-400 top-0 left-0 rounded-full blur-[170px]"></span>
+        <span className="absolute w-[200px] h-[200px] bg-violet-400 top-40 right-0 rounded-full blur-[130px]"></span>
       </div>
     </section>
   );

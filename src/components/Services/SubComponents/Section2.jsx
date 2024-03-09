@@ -4,7 +4,7 @@ const Section2 = ({obj}) => {
   return (
     <div className="w-[100%] relative bg-[#333] py-10 px-4 flex flex-col justify-center items-center">
     
-    <div className="w-[92%] z-10 grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 pt-[-80px] pb-6 gap-10 justify-center">
+    <div className="w-[100%] z-10 grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 pt-[-80px] pb-6 gap-10 justify-center">
       {/* Card Component */}
       {
        obj && obj.map((card)=>(

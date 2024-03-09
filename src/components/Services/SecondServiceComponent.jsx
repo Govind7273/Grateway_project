@@ -14,7 +14,7 @@ const SecondServiceComponent = ({data,Meta_Data}) => {
         <meta name="description" content={Description} />
         <link rel="canonical" href={Link} />
       </Helmet>
-    <div className="w-[100vw] bg-black overflow-x-hidden pt-16">
+    <div className="w-[100vw] bg-black overflow-x-hidden">
          {/* Section one  code */}
          <SectionOne obj={data.first} />
 
