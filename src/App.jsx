@@ -40,6 +40,7 @@ import {
   SoftDevServices,
   WebDevServices,
 } from "./components/Services/ServiceData/SoftDevServices";
+const Intership = lazy(() => import("./components/Internship/Internship"));
 import ScrollToTop from "./ScrollToTop";
 
 function App() {
@@ -47,7 +48,7 @@ function App() {
     <>
       <Navbar />
       <Suspense fallback={<Loading />}>
-        <ScrollToTop/>
+        <ScrollToTop />
         <Routes>
           <Route
             exact
@@ -164,6 +165,11 @@ function App() {
             element={
               <ServicesStaffing Meta_Data={Meta_Data.Service_Staffing} />
             }
+          ></Route>
+          <Route
+            exact
+            path="/Intership"
+            element={<Intership Meta_Data={Meta_Data.Internship} />}
           ></Route>
         </Routes>
       </Suspense>
