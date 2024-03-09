@@ -65,8 +65,8 @@ body::-webkit-scrollbar{
 
 .box{
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   perspective: 500px;
   cursor: pointer;
   margin: 20px;

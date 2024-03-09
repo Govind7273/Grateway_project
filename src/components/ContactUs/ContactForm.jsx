@@ -104,7 +104,7 @@ const ContactForm = () => {
       }
       SendQuery();
     } catch (validationError) {
-      toast.error("please cheack the form data");
+      toast.error("please check the form data");
       const newError = {};
       validationError.inner.forEach((err) => {
         newError[err.path.toLowerCase()] = err.message;
@@ -147,9 +147,8 @@ const ContactForm = () => {
                 }
                 id="subject"
                 name="subject"
-                placeholder="enter subject"
+              
                 className="bg-transparent text-white"
-                // value={ContactDetails.subject}
               >
                 <option className="text-white hidden" value="">
                  How can we Help ?

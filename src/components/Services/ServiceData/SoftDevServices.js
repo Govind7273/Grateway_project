@@ -13,7 +13,7 @@ export const SoftDevServices =
       content: {
         heading: "Software Development",
         message:
-          "At Greateway Software Pvt. Ltd. , we provide comprehensive software development services to help businesses build robust, scalable, and customized software solutions that meet their unique needs and drive digital transformation.",
+          "At Greateway Software Pvt. Ltd., we provide comprehensive software development services to help businesses build robust, scalable, and customized software solutions that meet their unique needs and drive digital transformation.",
       },
       imageUrl:
         SoftDevImage,

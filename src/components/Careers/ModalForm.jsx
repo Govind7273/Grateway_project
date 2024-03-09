@@ -1,9 +1,9 @@
-import { useRef, useState } from "react";
 import { useMutation } from "@tanstack/react-query";
-import toast, { Toaster } from "react-hot-toast";
-import { SendEmail } from "../../functions/EmailSendFunction";
-import { JobScheama } from "../../Yupschema/JobApplicationScheama";
+import { useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import toast, { Toaster } from "react-hot-toast";
+import { JobScheama } from "../../Yupschema/JobApplicationScheama";
+import { SendEmail } from "../../functions/EmailSendFunction";
 
 const ModalForm = ({ setModal }) => {
   const form = useRef();
@@ -76,7 +76,7 @@ const ModalForm = ({ setModal }) => {
       mutate();
     } catch (validationError) {
       // Display validation error using toast
-      toast.error("please cheack the form data");
+      toast.error("please check the form data");
       const newError = {};
       validationError.inner.forEach((err) => {
         newError[err.path.toLowerCase()] = err.message;
@@ -88,7 +88,7 @@ const ModalForm = ({ setModal }) => {
     <>
       <Toaster />
       <div className="fixed inset-0 p-4 flex justify-center items-center bg-opacity-30 backdrop-blur-sm">
-        <div className="p-8 relative bg-white bg-transparent shadow-[0px_0px_30px] shadow-green-400 text-black rounded-xl">
+        <div className="p-8 relative bg-white bg-transparent shadow-[0px_0px_10px] shadow-slate-500 text-black rounded-xl">
           {/* Close Button */}
           <span
             onClick={() => setModal(false)}

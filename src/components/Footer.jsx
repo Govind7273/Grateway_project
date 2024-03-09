@@ -18,7 +18,7 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">About Us</h3>
           <p className="mb-4">
-            GREATEWAY SOFTWARE PVT LTD. is a comprehensive IT company offering
+            GREATEWAY SOFTWARE PVT. LTD. is a comprehensive IT company offering
             end-to-end technology solutions. With expertise in software
             development, network infrastructure, cybersecurity, cloud services,
             and IT consulting, we empower businesses to thrive in the digital
