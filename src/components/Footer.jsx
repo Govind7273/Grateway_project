@@ -1,20 +1,18 @@
 import {
-  faFacebook,
-  faInstagram,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
-import {
   faEnvelope,
   faMapMarkerAlt,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import facebookIco from "../assets/icon/facebook.svg";
+import instagramIco from "../assets/icon/instagram.svg";
+import linkedin from "../assets/icon/linkedin.svg";
 
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-12 w-[100%] overflow-x-hidden">
-      <div className=" mx-auto grid grid-cols-1 md:grid-cols-4 gap-12  ml-8">
+      <div className=" mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 px-4">
         <div>
           <h3 className="text-lg font-semibold mb-4">About Us</h3>
           <p className="mb-4">
@@ -24,18 +22,18 @@ const Footer = () => {
             and IT consulting, we empower businesses to thrive in the digital
             era.
           </p>
-          <div className="">
-            <FontAwesomeIcon
-              icon={faFacebook}
-              className="mr-4 size-10 bg-[#4267B2] hover:cursor-pointer rounded-full"
+          <div className="flex flex-wrap">
+            <img
+              src={facebookIco}
+              className="mr-4 size-15 hover:scale-105 transition-all duration-200 ease-linear  hover:cursor-pointer "
             />
-            <FontAwesomeIcon
-              icon={faInstagram}
-              className="mr-4 size-10 bg-pink-600 hover:cursor-pointer  rounded-xl"
+           <img
+              src={instagramIco}
+              className="mr-4 size-15 hover:scale-105 transition-all duration-200 ease-linear hover:cursor-pointer "
             />
-            <FontAwesomeIcon
-              icon={faLinkedin}
-              className="mr-4 size-10 bg-[#0A66C2] hover:cursor-pointer  rounded-md"
+            <img
+              src={linkedin}
+              className="mr-4 size-15 hover:scale-105 transition-all duration-200 ease-linear  hover:cursor-pointer "
             />
           </div>
         </div>
