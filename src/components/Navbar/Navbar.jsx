@@ -50,7 +50,7 @@ const Navbar = () => {
             About Us
           </NavLink>
           <FlyoutLink FlyoutContent={PricingContent} className="text-black ">
-            <NavLink className="hover:bg-gray-300 p-2 rounded-xl font-bold text-black">
+            <NavLink to={"/Service-softDev"} className="hover:bg-gray-300 p-2 rounded-xl font-bold text-black">
               Services
             </NavLink>
           </FlyoutLink>

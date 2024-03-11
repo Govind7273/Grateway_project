@@ -247,7 +247,7 @@ const JobsCard = ({ setModal }) => {
            <div className="flex justify-center items-center">
            <button
               onClick={handleClick}
-              className="bg-zinc-900 rounded-[7px] tex-white px-4 py-1 font-headingFont text-sm  transition-all duration-150 ease-linear hover:bg-zinc-700"
+              className="bg-zinc-900 rounded-[7px] tex-white px-5 py-3 font-headingFont text-sm  transition-all duration-150 ease-linear hover:bg-zinc-700"
             >
               Apply Now
             </button>
