@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet-async";
 import {Link} from "react-router-dom"
 
 const VideoComponent = ({ video, title, desc, link, isVisible }) => (
-  <div className={`relative ${isVisible ? "" : "hidden"} h-screen md:h-full`}>
+  <div className={`relative ${isVisible ? "" : "hidden"} h-[30rem] md:h-full`}>
     <video
       className="w-full h-full object-cover opacity-50"
       src={video}
@@ -58,7 +58,7 @@ const Video_Array = [
     video: worktrim,
     title: "Creates projects considering the future scope",
     desc: "AI algorithms analyze project data to provide insights, predictions, and recommendations",
-    link: "//Service-crm",
+    link: "/Service-crm",
   },
 ];
 
