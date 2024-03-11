@@ -16,7 +16,7 @@ const ServiceComponent = ({data,Meta_Data}) => {
         <meta name="description" content={Description} />
         <link rel="canonical" href={Link} />
       </Helmet>
-    <div className="bg-slate-700  overflow-x-hidden text-white pt-[-40px] md:pt-[24px]">
+    <div className="bg-[#333] overflow-x-hidden text-white pt-[-40px] md:pt-[24px]">
       {/* First Section Of the Service Page */}
         <Section1 obj={data.first} />
       {/* Second Section of the Service Page -->bg-[#f6f5fc] */}
