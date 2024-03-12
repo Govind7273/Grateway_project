@@ -1,13 +1,17 @@
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Home from "./components/Home/Home";
+import {
+  CRMServices,
+  TestingAndQAServices,
+} from "./components/Services/ServiceData/SecondDevServices";
 import Meta_Data from "./functions/Seo_Meta";
 
 const AboutUs = lazy(() => import("./components/AboutUs/AboutUs"));
 const CareersPage = lazy(() => import("./components/Careers/CareersPage"));
 const ContactUs = lazy(() => import("./components/ContactUs/ContactUs"));
 const Footer = lazy(() => import("./components/Footer"));
-import Home from "./components/Home/Home";
 const Navbar = lazy(() => import("./components/Navbar/Navbar"));
 const Indrustry = lazy(() => import("./components/Indrustry/Indrustry"));
 const ServiceComponent = lazy(() =>
@@ -28,11 +32,8 @@ const BigDataService = lazy(() =>
 const SecondServiceComponent = lazy(() =>
   import("./components/Services/SecondServiceComponent")
 );
-import {
-  CRMServices,
-  TestingAndQAServices,
-} from "./components/Services/ServiceData/SecondDevServices";
 
+import ScrollToTop from "./ScrollToTop";
 import { Loading } from "./components/Loading";
 import {
   CloudServices,
@@ -41,8 +42,9 @@ import {
   WebDevServices,
 } from "./components/Services/ServiceData/SoftDevServices";
 const Intership = lazy(() => import("./components/Internship/Internship"));
-import ScrollToTop from "./ScrollToTop";
-
+const InternshipDetails = lazy(() =>
+  import("./components/Internship/InternshipDetails")
+);
 function App() {
   return (
     <>
@@ -170,6 +172,12 @@ function App() {
             exact
             path="/Intership"
             element={<Intership Meta_Data={Meta_Data.Internship} />}
+          ></Route>
+
+          <Route
+            exact
+            path="/internshipDetails/:id"
+            element={<InternshipDetails Meta_Data={Meta_Data.Internship} />}
           ></Route>
         </Routes>
       </Suspense>

@@ -1,53 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
+
 import Card from "./Card";
-import java from ".././Home/assets/svg/java-logo.svg";
-import Data from ".././Home/assets/svg/Data.svg";
-import analytics from ".././Home/assets/svg/analytics.svg";
-import react from ".././Home/assets/svg/react-logo.svg";
+import { IntershipDetails } from "./InternshipData";
 import Modal from "./Modal";
 
 const Internship = ({ Meta_Data }) => {
   const [ModalOpen, setModalOpen] = useState(false);
   const { Title, Description, Link } = Meta_Data;
-
-  const IntershipDetails = [
-    {
-      id: 1,
-      logo: java,
-      Post_Name: " Java Developer Internship",
-      quotes: "Searching for standout Java Developer Interns.",
-      Exp: "0 - 6 Months",
-      skills: "Java, SQL, Springboot",
-    },
-    {
-      id: 2,
-      logo: Data,
-      Post_Name: " Data Science Internship",
-      quotes: "seeking exceptional talents for our Data Science Interns.",
-      Exp: "0 - 6 Months",
-      skills: "Python or R, Pandas, NumPy, PowerBI, AWS",
-    },
-    {
-      id: 3,
-      logo: analytics,
-      Post_Name: "Data Analyst Internship",
-      quotes:
-        "Scouring for outstanding talents to join our Data Analytics Internship.",
-      Exp: "0 - 6 Months",
-      skills: "Power BI, or matplotlib, Hadoop, SQL",
-    },
-    {
-      id: 4,
-      logo: react,
-      Post_Name: "Web Development internship",
-      quotes: "Hiring top talent for our Web Dev Internship.",
-      Exp: "0 - 6 Months",
-      skills: "React.js, TailwindCSS, Redux, Express.js",
-    },
-  ];
-
+  
   return (
+    
     <>
       <Helmet>
         <title>{Title}</title>
@@ -70,7 +33,7 @@ const Internship = ({ Meta_Data }) => {
         <section className="flex flex-col justify-center items-center">
           {IntershipDetails.map((detail) => {
             return (
-              <div key={detail.id} className="w-full flex flex-col items-center">
+              <div key={detail.id} className="w-[80%] flex flex-col items-center">
 
               <Card
                 id={detail.id}
