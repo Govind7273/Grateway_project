@@ -1,14 +1,14 @@
-import React from "react";
 
-import { MdWork } from "react-icons/md";
-import { FaListUl } from "react-icons/fa6";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaListUl } from "react-icons/fa6";
+import { MdWork } from "react-icons/md";
+import { Link } from "react-router-dom";
 const Card = ({ id, logo, Post_Name, quotes, Exp, skills, setModalOpen }) => {
   return (
     <>
       <section
         key={id}
-        className="flex hover:scale-105 transition-all ease-in bg-white rounded-xl gap-3 py-4 md:py-10 md:w-[80%] md:flex-row flex-col items-center w-full m-2 p-6 justify-between"
+        className="flex hover:scale-105 transition-all ease-in bg-white rounded-xl gap-3 py-4 md:py-10 md:w-[100%] md:flex-row flex-col items-center w-full m-2 p-6 justify-between"
       >
         <div className="1st part flex gap-4 md:flex-row flex-col items-center">
           <div className="bg-gray-200 p-2 rounded-full">
@@ -16,7 +16,7 @@ const Card = ({ id, logo, Post_Name, quotes, Exp, skills, setModalOpen }) => {
           </div>
           <div className="job_Desc flex flex-col ">
             <h1 className="title font-bold text-2xl p-1 gap-1 flex-col flex">
-              {Post_Name}
+              <Link to={`/internshipDetails/${id}`} className="hover:underline">{Post_Name}</Link>
               <p className="font-normal text-base">{quotes}</p>
             </h1>
             <div className="flex md:flex-row flex-col gap-2 md:gap-5  justify-center h-full">
