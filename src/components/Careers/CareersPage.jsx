@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import JobsCard from "./JobsCard";
 import ModalForm from "./ModalForm";
-import { Helmet } from "react-helmet-async";
+import DDlImg from "./ddl.avif";
 
 const CareersPage = ({Meta_Data}) => {
   const { Title, Description, Link } = Meta_Data;
@@ -36,7 +37,7 @@ const CareersPage = ({Meta_Data}) => {
         <div className="flex-1 w-[100%] h-[100%] flex justify-end bg-transparent ">
           <img
             className="bg-transparent h-[100%]"
-            src="https://img.freepik.com/free-photo/3d-render-abstract-background-with-low-poly-plexus-design-nebula_1048-13110.jpg?size=626&ext=jpg&ga=GA1.1.1383068034.1707312047&semt=ais"
+            src={DDlImg}
             alt=""
           />
         </div>

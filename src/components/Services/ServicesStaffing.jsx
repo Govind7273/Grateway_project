@@ -1,5 +1,10 @@
 import { Helmet } from "react-helmet-async";
-
+import ContractImage from "./Images/ServiceSupport/ContractDeal.jpg";
+import ManWithClipboardImage from "./Images/ServiceSupport/ManWithClipboard.jpg";
+import MenWorkInOffice from "./Images/ServiceSupport/MenWorkInOffice.jpg";
+import ProgramingBg from './Images/ServiceSupport/ProgrammingBg.jpg';
+import WomenWorkImage from "./Images/ServiceSupport/WomenWork.jpg";
+import WorkMenImage from "./Images/ServiceSupport/WorkMen.jpg";
 const ServiceCard = ({ title, description, image }) => {
   return (
     <div className="bg-white rounded-[10px] shadow-lg shadow-violet-500">
@@ -22,16 +27,16 @@ const ServicesStaffing = ({Meta_Data}) => {
 
     <section className="w-[100vw] relative overflow-x-hidden pt-0 bg-black">
       {/* First Section */}
-      <div className="w-full relative flex flex-wrap justify-center items-center bg-gray-100 min-h-screen">
-        <span className="absolute w-[200px]  h-[100px] md:w-[450px] md:h-[450px] bg-gradient-to-tr from-violet-600 to-cyan-300 md:top-32 top-14 right-10 md:left-10 rounded-[10px] md:rounded-[0%_100%_31%_69%_/_46%_42%_58%_54%] flex justify-center items-center font-headingFont text-[5rem] z-10">
+      <div className="w-full relative flex  flex-wrap justify-center items-center bg-gray-100 min-h-screen">
+        <span className="absolute w-[180px]  h-[80px] md:w-[450px] md:h-[450px] md:bg-gradient-to-tr from-violet-600 to-cyan-300 md:top-32 top-20 right-5 md:left-10 rounded-[10px] md:rounded-[0%_100%_31%_69%_/_46%_42%_58%_54%] flex justify-center items-center font-headingFont text-[5rem] z-10">
           &#x1F3C6;
         </span>
         {/* Left */}
-        <div className="absolute md:bottom-0 bottom-10 z-10 w-4/5 md:w-3/5 lg:w-2/5 p-8 bg-white shadow-lg rounded-[10px]">
+        <div className="absolute md:bottom-0 bottom-10 z-10 w-[95%]   md:w-3/5 lg:w-2/5 md:p-8 p-2 bg-white shadow-lg rounded-[10px]">
           <h1 className="text-3xl font-extrabold text-gray-800 mb-4">
             IT Staffing Services
           </h1>
-          <p className="text-gray-700 text-lg mb-8">
+          <p className="text-gray-700 text-lg mb-8 md:mt-0 mt-10">
             "Transform your IT landscape with our bespoke staffing solutions. We
             meticulously match your needs with top-notch talent, ensuring
             seamless project execution. Let us elevate your workforce, driving
@@ -43,7 +48,7 @@ const ServicesStaffing = ({Meta_Data}) => {
         {/* Right */}
         <img
           className=" absolute right-0  md:w-1/2 md:h-[80vh] h-full w-full   object-cover"
-          src="https://img.freepik.com/free-photo/programming-background-concept_23-2150170134.jpg?t=st=1709556007~exp=1709559607~hmac=ae084e82d4402819764b413586cde32cedbe659f6adc3250f3df6d0d21ce2732&w=740"
+          src={ProgramingBg}
           alt="IT Staffing Image"
         />
       </div>
@@ -58,17 +63,17 @@ const ServicesStaffing = ({Meta_Data}) => {
             <ServiceCard
               title="Temporary Staffing"
               description="Quickly fill short-term positions with skilled IT professionals."
-              image="https://img.freepik.com/free-photo/man-holding-clipboard-work-with-join-our-team-message_23-2148985541.jpg?t=st=1709555241~exp=1709558841~hmac=d10aa0118ec5eb19a15160af1f52a2ca57f6eed895f6c8f4b00d3e9a37f73d6c&w=740"
+              image={ManWithClipboardImage}
             />
             <ServiceCard
               title="Permanent Placement"
               description="Find the right IT talent for your organization's long-term needs."
-              image="https://img.freepik.com/free-photo/young-men-working-office_23-2147785027.jpg?t=st=1709555308~exp=1709558908~hmac=27ecd7f293dab3baa5f23fb9156b6b45c6e21794b5439349ded6d5d77c91801e&w=740"
+              image={MenWorkInOffice}
             />
             <ServiceCard
               title="Contract-to-Hire"
               description="Assess candidates before making a permanent commitment."
-              image="https://img.freepik.com/free-photo/handshake-close-up-executives_1098-1384.jpg?t=st=1709555582~exp=1709559182~hmac=2b756d7c65b07477db97270b96938277db02e65ecf3c85b1314969cbf38896ea&w=740"
+              image={ContractImage}
             />
           </div>
         </div>
@@ -85,7 +90,7 @@ const ServicesStaffing = ({Meta_Data}) => {
 
            {/* Right */}
            <div className="col-span-1 p-8">
-              <img src="https://img.freepik.com/free-photo/man-sits-dark-room-front-blank-laptop-screen_169016-48879.jpg?t=st=1709558796~exp=1709562396~hmac=77e756c610e7e0de1bc30619b6380b2064c82a7dec915af251efc9bc118eaad6&w=740" alt="" />
+              <img src={WorkMenImage} alt="" />
            </div>
       </div>
 
@@ -94,7 +99,7 @@ const ServicesStaffing = ({Meta_Data}) => {
 <div className="grid md:grid-cols-2 grid-cols-1 gap-8 bg-gray-200">
            {/* left */}
            <div className="col-span-1 p-8">
-              <img src="https://img.freepik.com/free-photo/smart-businesswoman-working-her-laptop_23-2148452634.jpg?t=st=1709558988~exp=1709562588~hmac=88111036d9f0476f616313d4daac176c2275550f41dbd5158b46172a33d40aea&w=740" alt="" />
+              <img src={WomenWorkImage} alt="" />
            </div>
           
 
