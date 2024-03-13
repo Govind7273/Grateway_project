@@ -1,4 +1,20 @@
 //data for the software development processes
+import CloudCapacityPlanning from "../Images/CloudComputing/CloudCapacity.jpg";
+import CloudMigration from "../Images/CloudComputing/CloudMigration.jpg";
+import CloudManagementImage from "../Images/CloudComputing/CloudPlanning.jpg";
+import CloudSecurityImage from "../Images/CloudComputing/CloudSecurity.jpg";
+import CloudStorageImage from "../Images/CloudComputing/CloudStorage.jpg";
+import CloudStructureImage from "../Images/CloudComputing/CloudStructure.jpg";
+import CostOptimizationImage from "../Images/CloudComputing/CostOptimization.jpg";
+import CloudStorageBackoupImage from "../Images/CloudComputing/StorageBackup.jpg";
+import CiCdImage from "../Images/DevOps/CiCd.jpg";
+import CommunicationImage from "../Images/DevOps/Communication.jpg";
+import ConfigurationImage from "../Images/DevOps/Configuration.jpg";
+import ContiniousIntegrationImage from "../Images/DevOps/ContiniousIntegration.jpg";
+import DevopsInfraImage from "../Images/DevOps/DevopsInfra.jpg";
+import DevOpsImage from "../Images/DevOps/DevopsMain.jpg";
+import DockerImage from "../Images/DevOps/Docker.jpg";
+import KubernatesImage from "../Images/DevOps/Kubernates.jpg";
 import SoftDevImage from "../Images/SoftDevImages/SoftDevImg.jpg";
 import AgileSoftDevImg from "../Images/SoftDevImages/agileSoftDev.jpg";
 import ApiSoftDevImg from "../Images/SoftDevImages/apiSoftDev.jpg";
@@ -7,6 +23,14 @@ import EnterpriseSoftDevImg from '../Images/SoftDevImages/enterpriseSoftDev.jpg'
 import RequirementAnlysisSoftDevImg from "../Images/SoftDevImages/requirementSoftDev.jpg";
 import WebDesignSoftDevImg from "../Images/SoftDevImages/webDesignSoftDev.jpg";
 import WebDevSoftDevImg from "../Images/SoftDevImages/webDevSoftDev.jpg";
+import BackEndImage from "../Images/WebDev/BackEndDev.jpg";
+import CMSImg from "../Images/WebDev/CMS.png";
+import FrontEndDevImg from "../Images/WebDev/FrontEndDev.jpg";
+import ResponsiveImage from "../Images/WebDev/ResponsiveDesign.jpg";
+import SeoOptimizationImg from "../Images/WebDev/SeoOptimization.jpg";
+import WebDevImage from "../Images/WebDev/WebDev.jpg";
+import WebMaintainImg from "../Images/WebDev/WebMaintain.jpg";
+import CustomWebImage from "../Images/WebDev/customWeb.jpg";
 export const SoftDevServices = 
   {
     first: {
@@ -71,8 +95,6 @@ export const SoftDevServices =
     },
   }
 ;
-
-
 // data for the cloud computing processes
 
 export const CloudServices = 
@@ -84,38 +106,38 @@ export const CloudServices =
           "Cloud computing revolutionizes IT infrastructure, offering scalable, on-demand access to computing resources over the internet, enhancing flexibility, scalability, and cost-effectiveness for organizations worldwide.",
       },
       imageUrl:
-        "https://img.freepik.com/free-photo/website-hosting-concept-with-cloud_23-2149406772.jpg?t=st=1708757828~exp=1708761428~hmac=3a93e6aa8312e91401504889db1e9c2ee0dca6e079b5853ea45ed18f995adfd7&w=740",
+        CloudStorageImage,
         bgClass:'bg-[#FFDEE9] bg-[linear-gradient(0deg,_#FFDEE9_0%,_#B5FFFC_100%)]',
         secondBgClass:'flex-row-reverse'
       },
     cards: [
       {
-        imageUrl:'https://img.freepik.com/free-vector/cloud-computing-polygonal-wireframe-technology-concept_1017-29594.jpg?t=st=1708757935~exp=1708761535~hmac=41141363b33134463f0d9f1b2183bad4906774048927ac46e6dbdd28eed9fc31&w=740',
+        imageUrl:CloudMigration,
         heading: "Cloud Migration",
         description:
           "We offer seamless migration services, enabling you to smoothly transition your existing systems and applications to the cloud. Our experts handle data migration, application reconfiguration, and performance optimization to ensure a successful and hassle-free migration process.",
       },
       {
-        imageUrl:'https://img.freepik.com/free-vector/internet-data-security-concept-laptop-with-server-rack-clock-protection-encryption-data_39422-839.jpg?t=st=1708758000~exp=1708761600~hmac=798575b040d3899b43c9f97d8653f9146f4ca719454e211c902ac756b22d846d&w=740',
+        imageUrl:CloudSecurityImage,
         heading: "Cloud Security",
         description:
           "We prioritize the security and privacy of your data in the cloud. Our team implements advanced security measures, including data encryption, access controls, and threat monitoring, to safeguard your sensitive information and ensure compliance with industry regulations.",
       },
       {
-        imageUrl:'https://img.freepik.com/free-vector/character-illustration-people-with-technology-icons_53876-66104.jpg?t=st=1708758195~exp=1708761795~hmac=0adfdf70be11c57f451bbb20f867126f250bafe20f4c9a48b2a49bf7fdd0d693&w=740',
+        imageUrl:CloudCapacityPlanning,
         heading: "Capacity Planning",
         description:
           "Capacity planning is a strategic process that involves analyzing historical data, predicting future resource demands, and optimizing infrastructure to efficiently meet workload requirements in cloud environments.",
       },
       {
-        imageUrl:'https://img.freepik.com/free-photo/drawings-connected-devices_1134-261.jpg?t=st=1708758331~exp=1708761931~hmac=bf535a2330636cc65bc189b299c52dbd9ded3a45a601f54389ed1d30df4c6c11&w=740',
+        imageUrl:CloudStorageBackoupImage,
         heading: "Backup Strategy",
         description:
           "We are offering a robust backup strategy for cloud storage, ensuring regular data backups, redundancy, encryption, and periodic testing for data integrity.",
       },
     ],
     third:{
-        imageUrl:'https://img.freepik.com/free-photo/saas-concept-collage_23-2149399285.jpg?t=st=1708758546~exp=1708762146~hmac=c0e4ab57f7c97a218321e509957df964c7a2c4ca5492b13dc8427e09557bca6f&w=740',
+        imageUrl:CloudManagementImage,
         content:{
             heading:'Cloud Management and Monitoring',
             description:'We provide comprehensive cloud management and monitoring services to optimize the performance and availability of your cloud infrastructure. Our team handles provisioning, resource optimization, and continuous monitoring, allowing you to focus on your core business while we ensure the smooth operation of your cloud environment.',
@@ -123,7 +145,7 @@ export const CloudServices =
         }
     },
     fourth:{
-            imageUrl:'https://img.freepik.com/free-photo/man-trading-browsing-online-stock-investments-night_169016-47425.jpg?t=st=1708759026~exp=1708762626~hmac=e0e9c5cd609e9feba9e8b047e071db18b8d6d19b24a5cdb7568b1c2fb6d90506&w=740',
+            imageUrl:CostOptimizationImage,
             content:{
                 heading:'Cloud Cost Optimization',
                 description:'We help you optimize your cloud costs by analyzing your infrastructure, identifying cost-saving opportunities, and implementing strategies to minimize unnecessary expenses. Our experts provide recommendations to optimize resource allocation and leverage cost-effective cloud services.',
@@ -131,7 +153,7 @@ export const CloudServices =
         }
     },
     fifth:{
-        imageUrl:'https://img.freepik.com/free-vector/server-room-cloud-storage-icon-datacenter-database-concept-data-exchange-process_39422-556.jpg?t=st=1708758882~exp=1708762482~hmac=5d3b549627962770216d797c67c2c102e1c51e47560263d49bed4077449bb657&w=740',
+        imageUrl:CloudStructureImage,
         content:{
             heading:'Cloud Infrastructure',
             description:"Our team specializes in designing and implementing customized cloud infrastructures tailored to your specific requirements. Whether it's public, private, or hybrid cloud environments, we ensure seamless integration, optimal performance, and robust security for your applications and data.",
@@ -140,7 +162,6 @@ export const CloudServices =
     }
   }
 ;
-
 //data for the dev ops processes
 export const DevOpsServices = 
   {
@@ -151,37 +172,37 @@ export const DevOpsServices =
           "DevOps services encompass a range of practices and tools that streamline software development and IT operations. They facilitate collaboration, automation, continuous integration/continuous delivery (CI/CD), infrastructure as code (IaC), and monitoring for enhanced efficiency and agility.",
       },
       imageUrl:
-        "https://img.freepik.com/free-vector/gradient-devops-illustration_23-2149373211.jpg?t=st=1708760723~exp=1708764323~hmac=f746794d4a56eaee8f8553aca064281bdbb1330aafc9dd6cf5633f80defbbc98&w=740",
+        DevOpsImage,
       bgClass:'bg-[#FBDA61] bg-[linear-gradient(45deg,_#FBDA61_0%,_#FF5ACD_100%)]'
       },
     cards: [
       {
-        imageUrl:'https://img.freepik.com/free-vector/image-upload-concept-landing-page_52683-28275.jpg?t=st=1708763235~exp=1708766835~hmac=f34c240e8d80e84ab6ee4a499f944bdc21f3d3e5ac94df78a771c54095e438ac&w=740',
+        imageUrl:CiCdImage,
         heading: "Continuous Integration/Continuous Delivery (CI/CD)",
         description:
           "Continuous Integration and Continuous Delivery (CI/CD) is a software development practice that integrates code changes regularly, automates testing, and deploys applications swiftly, ensuring rapid, reliable, and continuous delivery of high-quality software.",
       },
       {
-        imageUrl:'https://img.freepik.com/free-vector/flat-design-technology-devops-illustration_23-2149356401.jpg?t=st=1708763339~exp=1708766939~hmac=127d22b5f978efa2c0f1e233808c2c61f32ac0fcf76506aeef3e94ff3d40e73a&w=740',
+        imageUrl:DevopsInfraImage,
         heading: "Infrastructure as Code (IaC)",
         description:
           "We offer Infrastructure as Code (IaC) services, enabling the automated provisioning and management of cloud infrastructure through code, enhancing scalability, consistency, and efficiency in IT operations and deployments.",
       },
       {
-        imageUrl:'https://cdn.iconscout.com/icon/free/png-512/free-docker-10-1175197.png?f=webp&w=256',
+        imageUrl:DockerImage,
         heading: "Containerization (e.g., Docker)",
         description:
           "We specialize in containerization services, leveraging Docker technology to package, deploy, and manage applications in lightweight, portable containers, ensuring seamless scalability, resource efficiency, and deployment consistency across diverse environments.",
       },
       {
-        imageUrl:'https://img.freepik.com/free-photo/ai-cloud-concept-with-cube_23-2149739756.jpg?t=st=1708764008~exp=1708767608~hmac=da16d588d1a6c55c031906b720adbbd3e67e0b9a1d4ca46acc7206693ffd8167&w=740',
+        imageUrl:KubernatesImage,
         heading: "Orchestration (e.g., Kubernetes)",
         description:
           "Our expertise lies in orchestration services, harnessing Kubernetes to automate the deployment, scaling, and management of containerized applications, optimizing resource utilization, enhancing scalability, and ensuring high availability in dynamic environments.",
       },
     ],
     third:{
-        imageUrl:'https://img.freepik.com/free-photo/diverse-team-coworkers-having-successful-partnership-feeling-happy-about-professional-teamwork-cheerful-people-celebrating-collaboration-agreement-together-boardroom-meeting_482257-46901.jpg?t=st=1708764143~exp=1708767743~hmac=a5e19b3ec436f6e827638913dac2529130f23626299771efff245be7d7d2da7e&w=826',
+        imageUrl:CommunicationImage,
         content:{
             heading:'Collaboration and Communication',
             description:'We promote collaboration and communication between development and operations teams by implementing collaborative tools and practices. This fosters transparency, improves efficiency, and facilitates faster decision-making throughout the software development lifecycle.',
@@ -189,7 +210,7 @@ export const DevOpsServices =
         }
     },
     fourth:{
-            imageUrl:'https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041850.jpg?t=st=1708764274~exp=1708767874~hmac=e4710c0a2a9be59584ac86b1322c0cd2b432c2c94d30390be5a9ada903df9a3e&w=740',
+            imageUrl:ConfigurationImage,
             content:{
                 heading:'Configuration Management',
                 description:'We assist in implementing configuration management tools to ensure consistent and standardized configuration across your infrastructure. By managing configurations as code, you can easily maintain and scale your infrastructure with minimal effort.',
@@ -197,7 +218,7 @@ export const DevOpsServices =
         }
     },
     fifth:{
-        imageUrl:'https://img.freepik.com/free-photo/6g-internet-connection_23-2150909434.jpg?t=st=1708764366~exp=1708767966~hmac=040c60a2177864affe738c981e973ace527e80b0a7f104819f7cc455706d00f9&w=740',
+        imageUrl:ContiniousIntegrationImage,
         content:{
             heading:'Continuous Integration and Deployment',
             description:"We help you implement efficient CI/CD pipelines, automating the build, testing, and deployment processes. By integrating code changes frequently, you can deliver software updates faster and with higher quality.",
@@ -217,38 +238,38 @@ export const WebDevServices =
           "Our web development services encompass the entire spectrum of website creation, from conceptualization to launch. We specialize in designing responsive, user-centric interfaces and developing robust, scalable backend systems tailored to client needs.",
       },
       imageUrl:
-        "https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040428.jpg?t=st=1708764781~exp=1708768381~hmac=72c34b53910cd0c6a708ade4ca39721b5055b36e7f87c1b97b84af5bbeeb3c32&w=740",
+        WebDevImage,
       bgClass:'bg-[#85fbff] bg-[linear-gradient(45deg,_#85fbff_0%,_#fee28b_33%,_#f38dae_66%,_#88aafc_100%)]',
       secondBgClass:'flex-row-reverse',  
     },
     cards: [
       {
-        imageUrl:'https://img.freepik.com/free-photo/seo-search-engine-optimization-internet-digital-concept_53876-138498.jpg?t=st=1708764907~exp=1708768507~hmac=cbbc07578e938d7a4f3eccce4aabce7187875cf199f1a027b47105dafdef4506&w=740',
+        imageUrl:SeoOptimizationImg,
         heading: "SEO Optimization",
         description:
           "We specialize in SEO optimization services, enhancing website visibility and ranking through strategic keyword research, content optimization, link building, and continuous monitoring to drive organic traffic and improve online presence.",
       },
       {
-        imageUrl:'https://img.freepik.com/free-photo/ui-ux-representations-with-laptop_23-2150201871.jpg?t=st=1708764993~exp=1708768593~hmac=5e38769cae0f2ad242c2ed47564a784b2c106c7093fd6ffcfcbab018dda1ebfd&w=740',
+        imageUrl:CustomWebImage,
         heading: "Custom Websites",
         description:
           "Crafting tailored websites, we offer bespoke designs and functionalities to match unique brand identities and user requirements, ensuring seamless user experiences and optimal performance across devices.",
       },
       {
-        imageUrl:'https://img.freepik.com/free-photo/homepage-seen-computer-screen_23-2149416723.jpg?t=st=1708765172~exp=1708768772~hmac=7ff1357203c21688ebb49f28e28da79c1e1e4fd873ad3843979f9990e65ff762&w=826',
+        imageUrl:ResponsiveImage,
         heading: "Responsive Design",
         description:
           "Responsive design ensures optimal viewing experience across devices, seamlessly adjusting layout and content to suit various screen sizes, enhancing usability and accessibility for all users.",
       },
       {
-        imageUrl:'https://img.freepik.com/free-photo/person-working-html-computer_23-2150038849.jpg?t=st=1708765253~exp=1708768853~hmac=4040505a17b7dd68eaee4bc5630802d362bf78d7d0456939b715c7a8e8806e65&w=740',
+        imageUrl:CMSImg,
         heading: "CMS Integration",
         description:
           "Our CMS integration services seamlessly incorporate robust content management systems into websites, empowering clients to efficiently create, manage, and publish digital content with ease and flexibility.",
       },
     ],
     third:{
-        imageUrl:'https://img.freepik.com/free-photo/upgrade-update-new-version-better-graphics-concept_53876-132183.jpg?t=st=1708765387~exp=1708768987~hmac=573d75dd66dea0daba0870b85480528fecab4880383ea3f588bbd7e3e6227b03&w=740',
+        imageUrl:WebMaintainImg,
         content:{
             heading:'Website Maintenance and Support',
             description:'We provide ongoing website maintenance and support services to ensure your website operates smoothly and remains up-to-date. Our team handles regular updates, security patches, performance monitoring, and technical support to keep your website running flawlessly.',
@@ -256,7 +277,7 @@ export const WebDevServices =
         }
     },
     fourth:{
-            imageUrl:'https://img.freepik.com/free-photo/programming-background-collage_23-2149901791.jpg?t=st=1708765468~exp=1708769068~hmac=bf31208286b995eb4462b61ad6ca86762c3985835c244f2eb0c490296af9921f&w=740',
+            imageUrl:FrontEndDevImg,
             content:{
                 heading:'Front-end Development',
                 description:'Frontend development involves creating intuitive user interfaces and interactive experiences using HTML, CSS, and JavaScript, ensuring seamless functionality and optimal performance across different devices and browsers.',
@@ -264,7 +285,7 @@ export const WebDevServices =
         }
     },
     fifth:{
-        imageUrl:'https://img.freepik.com/free-photo/medium-shot-man-working-computer_23-2150287696.jpg?t=st=1708765494~exp=1708769094~hmac=b1bd397921c486e68fbf9239a539b03fd7cabe060293355648198aca48a9333f&w=740',
+        imageUrl:BackEndImage,
         content:{
             heading:'Back-end Development',
             description:'Backend development involves designing and implementing server-side architectures, databases, and APIs to handle business logic, data storage, security, and integration, supporting robust functionality and scalability for web applications.',

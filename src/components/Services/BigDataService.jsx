@@ -8,6 +8,7 @@ import DataSecurityIcon from "./Images/BigDataIcons/data-security.svg";
 import InternetOfThingsIcon from "./Images/BigDataIcons/internet-things.svg";
 import MachineLearningIcon from "./Images/BigDataIcons/machine-learning.svg";
 import DataCollectionImg from "./Images/DataCollection.jpg";
+import ServerRackImage from "./Images/ServerRack.jpg";
 const BigDataService = ({ Meta_Data }) => {
   const { Title, Description,Link:link } = Meta_Data;
  
@@ -117,7 +118,7 @@ const BigDataService = ({ Meta_Data }) => {
           {/* left section */}
           <div className="col-span-1">
             <img
-              src="https://img.freepik.com/free-photo/server-racks-computer-network-security-server-room-data-center-dark-blue-generative-ai_1258-150857.jpg?t=st=1709192515~exp=1709196115~hmac=bbc76b2737fc234ec38aab256e6811aa7562781adc0e37888af6dbb919c6183b&w=740"
+              src={ServerRackImage}
               alt="image"
             />
           </div>
