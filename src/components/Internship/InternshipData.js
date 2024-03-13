@@ -9,14 +9,14 @@ export const IntershipDetails = [
     Post_Name: " Java Developer Internship",
     quotes: "Searching for standout Java Developer Interns.",
     Exp: "0 - 6 Months",
-    skills: "Java, SQL, Springboot",
+    skills: "Java, Springboot, Hibernate ,Spring MVC",
     description: {
       para1:
         "A Java internship is a program designed to provide students and recent graduates with practical experience in software development using the Java programming language. Java is a widely used programming language for building enterprise applications, web applications, and mobile apps, among other things.",
       para2:
-        "Software developer Internship & Software engineering Internships can be Beneficial to found jobs at a variety of organizations, including tech companies, startups, and financial institutions. Many internships are paid, although some may be unpaid or offer a stipend. The exact requirements and qualifications for Java internships can vary depending on the organization, but typically require a strong foundation in computer science, programming, and Java. During a Java internship, participants will work on a variety of projects, ranging from building software applications and modules to integrating Java with other technologies like databases and APIs. They will work closely with their mentors to learn best practices and gain hands-on experience in Java development. Interns may also have the opportunity to collaborate with other interns and team members, attend workshops and training sessions, and present their work to stakeholders. Java internships are a great way for students and recent graduates to gain practical experience and build their skills in a professional environment.",
+        "Software developer Internship & Software engineering Internships can be Beneficial to found jobs at a variety of organizations, including tech companies, startups, and financial institutions. Many internships are paid, although some may be unpaid or offer a stipend. The exact requirements and qualifications for Java internships can vary depending on the organization, but typically require a strong foundation in computer science, programming, and Java. During a Java internship, participants will work on a variety of projects, ranging from building software applications and modules to integrating Java with other technologies like databases and APIs.Interns may also have the opportunity to collaborate with other interns and team members, attend workshops and training sessions, and present their work to stakeholders. Java internships are a great way for students and recent graduates to gain practical experience and build their skills in a professional environment.",
       para3:
-        "They can also provide valuable networking opportunities and help interns develop a portfolio of work to showcase to potential employers. Greateway software is best Java Internship company in Pune | Mumbai | Ahmedabad. Java is a programming language that may be used to build applications for many platforms. Sun Microsystems created the high level programming language known as Java. Numerous programs and websites require Java to function, which is not always the case.",
+        "They can also provide valuable networking opportunities and help interns develop a portfolio of work to showcase to potential employers.Java is a programming language that may be used to build applications for many platforms,They will work closely with their mentors to learn best practices and gain hands-on experience in Java development. Sun Microsystems created the high level programming language known as Java. Numerous programs and websites require Java to function, which is not always the case.",
       Benfits: [
         {
           id: "1",
@@ -45,7 +45,7 @@ export const IntershipDetails = [
     Post_Name: " Data Science Internship",
     quotes: "seeking exceptional talents for our Data Science Interns.",
     Exp: "0 - 6 Months",
-    skills: "Python or R, Pandas, NumPy, PowerBI, AWS",
+    skills: "Python or R, Pandas, PowerBI, AI and ML ,NLP",
     description: {
       para1:
         "A Data Science internship program is meticulously designed to equip students and recent graduates with hands-on experience in the realm of data analysis, machine learning, and statistical modeling. In today's data-driven world, the demand for skilled data scientists is soaring, making this internship an invaluable stepping stone for aspiring professionals. ",
@@ -88,7 +88,7 @@ export const IntershipDetails = [
     quotes:
       "Scouring for outstanding talents to join our Data Analytics Internship.",
     Exp: "0 - 6 Months",
-    skills: "Power BI, or matplotlib, Hadoop, SQL",
+    skills: "Python, Power BI, or matplotlib, SQL, Excel",
     description: {
       para1:
         "A Data Analyst internship program provides students and recent graduates with practical experience in analyzing and interpreting data. This internship is essential in today's data-driven world, offering valuable opportunities for aspiring professionals in various industries, including technology companies, startups, and financial institutions. While some internships offer compensation, others may provide stipends or operate on an unpaid basis. Requirements typically include a strong foundation in mathematics, statistics, and proficiency in data analysis tools such as SQL, Excel, or Python. Throughout the internship, participants engage in a range of projects, from cleaning and organizing datasets to conducting exploratory data analysis and generating actionable insights. Guided by experienced mentors, interns learn industry best practices and gain hands-on experience in data analysis techniques. ",
@@ -130,7 +130,7 @@ export const IntershipDetails = [
     Post_Name: "Web Development internship",
     quotes: "Hiring top talent for our Web Dev Internship.",
     Exp: "0 - 6 Months",
-    skills: "React.js, TailwindCSS, Redux, Express.js",
+    skills: "HTML/CSS, Javascript, React.js, TailwindCSS, Node.js",
     description: {
       para1:
         "A Web Development internship program offers students and recent graduates a hands-on opportunity to delve into the ever-evolving world of website creation and development. In today's digital age, where online presence is paramount, this internship provides invaluable experience for aspiring professionals across various industries, including technology firms, startups, and marketing agencies. While some internships provide compensation, others may offer stipends or operate on an unpaid basis. Requirements typically include a solid understanding of programming languages such as HTML, CSS, and JavaScript, as well as familiarity with web development frameworks and tools.",
