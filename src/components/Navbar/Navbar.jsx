@@ -77,7 +77,7 @@ const Navbar = () => {
               isActive ? { color: "violet" } : { color: "black" }
             }
             className="hover:bg-gray-300 p-2 rounded-xl font-bold"
-            to={"/Intership"}
+            to={"/Internship"}
           >
             Internship
           </NavLink>
@@ -138,7 +138,7 @@ const PricingContent = () => {
     <div className="md:w-[50rem] bg-white overflow-y-scroll h-[20rem] md:h-full w-[21rem] gap-3 md:overflow-hidden flex flex-col p-4  md:grid md:grid-cols-2 shadow-lg rounded-lg">
       {links.map((l) => {
         return (
-          <div className="hover:bg-gray-200 rounded-xl p-2">
+          <div key={l.id} className="hover:bg-gray-200 rounded-xl p-2">
             <NavLink to={l.link}>
               <h1 className="font-bold w-fit">{l.name}</h1>
               <span className="text-xs">{l.desc}</span>

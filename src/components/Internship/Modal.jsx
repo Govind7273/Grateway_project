@@ -62,8 +62,8 @@ const Modal = ({ setModalOpen }) => {
       document.getElementById("role").value = "";
       captch.current.reset();
     },
-    // onError: () => toast.error("Something went wrong"),
-    onError: (err) => console.log(err),
+    onError: () => toast.error("Something went wrong"),
+   
   });
   // handle  submit
   const handleSendapplication = async (e) => {

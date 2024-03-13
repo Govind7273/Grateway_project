@@ -170,7 +170,7 @@ function App() {
           ></Route>
           <Route
             exact
-            path="/Intership"
+            path="/Internship"
             element={<Intership Meta_Data={Meta_Data.Internship} />}
           ></Route>
 
