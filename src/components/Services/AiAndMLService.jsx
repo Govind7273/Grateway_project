@@ -1,10 +1,11 @@
 
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import AiAndMlImage from "./Images/aiAndML.jpg";
 import faBrain from "./Images/brain.png";
 import faCogs from "./Images/cogs.png";
 import faRobot from "./Images/futuristic.png";
 import faServer from "./Images/server.png";
-import { Helmet } from "react-helmet-async";
 const AiAndMLService = ({Meta_Data}) => {
   const { Title, Description, Link:link } = Meta_Data;
 
@@ -96,7 +97,7 @@ const AiAndMLService = ({Meta_Data}) => {
         {/* right */}
         <img
           className="md:h-[100vh] h-[65vh] sm:h-[70vh] w-[100%] z-0 opacity-80"
-          src="https://img.freepik.com/free-photo/ai-technology-brain-background-digital-transformation-concept_53876-125206.jpg?t=st=1709274543~exp=1709278143~hmac=23ac9f8ae955ee35f3217e19997995ba9d71f129532d13965091ffcc8484b39f&w=740"
+          src={AiAndMlImage}
           alt=""
         />
       </div>
