@@ -14,7 +14,7 @@ const InternshipDetails = ({ Meta_Data }) => {
   const internshipDetail = IntershipDetails.find(
     (detail) => detail.id === parseInt(sid)
   );
-  console.log(internshipDetail);
+
   return (
     <>
       <Helmet>
