@@ -88,7 +88,7 @@ export const IntershipDetails = [
     quotes:
       "Scouring for outstanding talents to join our Data Analytics Internship.",
     Exp: "0 - 6 Months",
-    skills: "Python, Power BI, or matplotlib, SQL, Exel",
+    skills: "Python, Power BI, or matplotlib, SQL, Excel",
     description: {
       para1:
         "A Data Analyst internship program provides students and recent graduates with practical experience in analyzing and interpreting data. This internship is essential in today's data-driven world, offering valuable opportunities for aspiring professionals in various industries, including technology companies, startups, and financial institutions. While some internships offer compensation, others may provide stipends or operate on an unpaid basis. Requirements typically include a strong foundation in mathematics, statistics, and proficiency in data analysis tools such as SQL, Excel, or Python. Throughout the internship, participants engage in a range of projects, from cleaning and organizing datasets to conducting exploratory data analysis and generating actionable insights. Guided by experienced mentors, interns learn industry best practices and gain hands-on experience in data analysis techniques. ",
