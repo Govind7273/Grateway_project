@@ -12,6 +12,8 @@ import {
     faVialVirus,
     faWandSparkles,
 } from "@fortawesome/free-solid-svg-icons";
+import CustomerRelationship from "../Images/CustomerRelationship.jpg";
+import TestingAndQaImage from "../Images/TestingAndQA.jpg";
 
 export const TestingAndQAServices={
     first:{
@@ -19,7 +21,7 @@ export const TestingAndQAServices={
             title:'Testing And Quality Analysis',
             description:'Delivering excellence through meticulous software testing and quality analysis. Our expert team ensures robustness, reliability, and user satisfaction, guaranteeing seamless performance and error-free functionality for your software solutions.'
         },
-        imageUrl:'https://img.freepik.com/free-photo/overtime-office_1098-14940.jpg?t=st=1709013231~exp=1709016831~hmac=e534cf327acde2b265d43bc69a3ef6c7a334bf6e33521e0f8c54a9b61e4a93c5&w=740'
+        imageUrl:TestingAndQaImage
     },
 
     second:{
@@ -67,7 +69,7 @@ export const CRMServices={
             title:'Customer Relationship Management (CRM)',
             description:'In our CRM methodology, we champion personalized solutions, leveraging innovative technology and data-driven insights. Our commitment to seamless integration and continuous refinement ensures enduring client success and elevated customer experiences, driving sustained growth and satisfaction.'
         },
-        imageUrl:'https://img.freepik.com/free-photo/collage-customer-experience-concept_23-2149367128.jpg?t=st=1709116082~exp=1709119682~hmac=1829102c79982f041caf101efb8b36798f829834ac42164f3c605b06a3e7ab56&w=740'
+        imageUrl:CustomerRelationship
     },
 
     second:{

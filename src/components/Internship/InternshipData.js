@@ -88,7 +88,7 @@ export const IntershipDetails = [
     quotes:
       "Scouring for outstanding talents to join our Data Analytics Internship.",
     Exp: "0 - 6 Months",
-    skills: "Python, Power BI, or matplotlib, SQL, Excel",
+    skills: "Python, Power BI, SQL, Excel",
     description: {
       para1:
         "A Data Analyst internship program provides students and recent graduates with practical experience in analyzing and interpreting data. This internship is essential in today's data-driven world, offering valuable opportunities for aspiring professionals in various industries, including technology companies, startups, and financial institutions. While some internships offer compensation, others may provide stipends or operate on an unpaid basis. Requirements typically include a strong foundation in mathematics, statistics, and proficiency in data analysis tools such as SQL, Excel, or Python. Throughout the internship, participants engage in a range of projects, from cleaning and organizing datasets to conducting exploratory data analysis and generating actionable insights. Guided by experienced mentors, interns learn industry best practices and gain hands-on experience in data analysis techniques. ",
@@ -127,10 +127,10 @@ export const IntershipDetails = [
   {
     id: 4,
     logo: react,
-    Post_Name: "Web Development internship",
+    Post_Name: "Web Development Internship",
     quotes: "Hiring top talent for our Web Dev Internship.",
     Exp: "0 - 6 Months",
-    skills: "HTML/CSS, Javascript, React.js, TailwindCSS, Node.js",
+    skills: "HTML, CSS, Javascript, React.js, TailwindCSS, Node.js",
     description: {
       para1:
         "A Web Development internship program offers students and recent graduates a hands-on opportunity to delve into the ever-evolving world of website creation and development. In today's digital age, where online presence is paramount, this internship provides invaluable experience for aspiring professionals across various industries, including technology firms, startups, and marketing agencies. While some internships provide compensation, others may offer stipends or operate on an unpaid basis. Requirements typically include a solid understanding of programming languages such as HTML, CSS, and JavaScript, as well as familiarity with web development frameworks and tools.",
