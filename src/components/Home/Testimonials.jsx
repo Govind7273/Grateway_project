@@ -65,7 +65,7 @@ const Testimonials = () => {
   return (
     <main className="bg-gray-700  p-5 flex flex-col justify-center items-center min-h-lvh">
       <div className="flex p-5 justify-center text-white">
-        <h1 className="text-4xl font-black">Review's</h1>
+        <h1 className="text-4xl font-black">Reviews from the clients </h1>
       </div>
       <div className="relative z-10 container flex flex-wrap justify-center items-center gap-4 bg-transparent">
         {reviews.map((review) => (

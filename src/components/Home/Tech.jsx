@@ -40,7 +40,7 @@ const Tech = () => {
   return (
     <main className="w-[100%] bg-gray-700  flex justify-center items-center flex-col">
       <div className="flex p-12 justify-center text-white">
-        <h1 className="text-4xl font-black">Technology's we working with</h1>
+        <h1 className="text-4xl font-black">Technologies we are working with</h1>
       </div>
       <div className="Tech_list w-[80%] grid-cols-2 md:grid-cols-4 grid sm:grid-cols-3 lg:grid-cols-6  justify-evenly  justify-items-center items-center gap-x-12 gap-y-8">
         {Tech_list.map((TechIcon) => (
