@@ -52,6 +52,9 @@ const Modal = ({ setModalOpen }) => {
       seterror({});
       // document.getElementById("role").files[0] = "";
       captch.current.reset();
+      setTimeout(() => {
+        setModalOpen(false);
+      }, 2 * 1000);
     },
     onError: (err) => {
       toast.error(err);
