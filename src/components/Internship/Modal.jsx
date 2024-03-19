@@ -3,20 +3,20 @@ import { IntershipScheama } from "../../Yupschema/InternshipSchema";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useMutation } from "@tanstack/react-query";
 import toast, { Toaster } from "react-hot-toast";
-import { SendEmail } from "../../functions/EmailSendFunction";
+import { careerEmail } from "../../functions/EmailSendFunction";
+import { useCareerForm } from "../../utils/useCareerForm";
 
 const Modal = ({ setModalOpen }) => {
-  const form = useRef();
   const captch = useRef();
   const [CaptchaValue, setCaptchaValue] = useState(null);
   const [error, seterror] = useState({});
   const [Candidate, setCandidate] = useState({
     name: "",
     email: "",
-    phone: "",
+    number: "",
     role: "",
-    resume: "",
   });
+  const [resume, setresume] = useState(null);
 
   // input Component
   const InputField = (name, type, error) => {
@@ -32,9 +32,7 @@ const Modal = ({ setModalOpen }) => {
             setCandidate({ ...Candidate, [e.target.name]: e.target.value })
           }
           className="border outline-none w-full  border-slate-300 rounded-[6px] mb-2 px-2 py-2"
-          placeholder={
-            name === "Resume" ? "LinkedIn / Portfolio Link" : placeholder
-          }
+          placeholder={placeholder}
         />
         {error ? <div className="text-red-500 text-xs">{error}</div> : ""}
       </div>
@@ -42,39 +40,42 @@ const Modal = ({ setModalOpen }) => {
   };
   // mutation function to send intership email
   const { mutate: sendForm, isPending } = useMutation({
-    mutationFn: () =>
-      SendEmail({
-        serviceId: import.meta.env.VITE_SERVICE_ID,
-        templateId: import.meta.env.VITE_CAREER_TEMPLATE_ID,
-        publicId: import.meta.env.VITE_PUBLIC_ID,
-        form: form.current,
-      }),
-    onSuccess: () => {
-      toast.success("Application sent.");
+    mutationFn: (form) => careerEmail(form),
+    onSuccess: (res) => {
+      toast.success(res);
       setCandidate({
         name: "",
         email: "",
-        phone: "",
+        number: "",
         role: "",
-        resume: "",
       });
       seterror({});
-      document.getElementById("role").value = "";
+      // document.getElementById("role").files[0] = "";
       captch.current.reset();
+      setTimeout(() => {
+        setModalOpen(false);
+      }, 2 * 1000);
     },
-    onError: () => toast.error("Something went wrong"),
-   
+    onError: (err) => {
+      toast.error(err);
+    },
   });
   // handle  submit
   const handleSendapplication = async (e) => {
+    const { name, email, number, role } = Candidate;
     e.preventDefault();
     try {
       await IntershipScheama.validate(Candidate, { abortEarly: false });
+      const form = useCareerForm(name, email, number, role, resume);
       if (!CaptchaValue) {
         toast.error("Please fill the captcha");
         return; // Do not continue if captcha is empty
       }
-      sendForm();
+      if (!resume) {
+        toast.error("Please upload resume");
+        return; // Do not continue if captcha is empty
+      }
+      sendForm(form);
     } catch (validationError) {
       // Display validation error using toast
       toast.error("please check the form data");
@@ -91,7 +92,6 @@ const Modal = ({ setModalOpen }) => {
       <main className="fixed inset-0 p-4 flex justify-center items-center backdrop-blur-sm drop-shadow-2xl">
         <div className="  w-full md:w-[30rem] rounded-2xl p-5 bg-white">
           <form
-            ref={form}
             className="flex flex-col gap-4 w-full h-full "
             onSubmit={(e) => handleSendapplication(e)}
           >
@@ -115,13 +115,19 @@ const Modal = ({ setModalOpen }) => {
               {InputField("Email", "email", error.email)}
             </div>
 
-            <div className="flex gap-3 flex-wrap md:flex-nowrap justify-center items-center">
+            <div className="flex gap-3 flex-wrap justify-between items-center">
               {/* Third Form Field */}
-              {InputField("Phone", "text", error.phone)}
+              {InputField("number", "text", error.number)}
 
               {/* Role Field */}
-              <div className="flex gap-3 flex-wrap md:flex-nowrap w-full justify-center items-center">
-                {InputField("Resume", "text", error.resume)}
+              <div className="flex flex-col flex-wrap md:flex-nowrap w-full">
+                <label htmlFor="file">Upload Resume</label>
+                <input
+                  id="file"
+                  type="file"
+                  name="resume"
+                  onChange={(e) => setresume(e.target.files[0])}
+                />
               </div>
             </div>
             <div className=" flex justify-center w-full md:px-12 md:pl-2">
@@ -180,7 +186,7 @@ const Modal = ({ setModalOpen }) => {
             <div type="submit" className="flex justify-center items-center">
               <div className="bg-white min-h-[20px] flex items-center justify-center">
                 <button className="px-6 py-2 font-medium bg-indigo-500 text-white w-fit transition-all duration-70 shadow-[3px_3px_0px_black] active:shadow-none active:translate-x-[3px] active:translate-y-[3px]">
-                  {isPending ? "Sending" : "Apply"}
+                  {isPending ? "Sending..." : "Apply"}
                 </button>
               </div>
             </div>
