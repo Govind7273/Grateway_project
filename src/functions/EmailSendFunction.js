@@ -1,14 +1,27 @@
-import emailjs from "@emailjs/browser";
+import axios from "axios";
 // sending reponce of emial call
-const SendEmail = async ({ serviceId, templateId, form, publicId }) => {
-    try {
-        const responce = await emailjs.sendForm(serviceId, templateId, form, {
-            publicKey: publicId,
-        });
-        return responce;
-    } catch (error) {
-        return error;
-    }
+const careerEmail = async (form) => {
+  try {
+    const response = await axios.post(
+      `${import.meta.env.VITE_HOST}/api/v1/mail/sendmailwithattachment`,
+      form
+    );
+    return response?.data?.message;
+  } catch (error) {
+    throw error?.response?.data?.message;
+  }
 };
 
-export { SendEmail };
+const contactEmail = async (form) => {
+  try {
+    const response = await axios.post(
+      `${import.meta.env.VITE_HOST}/api/v1/mail/sendmailwithoutattachent`,
+      form
+    );
+    return response?.data?.message;
+  } catch (error) {
+    throw error?.response?.data?.message;
+    
+  }
+};
+export { careerEmail, contactEmail };
