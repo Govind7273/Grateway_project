@@ -3,20 +3,20 @@ import { useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import toast, { Toaster } from "react-hot-toast";
 import { JobScheama } from "../../Yupschema/JobApplicationScheama";
-import { SendEmail } from "../../functions/EmailSendFunction";
+import { careerEmail } from "../../functions/EmailSendFunction";
+import { useCareerForm } from "../../utils/useCareerForm";
 
 const ModalForm = ({ setModal }) => {
-  const form = useRef();
   const captch = useRef();
   const [CaptchValue, setCaptchaValue] = useState("");
   const [error, seterror] = useState({});
   const [contact, setContact] = useState({
     name: "",
     email: "",
-    phone: "",
+    number: "",
     role: "",
-    resume: "",
   });
+  const [resume, setresume] = useState(null);
 
   // input Component
   const InputField = (name, type, error) => {
@@ -29,10 +29,12 @@ const ModalForm = ({ setModal }) => {
           value={contact[`${name.toLowerCase()}`]}
           name={name.toLowerCase()}
           onChange={(e) =>
-            setContact({ ...contact, [e.target.name]: e.target.value})
+            setContact({ ...contact, [e.target.name]: e.target.value })
           }
           className="border outline-none w-full border-slate-300 rounded-[6px] mb-2 px-2 py-2"
-          placeholder={name==="Resume"?"Enter your LinkedIn Link":placeholder}
+          placeholder={
+            name === "Resume" ? "Enter your LinkedIn Link" : placeholder
+          }
         />
         {error ? <div className="text-red-500 text-xs">{error}</div> : ""}
       </div>
@@ -41,39 +43,44 @@ const ModalForm = ({ setModal }) => {
 
   // function to send email for job applications
   const { mutate, isPending } = useMutation({
-    mutationFn: () =>
-      SendEmail({
-        serviceId: import.meta.env.VITE_SERVICE_ID,
-        templateId: import.meta.env.VITE_CAREER_TEMPLATE_ID,
-        form: form.current,
-        publicId: import.meta.env.VITE_PUBLIC_ID,
-        contact,
-      }),
-    onSuccess: () => {
-      toast.success("Application sent.");
+    mutationFn: (form) => careerEmail(form),
+    onSuccess: (res) => {
+      toast.success(res);
       setContact({
         name: "",
         email: "",
-        phone: "",
+        number: "",
         role: "",
-        resume: "",
       });
+      setresume(null);
       seterror({});
       captch.current.reset();
+
+      setTimeout(() => {
+        setModal(false);
+      }, 2 * 1000);
     },
-    onError: () => toast.error("Something went wrong"),
+    onError: (err) => {
+      toast.error(err);
+    },
   });
 
   // handle submit for job application
   const handleSendapplication = async (e) => {
+    const { name, email, number, role } = contact;
     e.preventDefault();
     try {
       await JobScheama.validate(contact, { abortEarly: false });
+      const form = useCareerForm(name, email, number, role, resume);
       if (!CaptchValue) {
         toast.error("Please fill the captcha");
         return; // Do not continue if captcha is empty
       }
-      mutate();
+      if (!resume) {
+        toast.error("Please upload resume");
+        return; // Do not continue if captcha is empty
+      }
+      mutate(form);
     } catch (validationError) {
       // Display validation error using toast
       toast.error("please check the form data");
@@ -98,7 +105,6 @@ const ModalForm = ({ setModal }) => {
           </span>
 
           <form
-            ref={form}
             className="flex flex-col gap-4 "
             onSubmit={(e) => handleSendapplication(e)}
           >
@@ -116,14 +122,20 @@ const ModalForm = ({ setModal }) => {
 
             <div className="flex gap-3 flex-wrap md:flex-nowrap">
               {/* Third Form Field */}
-              {InputField("Phone", "text", error.phone)}
+              {InputField("number", "text", error.number)}
 
               {/* Role Field */}
               {InputField("Role", "text", error.role)}
             </div>
 
-            <div className="flex gap-3 flex-wrap md:flex-nowrap">
-              {InputField("Resume", "text", error.resume)}
+            <div className="flex gap-3 flex-wrap md:flex-nowrap md:item-center md:justify-center">
+              <label htmlFor="file">Upload Resume</label>
+              <input
+                id="file"
+                type="file"
+                name="resume"
+                onChange={(e) => setresume(e.target.files[0])}
+              />
             </div>
             <ReCAPTCHA
               ref={captch}

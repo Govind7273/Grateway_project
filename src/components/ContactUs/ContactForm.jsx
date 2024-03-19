@@ -4,6 +4,8 @@ import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 import { ContactScheama } from "../../Yupschema/ContactUsScheama";
 import ReCAPTCHA from "react-google-recaptcha";
+import { contactEmail } from "../../functions/EmailSendFunction";
+import { useCareerForm } from "../../utils/useCareerForm";
 
 const ContactForm = () => {
   const captch = useRef();
@@ -13,7 +15,7 @@ const ContactForm = () => {
   const [ContactDetails, setContactDetails] = useState({
     name: "",
     email: "",
-    phone: "",
+    number: "",
     subject: "",
     message: "",
   });
@@ -68,21 +70,13 @@ const ContactForm = () => {
   // function to send query by mail
   const { mutate: SendQuery, isPending } = useMutation({
     mutationKey: "SendQuery",
-    mutationFn: () =>
-      emailjs.sendForm(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_CONTACTUS_TEMPLATE_ID,
-        ContactForm.current,
-        {
-          publicKey: import.meta.env.VITE_PUBLIC_ID,
-        }
-      ),
-    onSuccess: () => {
-      toast.success("message sent .");
+    mutationFn: (ContactDetails) => contactEmail(ContactDetails),
+    onSuccess: (res) => {
+      toast.success(res);
       setContactDetails({
         name: "",
         email: "",
-        phone: "",
+        number: "",
         subject: "",
         message: "",
       });
@@ -90,7 +84,7 @@ const ContactForm = () => {
       document.getElementById("subject").value = "";
       captch.current.reset();
     },
-    onError: () => toast.error("something went wrong"),
+    onError: (err) => toast.error(err),
   });
 
   // handle sumbit for Contact Us
@@ -102,7 +96,7 @@ const ContactForm = () => {
         toast.error("Please fill the captcha");
         return; // Do not continue if captcha is empty
       }
-      SendQuery();
+      SendQuery(ContactDetails);
     } catch (validationError) {
       toast.error("please check the form data");
       const newError = {};
@@ -117,7 +111,6 @@ const ContactForm = () => {
     <>
       <Toaster />
       <form
-        ref={ContactForm}
         onSubmit={(e) => handlesendQuery(e)}
         className=" md:w-[60%] justify-center flex gap-2 flex-col w-full font-navlistFont flex-1 px-4 py-6"
       >
@@ -131,8 +124,8 @@ const ContactForm = () => {
           {InputBox("email", "email", error.email)}
         </div>
         <div className="flex md:gap-8 w-full flex-col md:flex-row ">
-          {/* phone number field */}
-          {InputBox("phone", "text", error.phone)}
+          {/* number number field */}
+          {InputBox("number", "text", error.number)}
           <div className="">
             <div
               className="flex flex-col p-3 mt-4 w-full md:w-[20rem]  bg-slate-600 bg-opacity-30 text-black rounded-md border-violet-500 border-l-4 shadow-md
@@ -147,11 +140,10 @@ const ContactForm = () => {
                 }
                 id="subject"
                 name="subject"
-              
                 className="bg-transparent text-white"
               >
                 <option className="text-white hidden" value="">
-                 How can we Help ?
+                  How can we Help ?
                 </option>
                 <option className="text-black" value="About Service">
                   About Service
