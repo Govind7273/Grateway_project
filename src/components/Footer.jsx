@@ -23,18 +23,24 @@ const Footer = () => {
             era.
           </p>
           <div className="flex flex-wrap">
+            <a href="https://www.facebook.com/profile.php?id=61557537305066&mibextid=ZbWKwL" target="_blank">
             <img
               src={facebookIco}
               className="mr-4 size-15 hover:scale-105 transition-all duration-200 ease-linear  hover:cursor-pointer "
             />
+            </a>
+            <a href="https://www.instagram.com/greateway_software_pvt.ltd?igsh=OGNtMmd3Y2VlcXFl" target="_blank">
            <img
               src={instagramIco}
               className="mr-4 size-15 hover:scale-105 transition-all duration-200 ease-linear hover:cursor-pointer "
             />
+            </a>
+            <a href="https://www.linkedin.com/company/greateway-software-pvt-ltd/" target="_blank">
             <img
               src={linkedin}
               className="mr-4 size-15 hover:scale-105 transition-all duration-200 ease-linear  hover:cursor-pointer "
             />
+            </a>
           </div>
         </div>
         <div>
