@@ -18,11 +18,6 @@ export const FoundersNote = () => {
             <div className="card w-[300px] transition-all duration-300 ease-in-out h-[300px] preserve-3d perspective bg-inherit border-none">
               {/* front face */}
               <div className="front-face absolute text-[#fff] w-[100%] h-[100%] overflow-hidden shadow-[0_15px_35px_rgba(0,_0,_0,_0.1)] rounded-[15px] bg-[rgba(255,_255,_255,_0.06)] preserve-3d transition-[0.5s] border-t-[1px_solid_#ddd] border-l-[1px_solid_#ddd] backface-invisible flex flex-col items-center justify-center ">
-                <img
-                  className="w-[150px] h-[150px] rounded-[50%] object-cover "
-                  src={FounderImg}
-                  alt=""
-                />
                 <div className="tracking-[2px]">Govind Rathod</div>
                 <div className="text-[0.8rem] text-[#ddd] tracking-[0.8px]">
                   Founder, CEO
@@ -35,7 +30,9 @@ export const FoundersNote = () => {
                   &#10077;
                 </span>
                 <div>
-                As the founder, I stand in awe of our organization's evolution—a testament to the dedication and passion of our team.
+                  As the founder, I stand in awe of our organization's
+                  evolution—a testament to the dedication and passion of our
+                  team.
                 </div>
                 <span className="absolute bottom-[35px] right-[25px] text-[1.2rem]">
                   &#10078;
@@ -46,11 +43,6 @@ export const FoundersNote = () => {
             <div className="card w-[300px] h-[300px] preserve-3d perspective bg-inherit border-none">
               {/* front face */}
               <div className="front-face absolute text-[#fff] w-[100%] h-[100%] overflow-hidden shadow-[0_15px_35px_rgba(0,_0,_0,_0.1)] rounded-[15px] bg-[rgba(255,_255,_255,_0.06)] preserve-3d transition-[0.5s] border-t-[1px_solid_#ddd] border-l-[1px_solid_#ddd] backface-invisible flex flex-col items-center justify-center ">
-                <img
-                  className="w-[150px] h-[150px] rounded-[50%] object-cover "
-                  src={CoFounderImg}
-                  alt=""
-                />
                 <div className="tracking-[2px]">Nilam Rathod</div>
                 <div className="text-[0.8rem] text-[#ddd] tracking-[0.8px]">
                   Co-Founder, CTO
@@ -63,7 +55,9 @@ export const FoundersNote = () => {
                   &#10077;
                 </span>
                 <div>
-                As a co-founder, I'm amazed by our organization's journey, a testament to collaborative spirit, determination, and shared aspirations.
+                  As a co-founder, I'm amazed by our organization's journey, a
+                  testament to collaborative spirit, determination, and shared
+                  aspirations.
                 </div>
                 <span className="absolute bottom-[35px] right-[25px] text-[1.2rem]">
                   &#10078;
