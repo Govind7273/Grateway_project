@@ -23,23 +23,32 @@ const Footer = () => {
             era.
           </p>
           <div className="flex flex-wrap">
-            <a href="https://www.facebook.com/profile.php?id=61557537305066&mibextid=ZbWKwL" target="_blank">
-            <img
-              src={facebookIco}
-              className="mr-4 size-15 hover:scale-105 transition-all duration-200 ease-linear  hover:cursor-pointer "
-            />
+            <a
+              href="https://www.facebook.com/profile.php?id=61557537305066&mibextid=ZbWKwL"
+              target="_blank"
+            >
+              <img
+                src={facebookIco}
+                className="mr-4 size-15 hover:scale-105 transition-all duration-200 ease-linear  hover:cursor-pointer "
+              />
             </a>
-            <a href="https://www.instagram.com/greateway_software_pvt.ltd?igsh=OGNtMmd3Y2VlcXFl" target="_blank">
-           <img
-              src={instagramIco}
-              className="mr-4 size-15 hover:scale-105 transition-all duration-200 ease-linear hover:cursor-pointer "
-            />
+            <a
+              href="https://www.instagram.com/greateway_software_pvt.ltd?igsh=OGNtMmd3Y2VlcXFl"
+              target="_blank"
+            >
+              <img
+                src={instagramIco}
+                className="mr-4 size-15 hover:scale-105 transition-all duration-200 ease-linear hover:cursor-pointer "
+              />
             </a>
-            <a href="https://www.linkedin.com/company/greateway-software-pvt-ltd/" target="_blank">
-            <img
-              src={linkedin}
-              className="mr-4 size-15 hover:scale-105 transition-all duration-200 ease-linear  hover:cursor-pointer "
-            />
+            <a
+              href="https://www.linkedin.com/company/greateway-software-pvt-ltd/"
+              target="_blank"
+            >
+              <img
+                src={linkedin}
+                className="mr-4 size-15 hover:scale-105 transition-all duration-200 ease-linear  hover:cursor-pointer "
+              />
             </a>
           </div>
         </div>
@@ -96,8 +105,8 @@ const Footer = () => {
           <div className="flex items-center mt-[-40px]">
             <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />
             <span className="mt-10">
-              Office No: 505, 06th Floor, Stellar Spaces, Opposite Zensar IT
-              Park, Kharadi, Pune 411014
+              Office No: 503, 06th Floor, Stellar Spaces, Opposite Zensar
+              Company, Kharadi, Pune 411014
             </span>
           </div>
         </div>
