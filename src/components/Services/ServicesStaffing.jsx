@@ -26,6 +26,7 @@ const ServicesStaffing = ({Meta_Data}) => {
       </Helmet>
 
     <section className="w-[100vw] relative overflow-x-hidden pt-0 bg-black">
+      
       {/* First Section */}
       <div className="w-full relative flex  flex-wrap justify-center items-center bg-gray-100 min-h-screen">
         <span className="absolute w-[180px]  h-[80px] md:w-[450px] md:h-[450px] md:bg-gradient-to-tr from-violet-600 to-cyan-300 md:top-32 top-20 right-5 md:left-10 rounded-[10px] md:rounded-[0%_100%_31%_69%_/_46%_42%_58%_54%] flex justify-center items-center font-headingFont text-[5rem] z-10">
