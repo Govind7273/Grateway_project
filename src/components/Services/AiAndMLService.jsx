@@ -1,66 +1,71 @@
-
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import AiAndMlImage from "./Images/aiAndML.jpg";
+import AiAndMlImage from "./Images/AIimage.jpeg";
+import AiAndMlImage1 from "./Images/ML.jpeg";
 import faBrain from "./Images/brain.png";
 import faCogs from "./Images/cogs.png";
 import faRobot from "./Images/futuristic.png";
 import faServer from "./Images/server.png";
-const AiAndMLService = ({Meta_Data}) => {
-  const { Title, Description, Link:link } = Meta_Data;
+import Expansion from "./Images/AIimage.jpeg";
+import GenerativeAIIcon from "./Images/GenerativeAi.png";
+import DataAnlyticsIcon from "./Images/dataanlytics.png";
+import GenerativeAIImage from "./Images/generativeAi1.jpeg";
+import DataAnalyticsImage from "./Images/dataanalyticsandML.jpg";
+import AIMLFaq from "./ServiceData/AIFAQ";
+import { HashLink } from "react-router-hash-link";
 
+const AiAndMLService = ({ Meta_Data }) => {
+  const { Title, Description, Link: link } = Meta_Data;
 
   const percentList = [
     {
       id: 1,
       percent: "83%",
-      title: "AI in Business",
+      title: "AI and ML in Business",
       message:
-        "Companies have invested in AI software development as a business strategy.",
+        "Businesses strategically allocate resources towards the development of AI and ML software solutions, recognizing their capacity to unlock transformative opportunities and revolutionize operational efficiency.",
     },
     {
       id: 2,
       percent: "76%",
       title: "High Priority",
       message:
-        "Enterprises have prioritized the AI and ML initiatives over other IT goals.",
+        "Enterprises are placing AI and ML initiatives at the forefront, prioritizing their transformative power above all other IT objectives.",
     },
     {
       id: 3,
       percent: "92%",
       title: "Continous Investment",
       message:
-        "Business invest on artificial intelligence consulting services in an ongoing basis.",
+        "Corporate entities steadfastly channel resources into AI consulting services, acknowledging their pivotal role in nurturing and advancing AI and machine learning initiatives.",
     },
   ];
 
   const aiCards = [
     {
       id: 1,
-      icon:faBrain,
+      icon: faBrain,
       title: "Cognitive AI",
       message:
         "Smart systems to mimic human behaviour and reasoning to solve complex business problems.",
     },
     {
       id: 2,
-      icon:faRobot,
+      icon: faRobot,
       title: "Virtual Assistance",
       message:
         "Build systems that understand the human commands and automate the mundane tasks.",
     },
     {
       id: 3,
-      icon: faCogs
-      ,
+      icon: faCogs,
       title: "Next-Gen Solutions",
       message:
         "Make your enterprise stand apart from the competitors with customized next-gen AI solutions.",
     },
     {
       id: 4,
-      icon:faServer
-      ,
+      icon: faServer,
       title: "Data Insights",
       message:
         "Get insights from any source and bring real-time changes to your business operations.",
@@ -68,98 +73,235 @@ const AiAndMLService = ({Meta_Data}) => {
   ];
   return (
     <>
-   <Helmet>
+      <Helmet>
         <title>{Title}</title>
         <meta name="description" content={Description} />
         <link rel="canonical" href={link} />
       </Helmet>
-    <section className="w-[100vw] overflow-x-hidden bg-black">
-      {/* First Section */}
-      <div className="w-[100%] relative flex justify-center items-center ">
-        {/* left */}
-        <div className=" absolute z-10 w-[100%] h-[100vh] gap-0 flex justify-center items-start flex-col pt-20">
-          <h1 className="text-white md:text-[2.5rem]  text-md font-extrabold p-2">
-            Artificial Intelligence (AI) Services
-          </h1>
-          <p className="text-white md:text-md text-sm p-4 md:w-[50%]">
-            We provide cutting-edge Artificial Intelligence services tailored to empower businesses across industries. From predictive analytics to personalized customer experiences, our solutions unlock new
-            possibilities for growth and efficiency, driving innovation and
-            intelligent decision-making.
-          </p>
-          <Link
-            className="ml-4 px-4 py-2 rounded-[5px] bg-white hover: font-bold hover:bg-cyan-300 hover:cursor-pointer transition-colors duration-200 ease-in-out"
-            to={"/Career"}
-          >
-            Apply Now <span className="text-xl ml-2">&#10132;</span>
-          </Link>
-        </div>
-
-        {/* right */}
-        <img
-          className="md:h-[100vh] h-[65vh] sm:h-[70vh] w-[100%] z-0 opacity-80"
-          src={AiAndMlImage}
-          alt=""
-        />
-      </div>
-
-      {/* Second Section */}
-      <div className="w-[100%] py-20 bg-blue-900/55 flex flex-col gap-10 text-white justify-center items-center cursor-pointer">
-        {/* First */}
-        <div className="text-3xl font-bold text-cyan-300 p-4 text-center">
-          How Fast Is the Growth of Artificial Intelligence
-        </div>
-        {/* Second */}
-        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 w-[100%] p-10">
-          {/* card */}
-          {percentList.map((item) => (
-            <div
-              key={item.id}
-              className="bg-[rgba(255,_255,_255,_.06)] p-6 rounded-xl flex flex-col gap-4 justify-center items-center"
-            >
-              {/* box */}
-              <div className="w-[120px] text-3xl h-[120px] rounded-full border-2 border-white flex justify-center items-center gap-2">
-                <h1 className="">{item.percent}</h1>
-              </div>
-              <h2 className="font-bold text-xl">{item.title}</h2>
-              <p className="text-center">{item.message}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Third Section */}
-      <div className="w-[100%] md:h-[100vh] grid md:grid-cols-3 grid-cols-1 justify-center items-center bg-white gap-x-8 py-10">
-        {/* left */}
-        <div className="col-span-1 p-4 flex flex-col gap-4">
-          <h2 className="text-3xl font-extrabold text-violet-400">
-            Why Your Business Needs Artificial Intelligence?
-          </h2>
-          <p>
-            By offering business-specific insights and process automation tools
-            to companies, AI has become the most revolutionary and much-needed
-            technology for the global industries. AI solutions have transformed
-            industries globally by enhancing the customer experience and
-            automating tedious and mundane tasks. From education to healthcare
-            and the supply chain, industries worldwide have invested in AI
-            development services. Are you ready to implement enterprise AI
-            solutions in your business?
-          </p>
-        </div>
-
-        {/* right */}
-        <div className="col-span-2 grid md:grid-cols-2 grid-cols-1 gap-x-8 gap-y-10 p-4">
-          {aiCards.map((item) => (
-            <div key={item.id} className="flex flex-col justify-center items-center gap-2 hover:border-b-4 hover:shadow-[0_0_20px] transition-all duration-200 ease-linear hover:cursor-pointer hover:shadow-cyan-300 hover:border-violet-400 p-4 rounded-sm">
-              <img className="w-[50px] " src={item.icon} alt="" />
-              <h2 className="text-xl font-bold text-violet-400">{item.title}</h2>
-              <p className="text-slate-400">
-               {item.message}
+      <section className="w-[100vw] overflow-x-hidden  bg-white pt-20 md:pt-0">
+        {/* First Section */}
+        <div className="relative flex flex-col items-center mx-auto lg:flex-row lg:mt-12 bg-white">
+          <div className="w-full h-full lg:w-6/10">
+            <img className="w-full h-full" src={Expansion} alt="" />
+          </div>
+          <div className="max-w-lg bg-slate-200 md:max-w-5xl border-2 hover:shadow-md hover:shadow-blue2 md:z-5 md:shadow-lg  lg:w-4/5   lg:ml-[-10%] xl:ml-[-20%] flex justify-center items-center">
+            <div className="flex flex-col px-2 py-2 md:px-8 items-center gap-4">
+              <h2 className="text-xl font-bold uppercase text-indigo-600 lg:text-3xl ">
+                AI & Machine Learning Service
+              </h2>
+              <h3 className="text-base font-medium text-black lg:text-2xl  text-center">
+                Unleashing the Power of AI and Machine Learning: Where
+                Innovation Meets Intelligence
+              </h3>
+              <p className="mt-5 text-gray1 md:text-lg text-base">
+                Step into the Future with our Advanced Artificial Intelligence
+                and Machine Learning Services, meticulously crafted to
+                revolutionize businesses across diverse sectors. Delve into the
+                realm of predictive analytics, where data-driven insights pave
+                the way for informed decision-making. Experience the power of
+                personalized customer interactions, tailored to enhance
+                engagement and loyalty. Our solutions are designed to unleash
+                innovation, driving efficiency and growth while shaping the
+                landscape of tomorrow's intelligent enterprises. Embrace the
+                transformative potential of AI and Machine Learning with us, and
+                embark on a journey towards unparalleled success.
               </p>
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </section>
+
+        {/* Second Section */}
+        <div className="w-[100%] pt-20 bg-white flex flex-col gap-10 text-black justify-center items-center cursor-pointer h-50rem]">
+          {/* First */}
+          <div className="text-4xl font-bold text-blue-700  text-center">
+            Visualizing AI and Machine Learning Progress
+          </div>
+          {/* Second */}
+          <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 w-[100%] p-10">
+            {/* card */}
+            {percentList.map((item) => (
+              <div
+                key={item.id}
+                className="bg-[rgba(255,_255,_255,_.06)] p-6 rounded-xl flex flex-col gap-4 justify-center items-center transition-transform transform hover:scale-110 bg-slate-200"
+              >
+                {/* box */}
+                <div className="w-[120px] text-3xl h-[120px] rounded-full border-4  border-blue-600 flex justify-center items-center gap-2">
+                  <h1 className="">{item.percent}</h1>
+                </div>
+                <h2 className="font-bold text-2xl">{item.title}</h2>
+                <p className="text-center text-lg">{item.message}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* third section */}
+        <div className="w-[100%] col-span-1 pt-10 px-6 bg-white flex flex-col text-black gap-x-6 py-6 justify-center items-center">
+          <div className=" w-full flex md:flex-row flex-col flex-col-2 gap-6 items-center">
+            {/*left */}
+            <div className="flex-1 px-6">
+              <h2 className=" text-4xl font-bold text-blue-400">
+                Why Business Needs AI and Machine Learning?
+              </h2>
+              <p className="md:text-lg text-base  pt-4">
+                Businesses are increasingly recognizing the unparalleled
+                potential of AI and ML to provide tailored insights and optimize
+                processes through automation. By leveraging these technologies,
+                organizations gain a profound understanding of their data,
+                enabling them to uncover actionable insights that drive informed
+                decision-making. Moreover, AI and ML serve as catalysts for
+                operational efficiency, streamlining workflows and enhancing
+                productivity across various sectors. From automating routine
+                tasks to predicting market trends, this transformative
+                technology empowers businesses to adapt and thrive in an
+                ever-evolving marketplace.
+              </p>
+            </div>
+            {/*right */}
+            <div className="w-full h-full flex-1 ">
+              <img src={AiAndMlImage1} alt="" className="w-full h-full " />
+            </div>
+          </div>
+        </div>
+
+        {/* fourth section*/}
+        <div className="w-[100%] col-span-1 pt-10 px-6 bg-white flex flex-col text-black gap-x-6 py-6 justify-center items-center">
+          <div className="flex flex-col py-2 md:px-8 items-start ">
+            <h2 className="text-xl font-bold uppercase text-indigo-600 lg:text-4xl">
+              Our Services
+            </h2>
+          </div>
+          <div className="w-full flex flex-col md:flex-row flex-col-2 gap-4 items-center ">
+            <div className="flex gap-2 flex-row flex-col-2">
+              <div className=" flex-1">
+                <img
+                  src={GenerativeAIIcon}
+                  width={30}
+                  height={30}
+                  alt=""
+                  className=" "
+                />
+              </div>
+              <div className="flex-2 gap-2  flex justify-center items-center  ">
+                <h2 className=" md:text-xl text-md font-bold text-black r">
+                  <HashLink to={"#AI"}>Generative AI</HashLink>
+                </h2>
+              </div>
+            </div>
+            <div className="flex flex-row flex-col-2">
+              <div className=" flex-1">
+                <img
+                  src={DataAnlyticsIcon}
+                  width={30}
+                  height={30}
+                  alt=""
+                  className=" "
+                />
+              </div>
+              <div className="flex-2  flex px-4 justify-center items-center ">
+                <h2 className=" md:text-xl text-md font-bold text-black r">
+                  <HashLink to={"#ML"}>Data Analytics and AI/ML</HashLink>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/*fifth section */}
+        <div></div>
+        {/* sixth Section */}
+        <div className=" w-full flex flex-col py-10 justify-center items-center">
+          <h2 className=" text-4xl font-bold text-blue-500 text-center">
+            Discover Our Offerings
+          </h2>
+          <p className="md:text-lg text-base w-4/5   pt-6">
+            At our software company, we harness the power of artificial
+            intelligence and machine learning to revolutionize industries and
+            drive innovation. Our expertise in AI and ML enables us to develop
+            intelligent solutions that adapt, learn, and evolve with your
+            business needs. From predictive analytics to natural language
+            processing, our team of data scientists and AI engineers leverages
+            advanced algorithms and state-of-the-art technology to unlock
+            actionable insights from your data. Whether you're looking to
+            automate processes, optimize decision-making, or enhance customer
+            experiences, our AI and ML solutions empower you to stay ahead in
+            today's data-driven world. Partner with us to explore the endless
+            possibilities of AI and machine learning and transform your business
+            for the future
+          </p>
+        </div>
+
+        {/* Sixth Section */}
+
+        {/*seventh section /generative AI section*/}
+        <div
+          id="AI"
+          className="w-[100%] col-span-1 pt-10 px-6 bg-white flex flex-col text-black gap-x-6 py-4 justify-center items-center"
+        >
+          <div className=" w-full flex  flex-col md:flex-row flex-col-4 gap-6 items-center">
+            {/*left */}
+            <div className="w-full h-full flex-1 ">
+              <img src={GenerativeAIImage} alt="" className="w-full h-full " />
+            </div>
+            {/*right */}
+            <div className="flex-1 px-10">
+              <h2 className=" text-xl  text-black">Generative AI</h2>
+              <p className="text-3xl font-bold text-black  pt-4">
+                Redefining the Boundaries of What's Possible
+              </p>
+              <h3 className="md:text-lg text-base text-black pt-4">
+                Unleash the power of Generative AI with Vionsys. From artistic
+                creations to innovative problem-solving, we help generate
+                creative content formats like text, code, and images using
+                cutting-edge AI models.
+              </h3>
+              <Link to="/GenerativeAi">
+                <button className="bg-slate-400 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded">
+                  View All
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+        {/*ML Section*/}
+        <div
+          id="ML"
+          className="w-[100%] col-span-1  px-6 bg-white flex flex-col text-black gap-x-6 pb-10 justify-center items-center"
+        >
+          <div className=" w-full flex flex-col md:flex-row flex-col-2 gap-6 items-center">
+            {/*left */}
+            <div className="flex-1 px-10">
+              <h2 className=" text-xl  text-black">Data Analytics and AI/Ml</h2>
+              <p className="text-3xl font-bold text-black  pt-4">
+                Animating your data for enhanced insights
+              </p>
+              <h3 className="md:text-lg text-base text-black pt-4">
+                Leverage Vionsys's extensive proficiency in Data Analytics and
+                AI/ML to propel your business forward. Our tailored approach
+                encompasses the creation of bespoke machine learning models and
+                the delivery of holistic AI consulting services, ensuring that
+                your data transcends into tangible, strategic insights. With our
+                transformative capabilities, we empower your organization to
+                unlock the full potential of your data, facilitating informed
+                decision-making and driving sustainable growth.
+              </h3>
+              <Link to="/DataAnalytics">
+                <button className="bg-slate-400 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded">
+                  View All
+                </button>
+              </Link>
+            </div>
+            {/*right */}
+            <div className="w-full h-full flex-1 ">
+              <img
+                src={DataAnalyticsImage}
+                alt=""
+                className="w-full h-[60%] "
+              />
+            </div>
+          </div>
+        </div>
+        <AIMLFaq />
+      </section>
     </>
   );
 };

@@ -41,6 +41,8 @@ import {
   SoftDevServices,
   WebDevServices,
 } from "./components/Services/ServiceData/SoftDevServices";
+import GenerativeAIDescriptive from "./components/Services/SubComponents/GenerativeAIDescriptive";
+import DataAnalyticsDescriptive from "./components/Services/SubComponents/DataAnalyticsDescriptive";
 const Intership = lazy(() => import("./components/Internship/Internship"));
 const InternshipDetails = lazy(() =>
   import("./components/Internship/InternshipDetails")
@@ -155,6 +157,16 @@ function App() {
             exact
             path="/Service-AI"
             element={<AiAndMLService Meta_Data={Meta_Data.Service_AI} />}
+          ></Route>
+          <Route
+            exact
+            path="/GenerativeAi"
+            element={<GenerativeAIDescriptive />}
+          ></Route>
+          <Route
+            exact
+            path="/DataAnalytics"
+            element={<DataAnalyticsDescriptive />}
           ></Route>
           <Route
             exact

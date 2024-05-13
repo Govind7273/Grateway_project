@@ -4,7 +4,7 @@ import { BiMessageDots } from "react-icons/bi";
 import { IoTime } from "react-icons/io5";
 import { MdOutlineSupportAgent } from "react-icons/md";
 import { Link } from "react-router-dom";
-import bg from "./Images/bg.jpg";
+import bg from "./Images/service.jpeg";
 function Accordion(props) {
   return (
     <div className="border rounded-md mb-1">
@@ -26,8 +26,8 @@ function Accordion(props) {
   );
 }
 
-const ServiceSupport = ({Meta_Data}) => {
-  const { Title, Description, Link:link } = Meta_Data;
+const ServiceSupport = ({ Meta_Data }) => {
+  const { Title, Description, Link: link } = Meta_Data;
 
   const Supports = [
     { id: 1, logo: MdOutlineSupportAgent, text: "Customer Support" },
@@ -80,7 +80,7 @@ const ServiceSupport = ({Meta_Data}) => {
   };
   return (
     <>
-       <Helmet>
+      <Helmet>
         <title>{Title}</title>
         <meta name="description" content={Description} />
         <link rel="canonical" href={link} />
@@ -92,16 +92,16 @@ const ServiceSupport = ({Meta_Data}) => {
           <img className="h-full w-full" src={bg} alt="support_bg" />
         </div>
         {/* second */}
-        <div className="pahrma_text absolute overflow-hidden top-0 w-full left-0 md:p-4 p-4 gap-5 flex-col md:h-full h-[50%] flex justify-center items-center">
-          <h1 className="text-white px-4 text-center font-extrabold text-[2rem] md:text-[4rem]">
+        <div className="pahrma_text absolute overflow-hidden top-0 w-full left-0 md:p-4 p-6 gap-5 flex-col md:h-full h-[50%] flex justify-center items-center">
+          <h1 className=" text-center text-white text-[2rem] md:text-[4rem]">
             Welcome to GreateWay Support
           </h1>
-          <p className="text-lg px-4 text-center text-white md:font-bold">
-            Need a hand? Our support team is just a click away!
+          <p className="text-lg px-4  text-center md:font-bold">
+            Require assistance? Our support team is ready to help with just a
+            click!
           </p>
         </div>
       </section>
-
 
       {/* second section */}
       <div className="flex flex-wrap relative -top-48 md:top-0  justify-center items-center gap-10 md:p-5">
@@ -134,8 +134,12 @@ const ServiceSupport = ({Meta_Data}) => {
       </section>
 
       <div className="flex relative md:top-0 -top-36 mb-[-80px] md:mb-0 h-[20vh] md:h-full justify-center w-full items-center gap-6 flex-col md:fl-row md:gap-6 p-3 md:p-5">
-        <h1 className=" text-[2rem] md:text-[3rem] font-bold justify-center flex">Need more Assistant</h1>
-        <button className="p-3 w-[70%] text-white md:w-fit bg-blue-500 hover:bg-blue-600 transition-all ease-linear font-bold rounded-xl"><Link to={"/ContactUs"}>Contact Us</Link></button>
+        <h1 className=" text-[2rem] md:text-[3rem] font-bold justify-center flex">
+          Need more Assistant
+        </h1>
+        <button className="p-3 w-[70%] text-white md:w-fit bg-blue-500 hover:bg-blue-600 transition-all ease-linear font-bold rounded-xl">
+          <Link to={"/ContactUs"}>Contact Us</Link>
+        </button>
       </div>
     </>
   );
