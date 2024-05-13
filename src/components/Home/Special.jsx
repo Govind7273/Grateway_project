@@ -1,5 +1,5 @@
 import React from "react";
-import Quality from "./assets/image/Quality.png";
+import Quality from "./assets/image/quality.png";
 import Solution from "./assets/image/Solution.png";
 import Team from "./assets/image/Team.png";
 import ClientCentric from "./assets/image/ClientCentric.png";
