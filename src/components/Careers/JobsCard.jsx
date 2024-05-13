@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 const JobsCard = ({ setModal }) => {
   const cardData = [
     {
@@ -166,7 +169,8 @@ const JobsCard = ({ setModal }) => {
         "Experience: 2-4 year",
         "Location :Kharadi, Pune",
       ],
-      education: "Bachelor's degree,Salesforce Administrator Certification (ADM201) is bonus",
+      education:
+        "Bachelor's degree,Salesforce Administrator Certification (ADM201) is bonus",
     },
     {
       position: "SAP Consultant",
@@ -190,17 +194,22 @@ const JobsCard = ({ setModal }) => {
   };
 
   return (
-    <div className="flex flex-col justify-center w-full items-center p-6 bg-white ">
+    <div className="flex flex-col w-full  items-center p-6 bg-white ">
       {/* card page title */}
-      <h1 className="text-5xl font-headingFont font-extrabold text-zinc-950">
-        Recent Openings
-      </h1>
+      <div className="flex justify-center items-center gap-2">
+        <div className="w-32 aspect-square rounded-full relative flex justify-center items-center animate-[spin_3s_linear_infinite] z-40 bg-[conic-gradient(white_0deg,white_300deg,transparent_270deg,transparent_360deg)] before:animate-[spin_2s_linear_infinite] before:absolute before:w-[60%] before:aspect-square before:rounded-full before:z-[80] before:bg-[conic-gradient(white_0deg,white_270deg,transparent_180deg,transparent_360deg)] after:absolute after:w-3/4 after:aspect-square after:rounded-full after:z-[60] after:animate-[spin_3s_linear_infinite] after:bg-[conic-gradient(#065f46_0deg,#065f46_180deg,transparent_180deg,transparent_360deg)]">
+          <span className="absolute w-[85%] aspect-square rounded-full z-[60] animate-[spin_5s_linear_infinite] bg-[conic-gradient(#34d399_0deg,#34d399_180deg,transparent_180deg,transparent_360deg)]"></span>
+        </div>
+        <h1 className="md:text-5xl text-lg text-center font-semibold text-black px-2 uppercase">
+          WE ARE HIRING
+        </h1>
+      </div>
 
       {/* Multiple Cards */}
-      <div className="w-[100%] grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 flex-wrap mt-10 gap-x-14 gap-y-10 justify-around items-center">
+      <div className="w-[100%] grid md:grid-cols-3 px-8 sm:grid-cols-2 grid-cols-1 flex-wrap mt-10 gap-x-14 gap-y-10 justify-around items-center">
         {/* card info */}
         {cardData.map((cardItem) => (
-          <div
+          <motion.div
             key={cardItem.position}
             className="p-4 bg-opacity-20 bg-slate-50 border rounded-xl flex flex-col gap-4 hover:cursor-pointer transition-all duration-300 shadow-lg ease-linear"
           >
@@ -214,11 +223,13 @@ const JobsCard = ({ setModal }) => {
             </p>
 
             {/* Requirent Types */}
-            <div className="flex flex-col gap-2">
-              <h1 className="text-xl font-navlistFont font-semibold text-zinc-950">
+            <div className="flex flex-col gap-2 ">
+              <h1 className="text-lg font-navlistFont font-semibold text-zinc-950">
                 Requirement:
               </h1>
-              <ul className="list-disc p-3">
+              <ul
+                className="list-disc p-3"
+              >
                 {cardItem.Requirement.map((reqList) => (
                   <li
                     key={reqList}
@@ -232,27 +243,25 @@ const JobsCard = ({ setModal }) => {
 
             {/* Education */}
             <div>
-              <h1 className="text-xl text-zinc-950 font-semibold">Education</h1>
-              {/* Education Description */}
-              <p className="text-slate-600 text-sm font-navlistFont">
-                {cardItem.education}
-              </p>
-              <h1 className="text-xl text-zinc-950 font-semibold">
+              <h1 className="text-md text-zinc-950 font-semibold">
+                Education: <span>{cardItem.education}</span>
+              </h1>
+              <h1 className="text-md text-zinc-950 font-semibold">
                 {" "}
                 Positions : 5
               </h1>
             </div>
 
             {/* Apply Button */}
-           <div className="flex justify-center items-center">
-           <button
-              onClick={handleClick}
-              className="bg-zinc-900 rounded-[7px] tex-white px-5 py-3 font-headingFont text-sm  transition-all duration-150 ease-linear hover:bg-zinc-700"
-            >
-              Apply Now
-            </button>
-           </div>
-          </div>
+            <div className="flex justify-center items-center">
+              <button
+                onClick={handleClick}
+                className="bg-zinc-900 rounded-[7px] tex-white px-5 py-3 font-headingFont text-sm  transition-all duration-150 ease-linear hover:bg-zinc-700"
+              >
+                Apply Now
+              </button>
+            </div>
+          </motion.div>
         ))}
       </div>
     </div>
