@@ -5,6 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { JobScheama } from "../../Yupschema/JobApplicationScheama";
 import { careerEmail } from "../../functions/EmailSendFunction";
 import { useCareerForm } from "../../utils/useCareerForm";
+import { IoMdClose } from "react-icons/io";
 
 const ModalForm = ({ setModal }) => {
   const captch = useRef();
@@ -20,7 +21,7 @@ const ModalForm = ({ setModal }) => {
 
   // input Component
   const InputField = (name, type, error) => {
-    const placeholder = `Enter Your ${name}`;
+    const placeholder = `${name}`;
     return (
       <div>
         <input
@@ -31,12 +32,12 @@ const ModalForm = ({ setModal }) => {
           onChange={(e) =>
             setContact({ ...contact, [e.target.name]: e.target.value })
           }
-          className="border outline-none w-full border-slate-300 rounded-[6px] mb-2 px-2 py-2"
+          className=" border-b-2 outline-none w-full border-slate-300 px-2 py-2"
           placeholder={
             name === "Resume" ? "Enter your LinkedIn Link" : placeholder
           }
         />
-        {error ? <div className="text-red-500 text-xs">{error}</div> : ""}
+        {error ? <div className="text-red-500 text-xs ">{error}</div> : ""}
       </div>
     );
   };
@@ -94,50 +95,68 @@ const ModalForm = ({ setModal }) => {
   return (
     <>
       <Toaster />
-      <div className="fixed inset-0 p-4 flex justify-center items-center bg-opacity-30 backdrop-blur-sm">
-        <div className="p-8 relative bg-white bg-transparent shadow-[0px_0px_10px] shadow-slate-500 text-black rounded-xl">
+      <div className="fixed z-20 px-2  inset-0 flex justify-center items-center bg-opacity-30 backdrop-blur-sm bg-black">
+        <div className="py-8 px-4 relative md:top-[30px] top-[50px] bg-white  shadow-[0px_0px_10px] shadow-slate-500 text-black rounded-xl">
           {/* Close Button */}
           <span
             onClick={() => setModal(false)}
-            className="absolute right-4 top-2 font-extrabold text-2xl text-red-600 bg-slate-200 px-2 hover:cursor-pointer rounded-[5px]"
+            className="absolute right-4 top-2 font-extrabold text-2xl text-blue-800 py-2 hover:bg-slate-200 px-4 hover:cursor-pointer rounded-[5px]"
           >
-            &#9747;
+            <IoMdClose />
           </span>
 
           <form
-            className="flex flex-col gap-4 "
+            className=" flex flex-col gap-4 lg:w-[320px] w-[300px]"
             onSubmit={(e) => handleSendapplication(e)}
           >
-            <h2 className="text-center text-2xl text-blue-600 font-headingFont font-bold">
+            <h2 className="text-center text-lg md:text-2xl text-blue-600 font-headingFont font-bold">
               Application Form
             </h2>
 
-            <div className="flex gap-3 flex-wrap md:flex-nowrap">
+            <div className="flex gap-3  justify-center items-center flex-wrap md:flex-nowrap">
               {/* First Form Field*/}
-              {InputField("Name", "text", error.name)}
+              <label htmlFor="name" className="text-right">
+                Name
+              </label>
+              {InputField("Jhon Decos", "text", error.name)}
+            </div>
 
+            <div className="flex justify-center items-center gap-3 flex-wrap md:flex-nowrap">
               {/* Second Form Field */}
-              {InputField("Email", "email", error.email)}
+              <label htmlFor="name" className="text-right">
+                E-mail
+              </label>
+              {InputField("jhon@gmail.com", "email", error.email)}
             </div>
 
-            <div className="flex gap-3 flex-wrap md:flex-nowrap">
+            <div className="flex justify-center items-center gap-3 flex-wrap md:flex-nowrap">
               {/* Third Form Field */}
-              {InputField("number", "text", error.number)}
-
-              {/* Role Field */}
-              {InputField("Role", "text", error.role)}
+              <label htmlFor="name" className="text-right">
+                Phone
+              </label>
+              {InputField("Phone No", "text", error.number)}
             </div>
 
-            <div className="flex gap-3 flex-wrap md:flex-nowrap md:item-center md:justify-center">
-              <label htmlFor="file">Upload Resume</label>
+            <div className="flex justify-center items-center gap-3 flex-wrap md:flex-nowrap">
+              {/* Role Field */}
+              <label htmlFor="name" className="text-right">
+                Job Role
+              </label>
+              {InputField("Designation", "text", error.role)}
+            </div>
+
+            <div className="grid w-full max-w-xs items-center justify-center  gap-1.5">
+              <label className="text-sm text-gray-400 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                Upload Resume
+              </label>
               <input
-                id="file"
+                id="picture"
                 type="file"
-                name="resume"
-                onChange={(e) => setresume(e.target.files[0])}
+                className="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm text-gray-400 file:border-0 file:bg-transparent file:text-gray-600 file:text-sm file:font-medium"
               />
             </div>
             <ReCAPTCHA
+              className="flex justify-center"
               ref={captch}
               sitekey={import.meta.env.VITE_RECAPTCHA_KEY}
               onChange={(value) => setCaptchaValue(value)}
