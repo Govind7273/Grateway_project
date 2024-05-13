@@ -19,13 +19,13 @@ body::-webkit-scrollbar{
   display: none;
 }
 .imgPara{
-  background-image: url('./components/AboutUs/images/paralax.jpg');
+  background-image: url('./components/AboutUs/images/14612.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-origin: initial;
-  opacity: 0.6;
+  opacity: 1;;
   overflow: hidden;
   
 }
@@ -122,4 +122,6 @@ body::-webkit-scrollbar{
   transform: rotateY(180deg);
 }
 
-
+.slick-slide > div{
+  margin: 0 10px;
+}
