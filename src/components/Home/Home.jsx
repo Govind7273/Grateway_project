@@ -1,17 +1,23 @@
 import { useEffect, useState } from "react";
-import dnatrim from "../../assets/videos/hand-trim.mp4";
-import robottrim from "../../assets/videos/robot-Trim.mp4";
-import vrtrim from "../../assets/videos/vr-Trim.mp4";
-import worktrim from "../../assets/videos/work-Trim.mp4";
+import AiMl from "../../assets/videos/AI_ML.mp4";
+import Service from "../../assets/videos/IT_Service.mp4";
+import Crm from "../../assets/videos/CRM.mp4";
+import Testing from "../../assets/videos/Testing.mp4";
+import Staffing from "../../assets/videos/IT_Staffing.mp4";
 import Services from "./Services";
 import Special from "./Special";
-import Tech from "./Tech";
+// import Tech from "./Tech";
 import Testimonials from "./Testimonials";
+import Features from "./Features";
+import About from "./About";
 import { Helmet } from "react-helmet-async";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
+import { InfiniteMovingCardsDemo } from "./Clients";
+import ChooseUs from "./ChooseUs";
+import Collaboration from "./Collaboration";
 
 const VideoComponent = ({ video, title, desc, link, isVisible }) => (
-  <div className={`relative ${isVisible ? "" : "hidden"} h-[30rem] md:h-full`}>
+  <div className={`relative ${isVisible ? "" : "hidden"} h-[30rem] md:h-full w-[100vw]`}>
     <video
       className="w-full h-full object-cover opacity-50"
       src={video}
@@ -19,15 +25,15 @@ const VideoComponent = ({ video, title, desc, link, isVisible }) => (
       autoPlay
       muted
     />
-    <div className="absolute items-center left-1 h-full top-0 flex w-full  p-2 md:p-5">
-      <div className="md:max-w-[40rem] w-full flex flex-col gap-2  space-y-3">
-        <h1 className="loop_video_title text-4xl md:text-6xl text-cyan-300 max-w-[50rem] font-bold font-headingFont">
+    <div className="absolute items-center left-1 h-full top-0 flex w-full p-2 md:p-5">
+      <div className="md:max-w-[45rem] w-full flex flex-col gap-2 space-y-3">
+        <h1 className="loop_video_title text-3xl md:text-5xl text-cyan-300 max-w-[50rem] font-bold font-headingFont">
           {title}
         </h1>
-        <p className="loop_video_desc max-w-[25rem] text-xl md:text-sm font-bold text-white font-navlistFont">
+        <p className="loop_video_desc max-w-[30rem] text-sm md:text-lg font-medium text-white font-navlistFont">
           {desc}
         </p>
-        <Link to={link} className="loop_video_btn items-start w-fit bg-cyan-300 px-3 py-1 mt-10 md:px-4 md:py-2 rounded-lg font-bold text-slate-800 hover:bg-white hover:text-cyan-700 transition-all 0.2 ease-out hover:border">
+        <Link to={link} className="loop_video_btn items-start w-fit bg-cyan-300 px-3 py-1 mt-10 md:px-4 md:py-2 rounded-xl font-bold text-slate-800 hover:bg-white hover:text-cyan-700 transition-all 0.2 ease-out hover:border">
           Explore with us
         </Link>
       </div>
@@ -37,27 +43,33 @@ const VideoComponent = ({ video, title, desc, link, isVisible }) => (
 
 const Video_Array = [
   {
-    video: dnatrim,
-    title: "AI Revolutionizes Healthcare",
-    desc: "Websites, apps that Transforming Diagnostics, Personalized Medicine, and Patient Care ",
+    video: AiMl,
+    title: "AI & Machine Learning",
+    desc: "Our AI solutions leverage ML to revolutionize industries, optimize processes, enhance decision-making, and deliver tangible results globally, unlocking transformative change worldwide.",
     link: "/Service-AI",
   },
   {
-    video: robottrim,
-    title: "The Transformative Power of Machine Learning",
-    desc: "Machine Learning (ML) is revolutionizing industries across the globe, and healthcare is no exception.",
+    video: Service,
+    title: "IT Service Support",
+    desc: "Our IT service support ensures your software systems operate smoothly, resolving issues promptly and optimizing performance for your business.",
     link: "/Service-bigData",
   },
   {
-    video: vrtrim,
-    title: "Harnessing the Potential of Virtual Reality",
-    desc: "Creating immersive gaming and movie experiences.",
+    video: Crm,
+    title: "Customer Relationship Management",
+    desc: "Enhance customer relationships with our comprehensive CRM solution, empowering you to streamline interactions, optimize sales processes, and deliver personalized experiences.",
     link: "/Service-cloud",
   },
   {
-    video: worktrim,
-    title: "Creates projects considering the future scope",
-    desc: "AI algorithms analyze project data to provide insights, predictions, and recommendations",
+    video: Testing,
+    title: "Testing And Quality Analysis",
+    desc: "Ensure the highest quality for your software products with our expert testing and quality analysis services, guaranteeing performance, reliability, and user satisfaction.",
+    link: "/Service-crm",
+  },
+  {
+    video: Staffing,
+    title: "IT Staffing",
+    desc: "Augment your team with skilled IT professionals tailored to your project needs, ensuring expertise, flexibility, and seamless integration.",
     link: "/Service-crm",
   },
 ];
@@ -94,21 +106,24 @@ const Home = ({ Meta_Data }) => {
           ))}
         </section>
       </main>
-      {/*3 speciality of site  */}
-
-      <Special />
-
-      {/*service provided by site in short */}
+      <About />
 
       <Services />
 
-      {/*technologies used in site */}
-
-      <Tech />
-
-      {/*reviews for the site */}
+      <Features />
 
       <Testimonials />
+      
+      <Special />
+
+      <ChooseUs />
+
+      <InfiniteMovingCardsDemo/>
+
+      <Collaboration />
+
+      {/*technologies used in site */}
+      {/* <Tech /> */}
     </>
   );
 };
