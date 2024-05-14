@@ -81,7 +81,7 @@ const Services = () => {
     <main className="bg-white p-5">
       <div className="flex justify-center md:p-5 p-2 text-gray-700">
 
-        <h1 className="text-3xl md:text-5xl font-black">Our Services</h1>
+        <h1 className="md:text-MainHeading text-MainHeading-sm font-extrabold">Our Services</h1>
       </div>
       <div className="flex flex-wrap md:gap-10 gap-5 justify-center overflow-hidden bg-white">
         {Services_List.map((service)=>{
@@ -93,16 +93,16 @@ const Services = () => {
                 <img src={service.logo} width={30} alt="" />
               </span>
               <div className="space-y-2  text-[#646464] transition-all duration-300 group-hover:text-white/90">
-                <h1 className="md:text-xl text-lg p-1 font-bold text-black">{service.title}</h1>
-                <p className="md:text-lg text-sm">
+                <h1 className="md:text-CardHeading text-CardHeading-sm p-1 font-bold">{service.title}</h1>
+                <p className="md:text-Paragraph text-Paragraph-sm">
                  {service.desc}
                 </p>
               </div>
-              <div className="pt-2 text-base font-semibold leading-7">
+              <div className="pt-2 font-medium leading-7">
                 <p>
                   <Link
                     to={service.link}
-                    className="text-black transition-all duration-300 group-hover:text-white"
+                    className="md:text-hyperlinks text-hyperlinks-sm transition-all duration-300 group-hover:text-white"
                   >
                     Read more &rarr;
                   </Link>
