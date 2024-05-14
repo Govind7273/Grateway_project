@@ -23,7 +23,7 @@ const ModalForm = ({ setModal }) => {
   const InputField = (name, type, error) => {
     const placeholder = `${name}`;
     return (
-      <div>
+      <div className="w-full">
         <input
           required
           type={type}
@@ -32,7 +32,7 @@ const ModalForm = ({ setModal }) => {
           onChange={(e) =>
             setContact({ ...contact, [e.target.name]: e.target.value })
           }
-          className=" border-b-2 outline-none w-full border-slate-300 px-2 py-2"
+          className=" border-b-2 outline-none w-full border-slate-300 md:h-10 h-4 pl-2 py-2"
           placeholder={
             name === "Resume" ? "Enter your LinkedIn Link" : placeholder
           }
@@ -95,7 +95,7 @@ const ModalForm = ({ setModal }) => {
   return (
     <>
       <Toaster />
-      <div className="fixed z-20 px-2  inset-0 flex justify-center items-center bg-opacity-30 backdrop-blur-sm bg-black">
+      <div className="fixed z-40 px-2  inset-0 flex justify-center items-center bg-opacity-30 backdrop-blur-sm bg-black">
         <div className="py-8 px-4 relative md:top-[30px] top-[50px] bg-white  shadow-[0px_0px_10px] shadow-slate-500 text-black rounded-xl">
           {/* Close Button */}
           <span
@@ -106,16 +106,16 @@ const ModalForm = ({ setModal }) => {
           </span>
 
           <form
-            className=" flex flex-col gap-4 lg:w-[320px] w-[300px]"
+            className=" flex flex-col lg:gap-4 gap-2 lg:w-[350px] w-[300px] px-2"
             onSubmit={(e) => handleSendapplication(e)}
           >
-            <h2 className="text-center text-lg md:text-2xl text-blue-600 font-headingFont font-bold">
+            <h2 className="text-center text-lg md:text-2xl text-[#3c4c54] font-headingFont font-bold">
               Application Form
             </h2>
 
             <div className="flex gap-3  justify-center items-center flex-wrap md:flex-nowrap">
               {/* First Form Field*/}
-              <label htmlFor="name" className="text-right">
+              <label htmlFor="name" className="text-right lg:w-20">
                 Name
               </label>
               {InputField("Jhon Decos", "text", error.name)}
@@ -123,7 +123,7 @@ const ModalForm = ({ setModal }) => {
 
             <div className="flex justify-center items-center gap-3 flex-wrap md:flex-nowrap">
               {/* Second Form Field */}
-              <label htmlFor="name" className="text-right">
+              <label htmlFor="name" className="text-right lg:w-20">
                 E-mail
               </label>
               {InputField("jhon@gmail.com", "email", error.email)}
@@ -131,7 +131,7 @@ const ModalForm = ({ setModal }) => {
 
             <div className="flex justify-center items-center gap-3 flex-wrap md:flex-nowrap">
               {/* Third Form Field */}
-              <label htmlFor="name" className="text-right">
+              <label htmlFor="name" className="text-right lg:w-20">
                 Phone
               </label>
               {InputField("Phone No", "text", error.number)}
@@ -139,7 +139,7 @@ const ModalForm = ({ setModal }) => {
 
             <div className="flex justify-center items-center gap-3 flex-wrap md:flex-nowrap">
               {/* Role Field */}
-              <label htmlFor="name" className="text-right">
+              <label htmlFor="name" className="text-right lg:w-20">
                 Job Role
               </label>
               {InputField("Designation", "text", error.role)}
@@ -162,8 +162,8 @@ const ModalForm = ({ setModal }) => {
               onChange={(value) => setCaptchaValue(value)}
             />
             <div type="submit" className="flex justify-center items-center">
-              <button className="bg-blue-600  py-2 px-4 font-headingFont font-bold text-white rounded-xl hover:bg-blue-700 transition-all duration-300 ease-linear">
-                {isPending ? "sending..." : "Apply"}
+              <button className="text-white bg-zinc-900 rounded-[7px] tex-white px-5 py-3 font-headingFont text-sm  transition-all duration-150 ease-linear hover:bg-zinc-700">
+                {isPending ? "sending..." : "Submit"}
               </button>
             </div>
           </form>

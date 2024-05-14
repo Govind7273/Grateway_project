@@ -200,7 +200,7 @@ const JobsCard = ({ setModal }) => {
         <div className="w-32 aspect-square rounded-full relative flex justify-center items-center animate-[spin_3s_linear_infinite] z-40 bg-[conic-gradient(white_0deg,white_300deg,transparent_270deg,transparent_360deg)] before:animate-[spin_2s_linear_infinite] before:absolute before:w-[60%] before:aspect-square before:rounded-full before:z-[80] before:bg-[conic-gradient(white_0deg,white_270deg,transparent_180deg,transparent_360deg)] after:absolute after:w-3/4 after:aspect-square after:rounded-full after:z-[60] after:animate-[spin_3s_linear_infinite] after:bg-[conic-gradient(#065f46_0deg,#065f46_180deg,transparent_180deg,transparent_360deg)]">
           <span className="absolute w-[85%] aspect-square rounded-full z-[60] animate-[spin_5s_linear_infinite] bg-[conic-gradient(#34d399_0deg,#34d399_180deg,transparent_180deg,transparent_360deg)]"></span>
         </div>
-        <h1 className="md:text-5xl text-lg text-center font-semibold text-black px-2 uppercase">
+        <h1 className="md:text-MainHeading text-lg text-center font-extrabold text-[#3c4c54] px-2 uppercase">
           WE ARE HIRING
         </h1>
       </div>
@@ -214,7 +214,7 @@ const JobsCard = ({ setModal }) => {
             className="p-4 bg-opacity-20 bg-slate-50 border rounded-xl flex flex-col gap-4 hover:cursor-pointer transition-all duration-300 shadow-lg ease-linear"
           >
             {/* Position section */}
-            <h2 className="text-2xl font-semibold font-headingFont text-zinc-950 text-center">
+            <h2 className="text-2xl font-bold font-headingFont text-[#3c4c54] text-center">
               {cardItem.position}
             </h2>
             {/* Description */}
@@ -224,7 +224,7 @@ const JobsCard = ({ setModal }) => {
 
             {/* Requirent Types */}
             <div className="flex flex-col gap-2 ">
-              <h1 className="text-lg font-navlistFont font-semibold text-zinc-950">
+              <h1 className="text-lg font-navlistFont font-semibold text-[#06b6d4]">
                 Requirement:
               </h1>
               <ul
@@ -243,12 +243,12 @@ const JobsCard = ({ setModal }) => {
 
             {/* Education */}
             <div>
-              <h1 className="text-md text-zinc-950 font-semibold">
-                Education: <span>{cardItem.education}</span>
+              <h1 className="text-md font-bold text-[#06b6d4]">
+                Education: <span className="text-[#3c4c54]">{cardItem.education}</span>
               </h1>
-              <h1 className="text-md text-zinc-950 font-semibold">
+              <h1 className="text-md font-bold text-[#06b6d4]">
                 {" "}
-                Positions : 5
+                Positions <span className="text-[#3c4c54]">: 5</span>
               </h1>
             </div>
 

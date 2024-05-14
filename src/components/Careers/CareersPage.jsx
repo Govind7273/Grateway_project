@@ -6,6 +6,7 @@ import JobsCard from "./JobsCard";
 import ModalForm from "./ModalForm";
 import { motion } from "framer-motion";
 import { animateScroll as scroll } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const testimonials = [
   {
@@ -41,9 +42,9 @@ const testimonials = [
 ];
 
 const CareersPage = ({ Meta_Data }) => {
-  const { Title, Description, Link } = Meta_Data;
+  const { Title, Description, link } = Meta_Data;
   const scrollTo = () => {
-    scroll.scrollTo(2600); // Scrolling to 100px from the top of the page.
+    scroll.scrollTo(2600); // Scrolling to 2600px from the top of the page.
   };
 
   const [isOpen, setIsOpen] = useState(false);
@@ -87,7 +88,7 @@ const CareersPage = ({ Meta_Data }) => {
       <Helmet>
         <title>{Title}</title>
         <meta name="description" content={Description} />
-        <link rel="canonical" href={Link} />
+        <link rel="canonical" href={link} />
       </Helmet>
 
       <div className="md:pt-16 text-white overflow-x-hidden h-auto ">
@@ -95,7 +96,7 @@ const CareersPage = ({ Meta_Data }) => {
         <section>
           <div className="flex flex-col items-center gap-6  absolute z-10 lg:h-auto w-auto h-auto lg:w-[700px] lg:top-[60%] lg:left-[50%] transform lg:-translate-y-1/2 lg:-translate-x-1/2 -translate-y-1/2 -translate-x-1/2 top-[50%] left-[50%] px-2">
             <motion.h1
-              className="md:text-6xl text-lg text-center text-[#76EAFA] font-bold uppercase"
+              className="md:text-TopHeading md:leading-TopHeading text-lg text-center text-TopHeading font-bold uppercase"
               variants={headingVariants}
               initial="hidden"
               animate="visible"
@@ -103,7 +104,7 @@ const CareersPage = ({ Meta_Data }) => {
               Elevate your career with Us!
             </motion.h1>
             <motion.h4
-              className="lg:w-[550px] font-semibold text-center text-xs lg:text-lg"
+              className="lg:w-[550px] font-bold text-center text-xs lg:text-xl text-white"
               variants={headingVariants}
               initial="hidden"
               animate="visible"
@@ -112,10 +113,9 @@ const CareersPage = ({ Meta_Data }) => {
               the greatest challenges of our time. Join the team and unlock your
               future career with us.
             </motion.h4>
-
             <button
               onClick={scrollTo}
-              className="bg-zinc-900 rounded-[7px] tex-white px-3 py-2 lg:px-5 lg:py-3 font-headingFont md:text-xs lg:text-sm  transition-all duration-150 ease-linear hover:bg-zinc-700"
+              className="loop_video_btn items-start w-fit bg-cyan-300 px-3 py-1 mt-10 md:px-4 md:py-2 rounded-xl font-bold text-slate-800 hover:bg-white hover:text-cyan-700 transition-all 0.2 ease-out hover:border"
             >
               Apply now
             </button>
@@ -150,7 +150,7 @@ const CareersPage = ({ Meta_Data }) => {
                 <span className="absolute w-[85%] aspect-square rounded-full z-[60] animate-[spin_5s_linear_infinite] bg-[conic-gradient(#34d399_0deg,#34d399_180deg,transparent_180deg,transparent_360deg)]"></span>
               </div>
 
-              <h1 className="md:text-5xl text-lg text-center font-semibold text-black px-2 uppercase">
+              <h1 className="md:text-MainHeading text-lg text-[#3c4c54] text-center font-extrabold px-2 uppercase">
                 Welcome to Greateway Softwares, India
               </h1>
             </div>
@@ -166,7 +166,7 @@ const CareersPage = ({ Meta_Data }) => {
                   src="src/assets/Images/CareerSect2_1.jpg"
                   alt=""
                 />
-                <p className="h-[40%] lg:text-lg  text-sm w-full shadow-lg text-gray-500 text-center flex items-center px-4 py-4 border-2">
+                <p className="h-[40%] lg:text-Paragraph text-[#1a2229] leading-Paragraph  text-sm w-full shadow-lg text-center flex items-center px-4 py-4 border-2">
                   Join our community if you value meaningful connections and are
                   passionate about driving technological progress. We're looking
                   for self-starters who embrace challenges, taking ownership of
@@ -185,7 +185,7 @@ const CareersPage = ({ Meta_Data }) => {
                   src="src/assets/Images/CareerSect2_2.jpg"
                   alt=""
                 />
-                <p className="h-[40%] lg:text-lg text-sm w-full shadow-lg text-gray-500 flex items-center text-center px-4 py-4 border-2">
+                <p className="h-[40%] lg:text-Paragraph text-[#1a2229] leading-Paragraph text-sm w-full shadow-lg flex items-center text-center px-4 py-4 border-2">
                   We places a high premium on personal development, recognizing
                   its direct correlation with the company's success. Our
                   energetic and flexible work atmosphere enables individuals to
@@ -209,11 +209,11 @@ const CareersPage = ({ Meta_Data }) => {
               />
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-3xl text-black font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                  <h1 className="text-3xl text-black  font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                     Step into the Future of{" "}
                     <span className="block text-blue-900"> Technology</span>
                   </h1>
-                  <p className="max-w-[600px] text-gray-500 md:text-lg dark:text-gray-400">
+                  <p className="max-w-[600px] text-Paragraph leading-Paragraph md:text-lg dark:text-gray-400">
                     we believe in pioneering the future of technology. Join us
                     on a transformative journey where creativity meets
                     cutting-edge innovation. Dive into a world where ideas turn
@@ -226,9 +226,11 @@ const CareersPage = ({ Meta_Data }) => {
                   </p>
                 </div>
                 <div className="w-full max-w-sm space-y-2">
-                  <button className="bg-zinc-900 rounded-[7px] tex-white px-5 py-3 font-headingFont text-sm  transition-all duration-150 ease-linear hover:bg-zinc-700">
-                    Get in Touch
-                  </button>
+                  <Link to={"/ContactUs"}>
+                    <button className="bg-zinc-900 rounded-[7px] tex-white px-5 py-3 font-headingFont text-sm  transition-all duration-150 ease-linear hover:bg-zinc-700">
+                      Get in Touch
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -237,19 +239,19 @@ const CareersPage = ({ Meta_Data }) => {
 
         {/* Fourth Section */}
         <section>
-          <div className="flex justify-center gap-2 py-12">
+          <div className="flex justify-center items-center gap-2 py-12">
             <div className="w-32 aspect-square rounded-full relative flex justify-center items-center animate-[spin_3s_linear_infinite] z-40 bg-[conic-gradient(white_0deg,white_300deg,transparent_270deg,transparent_360deg)] before:animate-[spin_2s_linear_infinite] before:absolute before:w-[60%] before:aspect-square before:rounded-full before:z-[80] before:bg-[conic-gradient(white_0deg,white_270deg,transparent_180deg,transparent_360deg)] after:absolute after:w-3/4 after:aspect-square after:rounded-full after:z-[60] after:animate-[spin_3s_linear_infinite] after:bg-[conic-gradient(#065f46_0deg,#065f46_180deg,transparent_180deg,transparent_360deg)]">
-              <span className="absolute w-[85%] aspect-square rounded-full z-[60] animate-[spin_5s_linear_infinite] bg-[conic-gradient(#34d399_0deg,#34d399_180deg,transparent_180deg,transparent_360deg)]"></span>
+              <span className="absolute w-[85%] aspect-square rounded-full z-[10] animate-[spin_5s_linear_infinite] bg-[conic-gradient(#34d399_0deg,#34d399_180deg,transparent_180deg,transparent_360deg)]"></span>
             </div>
-            <h1 className=" md:text-5xl text-lg py-12 text-center font-semibold text-black px-2 uppercase">
+            <h1 className=" md:text-MainHeading text-lg text-[#3c4c54]  text-center font-extrabold px-2 uppercase">
               Hear it from our Team
             </h1>
           </div>
-          <div className="h-[25rem] w-full dark:bg-black bg-slate-50  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative flex items-center justify-center">
+          <div className="h-[25rem] w-full  bg-slate-50  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative flex items-center justify-center">
             {/* Radial gradient for the container to give a faded look */}
             <div className=" absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white opacity-35"></div>
 
-            <div className="flex  flex-col gap-12 items-center bg-transparent h-[60vh] justify-center">
+            <div className="flex flex-col gap-12 items-center bg-transparent h-[60vh] justify-center">
               <InfiniteMovingCards2
                 items={testimonials}
                 direction="right"
