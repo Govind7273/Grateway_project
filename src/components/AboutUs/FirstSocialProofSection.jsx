@@ -30,10 +30,10 @@ export const FirstSocialProofSection = () => {
     },
   ];
   return (
-    <div className="mt-20  md:h-[230px] h-[400px] overflow-hidden relative p-4 bg-transparent  flex items-center justify-center w-[100vw]">
+    <div className="mt-10 sm:mt-20  md:h-[230px] h-[400px] overflow-hidden relative sm:p-4 bg-transparent  flex items-center justify-center w-[100vw]">
       
       {/* content */}
-      <div className="w-[100%] md:h-[230px] h-[400px] z-10 flex-wrap text-white flex justify-around items-center">
+      <div className="w-[100%] md:h-[230px] h-[400px] z-10 flex-wrap gap-4 text-white flex justify-around items-center">
         
           <div className="flex flex-col gap-2 justify-center items-center hover:scale-110 cursor-pointer">
             <span className=" text-5xl"><FaHandshake/></span>
