@@ -7,17 +7,19 @@ function DataAnalyticsDescriptive() {
   return (
     <section className="w-[100vw] overflow-x-hidden  bg-white pt-20 md:pt-10 relative ">
       {/* First Section */}
-      <div className="w-[100%] col-span-1 pt-10 bg-white flex flex-col text-black  py-6 justify-center items-center relative ">
+      <div className="w-[100%] col-span-1 pt-10 bg-white flex flex-col text-black  py-6 justify-center items-center relative opacity-95 ">
         <img src={Data} alt="" className="w-full " />
-        <div className="absolute w-[80%] md:flex-row ">
+        <div className="absolute w-[90%] md:flex-row ">
           <div className="w-[65%] flex flex-col md:gap-6 gap-2">
-            <h1 className="md:text-6xl text-xl text-white">
+            <h1 className="md:text-TopHeading text-TopHeading-sm font-extrabold">
               Data Analytics and AI/ML
             </h1>
-            <h2 className="md:text-2xl text-sm text-white">
+            <p className="md:text-xl text-sm  text-white font-bold">
               Unleashing the power within raw data, sculpting it into refined
+            </p>
+            <p className="md:text-xl text-sm  text-white font-bold">
               intelligence that drives impactful decisions and innovations.
-            </h2>
+            </p>
           </div>
         </div>
       </div>
@@ -25,18 +27,20 @@ function DataAnalyticsDescriptive() {
       {/*Second Section */}
       <div className="w-full col-span-1 py-6 bg-white flex flex-col px-20 justify-center  ">
         <div className="px-2">
-          <h1 className="md:text-6xl text-2xl text-black">Overview</h1>
+          <h1 className="md:text-MainHeading text-MainHeading-sm font-extrabold">
+            Overview
+          </h1>
         </div>
-        <div className=" w-full flex md:flex-row flex-col flex-col-2 items-start py-4 gap-4">
+        <div className=" w-full flex md:flex-row flex-col flex-col-2 items-start pt-4 gap-4">
           {/*left */}
           <div className="flex-1 px-2">
-            <p className=" md:text-lg text-base text-black pt-2">
+            <p className=" md:text-Paragraph text-Paragraph-sm pt-2">
               In today's data-driven world, organizations are collecting
               information at an unprecedented pace. But simply having data isn't
               enough. Extracting actionable insights is what truly fuels
               business growth.
             </p>
-            <p className="md:text-lg text-base text-black pt-2">
+            <p className="md:text-Paragraph text-Paragraph-sm pt-2">
               At Vionsys, we offer a comprehensive suite of Data Analytics and
               AI/ML solutions designed to unlock the hidden potential within
               your data. Our team of data scientists and machine learning
@@ -46,7 +50,7 @@ function DataAnalyticsDescriptive() {
               specific needs, and empower data-driven decision-making for
               strategic advantage.
             </p>
-            <p className="md:text-lg text-base text-black pt-2">
+            <p className="md:text-Paragraph text-Paragraph-sm pt-2">
               From predictive analytics and recommendation engines to anomaly
               detection and natural language processing, we deliver tailored
               solutions that propel your business. Our AI and machine learning
@@ -64,14 +68,14 @@ function DataAnalyticsDescriptive() {
       </div>
 
       {/* Third Section */}
-      <div className="w-full col-span-1 pb-6 bg-white flex flex-col px-20 justify-center ">
-        <div className="px-2">
-          <h1 className="md:text-6xl text-2xl text-black font-bold">
+      <div className="w-full col-span-1 pb-6 bg-white flex flex-col px-20 justify-center  ">
+        <div className="px-2 pb-2">
+          <h1 className="md:text-MainHeading text-MainHeading-sm font-extrabold">
             Our Expertise
           </h1>
         </div>
         <div className="px-2">
-          <div className="px-2 md:text-lg text-sm py-4">
+          <div className="px-2 md:text-Paragraph text-Paragraph-sm py-2">
             At Vionsys, we excel in harnessing the potential of data through
             advanced analytics and Artificial Intelligence (AI) solutions. Our
             expert team leverages cutting-edge technologies and methodologies to
@@ -81,11 +85,11 @@ function DataAnalyticsDescriptive() {
             model development, data analytics, AI consulting, and cloud-based ML
             platforms.
           </div>
-          <div className="flex flex-col px-2 py-4 ">
-            <h1 className="text-xl font-bold">
+          <div className="flex flex-col px-2 py-2 ">
+            <h1 className="md:text-SubHeading text-SubHeading-sm font-bold">
               Custom Machine Learning and Model Development
             </h1>
-            <p className="lg:text-lg  text-sm  py-2">
+            <p className="md:text-Paragraph  text-Paragraph-sm  py-2">
               Crafting tailored solutions to meet unique business needs. Our
               expert team leverages cutting-edge algorithms and predictive
               modelling techniques to uncover hidden patterns and trends within
@@ -94,11 +98,11 @@ function DataAnalyticsDescriptive() {
               drive business growth in today's data-driven landscape.
             </p>
           </div>
-          <div className="flex flex-col px-2 py-4 ">
-            <h1 className="text-xl font-bold">
+          <div className="flex flex-col px-2 py-2 ">
+            <h1 className="md:text-SubHeading text-SubHeading-sm font-bold">
               Data Analytics and Processing Services
             </h1>
-            <p className="lg:text-lg  text-sm  py-4">
+            <p className="md:text-Paragraph  text-Paragraph-sm py-2">
               Transforming raw data into actionable insights that drive
               strategic initiatives. Our expertise lies in harnessing advanced
               analytics techniques to unlock the true potential of data. With a
@@ -107,9 +111,11 @@ function DataAnalyticsDescriptive() {
               opportunities for growth in today's data-driven world.
             </p>
           </div>
-          <div className="flex flex-col px-2 py-4">
-            <h1 className="text-xl font-bold">AI and ML Consulting</h1>
-            <p className="lg:text-lg  text-sm  py-2">
+          <div className="flex flex-col px-2 py-2">
+            <h1 className="md:text-SubHeading text-SubHeading-sm font-bold">
+              AI and ML Consulting
+            </h1>
+            <p className="md:text-Paragraph  text-Paragraph-sm  py-2">
               Our ML and AI management consulting services guide you through the
               complexities of artificial intelligence, empowering you to
               capitalize on emerging trends and navigate complex challenges.
@@ -120,11 +126,11 @@ function DataAnalyticsDescriptive() {
               AI and machine learning and stay ahead of the competition.
             </p>
           </div>
-          <div className="flex flex-col px-2 py-4">
-            <h1 className="text-xl font-bold">
+          <div className="flex flex-col px-2 py-2">
+            <h1 className="md:text-SubHeading text-SubHeading-sm font-bold">
               Cloud-based Machine Learning Platforms
             </h1>
-            <p className="lg:text-lg  text-sm py-2 ">
+            <p className="md:text-Paragraph  text-Paragraph-sm py-2 ">
               Leveraging cloud-based machine learning platforms to scale
               Artificial Intelligence (AI) initiatives seamlessly and accelerate
               innovation. By harnessing the power of scalable cloud
