@@ -15,6 +15,9 @@ import { Link } from "react-router-dom"
 import { InfiniteMovingCardsDemo } from "./Clients";
 import ChooseUs from "./ChooseUs";
 import Collaboration from "./Collaboration";
+import { motion } from "framer-motion";
+import { fadein } from "../../../src/variants";
+
 
 const VideoComponent = ({ video, title, desc, link, isVisible }) => (
   <div className={`relative ${isVisible ? "" : "hidden"} h-[30rem] md:h-full w-[100vw]`}>
@@ -27,12 +30,18 @@ const VideoComponent = ({ video, title, desc, link, isVisible }) => (
     />
     <div className="absolute items-center left-1 h-full top-0 flex w-full p-2 md:p-5">
       <div className="md:max-w-[45rem] w-full flex flex-col gap-2 space-y-3">
-        <h1 className="loop_video_title md:text-TopHeading text-TopHeading-sm max-w-[50rem] font-extrabold font-headingFont">
+        <motion.h1 variants={fadein("down", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.8 }} className="loop_video_title md:text-TopHeading text-TopHeading-sm max-w-[50rem] font-extrabold font-headingFont">
           {title}
-        </h1>
-        <p className="loop_video_desc max-w-[30rem] text-sm md:text-lg font-medium text-white font-navlistFont">
+        </motion.h1>
+        <motion.p variants={fadein("down", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.8 }} className="loop_video_desc max-w-[30rem] text-sm md:text-lg font-medium text-white font-navlistFont">
           {desc}
-        </p>
+        </motion.p>
         <Link to={link} className="loop_video_btn items-start w-fit bg-cyan-300 px-3 py-1 mt-10 md:px-4 md:py-2 rounded-xl font-bold text-slate-800 hover:bg-white hover:text-cyan-700 transition-all 0.2 ease-out hover:border">
           Explore with us
         </Link>
@@ -113,12 +122,12 @@ const Home = ({ Meta_Data }) => {
       <Features />
 
       <Testimonials />
-      
+
       <Special />
 
       <ChooseUs />
 
-      <InfiniteMovingCardsDemo/>
+      <InfiniteMovingCardsDemo />
 
       <Collaboration />
 

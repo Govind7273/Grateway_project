@@ -1,16 +1,34 @@
-import React from 'react'
+import React from 'react';
+import { motion } from "framer-motion";
+import { fadein } from "../../../src/variants";
 
 function Collaboration() {
-    return (
-        <div className='py-12 text-center px-40'>
-            <h1 className='text-5xl text-gray-700 font-extrabold py-3'>Interested in collaborating with us?</h1>
-            <h4 className='text-2xl text-[#06b6d4] font-medium italic py-3'>Let's collaborate and create something extraordinary!</h4>
-            <p className='text-lg py-3'>At Greatway Software Pvt. Ltd., embark on a journey of endless possibilities. Join our dynamic team to immerse yourself in innovative projects, thrive in a collaborative environment, benefit from ongoing learning opportunities, and pave the way for your career growth. Discover the perfect setting to unleash your full potential in the ever-evolving realm of IT.</p>
-            <div className='py-3'>
-                <button className='bg-cyan-500 text-white px-4 py-2 hover:bg-cyan-700 rounded-xl'>Contact Us</button>
-            </div>
-        </div>
-    )
+  return (
+    <div className='md:py-12 p-4 text-center md:px-40'>
+      <motion.h1 variants={fadein("up", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.8 }} className='md:text-MainHeading text-MainHeading-sm font-extrabold md:py-2 py-1'>Interested in collaborating with us?</motion.h1>
+      <motion.h4 variants={fadein("up", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.8 }} className='text-2xl md:text-SubHeading text-SubHeading-sm font-bold italic md:py-2 py-1'>Let's collaborate and create something extraordinary!</motion.h4>
+      <motion.p variants={fadein("up", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.8 }} className='md:text-Paragraph text-Paragraph-sm py-3'>At Greatway Software Pvt. Ltd., embark on a journey of endless possibilities. Join our dynamic team to immerse yourself in innovative projects, thrive in a collaborative environment, benefit from ongoing learning opportunities, and pave the way for your career growth. Discover the perfect setting to unleash your full potential in the ever-evolving realm of IT.</motion.p>
+      <motion.div variants={fadein("up", 0.2)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.8 }} className="flex justify-center items-center">
+        <button
+          className="bg-zinc-900 rounded-[7px] text-white px-5 py-3 font-headingFont text-sm  transition-all duration-150 ease-linear hover:bg-zinc-700"
+        >
+          Apply Now
+        </button>
+      </motion.div>
+    </div>
+  )
 }
 
 export default Collaboration;
