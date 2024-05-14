@@ -49,8 +49,9 @@ module.exports = {
       },
     
       colors: {
-        "MainHeading":"#59c2d1",
-        "TopHeading":"#3c4c54",
+        "MainHeading":"#3c4c54",
+        // "TopHeading":"#59c2d1",
+        "TopHeading":"#67e8f9",
         "SubHeading":"#06b6d4",
         "Paragraph":"#1a2229",
         "CardHeading":"#1a2229",
