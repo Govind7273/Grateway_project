@@ -92,7 +92,7 @@ const Services = () => {
               <span className={`grid h-20 w-20 place-items-center rounded-full transition-all duration-300 group-hover:bg-${service.theme}-400`}>
                 <img src={service.logo} width={30} alt="" />
               </span>
-              <div className="space-y-2  text-gray-600 transition-all duration-300 group-hover:text-white/90">
+              <div className="space-y-2  text-[#646464] transition-all duration-300 group-hover:text-white/90">
                 <h1 className="md:text-xl text-lg p-1 font-bold text-black">{service.title}</h1>
                 <p className="md:text-lg text-sm">
                  {service.desc}

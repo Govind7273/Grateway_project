@@ -154,7 +154,7 @@ const FeaturesSection = () => {
               src={features}
               alt="Feature"
               className="mx-auto rounded-lg shadow-lg dark:bg-gray-500"
-              style={{ color: 'transparent', width: '600px', height: '600px' }}
+              style={{ color: 'transparent'}}
             />
           </div>
         </div>
