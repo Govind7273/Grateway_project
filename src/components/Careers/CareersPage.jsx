@@ -7,6 +7,7 @@ import ModalForm from "./ModalForm";
 import { motion } from "framer-motion";
 import { animateScroll as scroll } from "react-scroll";
 import { Link } from "react-router-dom";
+import { fadein } from "../../../src/variants";
 
 const testimonials = [
   {
@@ -150,9 +151,15 @@ const CareersPage = ({ Meta_Data }) => {
                 <span className="absolute w-[85%] aspect-square rounded-full z-[60] animate-[spin_5s_linear_infinite] bg-[conic-gradient(#34d399_0deg,#34d399_180deg,transparent_180deg,transparent_360deg)]"></span>
               </div>
 
-              <h1 className="md:text-MainHeading text-lg text-[#3c4c54] text-center font-extrabold px-2 uppercase">
+              <motion.h1
+                variants={fadein("right", 0.2)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.8 }}
+                className="md:text-MainHeading text-lg text-[#3c4c54] text-center font-extrabold px-2 uppercase"
+              >
                 Welcome to Greateway Softwares, India
-              </h1>
+              </motion.h1>
             </div>
 
             <div className="lg:h-[80vh] lg:w-[80vw] flex md:justify-center md:flex-row flex-col gap-10 py-6">
@@ -209,11 +216,23 @@ const CareersPage = ({ Meta_Data }) => {
               />
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-3xl text-black  font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                  <motion.h1
+                    variants={fadein("down", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.8 }}
+                    className="text-3xl text-black  font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                  >
                     Step into the Future of{" "}
                     <span className="block text-blue-900"> Technology</span>
-                  </h1>
-                  <p className="max-w-[600px] text-Paragraph leading-Paragraph md:text-lg dark:text-gray-400">
+                  </motion.h1>
+                  <motion.p
+                    variants={fadein("up", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{ once: false, amount: 0.8 }}
+                    className="max-w-[600px] text-Paragraph leading-Paragraph md:text-lg dark:text-gray-400"
+                  >
                     we believe in pioneering the future of technology. Join us
                     on a transformative journey where creativity meets
                     cutting-edge innovation. Dive into a world where ideas turn
@@ -223,7 +242,7 @@ const CareersPage = ({ Meta_Data }) => {
                     make a lasting impact on the world. Step into the future of
                     technology with us, and together, let's shape tomorrow's
                     world.
-                  </p>
+                  </motion.p>
                 </div>
                 <div className="w-full max-w-sm space-y-2">
                   <Link to={"/ContactUs"}>
@@ -243,9 +262,15 @@ const CareersPage = ({ Meta_Data }) => {
             <div className="w-32 aspect-square rounded-full relative flex justify-center items-center animate-[spin_3s_linear_infinite] z-40 bg-[conic-gradient(white_0deg,white_300deg,transparent_270deg,transparent_360deg)] before:animate-[spin_2s_linear_infinite] before:absolute before:w-[60%] before:aspect-square before:rounded-full before:z-[80] before:bg-[conic-gradient(white_0deg,white_270deg,transparent_180deg,transparent_360deg)] after:absolute after:w-3/4 after:aspect-square after:rounded-full after:z-[60] after:animate-[spin_3s_linear_infinite] after:bg-[conic-gradient(#065f46_0deg,#065f46_180deg,transparent_180deg,transparent_360deg)]">
               <span className="absolute w-[85%] aspect-square rounded-full z-[10] animate-[spin_5s_linear_infinite] bg-[conic-gradient(#34d399_0deg,#34d399_180deg,transparent_180deg,transparent_360deg)]"></span>
             </div>
-            <h1 className=" md:text-MainHeading text-lg text-[#3c4c54]  text-center font-extrabold px-2 uppercase">
+            <motion.h1
+              variants={fadein("right", 0.2)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.8 }}
+              className=" md:text-MainHeading text-lg text-[#3c4c54]  text-center font-extrabold px-2 uppercase"
+            >
               Hear it from our Team
-            </h1>
+            </motion.h1>
           </div>
           <div className="h-[25rem] w-full  bg-slate-50  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative flex items-center justify-center">
             {/* Radial gradient for the container to give a faded look */}
