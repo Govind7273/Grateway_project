@@ -20,6 +20,22 @@ module.exports = {
       },
     },
     extend: {
+      fontSize:{
+        "MainHeading":"36px",
+        "TopHeading":"48px",
+        "SubHeading":"20px",
+        "Paragraph":"16px",
+        "CardHeading":"24px",
+        "hyperlinks":"14px"
+      },
+      lineHeight:{
+        "MainHeading":"40px",
+        "TopHeading":"56px",
+        "SubHeading":"28px",
+        "Paragraph":"24px",
+        "CardHeading":"32px",
+        "hyperlinks":"20px"
+      },
       fontFamily:{
           headingFont:"'Noto Sans', sans-serif",
           navlistFont:"'Geologica', sans-serif"  
@@ -33,6 +49,12 @@ module.exports = {
       },
     
       colors: {
+        "MainHeading":"#59c2d1",
+        "TopHeading":"#3c4c54",
+        "SubHeading":"#06b6d4",
+        "Paragraph":"#1a2229",
+        "CardHeading":"#1a2229",
+        "hyperlinks":"#2c3493",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
