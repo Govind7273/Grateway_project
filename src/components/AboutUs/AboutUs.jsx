@@ -7,6 +7,7 @@ import { SecondSocialProof } from "./SecondSocialProof";
 import { ServiceInfoSection } from "./ServiceInfoSection";
 import { Ours } from "./Ours";
 import { Info } from "./Info";
+import { CTA } from "./CTA";
 
 const AboutUs = ({Meta_Data}) => {
   
@@ -40,25 +41,11 @@ const AboutUs = ({Meta_Data}) => {
       {OurValues()} */}
       {Ours()}
 
-      <div className="w-[70%] p-6 md:p-12 md:pb-[10rem]">
-            <div className=" text-black flex flex-col text-right items-end ">
-              <div className=" flex sm:text-xl md:text-2xl ">
-                "As a co-founder, I'm amazed by our organization's journey, a
-                    testament to collaborative spirit, determination, and shared
-                    aspirations."
-              </div>
-              <div className=" pt-2">
-                <div className="tracking-[2px] font-semibold text-xl">Nilam Rathod</div>
-                <div className="text-[0.8rem] tracking-[0.8px]">
-                Co-Founder, CTO
-                </div>
-              </div>
-              <div className="w-[6%] h-[0.5rem] bg-blue-700 rounded-full"></div>
-            </div>
-          </div>
-
       {/* Second Social Proof */}
-      {SecondSocialProof()}
+      {/* {SecondSocialProof()} */}
+
+      { CTA ()}
+
     </div>
     </>
   );
