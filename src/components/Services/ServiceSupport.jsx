@@ -5,6 +5,8 @@ import { IoTime } from "react-icons/io5";
 import { MdOutlineSupportAgent } from "react-icons/md";
 import { Link } from "react-router-dom";
 import bg from "./Images/service2.jpg";
+import Phonelogo from "./Images/phone.png";
+import EmailLogo from "./Images/Email.png";
 function Accordion(props) {
   return (
     <div className="border rounded-md mb-1">
@@ -78,6 +80,20 @@ const ServiceSupport = ({ Meta_Data }) => {
 
     setAccordion(updatedAccordions);
   };
+  const aiCards = [
+    {
+      id: 1,
+      icon: Phonelogo,
+      title: "+91 70586 06885",
+      message: "We are always happy to help.",
+    },
+    {
+      id: 2,
+      icon: EmailLogo,
+      title: "hr@greateway.com",
+      message: "The best way to get answer faster.",
+    },
+  ];
   return (
     <>
       <Helmet>
@@ -133,13 +149,41 @@ const ServiceSupport = ({ Meta_Data }) => {
         </div>
       </section>
 
-      <div className="flex relative md:top-0 -top-36 mb-[-80px] md:mb-0 h-[20vh] md:h-full justify-center w-full items-center gap-6 flex-col md:fl-row md:gap-6 p-3 md:p-5">
+      {/* <div className="flex relative md:top-0 -top-36 mb-[-80px] md:mb-0 h-[20vh] md:h-full justify-center w-full items-center gap-6 flex-col md:fl-row md:gap-6 p-3 md:p-5">
         <h1 className=" md:text-MainHeading text-MainHeading-sm font-extrabold justify-center flex">
           Need more Assistant
         </h1>
         <button className="p-3 w-[70%] text-white md:w-fit bg-blue-500 hover:bg-blue-600 transition-all ease-linear font-bold rounded-xl">
           <Link to={"/ContactUs"}>Contact Us</Link>
         </button>
+      </div> */}
+
+      {/* */}
+      <div class="w-full flex justify-center items-center pb-8">
+        <div class="w-1/3 flex flex-col gap-3 bg-gray-300 rounded-2xl py-6">
+          <div class="flex-col flex justify-center items-center gap-3">
+            <h1 class="md:text-SubHeading text-SubHeading-sm font-bold">
+              You still have a question?
+            </h1>
+            <p class="md:text-Paragraph text-Paragraph-sm w-2/3">
+              If you can't find the answer to your question, fill out your query
+              and submit it, or you can always contact us. We'll respond
+              shortly.
+            </p>
+          </div>
+          <div className="flex flex-row justify-between px-4 gap-4 rounded-lg py-2">
+            {aiCards.map((item) => (
+              <div
+                key={item.id}
+                className="w-1/2 flex flex-col gap-3 bg-white rounded-2xl p-4 hover:shadow-md hover:-translate-y-1"
+              >
+                <img src={item.icon} width={30} alt="" />
+                <h2 className="font-bold">{item.title}</h2>
+                <p>{item.message}.</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
