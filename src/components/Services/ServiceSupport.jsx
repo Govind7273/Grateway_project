@@ -4,7 +4,7 @@ import { BiMessageDots } from "react-icons/bi";
 import { IoTime } from "react-icons/io5";
 import { MdOutlineSupportAgent } from "react-icons/md";
 import { Link } from "react-router-dom";
-import bg from "./Images/service.jpeg";
+import bg from "./Images/service2.jpg";
 function Accordion(props) {
   return (
     <div className="border rounded-md mb-1">
@@ -88,15 +88,15 @@ const ServiceSupport = ({ Meta_Data }) => {
       {/* hero section */}
       <section className="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
         {/* first */}
-        <div className="pharma_img md:h-[100%] md:w-[100%] h-[60%]">
+        <div className="pharma_img md:h-[100%] md:w-[100%] h-[60%] pt-20">
           <img className="h-full w-full" src={bg} alt="support_bg" />
         </div>
         {/* second */}
-        <div className="pahrma_text absolute overflow-hidden top-0 w-full left-0 md:p-4 p-6 gap-5 flex-col md:h-full h-[50%] flex justify-center items-center">
-          <h1 className=" text-center text-white text-[2rem] md:text-[4rem]">
+        <div className="pahrma_text absolute overflow-hidden md:top-52 top-12 w-full left-0 md:p-4 p-6 md:gap-5 gap-2 flex-col md:h-full h-[70%] flex justify-center ">
+          <h1 className="  text-center text-white text-2xl md:text-6xl font-extrabold">
             Welcome to GreateWay Support
           </h1>
-          <p className="text-lg px-4  text-center md:font-bold">
+          <p className="md:text-xl text-md text-px-4 text-cyan-300 text-center md:font-bold">
             Require assistance? Our support team is ready to help with just a
             click!
           </p>
@@ -118,7 +118,7 @@ const ServiceSupport = ({ Meta_Data }) => {
       {/* Accordion for FAQ */}
       <section>
         <div className="p-2 m-4 md:m-8 relative md:top-0 -top-36 ">
-          <h2 className=" text-xl md:text-2xl mb-2 mx-auto font-bold p-2 text-center  text-black">
+          <h2 className="md:text-SubHeading text-SubHeading-sm font-bold p-2 text-center  text-black">
             Have questions? We have answers! Check out our FAQ
           </h2>
           {accordions.map((accordion) => (
@@ -134,7 +134,7 @@ const ServiceSupport = ({ Meta_Data }) => {
       </section>
 
       <div className="flex relative md:top-0 -top-36 mb-[-80px] md:mb-0 h-[20vh] md:h-full justify-center w-full items-center gap-6 flex-col md:fl-row md:gap-6 p-3 md:p-5">
-        <h1 className=" text-[2rem] md:text-[3rem] font-bold justify-center flex">
+        <h1 className=" md:text-MainHeading text-MainHeading-sm font-extrabold justify-center flex">
           Need more Assistant
         </h1>
         <button className="p-3 w-[70%] text-white md:w-fit bg-blue-500 hover:bg-blue-600 transition-all ease-linear font-bold rounded-xl">
