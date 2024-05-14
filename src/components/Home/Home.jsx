@@ -27,7 +27,7 @@ const VideoComponent = ({ video, title, desc, link, isVisible }) => (
     />
     <div className="absolute items-center left-1 h-full top-0 flex w-full p-2 md:p-5">
       <div className="md:max-w-[45rem] w-full flex flex-col gap-2 space-y-3">
-        <h1 className="loop_video_title text-3xl md:text-5xl text-cyan-300 max-w-[50rem] font-bold font-headingFont">
+        <h1 className="loop_video_title text-3xl text-TopHeading max-w-[50rem] font-extrabold font-headingFont">
           {title}
         </h1>
         <p className="loop_video_desc max-w-[30rem] text-sm md:text-lg font-medium text-white font-navlistFont">
