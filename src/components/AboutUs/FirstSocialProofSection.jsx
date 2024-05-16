@@ -8,27 +8,6 @@ import { useState } from "react";
 export const FirstSocialProofSection = () => {
 
   const[counterOn, setCounterOn]= useState(false);
-
-  const items = [
-    {
-      id: "1",
-      icon:"FaHandshake",
-      count: '3.5+',
-      message: "Years In Helping Business",
-    },
-    {
-      id: "2",
-      icon:"FaUsers",
-      count: '30+',
-      message: "Employees",
-    },
-    {
-      id: "3",
-      icon:"FaUsers",
-      count: 12,
-      message: "Complete Projects",
-    },
-  ];
   return (
     <div className="mt-10 sm:mt-20  md:h-[230px] h-[400px] overflow-hidden relative sm:p-4 bg-transparent  flex items-center justify-center w-[100vw]">
       

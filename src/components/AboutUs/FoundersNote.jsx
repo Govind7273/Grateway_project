@@ -8,7 +8,7 @@ export const FoundersNote = () => {
           {/* first section */}
           <div className="flex flex-wrap gap-2 sm:gap-10 items-center justify-center">
 
-              <div className="card bg-blue-50 rounded-xl w-[300px] md:w-[500px] h-[300px] preserve-3d perspective bg-inherit border-2 border-blue-100">
+              <div className="card bg-slate-100 rounded-xl w-[300px] md:w-[500px] h-[300px] preserve-3d perspective bg-inherit border-4 border-blue-100">
                 {/* front face */}
                 <div className="front-face absolute text-[#fff] w-[100%] h-[100%] overflow-hidden shadow-[0_15px_35px_rgba(0,_0,_0,_0.1)] rounded-[15px] bg-[rgba(255,_255,_255,_0.06)] preserve-3d transition-[0.5s] border-t-[1px_solid_#ddd] border-l-[1px_solid_#ddd] backface-invisible flex flex-col items-center justify-center ">
                 <div className="text-black">
@@ -33,7 +33,7 @@ export const FoundersNote = () => {
 
                 </div>
               </div>
-              <div className="card bg-blue-50 rounded-xl w-[300px] md:w-[500px] h-[300px] preserve-3d perspective bg-inherit border-2 border-blue-100">
+              <div className="card bg-slate-100 rounded-xl w-[300px] md:w-[500px] h-[300px] preserve-3d perspective bg-inherit border-4 border-blue-100">
                 {/* front face */}
                 <div className="front-face absolute text-[#fff] w-[100%] h-[100%] overflow-hidden shadow-[0_15px_35px_rgba(0,_0,_0,_0.1)] rounded-[15px] bg-[rgba(255,_255,_255,_0.06)] preserve-3d transition-[0.5s] border-t-[1px_solid_#ddd] border-l-[1px_solid_#ddd] backface-invisible flex flex-col items-center justify-center ">
                 <div className="text-black">
@@ -58,8 +58,6 @@ export const FoundersNote = () => {
 
                 </div>
               </div>
-
-              {/* Second Section */}
           </div>
         </div>
       </div>
