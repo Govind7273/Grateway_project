@@ -138,10 +138,11 @@ function TruckIcon(props) {
 }
 export const Secondsection = () => {
   return (
-    <>{/*Our Solutions*/}
-      <section className="w-full py-12 md:py-24 lg:py-24 overflow-x-hidden overflow-y-hidden">
-        <div className="container px-4 md:px-6">
-          <div className="space-y-4 text-center">
+    <>
+      {/*Our Solutions*/}
+      <section className="w-full md:h-[40vh] h-[30vh] py-12 md:py-24 lg:py-16 overflow-x-hidden overflow-y-hidden">
+        <div className="container  px-4 md:px-6">
+          <div className=" text-center">
             <motion.h1
               variants={fadein("up", 0.1)}
               initial="hidden"
@@ -156,7 +157,7 @@ export const Secondsection = () => {
         </div>
       </section>
       {/*Whole card section*/}
-      <section className="w-full md:py-24 lg:py-10 bg-gray-200 dark:bg-gray-800 overflow-x-hidden">
+      <section className="w-full md:py-24 lg:py-10 bg-gray-200 dark:bg-gray-800 overflow-x-hidden px-3">
         <div className="pb-10 px-2">
           <motion.h1
             variants={fadein("down", 0.1)}
@@ -175,14 +176,21 @@ export const Secondsection = () => {
             variants={fadein("right", 0.1)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once:true, amount: 0.5 }}
-            className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950"
+            whileHover={{ scale: 1.1 }}
+            transition={{
+              type: "spring",
+              stiffness: 80,
+              damping: 10,
+              amount: 0.1,
+            }}
+            viewport={{ once: true, amount: 0.5 }}
+            className=" group relative overflow-hidden rounded-lg bg-white shadow-md hover:cursor-pointer transition-all ease-linear hover:shadow-xl hover:scale-125 dark:bg-gray-950"
           >
             <div className="flex h-24 items-center justify-center bg-gray-100 p-4 dark:bg-gray-800">
               <BuildingIcon className="h-8 w-8 text-gray-500 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-50" />
             </div>
-            <div className="p-4">
-              <h3 className=" text-center text-CardHeading font-bold group-hover:text-gray-900 dark:group-hover:text-gray-50">
+            <div className="p-4 ">
+              <h3 className=" text-center text-CardHeading font-bold ">
                 Construction
               </h3>
               <p className="mt-2 text-Paragraph-sm line-clamp-3 dark:text-gray-400">
@@ -193,7 +201,16 @@ export const Secondsection = () => {
             </div>
           </motion.div>
           {/*Banking below */}
-          <div className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950"> 
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            transition={{
+              type: "spring",
+              stiffness: 80,
+              damping: 10,
+              amount: 0.1,
+            }}
+            className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950"
+          >
             <div className="flex h-24 items-center justify-center bg-gray-100 p-4 dark:bg-gray-800">
               <BriefcaseIcon className="h-8 w-8 text-gray-500 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-50" />
             </div>
@@ -202,16 +219,24 @@ export const Secondsection = () => {
                 Banking
               </h3>
               <p className="mt-2 text-Paragraph-sm line-clamp-3 dark:text-gray-400">
-                From online banking to mobile payments, we enable seamless customer experiences,Transforming banking compliance and risk
+                From online banking to mobile payments, we enable seamless
+                customer experiences,Transforming banking compliance and risk
                 management.
               </p>
             </div>
-          </div>
+          </motion.div>
           {/*field Services below*/}
           <motion.div
             variants={fadein("left", 0.1)}
             initial="hidden"
             whileInView={"show"}
+            whileHover={{ scale: 1.1 }}
+            transition={{
+              type: "spring",
+              stiffness: 80,
+              damping: 10,
+              amount: 0.1,
+            }}
             viewport={{ once: true, amount: 0.5 }}
             className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950"
           >
@@ -235,9 +260,15 @@ export const Secondsection = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.5 }}
+            whileHover={{ scale: 1.1 }}
+            transition={{
+              type: "spring",
+              stiffness: 80,
+              damping: 10,
+              amount: 0.1,
+            }}
             className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950"
           >
-            
             <div className="flex h-24 items-center justify-center bg-gray-100 p-4 dark:bg-gray-800">
               <BeakerIcon className="h-8 w-8 text-gray-500 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-50" />
             </div>
@@ -253,7 +284,16 @@ export const Secondsection = () => {
             </div>
           </motion.div>
           {/*Professional services below */}
-          <div className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950">     
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            transition={{
+              type: "spring",
+              stiffness: 80,
+              damping: 10,
+              amount: 0.1,
+            }}
+            className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950"
+          >
             <div className="flex h-24 items-center justify-center bg-gray-100 p-4 dark:bg-gray-800">
               <NewspaperIcon className="h-8 w-8 text-gray-500 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-50" />
             </div>
@@ -267,16 +307,22 @@ export const Secondsection = () => {
                 services through advanced IT services.
               </p>
             </div>
-          </div>
+          </motion.div>
           {/*finance Below */}
           <motion.div
             variants={fadein("left", 0.1)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: true, amount: 0.5 }}
-            className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950"
+            whileHover={{ scale: 1.1 }}
+            transition={{
+              type: "spring",
+              stiffness: 80,
+              damping: 10,
+              amount: 0.1,
+            }}
+            className=" group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950"
           >
-            
             <div className="flex h-24 items-center justify-center bg-gray-100 p-4 dark:bg-gray-800">
               <TelecomIcon className="h-8 w-8  group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-50" />
             </div>

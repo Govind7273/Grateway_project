@@ -29,12 +29,12 @@ const CARDS = [
     designation: "Greateway Software Solutions",
     content: (
       <>
-        <h1 className="font-bold text-CardHeading text-center">
-          Construction
-        </h1>
+        <h1 className="font-bold text-CardHeading text-center">Construction</h1>
         <p className="pt-2 text-Paragraph ">
           At Greateway, we deliver solutions streamline project management,
-          enhance collaboration, and boost productivity on and off-site,From advanced software integration to robust cybersecurity, we empower construction.
+          enhance collaboration, and boost productivity on and off-site,From
+          advanced software integration to robust cybersecurity, we empower
+          construction.
         </p>
       </>
     ),
@@ -62,9 +62,7 @@ const CARDS = [
     designation: "Greateway Software Solutions",
     content: (
       <>
-        <h1 className=" font-bold text-CardHeading text-center">
-          Education
-        </h1>
+        <h1 className=" font-bold text-CardHeading text-center">Education</h1>
         <p className="pt-2">
           robust learning management systems, secure digital classrooms, and
           advanced data analytics, all designed to enhance teaching and
@@ -147,39 +145,41 @@ const Indrustry = ({ Meta_Data }) => {
             </motion.p>
           </div>
         </section>
-        {/*CardsSlider Section*/}
-        <section className="min-h-[50vh] w-full overflow-x-hidden bg-gray-100 flex flex-col md:flex-row justify-evenly gap-10 px-4">
-          <div className="flex w-full md:w-auto py-10 px-4">
-            <CardStack items={CARDS} /> {/* Card component */}
+        {/*CardsSlider Section*/}{" "}
+        <section className="md:h-[50vh] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.1] bg-grid-black/[0.1] relative flex items-center justify-center">
+          <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+          <div className="min-h-[50vh] w-full overflow-x-hidden md:gap-10  flex flex-col md:flex-row justify-evenly px-2">
+            <div className="flex justify-center md:w-auto  py-10 px-2">
+              <CardStack items={CARDS} /> {/* Card component */}
+            </div>
+            <motion.div className="w-full md:w-auto flex flex-col md:py-7">
+              <motion.h1
+                variants={fadein("right", 0.2)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.8 }}
+                className=" text-center font-extrabold py-4 text-MainHeading"
+              >
+                Industry-specific IT,
+                <span className="text-MainHeading font-extrabold text-center">
+                  Infinite possibilities
+                </span>
+              </motion.h1>
+              <motion.p
+                variants={fadein("left", 0.2)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.8 }}
+                className="text-Paragraph md:text-lg md:text-center w-full md:w-[60vw] px-2"
+              >
+                With a proven track record of success and a team of experienced
+                professionals, we understand the unique challenges and
+                opportunities facing in industry. Trust us to be your strategic
+                IT partner, guiding you towards greater success and helping you
+                navigate the complexities with confidence.
+              </motion.p>
+            </motion.div>
           </div>
-          <motion.div className="w-full md:w-auto flex flex-col py-7">
-            <motion.h1
-              variants={fadein("right", 0.2)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.8 }}
-              className=" text-center font-extrabold py-4 text-MainHeading"
-            >
-              Industry-specific IT,
-              <span className="text-MainHeading font-extrabold text-center">
-                Infinite possibilities
-              </span>
-            </motion.h1>
-            <motion.p
-              variants={fadein("left", 0.2)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.8 }}
-              className="text-Paragraph md:text-lg md:text-center w-full md:w-[60vw] px-2"
-            >
-              With a proven track record of success and a team of experienced
-              professionals, we understand the unique challenges and
-              opportunities facing financial institutions. Trust us to be your
-              strategic IT partner, guiding you towards greater success and
-              helping you navigate the complexities of digital finance with
-              confidence.
-            </motion.p>
-          </motion.div>
         </section>
         {/* {Education section} */}
         <section className="h-full w-full">
@@ -204,9 +204,9 @@ const Indrustry = ({ Meta_Data }) => {
               className="mx-auto grid justify-center py-6 gap-10 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3"
             >
               {/*first card*/}
-              <div className=" shadow-lg relative  hover:cursor-pointer hover:scale-105 text-black bg-stone-100 hover: transition-all overflow-hidden  border bg-background p-2 md:h-[60vh] h-[40vh]">
+              <div className=" shadow-lg relative  hover:cursor-pointer hover:scale-105 text-black bg-stone-100 hover: transition-all overflow-hidden  border bg-background p-2  md:h-[60vh] h-[40vh]">
                 <div className="flex flex-col justify-between rounded-md p-6">
-                  <div className="space-y-4">
+                  <div className="space-y-4 ">
                     <motion.h3
                       variants={fadein("right", 0.5)}
                       initial="hidden"
@@ -222,7 +222,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView={"show"}
                       viewport={{ once: true, amount: 0.8 }}
-                      className="text-[#646464]"
+                      className="text-[#646464] py-2 h-auto"
                     >
                       Empower your organization with our cutting-edge Learning
                       Management System (LMS) solutions. At our IT services
@@ -317,7 +317,7 @@ const Indrustry = ({ Meta_Data }) => {
               className="mx-auto grid justify-center py-6 gap-10 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 h-auto"
             >
               {/*first card */}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden  border bg-background p-2 md:h-[60vh] h-[40vh]">
+              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden  border bg-background p-2  md:h-[60vh] h-[40vh]">
                 <div className="flex flex-col justify-between rounded-md p-6">
                   <div className="space-y-4">
                     <motion.h3
@@ -346,7 +346,7 @@ const Indrustry = ({ Meta_Data }) => {
                 </div>
               </div>
               {/*Second card */}
-              <div className=" shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border bg-background p-2 md:h-[60vh] h-[40vh]">
+              <div className=" shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border bg-background p-2  md:h-[60vh] h-[40vh]">
                 <div className="flex  flex-col justify-between rounded-md p-6">
                   <div className="space-y-4">
                     <motion.h3
