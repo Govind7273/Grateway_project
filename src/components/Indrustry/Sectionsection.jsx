@@ -138,8 +138,8 @@ function TruckIcon(props) {
 }
 export const Secondsection = () => {
   return (
-    <>
-      <section className="w-full py-12 md:py-24 lg:py-24 overflow-x-hidden">
+    <>{/*Our Solutions*/}
+      <section className="w-full py-12 md:py-24 lg:py-24 overflow-x-hidden overflow-y-hidden">
         <div className="container px-4 md:px-6">
           <div className="space-y-4 text-center">
             <motion.h1
@@ -152,24 +152,23 @@ export const Secondsection = () => {
               Our solutions are tailored to meet the unique needs of businesses
               across a wide range of industries.
             </motion.h1>
-            {/* <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              Our solutions are tailored to meet the unique needs of businesses across a wide range of industries.
-            </p> */}
           </div>
         </div>
       </section>
-      <section className="w-full md:py-24 lg:py-10 bg-gray-200 dark:bg-gray-800">
+      {/*Whole card section*/}
+      <section className="w-full md:py-24 lg:py-10 bg-gray-200 dark:bg-gray-800 overflow-x-hidden">
         <div className="pb-10 px-2">
           <motion.h1
             variants={fadein("down", 0.1)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.5 }}
-            className="md:text-4xl text-center font-bold text-2xl text-[#504d69]"
+            className="md:text-4xl text-center font-bold text-3xl text-[#504d69]"
           >
             Discover Solution For Your Industry
           </motion.h1>
         </div>
+        {/*Sub card section*/}
         <div className="container grid grid-cols-1 gap-6 px-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10">
           {/*Construction below */}
           <motion.div
@@ -183,32 +182,32 @@ export const Secondsection = () => {
               <BuildingIcon className="h-8 w-8 text-gray-500 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-50" />
             </div>
             <div className="p-4">
-              <h3 className=" text-center text-xl font-semibold group-hover:text-gray-900 dark:group-hover:text-gray-50">
+              <h3 className=" text-center text-CardHeading font-bold group-hover:text-gray-900 dark:group-hover:text-gray-50">
                 Construction
               </h3>
-              <p className="mt-2 text-md line-clamp-3 dark:text-gray-400">
+              <p className="mt-2 text-Paragraph-sm line-clamp-3 dark:text-gray-400">
                 Your trusted partner for construction IT, delivering reliability
                 and innovation,Maximizing construction project success through
                 strategic IT implementations.
               </p>
             </div>
           </motion.div>
-          <div className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950">
-            {/*Banking below */}
+          {/*Banking below */}
+          <div className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950"> 
             <div className="flex h-24 items-center justify-center bg-gray-100 p-4 dark:bg-gray-800">
               <BriefcaseIcon className="h-8 w-8 text-gray-500 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-50" />
             </div>
             <div className="p-4">
-              <h3 className="text-center text-xl font-semibold group-hover:text-gray-900 dark:group-hover:text-gray-50">
+              <h3 className="text-center text-CardHeading font-bold group-hover:text-gray-900 dark:group-hover:text-gray-50">
                 Banking
               </h3>
-              <p className="mt-2 text-md line-clamp-3 dark:text-gray-400">
-                From online banking to mobile payments, we enable seamless
-                customer experiences,Transforming banking compliance and risk
+              <p className="mt-2 text-Paragraph-sm line-clamp-3 dark:text-gray-400">
+                From online banking to mobile payments, we enable seamless customer experiences,Transforming banking compliance and risk
                 management.
               </p>
             </div>
           </div>
+          {/*field Services below*/}
           <motion.div
             variants={fadein("left", 0.1)}
             initial="hidden"
@@ -216,22 +215,21 @@ export const Secondsection = () => {
             viewport={{ once: true, amount: 0.5 }}
             className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950"
           >
-            {/*field Services below*/}
             <div className="flex h-24 items-center justify-center bg-gray-100 p-4 dark:bg-gray-800">
               <TruckIcon className="h-8 w-8 text-gray-500 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-50" />
             </div>
             <div className="p-4">
-              <h3 className="text-center text-xl font-semibold group-hover:text-gray-900 dark:group-hover:text-gray-50">
+              <h3 className="text-center text-CardHeading font-bold group-hover:text-gray-900 dark:group-hover:text-gray-50">
                 Field Services
               </h3>
-              <p className="mt-2 text-md  line-clamp-3 dark:text-gray-400">
+              <p className="mt-2 text-Paragraph-sm  line-clamp-3 dark:text-gray-400">
                 Streamlining field service workflows with custom-built IT
                 solutions,Enabling real-time communication and collaboration for
                 field service teams.
               </p>
             </div>
           </motion.div>
-
+          {/*Pharmaceutical below */}
           <motion.div
             variants={fadein("right", 0.1)}
             initial="hidden"
@@ -239,37 +237,38 @@ export const Secondsection = () => {
             viewport={{ once: true, amount: 0.5 }}
             className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950"
           >
-            {/*Pharmaceutical below */}
+            
             <div className="flex h-24 items-center justify-center bg-gray-100 p-4 dark:bg-gray-800">
               <BeakerIcon className="h-8 w-8 text-gray-500 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-50" />
             </div>
             <div className="p-4">
-              <h3 className="text-center text-xl font-semibold group-hover:text-gray-900 dark:group-hover:text-gray-50">
+              <h3 className="text-center text-CardHeading font-bold group-hover:text-gray-900 dark:group-hover:text-gray-50">
                 Pharmaceutical
               </h3>
-              <p className="mt-2 text-md line-clamp-3 dark:text-gray-400">
+              <p className="mt-2 text-Paragraph-sm line-clamp-3 dark:text-gray-400">
                 Maximizing efficiency in manufacturing and supply chain
                 management with IT innovation,Enabling personalized medicine and
                 patient care with tailored IT services.
               </p>
             </div>
           </motion.div>
-          <div className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950">
-            {/*Professional services below */}
+          {/*Professional services below */}
+          <div className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950">     
             <div className="flex h-24 items-center justify-center bg-gray-100 p-4 dark:bg-gray-800">
               <NewspaperIcon className="h-8 w-8 text-gray-500 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-50" />
             </div>
             <div className="p-4">
-              <h3 className="text-center text-xl font-semibold group-hover:text-gray-900 dark:group-hover:text-gray-50">
+              <h3 className="text-center text-CardHeading font-bold group-hover:text-gray-900 dark:group-hover:text-gray-50">
                 Professional Services
               </h3>
-              <p className="mt-2 text-md  line-clamp-3 dark:text-gray-400">
+              <p className="mt-2 text-Paragraph-sm  line-clamp-3 dark:text-gray-400">
                 Transforming professional services operations with cutting-edge
                 technology,Driving efficiency and profitability in professional
                 services through advanced IT services.
               </p>
             </div>
           </div>
+          {/*finance Below */}
           <motion.div
             variants={fadein("left", 0.1)}
             initial="hidden"
@@ -277,15 +276,15 @@ export const Secondsection = () => {
             viewport={{ once: true, amount: 0.5 }}
             className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950"
           >
-            {/*finance Below */}
+            
             <div className="flex h-24 items-center justify-center bg-gray-100 p-4 dark:bg-gray-800">
               <TelecomIcon className="h-8 w-8  group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-50" />
             </div>
             <div className="p-4">
-              <h3 className="text-center text-xl font-semibold group-hover:text-gray-900 dark:group-hover:text-gray-50">
+              <h3 className="text-center text-CardHeading font-bold group-hover:text-gray-900 dark:group-hover:text-gray-50">
                 Finance
               </h3>
-              <p className="mt-2 text-md  line-clamp-3 dark:text-gray-400">
+              <p className="mt-2 text-Paragraph-sm  line-clamp-3 dark:text-gray-400">
                 Ensuring security and compliance in financial IT systems,From
                 banking to investments, we optimize every aspect with IT
                 excellence.

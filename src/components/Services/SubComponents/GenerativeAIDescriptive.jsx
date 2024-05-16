@@ -6,18 +6,18 @@ function GenerativeAIDescriptive() {
   return (
     <section className="w-[100vw]   bg-white pt-20 md:pt-10 relative ">
       {/* First Section */}
-      <div className="w-[100%] col-span-1 pt-10 bg-white flex flex-col text-black  py-6 justify-center items-center relative">
+      <div className="w-[100%] col-span-1 pt-10 opacity-95 bg-white flex flex-col text-black  py-6 justify-center items-center relative">
         <img src={GenerativeAIImage} alt="" className="w-full " />
         <div className="absolute w-[80%] md:flex-row ">
           <div className="text-white w-2/3 flex justify-center items-center gap-6"></div>
 
           <div className="w-[65%] md:py-4 pt- px-2">
-            <h1 className="md:text-7xl text-xl font-extrabold text-white">
+            <h1 className="md:text-TopHeading text-TopHeading-sm font-extrabold text-white">
               Generative AI
             </h1>
           </div>
           <div className="w-[65%] lg:pt-4  px-2">
-            <h1 className="md:text-2xl text-sm text-white">
+            <h1 className="md:text-xl text-sm text-white font-bold ">
               Embarking at the intersection of boundless creativity and
               groundbreaking innovation
             </h1>
@@ -26,21 +26,36 @@ function GenerativeAIDescriptive() {
       </div>
 
       {/*Second Section */}
-      <div className="w-full col-span-1 py-10 bg-white flex flex-col px-20 justify-center  ">
+      <div className="w-full col-span-1 py-6 bg-white flex flex-col px-20 justify-center  ">
         <div className="px-2">
-          <h1 className="md:text-6xl text-2xl text-black">Overview</h1>
+          <h1 className="md:text-MainHeading text-MainHeading-sm font-extrabold">
+            Overview
+          </h1>
         </div>
         <div className=" w-full flex md:flex-row flex-col flex-col-2 items-start gap-6">
           {/*left */}
           <div className="flex-1 ">
-            <h2 className=" lg:text-xl text:sm text-black pt-6">
-              At Vionsys Gen AI Solutions, we revolutionize businesses through
-              innovative artificial intelligence technologies. Our structured
-              approach to Gen AI addresses diverse business needs and
-              industry-specific challenges. With a focus on innovation,
-              expertise, and vertical-specific solutions, we empower
-              organizations to unlock the full potential of AI for sustainable
-              growth and success.
+            <h2 className=" md:text-Paragraph text-Paragraph-sm pt-6">
+              At Vionsys Gen AI Solutions, we stand as the vanguard of business
+              transformation, pioneering a new era of innovation through
+              cutting-edge artificial intelligence technologies. Our
+              meticulously crafted approach to Gen AI is not just a solution;
+              it's a tailored roadmap to navigating the intricacies of diverse
+              business landscapes and overcoming industry-specific hurdles. At
+              the heart of our ethos lies a relentless pursuit of innovation. We
+              don't just keep pace with the latest advancements; we define them.
+              Armed with unparalleled expertise, we delve deep into the nuances
+              of each sector, crafting bespoke solutions that resonate with the
+              unique challenges and opportunities of every industry. Our
+              commitment extends beyond mere implementation; we are architects
+              of sustainable growth and enduring success. By harnessing the
+              power of AI, we empower organizations to unlock untapped
+              potential, driving efficiency, productivity, and profitability to
+              unprecedented heights. With Vionsys Gen AI Solutions by your side,
+              the future isn't just a vision—it's a tangible reality, brimming
+              with limitless possibilities for evolution and advancement. Join
+              us as we embark on a journey to redefine the very fabric of
+              business, one innovative solution at a time.
             </h2>
           </div>
           {/*right */}
@@ -53,12 +68,16 @@ function GenerativeAIDescriptive() {
       {/* Third Section */}
       <div className="w-full col-span-1 gap-6 bg-white flex flex-col px-20 justify-center ">
         <div className="px-2">
-          <h1 className="md:text-6xl text-2xl text-black">Our Expertise</h1>
+          <h1 className="md:text-MainHeading text-MainHeading-sm font-extrabold">
+            Our Expertise
+          </h1>
         </div>
         <div>
-          <div className="flex flex-col px-2 py-4 ">
-            <h1 className="text-xl font-bold">Compentency Center</h1>
-            <p className="lg:text-lg  text-sm  py-2">
+          <div className="flex flex-col px-2  ">
+            <h1 className="md:text-SubHeading text-SubHeading-sm font-bold">
+              Compentency Center
+            </h1>
+            <p className="md:text-Paragraph text-Paragraph-sm">
               We prioritize continuous internal research and development to
               remain at the forefront of emerging models, techniques, and
               industry best practices. We actively educate our team members to
@@ -70,11 +89,11 @@ function GenerativeAIDescriptive() {
               proceeding to full-scale production.
             </p>
           </div>
-          <div className="flex flex-col px-2 py-4 ">
-            <h1 className="text-xl font-bold">
+          <div className="flex flex-col px-2 py-2 ">
+            <h1 className="md:text-SubHeading text-SubHeading-sm font-bold">
               Retrieval Augmented Generation (RAG)
             </h1>
-            <p className="lg:text-lg  text-sm  py-2">
+            <p className="md:text-Paragraph text-Paragraph-sm">
               We leverage RAG techniques to effectively utilize enterprise,
               product, and customer data by Large Language Models (LLMs). With
               experience in vector databases, search techniques, and building
@@ -82,27 +101,33 @@ function GenerativeAIDescriptive() {
               improve customer-facing experiences.
             </p>
           </div>
-          <div className="flex flex-col px-2 py-4 ">
-            <h1 className="text-xl font-bold">Agent Development</h1>
-            <p className="lg:text-lg  text-sm  py-2">
+          <div className="flex flex-col px-2 py-2 ">
+            <h1 className="md:text-SubHeading text-SubHeading-sm font-bold">
+              Agent Development
+            </h1>
+            <p className="md:text-Paragraph text-Paragraph-sm">
               Our focus lies in developing actionable Gen AI agents capable of
               calling APIs to perform tasks on a platform. We contextualize Gen
               AI experiences to trigger workflows within a product, creating a
               seamless "Copilot" for enhanced user experience.
             </p>
           </div>
-          <div className="flex flex-col px-2 py-4 ">
-            <h1 className="text-xl font-bold">Industry-Specific Solutions</h1>
-            <p className="lg:text-lg  text-sm py-2 ">
+          <div className="flex flex-col px-2 py-2 ">
+            <h1 className="md:text-SubHeading text-SubHeading-sm font-bold">
+              Industry-Specific Solutions
+            </h1>
+            <p className="md:text-Paragraph text-Paragraph-sm">
               Specializing in vertical-specific focus areas, including
               healthcare, finance, retail, media, and supply chain, we build Gen
               AI apps tailored for specific domains. These address unique
               challenges and deliver tangible results.
             </p>
           </div>
-          <div className="flex flex-col px-2 py-4 ">
-            <h1 className="text-xl font-bold">Evaluation and Measurement</h1>
-            <p className="lg:text-lg  text-sm  py-2">
+          <div className="flex flex-col px-2 py-2 ">
+            <h1 className="md:text-SubHeading text-SubHeading-sm font-bold">
+              Evaluation and Measurement
+            </h1>
+            <p className="md:text-Paragraph text-Paragraph-sm pb-2">
               We employ rigorous evaluation frameworks to measure the
               effectiveness and impact of our Gen AI implementations. We aim to
               ensure alignment with business objectives and facilitate

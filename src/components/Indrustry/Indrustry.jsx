@@ -1,15 +1,15 @@
 import { Helmet } from "react-helmet-async";
 import React from "react";
 import { motion } from "framer-motion";
-import { fadein } from "../../../src/variants";
+import { fadein } from "../../variants";
 import edu2 from "./images/edu2.jpg";
 import tele from "./images/tele.jpg";
 import doc from "./images/doc.jpg";
 import { cn } from "../../utils/cn";
-import { CardStack } from "../../../src/components/ui/Card-Stack";
-import { Firstsection } from "../Indrustry/Firstsection";
-import { Secondsection } from "../Indrustry/Sectionsection";
-import { Thirdsection } from "../Indrustry/Thirdsection";
+import { CardStack } from "../ui/Card-Stack";
+import { Firstsection } from "./Firstsection";
+import { Secondsection } from "./Sectionsection";
+import { Thirdsection } from "./Thirdsection";
 function Highlight({ children, className }) {
   return (
     <span
@@ -29,7 +29,13 @@ const CARDS = [
     designation: "Greateway Software Solutions",
     content: (
       <>
-        <h1 className="md:text-6xl text-4xl text-[#44444c]">Construction</h1>
+        <h1 className="font-bold text-CardHeading text-center">
+          Construction
+        </h1>
+        <p className="pt-2 text-Paragraph ">
+          At Greateway, we deliver solutions streamline project management,
+          enhance collaboration, and boost productivity on and off-site,From advanced software integration to robust cybersecurity, we empower construction.
+        </p>
       </>
     ),
   },
@@ -39,7 +45,14 @@ const CARDS = [
     designation: "Greateway Software Solutions",
     content: (
       <>
-        <h1 className="md:text-6xl text-4xl text-[#44444c]">Banking & Finance</h1>
+        <h1 className="font-bold text-CardHeading text-center">
+          Banking & Finance
+        </h1>
+        <p className="pt-2">
+          We deliver specialized IT services tailored for the banking and
+          finance sector. Our solutions include secure transaction processing,
+          advanced data analytics, and compliance management.
+        </p>
       </>
     ),
   },
@@ -49,7 +62,14 @@ const CARDS = [
     designation: "Greateway Software Solutions",
     content: (
       <>
-        <h1 className="md:text-6xl text-4xl text-[#44444c]">Education</h1>
+        <h1 className=" font-bold text-CardHeading text-center">
+          Education
+        </h1>
+        <p className="pt-2">
+          robust learning management systems, secure digital classrooms, and
+          advanced data analytics, all designed to enhance teaching and
+          learning. Partner with us to leverage technology
+        </p>
       </>
     ),
   },
@@ -59,7 +79,14 @@ const CARDS = [
     designation: "Greateway Software Solutions",
     content: (
       <>
-        <h1 className="md:text-6xl text-4xl text-[#44444c]">Professional Services</h1>
+        <h1 className=" font-bold text-CardHeading text-center">
+          Professional Services
+        </h1>
+        <p className="pt-2 ">
+          Our advanced project management tools, secure data handling, and
+          seamless collaboration platforms, designed to enhance efficiency and
+          client satisfaction.
+        </p>
       </>
     ),
   },
@@ -69,7 +96,14 @@ const CARDS = [
     designation: "Greateway Software Solutions",
     content: (
       <>
-        <h1 className="md:text-6xl text-4xl text-[#44444c]">Field Services</h1>
+        <h1 className=" font-bold text-CardHeading text-center">
+          Field Services
+        </h1>
+        <p className="pt-2">
+          Our comprehensive solutions include mobile workforce management,
+          real-time data analytics, and secure communication platforms, ensuring
+          seamless coordination.
+        </p>
       </>
     ),
   },
@@ -85,9 +119,9 @@ const Indrustry = ({ Meta_Data }) => {
         <meta name="description" content={Description} />
         <link rel="canonical" href={Link} />
       </Helmet>
-
+      {/*Main div*/}
       <main className="overflow-x-hidden">
-        {/*main section */}
+        {/*landing section*/}
         <section className="relative w-full h-full overflow-x-hidden">
           <Firstsection /> {/*Images slider section */}
           <div className="absolute overflow-hidden top-0 w-screen left-0 p-4 flex-col h-full gap-4 flex justify-center items-center">
@@ -95,8 +129,8 @@ const Indrustry = ({ Meta_Data }) => {
               variants={fadein("down", 0.1)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{ once: true, amount: 0.5}}
-              className="md:text-6xl text-4xl font-bold text-cyan-300 text-wrap"
+              viewport={{ once: true, amount: 0.5 }}
+              className="md:text-TopHeading text-TopHeading-sm font-extrabold text-wrap"
             >
               Industries
             </motion.h1>
@@ -105,7 +139,7 @@ const Indrustry = ({ Meta_Data }) => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.5 }}
-              className="md:text-2xl text-xl font-semibold text-white text-center w-[70vw] "
+              className="text-xl font-bold text-white text-center w-[70vw] "
             >
               Navigating the complexities of modern industries demands versatile
               IT solutions. From marketing to logistics,we offer comprehensive
@@ -113,38 +147,41 @@ const Indrustry = ({ Meta_Data }) => {
             </motion.p>
           </div>
         </section>
-        <div className=" flex items-center justify-center md:w-auto w-screen bg-gray-100">
-          <CardStack items={CARDS} />
-        </div>
-        <section className="h-full w-full overflow-x-hidden  bg-gray-100">
-          <motion.div className=" h-1/2 w-screen flex flex-col py-7 items-center gap-4">
+        {/*CardsSlider Section*/}
+        <section className="min-h-[50vh] w-full overflow-x-hidden bg-gray-100 flex flex-col md:flex-row justify-evenly gap-10 px-4">
+          <div className="flex w-full md:w-auto py-10 px-4">
+            <CardStack items={CARDS} /> {/* Card component */}
+          </div>
+          <motion.div className="w-full md:w-auto flex flex-col py-7">
             <motion.h1
               variants={fadein("right", 0.2)}
               initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.8 }}
-              className="md:text-3xl text-xl text-center font-bold py-6 text-[#504d69] "
+              whileInView="show"
+              viewport={{ once: true, amount: 0.8 }}
+              className=" text-center font-extrabold py-4 text-MainHeading"
             >
               Industry-specific IT,
-              <span className="text-[#504d69]"> Infinite possibilities</span>
+              <span className="text-MainHeading font-extrabold text-center">
+                Infinite possibilities
+              </span>
             </motion.h1>
             <motion.p
               variants={fadein("left", 0.2)}
               initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.8 }}
-              className="text-center md:text-xl text- w-[70vw]"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.8 }}
+              className="text-Paragraph md:text-lg md:text-center w-full md:w-[60vw] px-2"
             >
               With a proven track record of success and a team of experienced
               professionals, we understand the unique challenges and
               opportunities facing financial institutions. Trust us to be your
               strategic IT partner, guiding you towards greater success and
               helping you navigate the complexities of digital finance with
-              confidence."
+              confidence.
             </motion.p>
           </motion.div>
         </section>
-        {/* {Finance section} */}
+        {/* {Education section} */}
         <section className="h-full w-full">
           <div className="md:h-[70vh] h-[40vh] w-full  flex items-center justify-center text-white bg-black">
             <img
@@ -157,7 +194,7 @@ const Indrustry = ({ Meta_Data }) => {
             </h1>
           </div>
           <div className="">
-            <h2 className="text-[#504d69] font-extrabold text-center text-3xl  w-screen pt-3">
+            <h2 className="text-MainHeading font-extrabold text-center  w-screen pt-3">
               Services We Serve
             </h2>
           </div>
@@ -166,8 +203,8 @@ const Indrustry = ({ Meta_Data }) => {
               data-aos="zoom-out"
               className="mx-auto grid justify-center py-6 gap-10 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3"
             >
-              {/*first */}
-              <div className=" shadow-lg relative  hover:cursor-pointer hover:scale-105 text-black bg-stone-200 hover:bg-[#3c4d54] transition-all overflow-hidden hover:text-white  border bg-background p-2 md:h-[60vh] h-[40vh]">
+              {/*first card*/}
+              <div className=" shadow-lg relative  hover:cursor-pointer hover:scale-105 text-black bg-stone-100 hover: transition-all overflow-hidden  border bg-background p-2 md:h-[60vh] h-[40vh]">
                 <div className="flex flex-col justify-between rounded-md p-6">
                   <div className="space-y-4">
                     <motion.h3
@@ -175,7 +212,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView={"show"}
                       viewport={{ once: true, amount: 0.5 }}
-                      className="font-bold text-xl text-[#2c3493]"
+                      className="font-bold text-xl text-[#1a2229]"
                     >
                       Learning Management system
                     </motion.h3>
@@ -185,7 +222,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView={"show"}
                       viewport={{ once: true, amount: 0.8 }}
-                      className="text-md"
+                      className="text-[#646464]"
                     >
                       Empower your organization with our cutting-edge Learning
                       Management System (LMS) solutions. At our IT services
@@ -196,8 +233,8 @@ const Indrustry = ({ Meta_Data }) => {
                   </div>
                 </div>
               </div>
-              {/*Second */}
-              <div className="shadow-lg  relative  hover:cursor-pointer hover:scale-105  text-black bg-stone-200  hover:bg-[#3c4d54] transition-all overflow-hidden hover:text-white border bg-background p-2 px-3 md:h-[60vh] h-[40vh]">
+              {/*Second card*/}
+              <div className="shadow-lg  relative  hover:cursor-pointer hover:scale-105  text-black bg-stone-100  hover:transition-all overflow-hidden border bg-background p-2 px-3 md:h-[60vh] h-[40vh]">
                 <div className="flex flex-col justify-between rounded-md p-6">
                   <div className="space-y-4">
                     <motion.h3
@@ -205,7 +242,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView={"show"}
                       viewport={{ once: true, amount: 0.8 }}
-                      className="font-bold text-xl text-[#2c3493]"
+                      className="font-bold text-xl text-[#1a2229]"
                     >
                       Virtual Classroom Solutions
                     </motion.h3>
@@ -214,7 +251,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView={"show"}
                       viewport={{ once: true, amount: 0.5 }}
-                      className="text-md"
+                      className="text-[#646464]"
                     >
                       Cultivate engaging virtual learning experiences with our
                       specialized IT services tailored for virtual classrooms.
@@ -225,8 +262,8 @@ const Indrustry = ({ Meta_Data }) => {
                   </div>
                 </div>
               </div>
-              {/*third */}
-              <div className="relative hover:cursor-pointer hover:scale-105  text-black bg-stone-200  hover:bg-[#3c4d54] transition-all overflow-hidden hover:text-white border bg-background p-2 md:h-[60vh] h-[40vh]">
+              {/*third card */}
+              <div className="relative hover:cursor-pointer hover:scale-105  text-black bg-stone-100  hover: transition-all overflow-hidden  border bg-background p-2 md:h-[60vh] h-[40vh]">
                 <div className="flex flex-col justify-between rounded-md p-6">
                   <div className="space-y-4">
                     <motion.h3
@@ -234,7 +271,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView={"show"}
                       viewport={{ once: true, amount: 0.8 }}
-                      className="font-bold text-xl text-[#2c3493]"
+                      className="font-bold text-xl text-[#1a2229]"
                     >
                       Online Assessment and Proctoring
                     </motion.h3>
@@ -243,7 +280,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView={"show"}
                       viewport={{ once: true, amount: 0.5 }}
-                      className="text-md"
+                      className="text-[#646464]"
                     >
                       Our advanced assessment platforms incorporate robust
                       proctoring features such as live monitoring, AI-based
@@ -257,6 +294,7 @@ const Indrustry = ({ Meta_Data }) => {
             </div>
           </section>
         </section>
+        {/*Telecom Section */}
         <section className="h-full w-full">
           <div className="md:h-[70vh] h-[40vh] w-full  flex items-center justify-center text-white bg-black">
             <img
@@ -269,7 +307,7 @@ const Indrustry = ({ Meta_Data }) => {
             </h1>
           </div>
           <div>
-            <h2 className="text-[#504d69] font-extrabold text-center text-3xl  w-screen pt-3">
+            <h2 className="text-MainHeading font-extrabold text-center text-3xl  w-screen pt-3">
               Services We Serve
             </h2>
           </div>
@@ -278,16 +316,16 @@ const Indrustry = ({ Meta_Data }) => {
               data-aos="zoom-out"
               className="mx-auto grid justify-center py-6 gap-10 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 h-auto"
             >
-              {/*first */}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-200 text-black transition-all overflow-hidden  border bg-background p-2 md:h-[60vh] h-[40vh]">
+              {/*first card */}
+              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden  border bg-background p-2 md:h-[60vh] h-[40vh]">
                 <div className="flex flex-col justify-between rounded-md p-6">
                   <div className="space-y-4">
                     <motion.h3
                       variants={fadein("left", 0.5)}
                       initial="hidden"
                       whileInView={"show"}
-                      viewport={{ once:true, amount: 0.8 }}
-                      className="font-bold text-xl px-2 text-[#2c3493]"
+                      viewport={{ once: true, amount: 0.8 }}
+                      className="font-bold text-center text-xl px-2 text-[#1a2229]"
                     >
                       Network Management
                     </motion.h3>
@@ -295,8 +333,8 @@ const Indrustry = ({ Meta_Data }) => {
                       variants={fadein("right", 0.1)}
                       initial="hidden"
                       whileInView={"show"}
-                      viewport={{ once:true, amount: 0.5 }}
-                      className="text-md "
+                      viewport={{ once: true, amount: 0.5 }}
+                      className="text-[#646464] "
                     >
                       Ensuring reliability and uptime with proactive network
                       monitoring and management,Your partner in network
@@ -307,8 +345,8 @@ const Indrustry = ({ Meta_Data }) => {
                   </div>
                 </div>
               </div>
-              {/*Second */}
-              <div className=" shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-200 text-black transition-all overflow-hidden border bg-background p-2 md:h-[60vh] h-[40vh]">
+              {/*Second card */}
+              <div className=" shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border bg-background p-2 md:h-[60vh] h-[40vh]">
                 <div className="flex  flex-col justify-between rounded-md p-6">
                   <div className="space-y-4">
                     <motion.h3
@@ -316,7 +354,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView={"show"}
                       viewport={{ once: true, amount: 0.5 }}
-                      className="font-bold text-xl px-2 text-[#2c3493]"
+                      className="font-bold  text-xl px-2 text-[#1a2229]"
                     >
                       Wireless communication
                     </motion.h3>
@@ -324,8 +362,8 @@ const Indrustry = ({ Meta_Data }) => {
                       variants={fadein("left", 0.1)}
                       initial="hidden"
                       whileInView={"show"}
-                      viewport={{ once:true, amount: 0.5 }}
-                      className="text-md"
+                      viewport={{ once: true, amount: 0.5 }}
+                      className="text-[#646464]"
                     >
                       Revolutionizing wireless communication landscapes, we
                       engineer seamless connectivity solutions that transcend
@@ -336,16 +374,16 @@ const Indrustry = ({ Meta_Data }) => {
                   </div>
                 </div>
               </div>
-              {/*third */}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-200 text-black transition-all overflow-hidden border bg-background p-2 md:h-[60vh] h-[40vh]">
+              {/*third card */}
+              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border bg-background p-2 md:h-[60vh] h-[40vh]">
                 <div className="flex flex-col justify-between rounded-md p-6">
                   <div className="space-y-4">
                     <motion.h3
                       variants={fadein("left", 0.5)}
                       initial="hidden"
                       whileInView={"show"}
-                      viewport={{ once:true, amount: 0.8 }}
-                      className="font-bold text-xl px-2 text-[#2c3493]"
+                      viewport={{ once: true, amount: 0.8 }}
+                      className="font-bold text-xl text-center px-2 text-[#1a2229]"
                     >
                       Virtualization And Cloud
                     </motion.h3>
@@ -354,7 +392,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView={"show"}
                       viewport={{ once: true, amount: 0.5 }}
-                      className="text-md "
+                      className="text-[#646464] "
                     >
                       At the nexus of virtualization and cloud, we architect
                       digital ecosystems that defy gravity, empowering
@@ -368,8 +406,8 @@ const Indrustry = ({ Meta_Data }) => {
             </div>
           </section>
         </section>
+        {/* healthcare Section */}
         <section>
-          {/* healthcare div */}
           <div className="md:h-[70vh] h-[40vh] w-full  flex items-center justify-center text-white bg-black">
             <img
               src={doc}
@@ -381,7 +419,7 @@ const Indrustry = ({ Meta_Data }) => {
             </h1>
           </div>
           <div>
-            <h2 className="text-[#504d69] font-extrabold text-center text-3xl  w-screen pt-3 ">
+            <h2 className="text-MainHeading font-extrabold text-center text-3xl  w-screen pt-3 ">
               Services We Serve
             </h2>
           </div>
@@ -390,8 +428,8 @@ const Indrustry = ({ Meta_Data }) => {
               data-aos="zoom-out"
               className="mx-auto grid justify-center py-6 gap-10 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 h-auto"
             >
-              {/*first */}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-200 text-black transition-all overflow-hidden border bg-background p-2 md:h-[60vh] h-[40vh]">
+              {/*first card */}
+              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border bg-background p-2 md:h-[60vh] h-[40vh]">
                 <div className="flex flex-col justify-between rounded-md p-6">
                   <div className="space-y-4">
                     <motion.h3
@@ -399,7 +437,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView={"show"}
                       viewport={{ once: true, amount: 0.8 }}
-                      className="font-bold text-xl px-2 text-[#2c3493]"
+                      className="font-bold text-xl px-2 text-[#1a2229]"
                     >
                       Healthcare Cloud Solutions
                     </motion.h3>
@@ -407,8 +445,8 @@ const Indrustry = ({ Meta_Data }) => {
                       variants={fadein("right", 0.1)}
                       initial="hidden"
                       whileInView={"show"}
-                      viewport={{ once:true, amount: 0.5 }}
-                      className="text-md"
+                      viewport={{ once: true, amount: 0.5 }}
+                      className="text-Paragraph"
                     >
                       From patient records to remote consultations, Their
                       platforms unite, fostering innovations. Securing data with
@@ -419,16 +457,16 @@ const Indrustry = ({ Meta_Data }) => {
                   </div>
                 </div>
               </div>
-              {/*Second */}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-200 text-black transition-all overflow-hidden border bg-background p-2 md:h-[60vh] h-[40vh]">
+              {/*Second card*/}
+              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border bg-background p-2 md:h-[60vh] h-[40vh]">
                 <div className="flex  flex-col justify-between rounded-md p-6">
                   <div className="space-y-4">
                     <motion.h3
                       variants={fadein("right", 0.1)}
                       initial="hidden"
                       whileInView={"show"}
-                      viewport={{ once:true, amount: 0.5 }}
-                      className="font-bold text-xl px-2 text-[#2c3493]"
+                      viewport={{ once: true, amount: 0.5 }}
+                      className="font-bold text-xl px-2 text-[#1a2229]"
                     >
                       Remote Monitoring
                     </motion.h3>
@@ -437,7 +475,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView={"show"}
                       viewport={{ once: true, amount: 0.5 }}
-                      className="text-md"
+                      className="text-Paragraph"
                     >
                       Systems empower, ensuring no wrecks. Remote monitoring, a
                       lifeline they extend, Keeping patients connected, on
@@ -449,8 +487,8 @@ const Indrustry = ({ Meta_Data }) => {
                   </div>
                 </div>
               </div>
-              {/*third */}
-              <div className=" shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-200 text-black transition-all overflow-hidden border bg-background p-2 md:h-[60vh] h-[40vh]">
+              {/*third card */}
+              <div className=" shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border bg-background p-2 md:h-[60vh] h-[40vh]">
                 <div className="flex flex-col justify-between rounded-md p-6">
                   <div className="space-y-4">
                     <motion.h3
@@ -458,7 +496,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView={"show"}
                       viewport={{ once: true, amount: 0.8 }}
-                      className="font-bold text-xl px-2 text-[#2c3493]"
+                      className="font-bold text-xl px-2 text-[#1a2229]"
                     >
                       Healthcare Analytics
                     </motion.h3>
@@ -467,7 +505,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView={"show"}
                       viewport={{ once: true, amount: 0.5 }}
-                      className="text-md"
+                      className="text-Paragraph"
                     >
                       We Provide to empower, driving innovation. Healthcare
                       analytics, a beacon they ignite, Guiding decisions,

@@ -86,14 +86,14 @@ const AiAndMLService = ({ Meta_Data }) => {
           </div>
           <div className="max-w-lg bg-slate-200 md:max-w-5xl border-2 hover:shadow-md hover:shadow-blue2 md:z-5 md:shadow-lg  lg:w-4/5   lg:ml-[-10%] xl:ml-[-20%] flex justify-center items-center">
             <div className="flex flex-col px-2 py-2 md:px-8 items-center gap-4">
-              <h2 className="text-xl font-bold uppercase text-indigo-600 lg:text-3xl ">
+              <h2 className="md:text-MainHeading text-MainHeading-sm font-extrabold lg:text-3xl ">
                 AI & Machine Learning Service
               </h2>
-              <h3 className="text-base font-medium text-black lg:text-2xl  text-center">
+              <h3 className="md:text-SubHeading text-SubHeading-sm  font-bold text-center">
                 Unleashing the Power of AI and Machine Learning: Where
                 Innovation Meets Intelligence
               </h3>
-              <p className="mt-5 text-gray1 md:text-lg text-base">
+              <p className="  md:text-Paragraph text-Paragraph-sm ">
                 Step into the Future with our Advanced Artificial Intelligence
                 and Machine Learning Services, meticulously crafted to
                 revolutionize businesses across diverse sectors. Delve into the
@@ -111,13 +111,13 @@ const AiAndMLService = ({ Meta_Data }) => {
         </div>
 
         {/* Second Section */}
-        <div className="w-[100%] pt-20 bg-white flex flex-col gap-10 text-black justify-center items-center cursor-pointer h-50rem]">
+        <div className="w-[100%] pt-10 bg-white flex flex-col gap-10 text-black justify-center items-center cursor-pointer h-50rem]">
           {/* First */}
-          <div className="text-4xl font-bold text-blue-700  text-center">
+          <div className="md:text-MainHeading text-MainHeading-sm  font-extrabold text-center">
             Visualizing AI and Machine Learning Progress
           </div>
           {/* Second */}
-          <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 w-[100%] p-10">
+          <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 w-[100%] px-10">
             {/* card */}
             {percentList.map((item) => (
               <div
@@ -128,22 +128,26 @@ const AiAndMLService = ({ Meta_Data }) => {
                 <div className="w-[120px] text-3xl h-[120px] rounded-full border-4  border-blue-600 flex justify-center items-center gap-2">
                   <h1 className="">{item.percent}</h1>
                 </div>
-                <h2 className="font-bold text-2xl">{item.title}</h2>
-                <p className="text-center text-lg">{item.message}</p>
+                <h2 className="md:text-CardHeading text-CardHeading-sm font-bold ">
+                  {item.title}
+                </h2>
+                <p className="md:text-Paragraph text-Paragraph-sm">
+                  {item.message}
+                </p>
               </div>
             ))}
           </div>
         </div>
 
         {/* third section */}
-        <div className="w-[100%] col-span-1 pt-10 px-6 bg-white flex flex-col text-black gap-x-6 py-6 justify-center items-center">
+        <div className="w-[100%] col-span-1 pt-10 px-6 bg-white flex flex-col  gap-x-6 py-6 justify-center items-center">
           <div className=" w-full flex md:flex-row flex-col flex-col-2 gap-6 items-center">
             {/*left */}
             <div className="flex-1 px-6">
-              <h2 className=" text-4xl font-bold text-blue-400">
+              <h2 className=" md:text-MainHeading text-MainHeading-sm font-extrabold ">
                 Why Business Needs AI and Machine Learning?
               </h2>
-              <p className="md:text-lg text-base  pt-4">
+              <p className="md:text-Paragraph text-Paragraph-sm  pt-4">
                 Businesses are increasingly recognizing the unparalleled
                 potential of AI and ML to provide tailored insights and optimize
                 processes through automation. By leveraging these technologies,
@@ -165,9 +169,9 @@ const AiAndMLService = ({ Meta_Data }) => {
         </div>
 
         {/* fourth section*/}
-        <div className="w-[100%] col-span-1 pt-10 px-6 bg-white flex flex-col text-black gap-x-6 py-6 justify-center items-center">
+        <div className="w-[100%] col-span-1 pt-8 px-6 bg-white flex flex-col text-black gap-x-6 py-6 justify-center items-center">
           <div className="flex flex-col py-2 md:px-8 items-start ">
-            <h2 className="text-xl font-bold uppercase text-indigo-600 lg:text-4xl">
+            <h2 className="md:text-MainHeading text-MainHeading-sm font-extrabold">
               Our Services
             </h2>
           </div>
@@ -183,7 +187,7 @@ const AiAndMLService = ({ Meta_Data }) => {
                 />
               </div>
               <div className="flex-2 gap-2  flex justify-center items-center  ">
-                <h2 className=" md:text-xl text-md font-bold text-black r">
+                <h2 className=" md:text-SubHeading text-SubHeading-sm font-bold">
                   <HashLink to={"#AI"}>Generative AI</HashLink>
                 </h2>
               </div>
@@ -199,7 +203,7 @@ const AiAndMLService = ({ Meta_Data }) => {
                 />
               </div>
               <div className="flex-2  flex px-4 justify-center items-center ">
-                <h2 className=" md:text-xl text-md font-bold text-black r">
+                <h2 className=" md:text-SubHeading text-SubHeading-sm font-bold">
                   <HashLink to={"#ML"}>Data Analytics and AI/ML</HashLink>
                 </h2>
               </div>
@@ -209,11 +213,11 @@ const AiAndMLService = ({ Meta_Data }) => {
         {/*fifth section */}
         <div></div>
         {/* sixth Section */}
-        <div className=" w-full flex flex-col py-10 justify-center items-center">
-          <h2 className=" text-4xl font-bold text-blue-500 text-center">
+        <div className=" w-full flex flex-col py-5 justify-center items-center">
+          <h2 className=" md:text-MainHeading text-MainHeading-sm font-extrabold">
             Discover Our Offerings
           </h2>
-          <p className="md:text-lg text-base w-4/5   pt-6">
+          <p className="md:text-Paragraph text-Paragraph-sm w-4/5   pt-6">
             At our software company, we harness the power of artificial
             intelligence and machine learning to revolutionize industries and
             drive innovation. Our expertise in AI and ML enables us to develop
@@ -235,7 +239,7 @@ const AiAndMLService = ({ Meta_Data }) => {
         {/*seventh section /generative AI section*/}
         <div
           id="AI"
-          className="w-[100%] col-span-1 pt-10 px-6 bg-white flex flex-col text-black gap-x-6 py-4 justify-center items-center"
+          className="w-[100%] col-span-1 pt-8 px-6 bg-white flex flex-col text-black gap-x-6 py-4 justify-center items-center"
         >
           <div className=" w-full flex  flex-col md:flex-row flex-col-4 gap-6 items-center">
             {/*left */}
@@ -244,11 +248,13 @@ const AiAndMLService = ({ Meta_Data }) => {
             </div>
             {/*right */}
             <div className="flex-1 px-10">
-              <h2 className=" text-xl  text-black">Generative AI</h2>
-              <p className="text-3xl font-bold text-black  pt-4">
+              <h2 className=" md:text-MainHeading text-MainHeading-sm font-extrabold">
+                Generative AI
+              </h2>
+              <p className="md:text-SubHeading text-SubHeading-sm font-bold  pt-4">
                 Redefining the Boundaries of What's Possible
               </p>
-              <h3 className="md:text-lg text-base text-black pt-4">
+              <h3 className="md:text-Paragraph text-Paragraph-sm pt-4">
                 Unleash the power of Generative AI with Vionsys. From artistic
                 creations to innovative problem-solving, we help generate
                 creative content formats like text, code, and images using
@@ -265,16 +271,18 @@ const AiAndMLService = ({ Meta_Data }) => {
         {/*ML Section*/}
         <div
           id="ML"
-          className="w-[100%] col-span-1  px-6 bg-white flex flex-col text-black gap-x-6 pb-10 justify-center items-center"
+          className="w-[100%] col-span-1  px-6 pt-4 bg-white flex flex-col text-black gap-x-6 pb-10 justify-center items-center"
         >
           <div className=" w-full flex flex-col md:flex-row flex-col-2 gap-6 items-center">
             {/*left */}
             <div className="flex-1 px-10">
-              <h2 className=" text-xl  text-black">Data Analytics and AI/Ml</h2>
-              <p className="text-3xl font-bold text-black  pt-4">
+              <h2 className="md:text-MainHeading text-MainHeading-sm font-extrabold">
+                Data Analytics and AI/Ml
+              </h2>
+              <p className="md:text-SubHeading text-SubHeading-sm font-bold  pt-4">
                 Animating your data for enhanced insights
               </p>
-              <h3 className="md:text-lg text-base text-black pt-4">
+              <h3 className="md:text-Paragraph text-Paragraph-sm pt-4">
                 Leverage Vionsys's extensive proficiency in Data Analytics and
                 AI/ML to propel your business forward. Our tailored approach
                 encompasses the creation of bespoke machine learning models and

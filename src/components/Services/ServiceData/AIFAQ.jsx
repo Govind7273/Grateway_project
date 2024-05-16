@@ -35,16 +35,18 @@ const AIMLFaq = () => {
   return (
     <>
       {/* Faq section */}
-      <section data-aos="zoom-in" className="w-[100vw] py-10">
-        <div className="relative w-full bg-white md:px-6 px-4 pt-10 md:pb-8 pb-4  shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
+      <section data-aos="zoom-in" className="w-[100vw] md:py-10 py-6">
+        <div className="relative w-full bg-white md:px-6 px-4 pt-8 md:pb-8 pb-4  shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
           <div className="mx-auto md:px-5 px-2">
             <div className="flex flex-col items-center">
-              <h2 className="text-2xl font-extrabold text-blue-700">FAQ</h2>
-              <p className="mt-3 text-xl font-bold ">
+              <h2 className="md:text-MainHeading text-MainHeading-sm font-extrabold">
+                FAQ
+              </h2>
+              <p className="mt-3 md:text-SubHeading text-SubHeading-sm font-bold ">
                 Frequently asked questions
               </p>
             </div>
-            <div className="mx-auto mt-8 grid max-w-xl divide-y divide-neutral-200">
+            <div className="mx-auto mt-8 grid max-w-xl divide-y md:text-Paragraph text-Paragraph-sm divide-neutral-200">
               {faqs.map((faq, index) => (
                 <div key={index} className="py-5">
                   <details className="group">

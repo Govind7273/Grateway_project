@@ -25,7 +25,7 @@ let interval;
         newArray.unshift(newArray.pop()); // move the last element to the front
         return newArray;
       });
-    }, 2000);
+    }, 3000);
   };
 
   return (
@@ -44,14 +44,14 @@ let interval;
               zIndex: cards.length - index, //  decrease z-index for the cards that are behind
             }}
           >
-            <div className="font-normal text-neutral-700 dark:text-neutral-200">
+            <div className="font-normal text-neutral-700 text-paraghaph leading-6 dark:text-neutral-200 md:line-clamp-8 line-clamp-5">
               {card.content}
             </div>
             <div>
-              <p className="text-[#2c3493] font-medium dark:text-white">
+              <p className="md:text-SubHeading  dark:text-white">
                 {card.name}
               </p>
-              <p className="text-neutral-400 font-normal dark:text-neutral-200">
+              <p className="text-[#2c3493]">
                 {card.designation}
               </p>
             </div>

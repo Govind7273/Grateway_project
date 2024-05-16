@@ -1,11 +1,11 @@
 
-import Ewaste from "./images/2148785030.jpg";
-import Source from "./images/2148923096.jpg";
-import Privacy from "./images/2149101213.jpg";
-import Access from "./images/2149595827.jpg";
-import Ecom from "./images/105380.jpg";
-import Develop from "./images/2148908797.jpg";
-import Product from "./images/2150196700.jpg";
+import Ewaste from "./images/Ewaste.jpg";
+import Source from "./images/Source.jpg";
+import Privacy from "./images/Privacy.jpg";
+import Access from "./images/Access.jpg";
+import Ecom from "./images/Ecom.jpg";
+import Develop from "./images/Develop.jpg";
+import Product from "./images/Product.jpg";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -86,21 +86,21 @@ export const CardSection = () => {
     },
   ];
   return (
-    <div className="mt-5 w-[100%] h-auto flex justify-center items-center p-6">
+    <div className="sm:mt-5 w-[100%] h-auto flex justify-center items-center p-2 sm:p-6">
      <Slider {...settings} className="w-full sm:w-[90%] justify-center">
      {cardItems.map((item) => (
           <div
             key={item.title}
             className="flex flex-col justify-center items-center text-center bg-opacity-70 gap-4 rounded-xl hover:bg-opacity-30 hover:scale-105 transition-all duration-150 ease-linear cursor-pointer"
           >
-            <h4 className="text-blue-900 font-headingFont font-bold text-xl pt-4 h-[5rem]">
+            <h4 className="text-CardHeading-sm md:text-CardHeading font-bold pt-4 h-[5rem]">
               {item.title}
             </h4>
             <div className="relative flex items-center justify-center rounded-xl group h-[25rem]">
               <img className="object-fit h-full w-full rounded-xl" src={item.image} ></img>
               <span className="absolute inset-0 opacity-40 bg-blue-950 rounded-xl"></span>
               <div className="absolute inset-0 opacity-100 duration-300 flex justify-center items-center">
-                <p className="text-white font-navlistFont p-4 text-md sm:text-xl">{item.content}</p>
+                <p className="text-white font-headingFont p-4 text-md sm:text-xl">{item.content}</p>
               </div>
             </div>
           </div>

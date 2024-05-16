@@ -4,7 +4,7 @@ export const Ours=()=>{
     return(
         <div className="flex flex-col md:w-[90%] py-10 sm-py-0 sm:p-10 md:p-4 lg:p-10 md:mb-20 md:shadow-blue-950 md:shadow-lg bg-blue-100 ">
             <div className="h-[6px] w-[70px] bg-blue-700 mx-4 rounded-full"></div>
-            <div className="text-3xl font-semibold text-black tracking-[2px] p-4 cursor-pointer">VISION MISSION <span className="text-blue-700">VALUES</span></div>
+            <div className="text-MainHeading-sm md:text-MainHeading p-4 cursor-pointer">VISION MISSION <span className="text-blue-700">VALUES</span></div>
             <div className="flex items-center justify-center gap-4">
                 <div className="flex  items-center justify-center flex-wrap">
                     <div className="w-full md:w-1/3 sm:p-4 md:p-0 xl:p-4">
