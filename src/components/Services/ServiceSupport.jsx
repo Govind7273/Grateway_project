@@ -4,7 +4,8 @@ import { BiMessageDots } from "react-icons/bi";
 import { IoTime } from "react-icons/io5";
 import { MdOutlineSupportAgent } from "react-icons/md";
 import { Link } from "react-router-dom";
-import bg from "./Images/service2.jpg";
+import bg from "./Images/Service.jpg";
+import listImg from "./Images/service2.jpg";
 function Accordion(props) {
   return (
     <div className="border rounded-md mb-1">
@@ -14,9 +15,8 @@ function Accordion(props) {
       >
         {props.title}
         <span
-          className={`float-right transform ${
-            props.isOpen ? "rotate-45" : "rotate-0"
-          }    transition-transform duration-300`}
+          className={`float-right transform ${props.isOpen ? "rotate-45" : "rotate-0"
+            }    transition-transform duration-300`}
         >
           &#10011;
         </span>
@@ -31,7 +31,6 @@ const ServiceSupport = ({ Meta_Data }) => {
 
   const Supports = [
     { id: 1, logo: MdOutlineSupportAgent, text: "Customer Support" },
-    { id: 2, logo: BiMessageDots, text: "features Queries" },
     { id: 3, logo: IoTime, text: "Support 24/7" },
   ];
 
@@ -86,19 +85,18 @@ const ServiceSupport = ({ Meta_Data }) => {
         <link rel="canonical" href={link} />
       </Helmet>
       {/* hero section */}
-      <section className="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section">
+      <section className="section relative w-full h-screen md:h-[40rem] overflow-hidden pharma_section bg-black">
         {/* first */}
-        <div className="pharma_img md:h-[100%] md:w-[100%] h-[60%] pt-20">
+        <div className="pharma_img md:w-[100%] md:h-auto pt-20 opacity-45">
           <img className="h-full w-full" src={bg} alt="support_bg" />
         </div>
         {/* second */}
-        <div className="pahrma_text absolute overflow-hidden md:top-52 top-12 w-full left-0 md:p-4 p-6 md:gap-5 gap-2 flex-col md:h-full h-[70%] flex justify-center ">
-          <h1 className="  text-center text-white text-2xl md:text-6xl font-extrabold">
+        <div className="pahrma_text absolute overflow-hidden top-12 w-full left-0 md:gap-5 gap-2 flex-col md:h-full h-[70%] flex justify-center ">
+          <h1 className="text-center md:text-TopHeading text-TopHeading-sm font-extrabold">
             Welcome to GreateWay Support
           </h1>
-          <p className="md:text-xl text-md text-px-4 text-cyan-300 text-center md:font-bold">
-            Require assistance? Our support team is ready to help with just a
-            click!
+          <p className="md:text-xl text-lg px-4 text-white text-center font-bold">
+            Require assistance? Our support team is ready to help you!
           </p>
         </div>
       </section>
@@ -114,6 +112,45 @@ const ServiceSupport = ({ Meta_Data }) => {
           );
         })}
       </div>
+
+      {/* Third Section */}
+      <section>
+  {/* Main Content */}
+  <div className="bg-white py-12">
+    <div className="mx-auto max-w-7xl p-6 lg:px-8 border-4">
+      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div className="flex flex-col items-center">
+          <h2 className="text-lg font-semibold leading-8 tracking-tight text-start text-indigo-600">Everything you need</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-start text-gray-900 sm:text-4xl">IT Service Support Overview</p>
+          <p className="mt-6 text-base leading-7 text-gray-600">Our comprehensive IT service support plays a pivotal role in upholding the reliability, security, and efficiency of organizational IT infrastructure. We tailor our services to accommodate the unique needs and scale of each client's business.</p>
+          <img src={listImg} alt="" />
+        </div>
+        <div className="grid grid-cols-1 gap-y-6 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:gap-y-2">
+          {/* List Items */}
+          {[
+            { title: "Help Desk Support", content: "Providing frontline assistance for users facing IT issues, including troubleshooting software and hardware problems and offering guidance on application usage." },
+            { title: "Technical Support", content: "Resolving complex technical challenges related to network issues, server management and system administration." },
+            { title: "Remote Monitoring and Management", content: "Proactively monitoring IT infrastructure remotely, performing automated maintenance and responding to alerts promptly." },
+            { title: "Incident Management and Resolution", content: "Logging and categorizing incidents, implementing escalation procedures for unresolved issues and conducting root cause analysis." },
+            { title: "Patch Management", content: "Applying patches, updates and fixes to keep systems secure and optimize performance, while ensuring compatibility and stability through testing." },
+            { title: "Backup and Disaster Recovery", content: "Implementing backup solutions and disaster recovery plans to protect data and ensure business continuity in case of data loss or system failure." }
+          ].map((item, index) => (
+            <div key={index} className="relative pl-9">
+              <div className="font-semibold text-gray-900">
+                <svg className="absolute top-1 left-0 h-5 w-5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd"></path>
+                </svg>
+                {item.title}
+              </div>
+              <div className="mt-2">{item.content}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Accordion for FAQ */}
       <section>
