@@ -7,6 +7,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AddressMap from "./AddressMap";
 import ContactForm from "./ContactForm";
 import { Helmet } from "react-helmet-async";
+import { IoLocation } from "react-icons/io5";
+import { IoMdCall } from "react-icons/io";
+import { IoMail } from "react-icons/io5";
+import ContactUs1 from "./image/ContactUs1.jpg";
 
 const ContactUs = ({Meta_Data}) => {
   const { Title, Description, Link } = Meta_Data;
@@ -18,56 +22,92 @@ const ContactUs = ({Meta_Data}) => {
         <meta name="description" content={Description} />
         <link rel="canonical" href={Link} />
       </Helmet>
-  
-    <div className="w-full overflow-x-hidden pt-20 px-3  flex flex-col justify-center items-center gap-4 bg-slate-900 dark:text-white">
-      <div className="flex w-[100%] overflow-x-hidden mt-4 mb-10  md:flex-row flex-col flex-wrap justify-center  bg-slate-700 rounded-xl ">
-        {/* left section */}
-        <div className="flex  md:w-[40%] w-full flex-col flex-wrap gap-0 p-6 bg-[#FFDEE9] bg-[linear-gradient(0deg,_#FFDEE9_0%,_#B5FFFC_100%)]">
-          {/* first part */}
-          <div className="mb-2">
-            <h1 className="font-headingFont text-5xl font-extrabold text-violet-700">
-              Contact Information
-            </h1>
-          </div>
-          {/* second part */}
-          <div className=" flex flex-col gap-2 flex-wrap ">
-            <p className="font-headingFont font-bold -mb-2 mt-4">Address:</p>
-            <p className="font-navlistFont text-md text-slate-900">
-            Office No: 505, 06th  Floor, Stellar Spaces, Opposite Zensar IT Park, Kharadi, Pune 411014
+
+      <div className="w-full overflow-x-hidden pt-5 px-3 flex flex-col justify-center items-center gap-4 bg-white dark:text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center">
+          <h2 class="text-5xl font-extrabold text-violet-800">Contact Us</h2>
+          <p class="pt-4 pb-4 text-base max-w-2xl text-center m-auto dark:text-gray-400">
+            Want to contact us? Fill the below form and we'll be happy to show you how we can transform your experience.
+          </p>
+        </div>
+        
+
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-16">
+          <div className="flex gap-2 sm:items-center text-slate-900">
+            <IoLocation  className="text-2xl "/>
+            <p className="font-navlistFont text-sm ">
+              Office No: 503, 06th Floor, Stellar Spaces, <br />
+              Opposite Zensar IT Park, Kharadi, Pune 411014
             </p>
-            <p className="font-headingFont font-bold -mb-2">Contact:</p>
-            <span className="text-slate-900 font-headingFont">
-            +91 70586 06885
-            </span>
-            <p className="font-headingFont font-bold -mb-2">Email:</p>
-            <span className="text-md text-blue-900">
-              hr@greateway.com
+          </div>
+
+          <div className="flex gap-2 sm:items-center text-slate-900">
+            <IoMdCall className="text-2xl "/>
+            <span className="text-slate-800 font-headingFont">
+              +91 70586 06885
             </span>
           </div>
-          {/* third part */}
-          <div className="text-lg font-bold text-violet-700 mt-52">
-            <p className="mb-2">Follow Us On</p>
-            <div className="flex gap-4">
-              <FontAwesomeIcon
-                icon={faFacebook}
-                className="text-blue-400 text-3xl cursor-pointer"
-              />
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                className="text-blue-700 text-3xl cursor-pointer"
-              />
-              <FontAwesomeIcon
-                icon={faInstagram}
-                className="text-red-600 text-3xl cursor-pointer"
-              />
+
+          <div className="flex gap-2 sm:items-center text-slate-900">
+  <IoMail className="text-2xl" />
+  <a href="mailto:hr@greateway.com" className="text-md  hover:text-blue-600">
+    hr@greateway.com
+  </a>
+</div>
+</div>
+
+        <hr className="my-4 w-full border-t-2 border-gray-400" />
+        <div className="flex w-[100%] overflow-x-hidden mt-4  md:flex-row flex-col flex-wrap justify-center  bg-white">
+          {/* left section */}
+          <div className="flex  md:w-[40%] w-full flex-col flex-wrap gap-0 p-6 bg-white ">
+            {/* first part */}
+            <div className="mb-2 rounded-lg">
+              <div className="mb-2">
+                {/* Adding the image here */}
+                <img src={ContactUs1} alt="My Image" className="w-full shadow-xl border-2 border-sky-500 rounded-2xl" />
+              </div>
+            </div>
+            {/* second part */}
+            <div className="text-lg font-bold text-violet-700 text-center mt-5">
+              <p className="mb-2">Follow Us On</p>
+              <div className="flex flex-col items-center">
+                <div className="flex gap-4">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61557537305066&mibextid=ZbWKwL"
+                    target="_blank"
+                  ><FontAwesomeIcon
+                      icon={faFacebook}
+                      className="text-blue-400 text-3xl cursor-pointer"
+                    /></a>
+
+                  <a href="https://www.linkedin.com/company/greateway-software-pvt-ltd/"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon
+                      icon={faLinkedin}
+                      className="text-blue-700 text-3xl cursor-pointer"
+                    /> </a>
+
+                  <a href="https://www.instagram.com/greateway_software_pvt.ltd?igsh=OGNtMmd3Y2VlcXFl"
+                    target="_blank"
+                  ><FontAwesomeIcon
+                      icon={faInstagram}
+                      className="text-red-600 text-3xl cursor-pointer"
+                    /> </a>
+
+
+                </div>
+              </div>
             </div>
           </div>
+          {/* right section */}
+          <ContactForm />
+          <hr className="w-full border-t-2 border-gray-400" />
         </div>
-        {/* right section */}
-        <ContactForm />
+        <span class="inline-block rounded-lg text-blue-900 my-5 bg-blue-100 px-2  p-2 text-xl relative font-semibold">Let the map be your guide to finding us</span>
+        
+        <AddressMap />
       </div>
-      <AddressMap />
-    </div>
     </>
   );
 };
