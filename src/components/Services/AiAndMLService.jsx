@@ -187,7 +187,7 @@ const AiAndMLService = ({ Meta_Data }) => {
                 />
               </div>
               <div className="flex-2 gap-2  flex justify-center items-center  ">
-                <h2 className=" md:text-SubHeading text-SubHeading-sm font-bold">
+                <h2 className=" md:text-SubHeading text-SubHeading-sm font-bold hover:text-blue-800">
                   <HashLink to={"#AI"}>Generative AI</HashLink>
                 </h2>
               </div>
@@ -203,7 +203,7 @@ const AiAndMLService = ({ Meta_Data }) => {
                 />
               </div>
               <div className="flex-2  flex px-4 justify-center items-center ">
-                <h2 className=" md:text-SubHeading text-SubHeading-sm font-bold">
+                <h2 className=" md:text-SubHeading text-SubHeading-sm font-bold hover:text-blue-800">
                   <HashLink to={"#ML"}>Data Analytics and AI/ML</HashLink>
                 </h2>
               </div>

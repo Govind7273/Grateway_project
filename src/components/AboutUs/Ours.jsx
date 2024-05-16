@@ -1,4 +1,3 @@
-import mission from "./images/2147704429.jpg";
 
 export const Ours=()=>{
     return(

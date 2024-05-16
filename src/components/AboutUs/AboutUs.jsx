@@ -3,7 +3,6 @@ import { CardSection } from "./CardSection";
 import { FirstSocialProofSection } from "./FirstSocialProofSection";
 import { FoundersNote } from "./FoundersNote";
 import { SecondSection } from "./SecondSection";
-import { SecondSocialProof } from "./SecondSocialProof";
 import { ServiceInfoSection } from "./ServiceInfoSection";
 import { Ours } from "./Ours";
 import { Info } from "./Info";
@@ -41,8 +40,6 @@ const AboutUs = ({Meta_Data}) => {
       {OurValues()} */}
       {Ours()}
 
-      {/* Second Social Proof */}
-      {/* {SecondSocialProof()} */}
 
       { CTA ()}
 

@@ -10,11 +10,7 @@
 
           {/* paragraph */}
           <p className="text-Paragraph text-center cursor-pointer">
-            Corporate Social Responsibility (CSR) is a crucial aspect for IT
-            companies, as they have the opportunity to leverage their
-            technological expertise and influence to make a positive impact on
-            society and the environment. Here are some key areas where IT
-            companies can focus their CSR efforts:
+          Corporate Social Responsibility (CSR) holds significant importance for IT companies, providing them with the unique opportunity to use their technological capabilities and influence to benefit society and the environment. Here are several key areas where IT companies can concentrate their CSR initiatives
           </p>
         </div>
       </div>

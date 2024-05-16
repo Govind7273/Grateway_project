@@ -71,9 +71,9 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item, idx) => (
-            <div key={item.id} className="w-[20rem]">
+            <div key={item.id} className="md:w-[20rem] w-[10rem]">
              <div className="">
-                <img src={item.img} alt="" className="h-[10rem]"/>
+                <img src={item.img} alt="" className="md:h-[10rem] h-[7rem]"/>
              </div>
             </div>
         ))}
