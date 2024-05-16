@@ -1,36 +1,73 @@
+import { motion } from "framer-motion";
+import { fadein } from "../../../../src/components/Internship/variant";
+import { Link } from "react-router-dom";
 
 const Section5 = ({obj}) => {
   return (
-    <div className="w-[100%] relative flex flex-col justify-center items-center p-4 bg-[#333] ">
+    <main
+    id="section3"
+     className="w-[100%] relative sm:pt-10 px-10 flex flex-col justify-center items-center p-4 bg-stone-100 ">
         <div className="relative  w-[100%] md:py-10 py-4 flex  flex-wrap md:flex-row flex-col gap-10">
           {/* left side of the section */}
-          <div className="z-10 w-[100%] flex-1 flex flex-col justify-center gap-4 before:contents-[''] before:absolute md:before:w-[22%] before:w-[60%] md:before:h-[50%] before:h-[25%] before:top-[200px]  before:bg-[#4158D0] before:bg-[linear-gradient(43deg,_#4158D0_0%,_#C850C0_46%,_#FFCC70_100%)] before:z-[-1] before:rounded-[87%_13%_48%_52%_/_70%_32%_68%_30%] ">
-            <h3 className="text-3xl font-headingFont text-pink-600 font-bold">
-           {obj.content.heading}
-            </h3>
-            <p className="text-md font-navlistFont text-slate-50 font-bold">
-            {obj.content.description}
-            </p>
-            <ul className="list-disc text-white font-semibold font-headingFont ml-8">
+          <div className="z-10 w-[100%] px-5 flex-1 flex flex-col justify-center gap-4">
+
+            <motion.h3
+              variants={fadein("right", 0.1)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once:false, amount: 0.5 }}
+              className="text-3xl font-headingFont text-violet-700 font-bold">
+              {obj.content.heading}
+            </motion.h3>
+
+            <motion.p
+              variants={fadein("right", 0.1)}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once:false, amount: 0.5 }} 
+              className="text-md font-navlistFont text-gray-800 ">
+              {obj.content.description}
+            </motion.p>
+
+            <ul className="text-gray-800 flex flex-wrap font-headingFont">
              {
               obj.content.list?.map((item)=>(
-                <li key={Math.random()}>{item}</li>
+
+                <motion.li 
+                  variants={fadein("right", 0.1)}
+                  initial="hidden"
+                  whileInView={"show"}
+                  viewport={{ once:false, amount: 0.5 }}
+                  className="border border-gray-700 my-2 mx-4 px-6 py-1 rounded-xl" 
+                  key={Math.random()}>{item}
+                </motion.li>
               ))
              }
             </ul>
           </div>
 
           {/* Right side of the section */}
-          <div className="z-10 w-[100%] flex-1 flex justify-center items-center">
+          <div className="z-10 w-[100%] h-fit flex-1 flex justify-center items-center rounded-xl shadow-black shadow-lg">
             <img
-              className="w-[100%] cursor-pointer rounded-lg"
+              className="w-[100%] h-auto cursor-pointer rounded-xl"
               src={obj.imageUrl}
               alt=""
             />
           </div>
         </div>
 
-      </div>
+        <section className="py-10 w-[60%]">
+        
+          <div className="container flex flex-col md:flex-row gap-5 bg-white items-center justify-between py-5 px-6 rounded-tr-[20%] rounded-bl-[20%]">
+            <h2 className="text-MainHeading-sm font-light text-gray-800">Discover what we can do for you.</h2>
+             
+            <Link to="/ContactUs" className="bg-blue-900 sm:text-base text-[10px] hover:bg-blue-800 w-fit text-white py-2 px-6 rounded-xl focus:outline-none focus:shadow-outline">
+             Contact Us
+            </Link>
+          </div>
+        </section>
+       
+    </main>
   )
 }
 

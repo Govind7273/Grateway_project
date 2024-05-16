@@ -41,7 +41,7 @@ export const SoftDevServices =
       },
       imageUrl:
         SoftDevImage,
-      bgClass:'bg-[linear-gradient(to_top,_#fbc2eb_0%,_#a6c1ee_100%)]',
+      bgClass: '',
     },
     cards: [
       {
@@ -72,9 +72,9 @@ export const SoftDevServices =
     third:{
         imageUrl:WebDesignSoftDevImg,
         content:{
-            heading:'Web Designing Services',
-            description:'Our professional web developers analyze your target audience and craft an engaging, frictionless, and superior user journey using aesthetic designs and trending UI components. We also test your prototypes under different situations to ensure a glitch-free experience over multiple platforms.',
-            list:['UI/UX Optimization','Responsive Design','Custom Development','E-Commerce Solutions']
+            heading:'Software Development Services',
+            description:'Our professional Software developers analyze your target audience and craft an engaging, frictionless, and superior user journey using aesthetic designs and trending UI components. We also test your prototypes under different situations to ensure a glitch-free experience over multiple platforms.',
+            list:['API Integration','Responsive Design','Custom Software Development','Database Management']
         }
     },
     fourth:{
@@ -88,9 +88,9 @@ export const SoftDevServices =
     fifth:{
         imageUrl:WebDevSoftDevImg,
         content:{
-            heading:'Web Application Development',
-            description:'We design and develop secure and responsive web applications that cater to your specific business needs. Our web applications are built using cutting-edge technologies and frameworks, ensuring scalability, performance, and a smooth user experience.',
-            list:['Full Stack Development','Agile Methodology','API Development','Cloud Deployment']
+            heading:'Custom Software Development',
+            description:'We design and develop secure and responsive software solutions that cater to your specific business needs. Our software applications are built using cutting-edge technologies and frameworks, ensuring scalability, performance, and a smooth user experience.',
+            
     }
     },
   }
