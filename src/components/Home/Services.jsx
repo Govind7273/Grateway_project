@@ -22,13 +22,6 @@ const Services = () => {
       theme: "#a6a55b",
     },
     {
-      logo: crm,
-      title: "Customer Relationship Management",
-      desc: "Improve customer relationships and business performance with our CRM solutions. We offer customized implementations, data management, reporting and ongoing support to maximize satisfaction and retention.",
-      link: "/Service-testingAndQA",
-      theme: "#518bb5"
-    },
-    {
       logo: cloud,
       title: "Cloud Computing",
       desc: "Embrace the scalability, flexibility and cost-efficiency of cloud computing with our comprehensive cloud services, which encompass cloud migration, architecture design and managed solutions.",
@@ -43,6 +36,13 @@ const Services = () => {
       theme: "#ad9171"
     },
     {
+      logo: crm,
+      title: "Customer Relationship Management",
+      desc: "Improve customer relationships and business performance with our CRM solutions. We offer customized implementations, data management, reporting and ongoing support to maximize satisfaction and retention.",
+      link: "/Service-crm",
+      theme: "#518bb5"
+    },
+    {
       logo: testing,
       title: "Testing and QA",
       desc: "Ensure the quality and reliability of your software products with our comprehensive testing and QA services. We offer functional testing, performance testing, security testing and more to validate and enhance your software solutions.",
@@ -50,10 +50,17 @@ const Services = () => {
       theme: "#688f9c"
     },
     {
+      logo: devop,
+      title: "DevOps",
+      desc: "Facilitate collaboration between development and operations to accelerate software delivery and improve product quality with our DevOps services, including continuous integration, deployment and infrastructure automation.",
+      link: "/Service-devOps",
+      theme: "#689c89"
+    },
+    {
       logo: service,
       title: "IT Staffing",
       desc: "Enhance your workforce and business outcomes with our IT staffing services. We provide customized staffing solutions, recruitment, onboarding and ongoing support to meet your technology talent needs effectively.",
-      link: "/Service-testingAndQA",
+      link: "/Service-Staffing",
       theme: "#765f9c"
     },
     {
@@ -64,17 +71,10 @@ const Services = () => {
       theme: "#7b9665"
     },
     {
-      logo: devop,
-      title: "DevOps",
-      desc: "Facilitate collaboration between development and operations to accelerate software delivery and improve product quality with our DevOps services, including continuous integration, deployment and infrastructure automation.",
-      link: "/Service-devOps",
-      theme: "#689c89"
-    },
-    {
       logo: staffing,
       title: "IT Service Support",
-      desc: "Boost your team's efficiency and business performance with our IT service support. We provide tailored support, proactive maintenance and responsive assistance to keep your systems running smoothly.",
-      link: "/Service-testingAndQA",
+      desc: "Boost your team's efficiency and business performance with our comprehensive IT service support. We provide tailored solutions, proactive maintenance, and responsive assistance to keep your systems running smoothly.",
+      link: "/Service-Support",
       theme: "#9c5f82"
     },
   ];

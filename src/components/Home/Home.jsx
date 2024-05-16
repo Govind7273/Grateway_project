@@ -61,25 +61,25 @@ const Video_Array = [
     video: Service,
     title: "IT Service Support",
     desc: "Our IT service support ensures your software systems operate smoothly, resolving issues promptly and optimizing performance for your business.",
-    link: "/Service-bigData",
+    link: "/Service-Support",
   },
   {
     video: Crm,
     title: "Customer Relationship Management",
     desc: "Enhance customer relationships with our comprehensive CRM solution, empowering you to streamline interactions, optimize sales processes, and deliver personalized experiences.",
-    link: "/Service-cloud",
+    link: "/Service-crm",
   },
   {
     video: Testing,
     title: "Testing And Quality Analysis",
     desc: "Ensure the highest quality for your software products with our expert testing and quality analysis services, guaranteeing performance, reliability, and user satisfaction.",
-    link: "/Service-crm",
+    link: "/Service-testingAndQA",
   },
   {
     video: Staffing,
     title: "IT Staffing",
     desc: "Augment your team with skilled IT professionals tailored to your project needs, ensuring expertise, flexibility, and seamless integration.",
-    link: "/Service-crm",
+    link: "/Service-Staffing",
   },
 ];
 

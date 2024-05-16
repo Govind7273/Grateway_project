@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { fadein } from "../../../src/variants";
+import { Link } from 'react-router-dom';
 
 function Collaboration() {
   return (
@@ -21,11 +22,11 @@ function Collaboration() {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.8 }} className="flex justify-center items-center">
-        <button
+        <Link to='/ContactUs'><button
           className="bg-zinc-900 rounded-[7px] text-white px-5 py-3 font-headingFont text-sm  transition-all duration-150 ease-linear hover:bg-zinc-700"
         >
           Apply Now
-        </button>
+        </button></Link>
       </motion.div>
     </div>
   )
