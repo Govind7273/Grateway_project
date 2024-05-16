@@ -13,7 +13,7 @@ const CareersPage = lazy(() => import("./components/Careers/CareersPage"));
 const ContactUs = lazy(() => import("./components/ContactUs/ContactUs"));
 const Footer = lazy(() => import("./components/Footer"));
 const Navbar = lazy(() => import("./components/Navbar/Navbar"));
-const Indrustry = lazy(() => import("./components/Indrustry/Indrustry"));
+const Indrustry = lazy(() => import("./components/Indrustry/Industry"));
 const ServiceComponent = lazy(() =>
   import("./components/Services/ServiceComponent")
 );

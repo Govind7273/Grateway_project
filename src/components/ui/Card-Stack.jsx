@@ -3,11 +3,7 @@ import { motion } from "framer-motion";
 
 let interval;
 
- export const CardStack = ({
-  items,
-  offset,
-  scaleFactor,
-}) => {
+export const CardStack = ({ items, offset, scaleFactor }) => {
   const CARD_OFFSET = offset || 10;
   const SCALE_FACTOR = scaleFactor || 0.06;
   const [cards, setCards] = useState(items);
@@ -48,12 +44,8 @@ let interval;
               {card.content}
             </div>
             <div>
-              <p className="md:text-SubHeading  dark:text-white">
-                {card.name}
-              </p>
-              <p className="text-[#2c3493]">
-                {card.designation}
-              </p>
+              <p className="md:text-SubHeading  dark:text-white">{card.name}</p>
+              <p className="text-[#2c3493]">{card.designation}</p>
             </div>
           </motion.div>
         );

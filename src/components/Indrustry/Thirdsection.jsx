@@ -8,7 +8,8 @@ import infrastructure from "../Indrustry/images/infrastructure.jpg";
 import { Link } from "react-router-dom";
 export const Thirdsection = () => {
   return (
-    <div className="px-3">{/*Main div */}
+    <div className="px-3 pt-4">
+      {/*Main div */}
       {/*Main Section*/}
       <section className="w-full py-12 md:py-24 lg:py-20 bg-[#F9FAFB] dark:bg-gray-800 overflow-x-hidden">
         <div className="container px-4 md:px-6">
