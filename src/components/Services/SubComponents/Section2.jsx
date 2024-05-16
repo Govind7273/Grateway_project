@@ -1,10 +1,13 @@
 import CardComponent from "./CardComponent"
+import { AiOutlineAlignRight } from "react-icons/ai";
 
 const Section2 = ({obj}) => {
   return (
-    <div className="w-[100%] relative bg-[#333] py-10 px-4 flex flex-col justify-center items-center">
-    
-    <div className="w-[100%] z-10 grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 pt-[-80px] pb-6 gap-10 justify-center">
+    <div
+    id="section2"
+     className="w-[100%] h-full relative flex py-24 pb-28 px-10">
+      <div className="flex absolute -rotate-90 md:mt-[-220px] mt-[-100px] ml-14 z-0 md:text-[180px] text-[100px] text-blue-900"><AiOutlineAlignRight /></div>
+     <div className="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1  items-center justify-center gap-10 z-10 pb-6">
       {/* Card Component */}
       {
        obj && obj.map((card)=>(
@@ -12,8 +15,7 @@ const Section2 = ({obj}) => {
        ))
       }
     </div>
-    <div className="left-0 top-[20%] absolute w-[300px] h-[300px] md:w-[410px] md:h-[410px] rounded-[87%_13%_48%_52%_/_70%_32%_68%_30%] z-0 bg-[#4158D0] bg-[linear-gradient(43deg,_#4158D0_0%,_#C850C0_46%,_#FFCC70_100%)] "></div>
-  </div>
+    </div>
   )
 }
 
