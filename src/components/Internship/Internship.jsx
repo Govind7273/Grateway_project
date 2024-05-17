@@ -13,7 +13,7 @@ import { fadein} from "./variant"
 
 const Internship = ({ Meta_Data }) => {
   const [ModalOpen, setModalOpen] = useState(false);
-  const { Title, Description, Lenk } = Meta_Data;
+  const { Title, Description, Link1 } = Meta_Data;
   
   
   return (
@@ -22,7 +22,7 @@ const Internship = ({ Meta_Data }) => {
       <Helmet>
         <title>{Title}</title>
         <meta name="description" content={Description} />
-        <link rel="canonical" href={Lenk} />
+        <link rel="canonical" href={Link1} />
       </Helmet>
       <main className="main__screen bg-gray-300 relative">
         <section className="max-w-full h-full flex justify-center lg:pt-8 sm:pt-6 pt-20 flex-col items-end">
