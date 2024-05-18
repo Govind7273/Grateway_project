@@ -30,7 +30,7 @@ export const Thirdsection = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.8 }}
-                className="max-w-[700px] text-SubHeading"
+                className="max-w-[700px] md:text-xl text-SubHeading"
               >
                 Our industry-focused solutions are designed to help you overcome
                 your unique challenges and drive innovation in your field.

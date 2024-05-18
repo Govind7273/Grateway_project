@@ -152,7 +152,7 @@ const Indrustry = ({ Meta_Data }) => {
             <div className="flex justify-center md:w-auto  py-10 px-2">
               <CardStack items={CARDS} /> {/* Card component */}
             </div>
-            <motion.div className="w-full md:w-auto flex flex-col md:py-7">
+            <motion.div className="w-full md:w-auto flex flex-col pb-3 md:py-7">
               <motion.h1
                 variants={fadein("right", 0.2)}
                 initial="hidden"
