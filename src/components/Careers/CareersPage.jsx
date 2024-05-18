@@ -8,6 +8,12 @@ import { motion } from "framer-motion";
 import { animateScroll as scroll } from "react-scroll";
 import { Link } from "react-router-dom";
 import { fadein } from "../../../src/variants";
+import CareerSect2_1 from "../../assets/Images/CareerSect2_1.jpg"
+import CareerSect2_2 from "../../assets/Images/CareerSect2_2.jpg"
+import CareerAdv from "../../assets/Images/CareerAdv.jpg"
+import CareerHead1 from "../../assets/Images/CareerHead1.jpg"
+import CareerHead2 from "../../assets/Images/CareerHead2.jpg"
+import CareerHead3 from "../../assets/Images/CareerHead3.jpg"
 
 const testimonials = [
   {
@@ -51,9 +57,9 @@ const CareersPage = ({ Meta_Data }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [
-    "src/assets/Images/CareerHead1.jpg",
-    "src/assets/Images/CareerHead2.jpg",
-    "src/assets/Images/CareerHead3.jpg",
+    CareerHead1,
+    CareerHead2,
+    CareerHead3,
   ];
 
   const headingVariants = {
@@ -170,8 +176,8 @@ const CareersPage = ({ Meta_Data }) => {
               >
                 <img
                   className="h-[60%] w-full object-fill"
-                  src="src/assets/Images/CareerSect2_1.jpg"
-                  alt=""
+                  src={CareerSect2_1}
+                  alt="Image not Found"
                 />
                 <p className="h-[40%] lg:text-Paragraph text-[#1a2229] leading-Paragraph  text-sm w-full shadow-lg text-center flex items-center px-4 py-4 border-2">
                   Join our community if you value meaningful connections and are
@@ -189,8 +195,8 @@ const CareersPage = ({ Meta_Data }) => {
               >
                 <img
                   className="h-[60%] w-full object-cover"
-                  src="src/assets/Images/CareerSect2_2.jpg"
-                  alt=""
+                  src={CareerSect2_2}
+                  alt="Image not Found"
                 />
                 <p className="h-[40%] lg:text-Paragraph text-[#1a2229] leading-Paragraph text-sm w-full shadow-lg flex items-center text-center px-4 py-4 border-2">
                   We places a high premium on personal development, recognizing
@@ -211,7 +217,7 @@ const CareersPage = ({ Meta_Data }) => {
                 alt="Hero"
                 className="mx-auto aspect-video overflow-hidden object-cover object-center sm:w-full lg:order-last"
                 height="310"
-                src="src/assets/Images/CareerAdv.jpg"
+                src={CareerAdv}
                 width="550"
               />
               <div className="flex flex-col justify-center space-y-4">
