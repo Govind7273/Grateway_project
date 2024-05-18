@@ -56,12 +56,12 @@ const Section5 = ({obj}) => {
           </div>
         </div>
 
-        <section className="py-10 w-[60%]">
+        <section className="py-10 md:w-[60%] w-[90%]">
         
           <div className="container flex flex-col md:flex-row gap-5 bg-white items-center justify-between py-5 px-6 rounded-tr-[20%] rounded-bl-[20%]">
             <h2 className="text-MainHeading-sm font-light text-gray-800">Discover what we can do for you.</h2>
              
-            <Link to="/ContactUs" className="bg-blue-900 sm:text-base text-[10px] hover:bg-blue-800 w-fit text-white py-2 px-6 rounded-xl focus:outline-none focus:shadow-outline">
+            <Link to="/ContactUs" className="bg-blue-900  hover:bg-blue-800 w-fit text-white py-2 px-6 rounded-xl focus:outline-none focus:shadow-outline">
              Contact Us
             </Link>
           </div>

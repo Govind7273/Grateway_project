@@ -11,7 +11,7 @@ import { MdOutlineKeyboardBackspace } from "react-icons/md";
 
 const InternshipDetails = ({ Meta_Data }) => {
   const [ModalOpen, setModalOpen] = useState(false);
-  const { Title, Description, Lenk } = Meta_Data;
+  const { Title, Description, Link1 } = Meta_Data;
   const { id } = useParams();
   const sid = parseInt(id);
   // Find the Internship detail with the matching id
@@ -24,7 +24,7 @@ const InternshipDetails = ({ Meta_Data }) => {
       <Helmet>
         <title>{Title}</title>
         <meta name="description" content={Description} />
-        <link rel="canonical" href={Lenk} />
+        <link rel="canonical" href={Link1} />
       </Helmet>
       <main className="bg-stone-200">
       <img className="w-full h-[700px] top-[-60px] absolute flex z-10 object-cover"
@@ -109,11 +109,10 @@ const InternshipDetails = ({ Meta_Data }) => {
           )}
         </div>
         </section>
-
-        
-        {ModalOpen && <Modal setModalOpen={setModalOpen} />}
+ 
         </section>
       </section>
+      {ModalOpen && <Modal setModalOpen={setModalOpen} />}
       </main>
     </>
   );
