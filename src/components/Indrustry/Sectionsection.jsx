@@ -140,7 +140,7 @@ export const Secondsection = () => {
   return (
     <>
       {/*Our Solutions*/}
-      <section className="w-full md:h-[40vh] h-[30vh] py-12 md:py-24 lg:py-16 overflow-x-hidden overflow-y-hidden">
+      <section className="w-full md:h-[30vh] h-[20vh] py-12 md:py-24 lg:py-16 overflow-x-hidden overflow-y-hidden">
         <div className="container  px-4 md:px-6">
           <div className=" text-center">
             <motion.h1
