@@ -54,7 +54,7 @@ const Video_Array = [
   {
     video: AiMl,
     title: "AI & Machine Learning",
-    desc: "Our AI solutions leverage ML to revolutionize industries, optimize processes, enhance decision-making, and deliver tangible results globally, unlocking transformative change worldwide.",
+    desc: "Our AI solutions leverage ML to revolutionize industries, optimize processes, enhance decision-making and deliver tangible results globally, unlocking transformative change worldwide.",
     link: "/Service-AI",
   },
   {
@@ -66,19 +66,19 @@ const Video_Array = [
   {
     video: Crm,
     title: "Customer Relationship Management",
-    desc: "Enhance customer relationships with our comprehensive CRM solution, empowering you to streamline interactions, optimize sales processes, and deliver personalized experiences.",
+    desc: "Enhance customer relationships with our comprehensive CRM solution, empowering you to streamline interactions, optimize sales processes and deliver personalized experiences.",
     link: "/Service-crm",
   },
   {
     video: Testing,
     title: "Testing And Quality Analysis",
-    desc: "Ensure the highest quality for your software products with our expert testing and quality analysis services, guaranteeing performance, reliability, and user satisfaction.",
+    desc: "Ensure the highest quality for your software products with our expert testing and quality analysis services, guaranteeing performance, reliability and user satisfaction.",
     link: "/Service-testingAndQA",
   },
   {
     video: Staffing,
     title: "IT Staffing",
-    desc: "Augment your team with skilled IT professionals tailored to your project needs, ensuring expertise, flexibility, and seamless integration.",
+    desc: "Augment your team with skilled IT professionals tailored to your project needs, ensuring expertise, flexibility and seamless integration.",
     link: "/Service-Staffing",
   },
 ];

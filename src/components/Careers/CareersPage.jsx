@@ -18,25 +18,25 @@ const testimonials = [
   },
   {
     quote:
-      "Working at GreateWay Software has been a rewarding experience. The dynamic work environment, focus on learning, and collaborative spirit make it an excellent place for professional growth. While there are areas for improvement.",
+      "Working at GreateWay Software has been a rewarding experience. The dynamic work environment, focus on learning and collaborative spirit make it an excellent place for professional growth. While there are areas for improvement.",
     name: "Pankaj Bhagat",
     title: "",
   },
   {
     quote:
-      "My experience at GreateWay Software India Pvt.Ltd was outstanding, thanks to its innovative culture, focus on employee development, and excellent work-life balance. Grateful for the enriching opportunities.",
+      "My experience at GreateWay Software India Pvt.Ltd was outstanding, thanks to its innovative culture, focus on employee development and excellent work-life balance. Grateful for the enriching opportunities.",
     name: "Prashik Kambale",
     title: "",
   },
   {
     quote:
-      "Serving DevOps role at GreateWay Software, thanks to its cooperative culture, focus on employee development, and excellent work balance. Grateful for the enriching opportunities and collaborative environment.",
+      "Serving DevOps role at GreateWay Software, thanks to its cooperative culture, focus on employee development and excellent work balance. Grateful for the enriching opportunities and collaborative environment.",
     name: "Shantanu Arvindekar",
     title: "",
   },
   {
     quote:
-      "GreateWay Software is recognized foe its good work culture and job stability. The organization provided me numerous opportunities to learn new things , to enhance my existing knowledge. That is all I felt.",
+      "GreateWay Software is recognized foe its good work culture and job stability. The organization provided me numerous opportunities to learn new things to enhance my existing knowledge. That is all I felt.",
     name: "Vishnu Jadhav",
     title: "",
   },
@@ -110,13 +110,12 @@ const CareersPage = ({ Meta_Data }) => {
               initial="hidden"
               animate="visible"
             >
-              We believe that technology with purpose has the potential to solve
-              the greatest challenges of our time. Join the team and unlock your
+              We believe purposeful technology has the potential to address the most significant challenges of our era. Join the team and unlock your
               future career with us.
             </motion.h4>
             <button
               onClick={scrollTo}
-              className="loop_video_btn items-start w-fit bg-cyan-300 px-3 py-1 mt-10 md:px-4 md:py-2 rounded-xl font-bold text-slate-800 hover:bg-white hover:text-cyan-700 transition-all 0.2 ease-out hover:border"
+              className="loop_video_btn items-start w-fit bg-cyan-300 px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold text-slate-800 hover:bg-white hover:text-cyan-700 transition-all 0.2 ease-out hover:border"
             >
               Apply now
             </button>
@@ -125,9 +124,8 @@ const CareersPage = ({ Meta_Data }) => {
             {images.map((image, index) => (
               <motion.div
                 key={index}
-                className={`absolute inset-0 flex items-center justify-center ${
-                  index === currentIndex ? "block" : "hidden"
-                }`}
+                className={`absolute inset-0 flex items-center justify-center ${index === currentIndex ? "block" : "hidden"
+                  }`}
                 initial="hidden"
                 animate="visible"
                 variants={slideVariants} // Use simplified slideVariants
@@ -233,14 +231,14 @@ const CareersPage = ({ Meta_Data }) => {
                     viewport={{ once: false, amount: 0.8 }}
                     className="max-w-[600px] text-Paragraph leading-Paragraph md:text-lg dark:text-gray-400"
                   >
-                    we believe in pioneering the future of technology. Join us
+                    We believe in pioneering the future of technology. Join us
                     on a transformative journey where creativity meets
                     cutting-edge innovation. Dive into a world where ideas turn
-                    into reality, and every challenge is an opportunity for
+                    into reality and every challenge is an opportunity for
                     growth. As part of our team, you'll collaborate with
-                    visionary minds, push the boundaries of what's possible, and
+                    visionary minds, push the boundaries of what's possible and
                     make a lasting impact on the world. Step into the future of
-                    technology with us, and together, let's shape tomorrow's
+                    technology with us and together, let's shape tomorrow's
                     world.
                   </motion.p>
                 </div>

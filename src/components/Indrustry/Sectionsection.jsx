@@ -195,7 +195,7 @@ export const Secondsection = () => {
               </h3>
               <p className="mt-2 text-Paragraph-sm line-clamp-3 dark:text-gray-400">
                 Your trusted partner for construction IT, delivering reliability
-                and innovation,Maximizing construction project success through
+                and innovation, Maximizing construction project success through
                 strategic IT implementations.
               </p>
             </div>
@@ -220,7 +220,7 @@ export const Secondsection = () => {
               </h3>
               <p className="mt-2 text-Paragraph-sm line-clamp-3 dark:text-gray-400">
                 From online banking to mobile payments, we enable seamless
-                customer experiences,Transforming banking compliance and risk
+                customer experiences, Transforming banking compliance and risk
                 management.
               </p>
             </div>
@@ -249,7 +249,7 @@ export const Secondsection = () => {
               </h3>
               <p className="mt-2 text-Paragraph-sm  line-clamp-3 dark:text-gray-400">
                 Streamlining field service workflows with custom-built IT
-                solutions,Enabling real-time communication and collaboration for
+                solutions, Enabling real-time communication and collaboration for
                 field service teams.
               </p>
             </div>
@@ -278,7 +278,7 @@ export const Secondsection = () => {
               </h3>
               <p className="mt-2 text-Paragraph-sm line-clamp-3 dark:text-gray-400">
                 Maximizing efficiency in manufacturing and supply chain
-                management with IT innovation,Enabling personalized medicine and
+                management with IT innovation, Enabling personalized medicine and
                 patient care with tailored IT services.
               </p>
             </div>
@@ -303,7 +303,7 @@ export const Secondsection = () => {
               </h3>
               <p className="mt-2 text-Paragraph-sm  line-clamp-3 dark:text-gray-400">
                 Transforming professional services operations with cutting-edge
-                technology,Driving efficiency and profitability in professional
+                technology, Driving efficiency and profitability in professional
                 services through advanced IT services.
               </p>
             </div>
@@ -331,7 +331,7 @@ export const Secondsection = () => {
                 Finance
               </h3>
               <p className="mt-2 text-Paragraph-sm  line-clamp-3 dark:text-gray-400">
-                Ensuring security and compliance in financial IT systems,From
+                Ensuring security and compliance in financial IT systems, From
                 banking to investments, we optimize every aspect with IT
                 excellence.
               </p>

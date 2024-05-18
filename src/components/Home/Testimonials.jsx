@@ -31,7 +31,7 @@ const Testimonials = () => {
               <a href="#">
                 <h4 className="text-lg mb-3 font-bold">Vision</h4>
               </a>
-              <p className="mb-2 md:text-sm text-xs text-gray-600">At Greateway Software Pvt. Ltd., we are dedicated to leading innovation in crafting transformative digital solutions that empower businesses worldwide. Our vision is to revolutionize industries through cutting-edge technology, driving sustainable growth, and delivering lasting value to our clients, employees and communities.</p>
+              <p className="mb-2 md:text-sm text-xs text-gray-600">At Greateway Software Pvt. Ltd., we are dedicated to leading innovation in crafting transformative digital solutions that empower businesses worldwide. Our vision is to revolutionize industries through cutting-edge technology, driving sustainable growth and delivering lasting value to our clients, employees and communities.</p>
 
               <img src={Eye} alt="" className="w-full hidden md:block" />
 
@@ -50,7 +50,7 @@ const Testimonials = () => {
               <a href="#">
                 <h4 className="text-lg mb-3 font-bold">Mission</h4>
               </a>
-              <p className="mb-2 md:text-sm text-xs text-gray-600">At Greateway Software Pvt. Ltd., we strive to deliver IT excellence through advanced technologies like AI, Machine Learning, Cloud Computing, and Software Development. With collaborative partnerships, rigorous research, and continuous improvement, we aim to exceed client expectations, drive efficiency, and catalyze business success.</p>
+              <p className="mb-2 md:text-sm text-xs text-gray-600">At Greateway Software Pvt. Ltd., we strive to deliver IT excellence through advanced technologies like AI, Machine Learning, Cloud Computing and Software Development. With collaborative partnerships, rigorous research and continuous improvement, we aim to exceed client expectations, drive efficiency and catalyze business success.</p>
 
               <img src={Miss} alt="" className="w-full hidden md:block" />
 
@@ -70,8 +70,8 @@ const Testimonials = () => {
                 <h4 className="text-lg mb-3 font-bold">Company Value</h4>
               </a>
               <p className="mb-2 md:text-sm text-xs text-gray-600">
-                At our company, we uphold a commitment to honesty, integrity, and ethics in everything we do.
-                We foster innovation through teamwork, valuing diverse perspectives, and treating everyone with respect.
+                At our company, we uphold a commitment to honesty, integrity and ethics in everything we do.
+                We foster innovation through teamwork, valuing diverse perspectives and treating everyone with respect.
                 These core values guide our actions and inspire us to create a positive impact in our work and communities.
               </p>
               <br />

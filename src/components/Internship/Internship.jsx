@@ -39,7 +39,7 @@ const Internship = ({ Meta_Data }) => {
           </h1>
           <p  className="text-center text-[10px] md:text-lg text-slate-200 px-2 py-2 sm:px-10 sm:pt-8 max-w-[45rem]">
             "To gain invaluable hands-on experience,
-            mentorship, and networking opportunities that will propel your
+            mentorship and networking opportunities that will propel your
             career forward. Discover your potential and build the foundation for
             a successful career with us."
           </p>
@@ -104,14 +104,14 @@ const Internship = ({ Meta_Data }) => {
                      initial="hidden"
                      whileInView={"show"}
                      viewport={{ once: false, amount: 0.8 }}
-                     className="font-mono text-3xl pb-4 text-indigo-800">Career Development</motion.h1>
+                     className="font-semibold text-3xl pb-4 text-indigo-800">Career Development</motion.h1>
                     <motion.p
                      variants={fadein("up", 0.2)}
                      initial="hidden"
                      whileInView={"show"}
                      viewport={{ once: false, amount: 0.8 }}
                     className=" text-gray-800 text-lg pt-4">
-                    "Offering tailored paths for growth through mentorship, training programs, and opportunities for advancement. we empower our team to grow professionally, fostering innovation and excellence in software solutions."
+                    "Providing customized growth opportunities through mentorship, training programs and pathways for advancement. We empower our team to grow professionally, fostering innovation and excellence in software solutions."
                     </motion.p>
 
                   </div>
