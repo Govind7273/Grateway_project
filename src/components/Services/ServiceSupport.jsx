@@ -1,6 +1,4 @@
-import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { BiMessageDots } from "react-icons/bi";
 import { IoTime } from "react-icons/io5";
 import { MdOutlineSupportAgent } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -34,49 +32,6 @@ const ServiceSupport = ({ Meta_Data }) => {
     { id: 3, logo: IoTime, text: "Support 24/7" },
   ];
 
-  const [accordions, setAccordion] = useState([
-    {
-      key: 1,
-      title:
-        "I'm considering software development services. How can you help me?",
-      data: `Our software development services are designed to help businesses like yours create custom software solutions tailored to your unique needs. From developing new applications to enhancing existing systems, we can help you every step of the way.`,
-      isOpen: false,
-    },
-    {
-      key: 2,
-      title: "What is the process for testing and quality analysis?",
-      data: `Our Testing and Quality Analysis process is comprehensive and rigorous. We start by understanding your project requirements, then develop a testing plan that includes various types of testing such as functional, performance, security, and more. Our quality analysis involves detailed reviews and audits to ensure your project meets the highest standards.`,
-      isOpen: false,
-    },
-    {
-      key: 4,
-      title: "How can your CRM solutions improve my customer relationships?",
-      data: "Our Customer Relationship Management solutions help businesses like yours build stronger, more profitable customer relationships. We can optimize your existing",
-    },
-    {
-      key: 5,
-      title: "How can I benefit from your Artificial Intelligence solutions?",
-      data: `Our Artificial Intelligence (AI) solutions leverage the latest advancements in machine learning and natural language processing to help businesses like yours automate tasks, gain valuable insights from data, and provide personalized experiences to customers. Our AI solutions are customizable and can be tailored to your unique business needs.`,
-      isOpen: false,
-    },
-    {
-      key: 6,
-      title: "What are the advantages of Cloud Computing?",
-      data: `Cloud Computing offers numerous advantages, including cost savings, scalability, flexibility, and improved collaboration. Our Cloud Computing services can help your business leverage these benefits by migrating your applications and infrastructure to the cloud, designing cloud-native applications, and optimizing your cloud environment for performance and cost efficiency.`,
-      isOpen: false,
-    },
-  ]);
-  const toggleAccordion = (accordionkey) => {
-    const updatedAccordions = accordions.map((accord) => {
-      if (accord.key === accordionkey) {
-        return { ...accord, isOpen: !accord.isOpen };
-      } else {
-        return { ...accord, isOpen: false };
-      }
-    });
-
-    setAccordion(updatedAccordions);
-  };
   return (
     <>
       <Helmet>
@@ -103,19 +58,19 @@ const ServiceSupport = ({ Meta_Data }) => {
 
       {/* second section */}
       <section>
-      <div className="flex flex-wrap top-3 md:top-0 justify-center items-center gap-10 md:p-5 pt-2">
-        {Supports.map((s) => {
-          return (
-            <div>
-              <h1></h1>
-              <span key={s.id} className="items-center flex flex-col">
-                {<s.logo size={50} />}
-                <h1>{s.text}</h1>
-              </span>
-            </div>
-          );
-        })}
-      </div>
+        <div className="flex flex-wrap top-3 md:top-0 justify-center items-center gap-10 md:p-5 pt-2">
+          {Supports.map((s) => {
+            return (
+              <div>
+                <h1></h1>
+                <span key={s.id} className="items-center flex flex-col">
+                  {<s.logo size={50} />}
+                  <h1>{s.text}</h1>
+                </span>
+              </div>
+            );
+          })}
+        </div>
       </section>
 
       {/* Third Section */}
@@ -159,23 +114,70 @@ const ServiceSupport = ({ Meta_Data }) => {
 
       {/* Accordion for FAQ */}
       <section>
-        <div className="p-2 m-4 md:m-4 relative md:top-5 top-0">
-          <h2 className="md:text-SubHeading text-SubHeading-sm font-bold p-2 text-center  text-black">
-            Have questions? We have answers! Check out our FAQ
-          </h2>
-          {accordions.map((accordion,index) => (
-            <Accordion
-              key={index}
-              title={accordion.title}
-              data={accordion.data}
-              isOpen={accordion.isOpen}
-              toggleAccordion={() => toggleAccordion(accordion.key)}
-            />
-          ))}
+        <div className="relative w-full bg-white px-6 pt-10 pb-8 mt-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
+          <div className="mx-auto px-5">
+            <div className="flex flex-col items-center">
+              <h2 className="mt-5 text-center text-3xl font-bold tracking-tight md:text-5xl">FAQ</h2>
+              <p className="mt-3 text-lg text-neutral-500 md:text-xl">Questions related to IT Service Support</p>
+            </div>
+            <div className="mx-auto mt-8 grid max-w-xl divide-y divide-neutral-200">
+              {[
+                {
+                  question: "I'm considering software development services. How can you help me?",
+                  answer:
+                    "Our software development services are designed to help businesses like yours create custom software solutions tailored to your unique needs. From developing new applications to enhancing existing systems, we can help you every step of the way.",
+                },
+                {
+                  question: "What is the process for testing and quality analysis?",
+                  answer:
+                    "Our Testing and Quality Analysis process is comprehensive and rigorous. We start by understanding your project requirements, then develop a testing plan that includes various types of testing such as functional, performance, security, and more. Our quality analysis involves detailed reviews and audits to ensure your project meets the highest standards.",
+                },
+                {
+                  question: "How can your CRM solutions improve my customer relationships?",
+                  answer:
+                    "Our Customer Relationship Management solutions help businesses like yours build stronger, more profitable customer relationships. We can optimize your existing.",
+                },
+                {
+                  question: "How can I benefit from your Artificial Intelligence solutions?",
+                  answer:
+                    "Our Artificial Intelligence (AI) solutions leverage the latest advancements in machine learning and natural language processing to help businesses like yours automate tasks, gain valuable insights from data, and provide personalized experiences to customers. Our AI solutions are customizable and can be tailored to your unique business needs.",
+                },
+                {
+                  question: "What are the advantages of Cloud Computing?",
+                  answer:
+                    "Cloud Computing offers numerous advantages, including cost savings, scalability, flexibility, and improved collaboration. Our Cloud Computing services can help your business leverage these benefits by migrating your applications and infrastructure to the cloud, designing cloud-native applications, and optimizing your cloud environment for performance and cost efficiency.",
+                },
+              ].map((faq, index) => (
+                <div className="py-5" key={index}>
+                  <details className="group">
+                    <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                      <span>{faq.question}</span>
+                      <span className="transition group-open:rotate-180">
+                        <svg
+                          fill="none"
+                          height="24"
+                          shapeRendering="geometricPrecision"
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="1.5"
+                          viewBox="0 0 24 24"
+                          width="24"
+                        >
+                          <path d="M6 9l6 6 6-6"></path>
+                        </svg>
+                      </span>
+                    </summary>
+                    <p className="group-open:animate-fadeIn mt-3 text-neutral-600">{faq.answer}</p>
+                  </details>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      <div className="flex relative top-0 md:-top-36 md:mb-[-80px] mb-0 h-[30vh] md:h-full justify-center w-full items-center gap-6 flex-col md:fl-row md:gap-6 p-3 md:p-5">
+      <div className="flex relative top-0 mb-0 h-[30vh] md:h-full justify-center w-full items-center gap-6 flex-col md:fl-row md:gap-6 p-3 md:p-5">
         <h1 className=" md:text-MainHeading text-MainHeading-sm font-extrabold justify-center flex text-center">
           Need more Assistant
         </h1>
