@@ -198,13 +198,16 @@ const JobsCard = ({ setModal }) => {
     <div className="flex flex-col w-full  items-center p-6 bg-white ">
       {/* card page title */}
       <div className="flex justify-center items-center gap-2">
-        <div className="w-32 aspect-square rounded-full relative flex justify-center items-center animate-[spin_3s_linear_infinite] z-40 bg-[conic-gradient(white_0deg,white_300deg,transparent_270deg,transparent_360deg)] before:animate-[spin_2s_linear_infinite] before:absolute before:w-[60%] before:aspect-square before:rounded-full before:z-[80] before:bg-[conic-gradient(white_0deg,white_270deg,transparent_180deg,transparent_360deg)] after:absolute after:w-3/4 after:aspect-square after:rounded-full after:z-[60] after:animate-[spin_3s_linear_infinite] after:bg-[conic-gradient(#065f46_0deg,#065f46_180deg,transparent_180deg,transparent_360deg)]">
-          <span className="absolute w-[85%] aspect-square rounded-full z-[60] animate-[spin_5s_linear_infinite] bg-[conic-gradient(#34d399_0deg,#34d399_180deg,transparent_180deg,transparent_360deg)]"></span>
+        <div className="w-32 aspect-square rounded-full relative flex justify-center items-center animate-[spin_3s_linear_infinite] z-40 bg-[conic-gradient(white_0deg,white_300deg,transparent_270deg,transparent_360deg)] before:animate-[spin_2s_linear_infinite] before:absolute before:w-[60%] before:aspect-square before:rounded-full before:z-[80] before:bg-[conic-gradient(white_0deg,white_270deg,transparent_180deg,transparent_360deg)] after:absolute after:w-3/4 after:aspect-square after:rounded-full after:z-[60] after:animate-[spin_3s_linear_infinite] after:bg-[conic-gradient(#06b6d4_0deg,#06b6d4_180deg,transparent_180deg,transparent_360deg)]">
+          <span className="absolute w-[85%] aspect-square rounded-full z-[60] animate-[spin_5s_linear_infinite] bg-[conic-gradient(#2c3493_0deg,#2c3493_180deg,transparent_180deg,transparent_360deg)]"></span>
         </div>
-        <motion.h1 variants={fadein("right", 0.2)}
-                    initial="hidden"
-                    whileInView={"show"}
-                    viewport={{ once: false, amount: 0.8 }} className="md:text-MainHeading text-lg text-center font-extrabold text-[#3c4c54] px-2 uppercase">
+        <motion.h1
+          variants={fadein("right", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: false, amount: 0.8 }}
+          className="md:text-MainHeading text-lg text-center font-extrabold text-[#3c4c54] px-2 uppercase"
+        >
           WE ARE HIRING
         </motion.h1>
       </div>
@@ -231,9 +234,7 @@ const JobsCard = ({ setModal }) => {
               <h1 className="text-lg font-navlistFont font-semibold text-[#06b6d4]">
                 Requirement:
               </h1>
-              <ul
-                className="list-disc p-3"
-              >
+              <ul className="list-disc p-3">
                 {cardItem.Requirement.map((reqList) => (
                   <li
                     key={reqList}
@@ -248,7 +249,8 @@ const JobsCard = ({ setModal }) => {
             {/* Education */}
             <div>
               <h1 className="text-md font-bold text-[#06b6d4]">
-                Education: <span className="text-[#3c4c54]">{cardItem.education}</span>
+                Education:{" "}
+                <span className="text-[#3c4c54]">{cardItem.education}</span>
               </h1>
               <h1 className="text-md font-bold text-[#06b6d4]">
                 {" "}
