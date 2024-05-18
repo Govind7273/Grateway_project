@@ -158,7 +158,7 @@ export const Secondsection = () => {
       </section>
       {/*Whole card section*/}
       <section className="w-full md:py-24 lg:py-10 bg-gray-200 dark:bg-gray-800 overflow-x-hidden px-3">
-        <div className="pb-10 px-2">
+        <div className="py-10 px-2">
           <motion.h1
             variants={fadein("down", 0.1)}
             initial="hidden"
@@ -170,7 +170,7 @@ export const Secondsection = () => {
           </motion.h1>
         </div>
         {/*Sub card section*/}
-        <div className="container grid grid-cols-1 gap-6 px-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10">
+        <div className="container pb-5 grid grid-cols-1 gap-6 px-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10">
           {/*Construction below */}
           <motion.div
             variants={fadein("right", 0.1)}
