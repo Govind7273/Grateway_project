@@ -30,7 +30,7 @@ const ModalForm = ({ setModal }) => {
           onChange={(e) =>
             setContact({ ...contact, [e.target.name]: e.target.value })
           }
-          className="border-b-2 outline-none w-full border-slate-300 md:h-10 h-4 pl-2 py-2"
+          className="border-b-2 outline-none w-full border-slate-300 md:h-10 h-4 pl-2 py-3"
           placeholder={label}
         />
         {error && <div className="text-red-500 text-xs">{error}</div>}
@@ -107,28 +107,28 @@ const ModalForm = ({ setModal }) => {
             </h2>
 
             <div className="flex gap-3 justify-center items-center flex-wrap md:flex-nowrap">
-              <label htmlFor="name" className="text-right lg:w-20">
+              <label htmlFor="name" className="text-right lg:w-20 h-3">
                 Name
               </label>
               {InputField("Jhon Decos", "name", "text", error.name)}
             </div>
 
             <div className="flex justify-center items-center gap-3 flex-wrap md:flex-nowrap">
-              <label htmlFor="email" className="text-right lg:w-20">
+              <label htmlFor="email" className="text-right lg:w-20 h-3">
                 E-mail
               </label>
               {InputField("jhon@gmail.com", "email", "email", error.email)}
             </div>
 
             <div className="flex justify-center items-center gap-3 flex-wrap md:flex-nowrap">
-              <label htmlFor="number" className="text-right lg:w-20">
+              <label htmlFor="number" className="text-right lg:w-20 h-3">
                 Phone
               </label>
               {InputField("xxx-xxxx-xxx", "number", "text", error.number)}
             </div>
 
             <div className="flex justify-center items-center gap-3 flex-wrap md:flex-nowrap">
-              <label htmlFor="Designation" className="text-right lg:w-20">
+              <label htmlFor="Designation" className="text-right lg:w-20 h-3">
                 Job Role
               </label>
               {InputField("Job Role", "role", "text", error.role)}

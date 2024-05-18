@@ -172,9 +172,9 @@ const BigDataService = ({ Meta_Data }) => {
               that is vital for business intelligence and strategic planning.
             </motion.p>
           </div>
-          <div className="h-auto py-2 lg:w-[40vw]">
+          <div className="h-auto py-2 lg:w-[40vw] px-5">
             <img
-              className="lg:h-[55vh]  object-cover  rounded-xl shadow-xl"
+              className="lg:h-[50vh]  object-cover  rounded-xl shadow-xl"
               src={DataCollectionImg}
               width={2500}
               height={1000}
@@ -184,7 +184,7 @@ const BigDataService = ({ Meta_Data }) => {
         </section>
 
         {/* Third-2 */}
-        <section className="w-[100vw] flex md:flex-row flex-col  md:h-[61vh] p-2 overflow-y-hidden overflow-x-hidden gap-5 px-4">
+        <section className="w-[100vw] h-auto flex md:flex-row flex-col md:h-[61vh] p-2 overflow-y-hidden overflow-x-hidden gap-5 px-4">
           {/* left section */}
           <div>
             <img
@@ -196,7 +196,7 @@ const BigDataService = ({ Meta_Data }) => {
           </div>
 
           {/* right section */}
-          <div className=" px-4 flex gap-4 flex-col">
+          <div className=" px-4 flex gap-4 flex-col pt-4">
             <motion.h1
               variants={fadein("right", 0.1)}
               initial="hidden"
@@ -220,7 +220,7 @@ const BigDataService = ({ Meta_Data }) => {
               process large datasets efficiently.
             </motion.p>
             <h4 className="text-xl text-black font-bold">Storages:</h4>
-            <ul className="list-disc ms-6 font-bold leading-loose w-2/3 ">
+            <ul className="list-disc ms-6 font-bold leading-loose w-2/3 h-[46vh]">
               <motion.li
                 variants={fadein("up", 0.1)}
                 initial="hidden"
