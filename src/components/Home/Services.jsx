@@ -66,14 +66,14 @@ const Services = () => {
     {
       logo: web,
       title: "Web Development",
-      desc: "Our web development services are expertly designed to meet the distinct needs of both startups and established businesses. We focus on delivering responsive and user-friendly web applications, from concept to deployment.",
+      desc: "Our web development services are expertly designed to meet the distinct needs of both startups and established businesses. We focus on delivering responsive and user-friendly web applications from concept to deployment.",
       link: "/Service-webDev",
       theme: "#7b9665"
     },
     {
       logo: staffing,
       title: "IT Service Support",
-      desc: "Boost your team's efficiency and business performance with our comprehensive IT service support. We provide tailored solutions, proactive maintenance, and responsive assistance to keep your systems running smoothly.",
+      desc: "Boost your team's efficiency and business performance with our comprehensive IT service support. We provide tailored solutions, proactive maintenance and responsive assistance to keep your systems running smoothly.",
       link: "/Service-Support",
       theme: "#9c5f82"
     },

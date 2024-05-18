@@ -42,7 +42,7 @@ const ServiceSupport = ({ Meta_Data }) => {
       {/* hero section */}
       <section className="relative w-full h-full overflow-hidden pharma_section bg-black">
         {/* first */}
-        <div className="pharma_img md:w-[100%] md:h-auto pt-20 opacity-45">
+        <div className="pharma_img md:w-[100%] md:h-auto pt-16 opacity-45">
           <img className="h-full w-full" src={bg} alt="support_bg" />
         </div>
         {/* second */}

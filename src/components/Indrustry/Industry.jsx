@@ -32,7 +32,7 @@ const CARDS = [
         <h1 className="font-bold text-CardHeading text-center">Construction</h1>
         <p className="pt-2 text-Paragraph ">
           At Greateway, we deliver solutions streamline project management,
-          enhance collaboration, and boost productivity on and off-site,From
+          enhance collaboration and boost productivity on and off-site, From
           advanced software integration to robust cybersecurity, we empower
           construction.
         </p>
@@ -51,7 +51,7 @@ const CARDS = [
         <p className="pt-2">
           We deliver specialized IT services tailored for the banking and
           finance sector. Our solutions include secure transaction processing,
-          advanced data analytics, and compliance management.
+          advanced data analytics and compliance management.
         </p>
       </>
     ),
@@ -64,7 +64,7 @@ const CARDS = [
       <>
         <h1 className=" font-bold text-CardHeading text-center">Education</h1>
         <p className="pt-2">
-          robust learning management systems, secure digital classrooms, and
+          robust learning management systems, secure digital classrooms and
           advanced data analytics, all designed to enhance teaching and
           learning. Partner with us to leverage technology
         </p>
@@ -81,7 +81,7 @@ const CARDS = [
           Professional Services
         </h1>
         <p className="pt-2 ">
-          Our advanced project management tools, secure data handling, and
+          Our advanced project management tools, secure data handling and
           seamless collaboration platforms, designed to enhance efficiency and
           client satisfaction.
         </p>
@@ -99,7 +99,7 @@ const CARDS = [
         </h1>
         <p className="pt-2">
           Our comprehensive solutions include mobile workforce management,
-          real-time data analytics, and secure communication platforms, ensuring
+          real-time data analytics and secure communication platforms, ensuring
           seamless coordination.
         </p>
       </>
@@ -140,7 +140,7 @@ const Indrustry = ({ Meta_Data }) => {
               className="text-xl font-bold text-white text-center w-[70vw] "
             >
               Navigating the complexities of modern industries demands versatile
-              IT solutions. From marketing to logistics,we offer comprehensive
+              IT solutions. From marketing to logistics, we offer comprehensive
               services tailored to your business's specific needs.
             </motion.p>
           </div>
@@ -283,7 +283,7 @@ const Indrustry = ({ Meta_Data }) => {
                     >
                       Our advanced assessment platforms incorporate robust
                       proctoring features such as live monitoring, AI-based
-                      behavior analysis, and secure exam environments. With a
+                      behavior analysis and secure exam environments. With a
                       focus on preventing cheating and maintaining exam
                       integrity.
                     </motion.p>
@@ -395,7 +395,7 @@ const Indrustry = ({ Meta_Data }) => {
                     >
                       At the nexus of virtualization and cloud, we architect
                       digital ecosystems that defy gravity, empowering
-                      businesses to transcend limitations, accelerate growth,
+                      businesses to transcend limitations, accelerate growth
                       and achieve unprecedented levels of agility and
                       scalability.
                     </motion.p>
@@ -477,7 +477,7 @@ const Indrustry = ({ Meta_Data }) => {
                       className="text-Paragraph "
                     >
                       Systems empower, ensuring no wrecks. Remote monitoring, a
-                      lifeline they extend, keeping patients connected, on
+                      lifeline they extend, keeping patients connected on
                       health they depend. With real-time alerts and data
                       insights clear, they empower clinicians, dispelling fear.
                       In the landscape of health, their role profound, IT
