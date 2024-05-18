@@ -183,64 +183,63 @@ const Indrustry = ({ Meta_Data }) => {
         </section>
         {/* {Education section} */}
         <section className="h-full w-full">
-          <div className="md:h-[70vh] h-[40vh] w-full  flex items-center justify-center text-white bg-black">
+          <div className="relative h-[40vh] md:h-[70vh] w-full flex items-center justify-center text-white bg-black">
             <img
               src={edu2}
-              className="absolute md:h-[70vh] h-[40vh] w-full object-cover opacity-55"
+              className="absolute h-full w-full object-cover opacity-55"
               alt="linear board demo"
             />
-            <h1 className="relative md:text-6xl text-5xl font-bold  text-center pt-3 z-20">
+            <h1 className="relative text-5xl md:text-6xl font-bold text-center pt-3 z-20">
               Education
             </h1>
           </div>
-          <div className="">
-            <h2 className="text-MainHeading font-extrabold text-center  w-screen pt-3">
+          <div className="w-full">
+            <h2 className="text-MainHeading font-extrabold text-center w-full pt-3">
               Services We Serve
             </h2>
           </div>
-          <section className="px-3 ">
+          <section className="px-3">
             <div
               data-aos="zoom-out"
               className="mx-auto grid justify-center py-6 gap-10 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3"
             >
-              {/*first card*/}
-              <div className=" shadow-lg relative  hover:cursor-pointer hover:scale-105 text-black bg-stone-100 hover: transition-all overflow-hidden  border bg-background p-2  md:h-[60vh] h-[40vh]">
-                <div className="flex flex-col justify-between rounded-md p-6">
-                  <div className="space-y-4 ">
+              {/* First card */}
+              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 transition-transform text-black bg-stone-100 overflow-hidden border p-2 h-auto md:h-auto">
+                <div className="flex flex-col justify-between rounded-md p-6 h-full">
+                  <div className="space-y-4">
                     <motion.h3
                       variants={fadein("right", 0.5)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
                       className="font-bold text-xl text-[#1a2229]"
                     >
-                      Learning Management system
+                      Learning Management System
                     </motion.h3>
-
                     <motion.p
                       variants={fadein("left", 0.1)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.8 }}
-                      className="text-[#646464] py-2 h-auto"
+                      className="text-[#646464] py-2"
                     >
                       Empower your organization with our cutting-edge Learning
                       Management System (LMS) solutions. At our IT services
                       company, we understand the critical role that technology
-                      plays in modern education and training,our customizable
+                      plays in modern education and training. Our customizable
                       LMS platforms are tailored to meet your specific needs.
                     </motion.p>
                   </div>
                 </div>
               </div>
-              {/*Second card*/}
-              <div className="shadow-lg  relative  hover:cursor-pointer hover:scale-105  text-black bg-stone-100  hover:transition-all overflow-hidden border bg-background p-2 px-3 md:h-[60vh] h-[40vh]">
-                <div className="flex flex-col justify-between rounded-md p-6">
+              {/* Second card */}
+              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 transition-transform text-black bg-stone-100 overflow-hidden border p-2 h-auto md:h-auto">
+                <div className="flex flex-col justify-between rounded-md p-6 h-full">
                   <div className="space-y-4">
                     <motion.h3
                       variants={fadein("left", 0.5)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.8 }}
                       className="font-bold text-xl text-[#1a2229]"
                     >
@@ -249,7 +248,7 @@ const Indrustry = ({ Meta_Data }) => {
                     <motion.p
                       variants={fadein("right", 0.1)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
                       className="text-[#646464]"
                     >
@@ -257,19 +256,19 @@ const Indrustry = ({ Meta_Data }) => {
                       specialized IT services tailored for virtual classrooms.
                       We offer comprehensive solutions designed to seamlessly
                       integrate virtual classrooms into your educational or
-                      corporate envronment.
+                      corporate environment.
                     </motion.p>
                   </div>
                 </div>
               </div>
-              {/*third card */}
-              <div className="relative hover:cursor-pointer hover:scale-105  text-black bg-stone-100  hover: transition-all overflow-hidden  border bg-background p-2 md:h-[60vh] h-[40vh]">
-                <div className="flex flex-col justify-between rounded-md p-6">
+              {/* Third card */}
+              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 transition-transform text-black bg-stone-100 overflow-hidden border p-2 h-auto md:h-auto">
+                <div className="flex flex-col justify-between rounded-md p-6 h-full">
                   <div className="space-y-4">
                     <motion.h3
                       variants={fadein("right", 0.5)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.8 }}
                       className="font-bold text-xl text-[#1a2229]"
                     >
@@ -278,7 +277,7 @@ const Indrustry = ({ Meta_Data }) => {
                     <motion.p
                       variants={fadein("left", 0.1)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
                       className="text-[#646464]"
                     >
@@ -296,18 +295,18 @@ const Indrustry = ({ Meta_Data }) => {
         </section>
         {/*Telecom Section */}
         <section className="h-full w-full">
-          <div className="md:h-[70vh] h-[40vh] w-full  flex items-center justify-center text-white bg-black">
+          <div className="relative h-[40vh] md:h-[70vh] w-full flex items-center justify-center text-white bg-black">
             <img
               src={tele}
-              className="absolute md:h-[70vh] h-[40vh] w-full object-cover opacity-55 "
+              className="absolute h-full w-full object-cover opacity-55"
               alt="linear board demo"
             />
-            <h1 className="relative md:text-6xl text-5xl font-bold  text-center pt-3 z-20">
+            <h1 className="relative text-5xl md:text-6xl font-bold text-center pt-3 z-20">
               Telecom Services
             </h1>
           </div>
           <div>
-            <h2 className="text-MainHeading font-extrabold text-center text-3xl  w-screen pt-3">
+            <h2 className="text-MainHeading font-extrabold text-center text-3xl w-full pt-3">
               Services We Serve
             </h2>
           </div>
@@ -316,14 +315,14 @@ const Indrustry = ({ Meta_Data }) => {
               data-aos="zoom-out"
               className="mx-auto grid justify-center py-6 gap-10 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 h-auto"
             >
-              {/*first card */}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden  border bg-background p-2  md:h-[60vh] h-[40vh]">
-                <div className="flex flex-col justify-between rounded-md p-6">
+              {/* First card */}
+              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border p-2 h-auto">
+                <div className="flex flex-col justify-between rounded-md p-6 h-full">
                   <div className="space-y-4">
                     <motion.h3
                       variants={fadein("left", 0.5)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.8 }}
                       className="font-bold text-center text-xl px-2 text-[#1a2229]"
                     >
@@ -332,56 +331,56 @@ const Indrustry = ({ Meta_Data }) => {
                     <motion.p
                       variants={fadein("right", 0.1)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="text-[#646464] "
+                      className="text-[#646464]"
                     >
                       Ensuring reliability and uptime with proactive network
-                      monitoring and management,Your partner in network
+                      monitoring and management. Your partner in network
                       excellence, delivering scalable solutions tailored to your
-                      needs,Guarding your network against cyber threats with
+                      needs. Guarding your network against cyber threats with
                       robust security measures.
                     </motion.p>
                   </div>
                 </div>
               </div>
-              {/*Second card */}
-              <div className=" shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border bg-background p-2  md:h-[60vh] h-[40vh]">
-                <div className="flex  flex-col justify-between rounded-md p-6">
+              {/* Second card */}
+              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border p-2 h-auto">
+                <div className="flex flex-col justify-between rounded-md p-6 h-full">
                   <div className="space-y-4">
                     <motion.h3
                       variants={fadein("right", 0.1)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="font-bold  text-xl px-2 text-[#1a2229]"
+                      className="font-bold text-xl px-2 text-[#1a2229]"
                     >
-                      Wireless communication
+                      Wireless Communication
                     </motion.h3>
                     <motion.p
                       variants={fadein("left", 0.1)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
                       className="text-[#646464]"
                     >
                       Revolutionizing wireless communication landscapes, we
                       engineer seamless connectivity solutions that transcend
                       boundaries and empower businesses to thrive in a
-                      hyper-connected world.Crafting bespoke wireless
+                      hyper-connected world. Crafting bespoke wireless
                       communication ecosystems.
                     </motion.p>
                   </div>
                 </div>
               </div>
-              {/*third card */}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border bg-background p-2 md:h-[60vh] h-[40vh]">
-                <div className="flex flex-col justify-between rounded-md p-6">
+              {/* Third card */}
+              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border p-2 h-auto">
+                <div className="flex flex-col justify-between rounded-md p-6 h-full">
                   <div className="space-y-4">
                     <motion.h3
                       variants={fadein("left", 0.5)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.8 }}
                       className="font-bold text-xl text-center px-2 text-[#1a2229]"
                     >
@@ -390,9 +389,9 @@ const Indrustry = ({ Meta_Data }) => {
                     <motion.p
                       variants={fadein("right", 0.1)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="text-[#646464] "
+                      className="text-[#646464]"
                     >
                       At the nexus of virtualization and cloud, we architect
                       digital ecosystems that defy gravity, empowering
@@ -408,109 +407,109 @@ const Indrustry = ({ Meta_Data }) => {
         </section>
         {/* healthcare Section */}
         <section>
-          <div className="md:h-[70vh] h-[40vh] w-full  flex items-center justify-center text-white bg-black">
+          <div className="md:h-[70vh] h-[40vh] w-full flex items-center justify-center text-white bg-black">
             <img
               src={doc}
-              className="absolute md:h-[70vh] h-[40vh] w-full object-cover opacity-55 "
+              className="absolute md:h-[70vh] h-[40vh] w-full object-cover opacity-55"
               alt="linear board demo"
             />
-            <h1 className="relative md:text-6xl text-4xl font-bold  text-center pt-3 z-20">
+            <h1 className="relative md:text-6xl text-4xl font-bold text-center pt-3 z-20">
               Healthcare
             </h1>
           </div>
           <div>
-            <h2 className="text-MainHeading font-extrabold text-center text-3xl  w-screen pt-3 ">
+            <h2 className="text-MainHeading font-extrabold text-center text-3xl w-screen pt-3">
               Services We Serve
             </h2>
           </div>
           <section className="h-full px-3">
             <div
               data-aos="zoom-out"
-              className="mx-auto grid justify-center py-6 gap-10 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 h-auto"
+              className="mx-auto grid justify-center py-6 gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:max-w-[64rem] h-auto"
             >
-              {/*first card */}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border bg-background p-2 md:h-[60vh] h-[40vh]">
-                <div className="flex flex-col justify-between rounded-md p-6">
+              {/* First card */}
+              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border p-4 min-h-[30vh]">
+                <div className="flex flex-col justify-between rounded-md p-4">
                   <div className="space-y-4">
                     <motion.h3
                       variants={fadein("left", 0.5)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.8 }}
-                      className="font-bold text-xl px-2 text-[#1a2229]"
+                      className="font-bold text-xl text-center px-2 text-[#1a2229]"
                     >
                       Healthcare Cloud Solutions
                     </motion.h3>
                     <motion.p
                       variants={fadein("right", 0.1)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="text-Paragraph"
+                      className="text-Paragraph "
                     >
-                      From patient records to remote consultations, Their
+                      From patient records to remote consultations, their
                       platforms unite, fostering innovations. Securing data with
-                      encryption's might, They ensure privacy, day and night. In
+                      encryption's might, they ensure privacy, day and night. In
                       the cloud's embrace, healthcare finds wings, IT providers
                       empower, as progress sings.
                     </motion.p>
                   </div>
                 </div>
               </div>
-              {/*Second card*/}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border bg-background p-2 md:h-[60vh] h-[40vh]">
-                <div className="flex  flex-col justify-between rounded-md p-6">
+              {/* Second card*/}
+              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border p-4 min-h-[30vh]">
+                <div className="flex flex-col justify-between rounded-md p-4">
                   <div className="space-y-4">
                     <motion.h3
                       variants={fadein("right", 0.1)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="font-bold text-xl px-2 text-[#1a2229]"
+                      className="font-bold text-xl text-center px-2 text-[#1a2229]"
                     >
                       Remote Monitoring
                     </motion.h3>
                     <motion.p
                       variants={fadein("left", 0.1)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="text-Paragraph"
+                      className="text-Paragraph "
                     >
                       Systems empower, ensuring no wrecks. Remote monitoring, a
-                      lifeline they extend, Keeping patients connected, on
+                      lifeline they extend, keeping patients connected, on
                       health they depend. With real-time alerts and data
-                      insights clear, They empower clinicians, dispelling fear.
+                      insights clear, they empower clinicians, dispelling fear.
                       In the landscape of health, their role profound, IT
                       service providers, care's champions found.
                     </motion.p>
                   </div>
                 </div>
               </div>
-              {/*third card */}
-              <div className=" shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border bg-background p-2 md:h-[60vh] h-[40vh]">
-                <div className="flex flex-col justify-between rounded-md p-6">
+              {/* Third card */}
+              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border p-4 min-h-[30vh]">
+                <div className="flex flex-col justify-between rounded-md p-4">
                   <div className="space-y-4">
                     <motion.h3
                       variants={fadein("left", 0.5)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.8 }}
-                      className="font-bold text-xl px-2 text-[#1a2229]"
+                      className="font-bold text-xl text-center px-2 text-[#1a2229]"
                     >
                       Healthcare Analytics
                     </motion.h3>
                     <motion.p
                       variants={fadein("right", 0.1)}
                       initial="hidden"
-                      whileInView={"show"}
+                      whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
                       className="text-Paragraph"
                     >
-                      We Provide to empower, driving innovation. Healthcare
-                      analytics, a beacon they ignite, Guiding decisions,
+                      We provide to empower, driving innovation. Healthcare
+                      analytics, a beacon they ignite, guiding decisions,
                       shining light. With predictive models and deep dives into
-                      stats, They empower providers, narrowing knowledge gaps.
+                      stats, they empower providers, narrowing knowledge gaps.
                       In the landscape of health, their role profound, IT
                       service providers, where wisdom's found.
                     </motion.p>

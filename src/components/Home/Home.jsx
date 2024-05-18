@@ -102,7 +102,7 @@ const Home = ({ Meta_Data }) => {
         <link rel="canonical" href={Link} />
       </Helmet>
       <main>
-        <section className="flex relative bg-black">
+        <section className="flex relative bg-black overflow-x-hidden">
           {Video_Array.map((vid, idx) => (
             <VideoComponent
               key={vid.video}
