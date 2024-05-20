@@ -140,8 +140,8 @@ export const Secondsection = () => {
   return (
     <>
       {/*Our Solutions*/}
-      <section className="w-full md:h-[30vh] h-[20vh] py-12 md:py-24 lg:py-16 overflow-x-hidden overflow-y-hidden">
-        <div className="container  px-4 md:px-6">
+      <section className="w-full md:h-[30vh] auto flex justify-center py-10  items-center overflow-x-hidden overflow-y-hidden">
+        <div className="container px-4 md:px-6">
           <div className=" text-center">
             <motion.h1
               variants={fadein("up", 0.1)}
@@ -249,8 +249,8 @@ export const Secondsection = () => {
               </h3>
               <p className="mt-2 text-Paragraph-sm  line-clamp-3 dark:text-gray-400">
                 Streamlining field service workflows with custom-built IT
-                solutions, Enabling real-time communication and collaboration for
-                field service teams.
+                solutions, Enabling real-time communication and collaboration
+                for field service teams.
               </p>
             </div>
           </motion.div>
@@ -278,8 +278,8 @@ export const Secondsection = () => {
               </h3>
               <p className="mt-2 text-Paragraph-sm line-clamp-3 dark:text-gray-400">
                 Maximizing efficiency in manufacturing and supply chain
-                management with IT innovation, Enabling personalized medicine and
-                patient care with tailored IT services.
+                management with IT innovation, Enabling personalized medicine
+                and patient care with tailored IT services.
               </p>
             </div>
           </motion.div>

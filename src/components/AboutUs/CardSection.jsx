@@ -93,14 +93,14 @@ export const CardSection = () => {
             key={item.title}
             className="flex flex-col justify-center items-center text-center bg-opacity-70 gap-4 rounded-xl hover:bg-opacity-30 hover:scale-105 transition-all duration-150 ease-linear cursor-pointer"
           >
-            <h4 className="text-CardHeading-sm md:text-CardHeading font-bold pt-4 h-[5rem]">
+            <h4 className="text-xl md:text-CardHeading font-bold p-4 md:h-[14vh] h-auto">
               {item.title}
             </h4>
-            <div className="relative flex items-center justify-center rounded-xl group h-[25rem]">
-              <img className="object-fit h-full w-full rounded-xl" src={item.image} ></img>
+            <div className="relative flex items-center justify-center rounded-xl group bg-black h-[25rem]">
+              <img className="object-fit h-full w-full rounded-xl opacity-60" src={item.image} ></img>
               <span className="absolute inset-0 opacity-40 bg-blue-950 rounded-xl"></span>
               <div className="absolute inset-0 opacity-100 duration-300 flex justify-center items-center">
-                <p className="text-white font-headingFont p-4 text-md sm:text-xl">{item.content}</p>
+                <p className="text-Paragraph text-gray-200 p-4 text sm:text-xl">{item.content}</p>
               </div>
             </div>
           </div>
