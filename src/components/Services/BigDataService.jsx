@@ -37,7 +37,7 @@ const BigDataService = ({ Meta_Data }) => {
       img: DataSecurityIcon,
       title: "Data Security",
       message:
-        "Our lowest-cost VPS hosting plan offers numerous premium features, including a dedicated IP.",
+        "Our lowest-cost VPS hosting plan offers numerous premium features including a dedicated IP.",
     },
     {
       img: AiIcon,
@@ -163,7 +163,7 @@ const BigDataService = ({ Meta_Data }) => {
               Data Collection and Integration are crucial processes in modern
               data management. Data collection involves systematically gathering
               information from various internal and external sources, using
-              methods such as automated tools, APIs, and sensors. Data
+              methods such as automated tools, APIs and sensors. Data
               integration combines this collected data from disparate sources
               into a unified view, often employing ETL or ELT processes. This
               integration enables comprehensive analysis and informed
@@ -214,9 +214,9 @@ const BigDataService = ({ Meta_Data }) => {
               className="text-Paragraph p-2"
             >
               We design and implement robust data storage and management
-              solutions that can handle the velocity, volume, and variety of Big
-              Data. Our experts utilize scalable and distributed systems, such
-              as Hadoop and cloud-based platforms, to store, organize, and
+              solutions that can handle the velocity, volume and variety of Big
+              Data. Our experts utilize scalable and distributed systems such
+              as Hadoop and cloud-based platforms, to store, organize and
               process large datasets efficiently.
             </motion.p>
             <h4 className="text-xl text-black font-bold">Storages:</h4>

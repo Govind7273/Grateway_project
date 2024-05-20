@@ -103,7 +103,7 @@ const AiAndMLService = ({ Meta_Data }) => {
                 engagement and loyalty. Our solutions are designed to unleash
                 innovation, driving efficiency and growth while shaping the
                 landscape of tomorrow's intelligent enterprises. Embrace the
-                transformative potential of AI and Machine Learning with us, and
+                transformative potential of AI and Machine Learning with us and
                 embark on a journey towards unparalleled success.
               </p>
             </div>
@@ -221,12 +221,12 @@ const AiAndMLService = ({ Meta_Data }) => {
             At our software company, we harness the power of artificial
             intelligence and machine learning to revolutionize industries and
             drive innovation. Our expertise in AI and ML enables us to develop
-            intelligent solutions that adapt, learn, and evolve with your
+            intelligent solutions that adapt, learn and evolve with your
             business needs. From predictive analytics to natural language
             processing, our team of data scientists and AI engineers leverages
             advanced algorithms and state-of-the-art technology to unlock
             actionable insights from your data. Whether you're looking to
-            automate processes, optimize decision-making, or enhance customer
+            automate processes, optimize decision-making or enhance customer
             experiences, our AI and ML solutions empower you to stay ahead in
             today's data-driven world. Partner with us to explore the endless
             possibilities of AI and machine learning and transform your business
@@ -255,9 +255,9 @@ const AiAndMLService = ({ Meta_Data }) => {
                 Redefining the Boundaries of What's Possible
               </p>
               <h3 className="md:text-Paragraph text-Paragraph-sm pt-4">
-                Unleash the power of Generative AI with Vionsys. From artistic
+                Unleash the power of Generative AI with Greatway. From artistic
                 creations to innovative problem-solving, we help generate
-                creative content formats like text, code, and images using
+                creative content formats like text, code and images using
                 cutting-edge AI models.
               </h3>
               <Link to="/GenerativeAi">
@@ -283,7 +283,7 @@ const AiAndMLService = ({ Meta_Data }) => {
                 Animating your data for enhanced insights
               </p>
               <h3 className="md:text-Paragraph text-Paragraph-sm pt-4">
-                Leverage Vionsys's extensive proficiency in Data Analytics and
+                Leverage Greatway's extensive proficiency in Data Analytics and
                 AI/ML to propel your business forward. Our tailored approach
                 encompasses the creation of bespoke machine learning models and
                 the delivery of holistic AI consulting services, ensuring that

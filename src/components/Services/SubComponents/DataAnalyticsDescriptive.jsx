@@ -41,20 +41,20 @@ function DataAnalyticsDescriptive() {
               business growth.
             </p>
             <p className="md:text-Paragraph text-Paragraph-sm pt-2">
-              At Vionsys, we offer a comprehensive suite of Data Analytics and
+              At Greatway, we offer a comprehensive suite of Data Analytics and
               AI/ML solutions designed to unlock the hidden potential within
               your data. Our team of data scientists and machine learning
               engineers leverages cutting-edge technologies and methodologies to
               transform raw data into actionable intelligence, uncover hidden
               patterns and trends, develop custom AI/ML models tailored to your
-              specific needs, and empower data-driven decision-making for
+              specific needs and empower data-driven decision-making for
               strategic advantage.
             </p>
             <p className="md:text-Paragraph text-Paragraph-sm pt-2">
               From predictive analytics and recommendation engines to anomaly
               detection and natural language processing, we deliver tailored
               solutions that propel your business. Our AI and machine learning
-              development services offer scalability, efficiency, and accuracy,
+              development services offer scalability, efficiency and accuracy,
               helping you maintain an advantage in an increasingly competitive
               landscape. Move with us as we harness the power of data with our
               advanced AI and ML services for unparalleled business success.
@@ -76,13 +76,13 @@ function DataAnalyticsDescriptive() {
         </div>
         <div className="px-2">
           <div className="px-2 md:text-Paragraph text-Paragraph-sm py-2">
-            At Vionsys, we excel in harnessing the potential of data through
+            At Greatway, we excel in harnessing the potential of data through
             advanced analytics and Artificial Intelligence (AI) solutions. Our
             expert team leverages cutting-edge technologies and methodologies to
             extract actionable insights from vast datasets, enabling data-driven
             decision-making and business growth. With a focus on scalability,
-            efficiency, and accuracy, we specialize in custom machine learning
-            model development, data analytics, AI consulting, and cloud-based ML
+            efficiency and accuracy, we specialize in custom machine learning
+            model development, data analytics, AI consulting and cloud-based ML
             platforms.
           </div>
           <div className="flex flex-col px-2 py-2 ">
@@ -93,7 +93,7 @@ function DataAnalyticsDescriptive() {
               Crafting tailored solutions to meet unique business needs. Our
               expert team leverages cutting-edge algorithms and predictive
               modelling techniques to uncover hidden patterns and trends within
-              vast datasets. With a focus on scalability, efficiency, and
+              vast datasets. With a focus on scalability, efficiency and
               accuracy, we empower organizations to make informed decisions and
               drive business growth in today's data-driven landscape.
             </p>
@@ -107,7 +107,7 @@ function DataAnalyticsDescriptive() {
               strategic initiatives. Our expertise lies in harnessing advanced
               analytics techniques to unlock the true potential of data. With a
               focus on accuracy and efficiency, we empower organizations to make
-              informed decisions, optimize operations, and unlock new
+              informed decisions, optimize operations and unlock new
               opportunities for growth in today's data-driven world.
             </p>
           </div>
@@ -121,7 +121,7 @@ function DataAnalyticsDescriptive() {
               capitalize on emerging trends and navigate complex challenges.
               With our deep expertise and industry insights, we help
               organizations develop tailored AI strategies that drive
-              innovation, enhance operational efficiency, and unlock new
+              innovation, enhance operational efficiency and unlock new
               opportunities for growth. Partner with us to harness the power of
               AI and machine learning and stay ahead of the competition.
             </p>
@@ -135,10 +135,10 @@ function DataAnalyticsDescriptive() {
               Artificial Intelligence (AI) initiatives seamlessly and accelerate
               innovation. By harnessing the power of scalable cloud
               infrastructure and advanced machine learning tools, we enable
-              organizations to deploy, manage, and scale machine learning models
+              organizations to deploy, manage and scale machine learning models
               efficiently. Our expertise in cloud-based ML platforms ensures
               that businesses can leverage cutting-edge AI technologies to drive
-              actionable insights, streamline operations, and stay competitive
+              actionable insights, streamline operations and stay competitive
               in today's digital landscape.
             </p>
           </div>

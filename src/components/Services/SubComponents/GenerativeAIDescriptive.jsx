@@ -36,7 +36,7 @@ function GenerativeAIDescriptive() {
           {/*left */}
           <div className="flex-1 ">
             <h2 className=" md:text-Paragraph text-Paragraph-sm pt-6">
-              At Vionsys Gen AI Solutions, we stand as the vanguard of business
+              At Greatway Gen AI Solutions, we stand as the vanguard of business
               transformation, pioneering a new era of innovation through
               cutting-edge artificial intelligence technologies. Our
               meticulously crafted approach to Gen AI is not just a solution;
@@ -50,8 +50,8 @@ function GenerativeAIDescriptive() {
               commitment extends beyond mere implementation; we are architects
               of sustainable growth and enduring success. By harnessing the
               power of AI, we empower organizations to unlock untapped
-              potential, driving efficiency, productivity, and profitability to
-              unprecedented heights. With Vionsys Gen AI Solutions by your side,
+              potential, driving efficiency, productivity and profitability to
+              unprecedented heights. With Greatway Gen AI Solutions by your side,
               the future isn't just a vision—it's a tangible reality, brimming
               with limitless possibilities for evolution and advancement. Join
               us as we embark on a journey to redefine the very fabric of
@@ -79,7 +79,7 @@ function GenerativeAIDescriptive() {
             </h1>
             <p className="md:text-Paragraph text-Paragraph-sm">
               We prioritize continuous internal research and development to
-              remain at the forefront of emerging models, techniques, and
+              remain at the forefront of emerging models, techniques and
               industry best practices. We actively educate our team members to
               proficiently apply these methodologies in real-world scenarios.
               Moreover, we provide consulting services and undertake customer
@@ -95,8 +95,8 @@ function GenerativeAIDescriptive() {
             </h1>
             <p className="md:text-Paragraph text-Paragraph-sm">
               We leverage RAG techniques to effectively utilize enterprise,
-              product, and customer data by Large Language Models (LLMs). With
-              experience in vector databases, search techniques, and building
+              product and customer data by Large Language Models (LLMs). With
+              experience in vector databases, search techniques and building
               and evaluating RAG at scale, we enhance internal efficiency and
               improve customer-facing experiences.
             </p>
@@ -117,8 +117,8 @@ function GenerativeAIDescriptive() {
               Industry-Specific Solutions
             </h1>
             <p className="md:text-Paragraph text-Paragraph-sm">
-              Specializing in vertical-specific focus areas, including
-              healthcare, finance, retail, media, and supply chain, we build Gen
+              Specializing in vertical-specific focus areas including
+              healthcare, finance, retail, media and supply chain, we build Gen
               AI apps tailored for specific domains. These address unique
               challenges and deliver tangible results.
             </p>
