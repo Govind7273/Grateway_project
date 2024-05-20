@@ -10,7 +10,7 @@ import { fadein } from "../../../src/variants";
 
 const Testimonials = () => {
   return (
-    <main className="bg-white p-5 flex flex-col justify-center items-center min-h-lvh">
+    <main className="bg-white p-5 flex flex-col justify-center items-center min-h-lvh overflow-x-hidden">
       <motion.div variants={fadein("down", 0.2)}
         initial="hidden"
         whileInView={"show"}
@@ -19,13 +19,13 @@ const Testimonials = () => {
       </motion.div>
 
       <div className="max-w-screen-xl mx-auto md:p-4 p-1">
-        <div className="sm:grid lg:grid-cols-3 sm:grid-cols-2 gap-10">
+        <div className="sm:grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-12 md:gap-12">
 
           {/* First Article */}
-          <motion.div variants={fadein("left", 0.2)}
+          <motion.div variants={fadein("right", 0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.8 }} className="hover:bg-[#97d8d8] transform transition-transform hover:shadow-xl hover:-translate-y-4 p-4 ease-in-out bg-slate-200 mb-2 duration-500 max-w-sm rounded overflow-hidden shadow-lg">
+            viewport={{ once: true, amount: 0.8 }} className="hover:bg-[#97d8d8] transform transition-transform hover:shadow-xl hover:-translate-y-4 p-4 ease-in-out bg-slate-200 mb-2 duration-500 max-w-sm rounded overflow-hidden shadow-lg">
             <div className="py-4 md:px-8 px-2">
               <img src={vision} alt="" className="rounded-full h-12 w-12 mb-4" />
               <a href="#">
@@ -41,10 +41,10 @@ const Testimonials = () => {
           </motion.div>
 
           {/* Second Article */}
-          <motion.div variants={fadein("up", 0.2)}
+          <motion.div variants={fadein("", 0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.8 }} className="hover:bg-[#97d8d8] transform transition-transform hover:shadow-xl hover:-translate-y-4 p-4 ease-in-out bg-slate-200 mb-2 duration-500 max-w-sm rounded overflow-hidden shadow-lg">
+            viewport={{ once: true, amount: 0.8 }} className="hover:bg-[#97d8d8] transform transition-transform hover:shadow-xl hover:-translate-y-4 p-4 ease-in-out bg-slate-200 mb-2 duration-500 max-w-sm rounded overflow-hidden shadow-lg">
             <div className="py-4 md:px-8 px-2">
               <img src={mission} alt="" className="rounded-full h-12 w-12 mb-4" />
               <a href="#">
@@ -60,10 +60,10 @@ const Testimonials = () => {
           </motion.div>
 
           {/* Third Article */}
-          <motion.div variants={fadein("right", 0.2)}
+          <motion.div variants={fadein("left", 0.1)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.8 }} className="hover:bg-[#97d8d8] transform transition-transform hover:shadow-xl hover:-translate-y-4 p-4 ease-in-out bg-slate-200 mb-2 duration-500 max-w-sm rounded overflow-hidden shadow-lg">
+            viewport={{ once: true, amount: 0.9 }} className="hover:bg-[#97d8d8] transform transition-transform hover:shadow-xl hover:-translate-y-4 p-4 ease-in-out bg-slate-200 mb-2 duration-500 max-w-sm rounded overflow-hidden shadow-lg">
             <div className="py-4 md:px-8 px-2">
               <img src={value} alt="" className="rounded-full h-12 w-12 mb-4 bg-white" />
               <a href="#">
