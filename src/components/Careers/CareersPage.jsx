@@ -8,12 +8,12 @@ import { motion } from "framer-motion";
 import { animateScroll as scroll } from "react-scroll";
 import { Link } from "react-router-dom";
 import { fadein } from "../../../src/variants";
-import CareerSect2_1 from "../../assets/Images/CareerSect2_1.jpg"
-import CareerSect2_2 from "../../assets/Images/CareerSect2_2.jpg"
-import CareerAdv from "../../assets/Images/CareerAdv.jpg"
-import CareerHead1 from "../../assets/Images/CareerHead1.jpg"
-import CareerHead2 from "../../assets/Images/CareerHead2.jpg"
-import CareerHead3 from "../../assets/Images/CareerHead3.jpg"
+import CareerSect2_1 from "../../assets/Images/CareerSect2_1.jpg";
+import CareerSect2_2 from "../../assets/Images/CareerSect2_2.jpg";
+import CareerAdv from "../../assets/Images/CareerAdv.jpg";
+import CareerHead1 from "../../assets/Images/CareerHead1.jpg";
+import CareerHead2 from "../../assets/Images/CareerHead2.jpg";
+import CareerHead3 from "../../assets/Images/CareerHead3.jpg";
 
 const testimonials = [
   {
@@ -56,11 +56,7 @@ const CareersPage = ({ Meta_Data }) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [
-    CareerHead1,
-    CareerHead2,
-    CareerHead3,
-  ];
+  const images = [CareerHead1, CareerHead2, CareerHead3];
 
   const headingVariants = {
     hidden: { opacity: 0, y: -50 },
@@ -116,8 +112,9 @@ const CareersPage = ({ Meta_Data }) => {
               initial="hidden"
               animate="visible"
             >
-              We believe purposeful technology has the potential to address the most significant challenges of our era. Join the team and unlock your
-              future career with us.
+              We believe purposeful technology has the potential to address the
+              most significant challenges of our era. Join the team and unlock
+              your future career with us.
             </motion.h4>
             <button
               onClick={scrollTo}
@@ -130,8 +127,9 @@ const CareersPage = ({ Meta_Data }) => {
             {images.map((image, index) => (
               <motion.div
                 key={index}
-                className={`absolute inset-0 flex items-center justify-center ${index === currentIndex ? "block" : "hidden"
-                  }`}
+                className={`absolute inset-0 flex items-center justify-center ${
+                  index === currentIndex ? "block" : "hidden"
+                }`}
                 initial="hidden"
                 animate="visible"
                 variants={slideVariants} // Use simplified slideVariants
@@ -228,13 +226,16 @@ const CareersPage = ({ Meta_Data }) => {
                     className="text-3xl text-black  font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                   >
                     Step into the Future of{" "}
-                    <span className="block text-blue-900"> Technology</span>
+                    <span className="block text-blue-900 pt-1">
+                      {" "}
+                      Technology
+                    </span>
                   </motion.h1>
                   <motion.p
                     variants={fadein("up", 0.2)}
                     initial="hidden"
                     whileInView={"show"}
-                    viewport={{ once: false, amount: 0.8 }}
+                    viewport={{ once: true, amount: 0.8 }}
                     className="max-w-[600px] text-Paragraph leading-Paragraph md:text-lg dark:text-gray-400"
                   >
                     We believe in pioneering the future of technology. Join us
@@ -292,7 +293,7 @@ const CareersPage = ({ Meta_Data }) => {
 
         {/* Fifth Section */}
         <section>
-          <div className="w-full flex flex-wrap justify-center items-center mt-16  ">
+          <div className="w-full flex flex-wrap justify-center items-center   ">
             <JobsCard setModal={setIsOpen} />
           </div>
         </section>

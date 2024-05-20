@@ -140,7 +140,7 @@ const BigDataService = ({ Meta_Data }) => {
       </section>
 
       {/* Third Section */}
-      <section className="w-[100vw] h-full overflow-x-hidden  flex flex-col bg-white justify-center items-center">
+      <section className="w-[100vw] h-auto overflow-x-hidden  flex flex-col bg-white justify-center items-center">
         {/* Third-1 */}
         <section className="flex justify-evenly w-screen md:h-[60vh] flex-col md:flex-row ">
           <div className="space-y-4 py-4 px-1 lg:w-[50%] md:flex-col ">
@@ -184,7 +184,7 @@ const BigDataService = ({ Meta_Data }) => {
         </section>
 
         {/* Third-2 */}
-        <section className="w-[100vw] h-auto flex md:flex-row flex-col md:h-[61vh] p-2 overflow-y-hidden overflow-x-hidden gap-5 px-4">
+        <section className="w-[100vw] flex md:flex-row flex-col md:h-[70vh] h-[80vh] p-2 overflow-y-hidden overflow-x-hidden gap-20 px-4">
           {/* left section */}
           <div>
             <img
@@ -215,12 +215,12 @@ const BigDataService = ({ Meta_Data }) => {
             >
               We design and implement robust data storage and management
               solutions that can handle the velocity, volume and variety of Big
-              Data. Our experts utilize scalable and distributed systems such
-              as Hadoop and cloud-based platforms, to store, organize and
-              process large datasets efficiently.
+              Data. Our experts utilize scalable and distributed systems such as
+              Hadoop and cloud-based platforms, to store, organize and process
+              large datasets efficiently.
             </motion.p>
             <h4 className="text-xl text-black font-bold">Storages:</h4>
-            <ul className="list-disc ms-6 font-bold leading-loose w-2/3 h-[46vh]">
+            <ul className="list-disc ms-6 font-bold leading-loose w-2/3 ">
               <motion.li
                 variants={fadein("up", 0.1)}
                 initial="hidden"
