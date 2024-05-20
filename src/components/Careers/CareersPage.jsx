@@ -103,7 +103,7 @@ const CareersPage = ({ Meta_Data }) => {
         <section>
           <div className="flex flex-col items-center gap-6  absolute z-10 lg:h-auto w-auto h-auto lg:w-[700px] lg:top-[60%] lg:left-[50%] transform lg:-translate-y-1/2 lg:-translate-x-1/2 -translate-y-1/2 -translate-x-1/2 top-[50%] left-[50%] px-2">
             <motion.h1
-              className="md:text-TopHeading md:leading-TopHeading text-lg text-center text-TopHeading font-bold uppercase"
+              className="md:text-TopHeading text-TopHeading-sm text-center font-extrabold"
               variants={headingVariants}
               initial="hidden"
               animate="visible"

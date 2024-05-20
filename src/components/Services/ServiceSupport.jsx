@@ -82,7 +82,7 @@ const ServiceSupport = ({ Meta_Data }) => {
               <div className="flex flex-col items-center">
                 <h2 className="text-lg font-semibold leading-8 tracking-tight text-start text-indigo-600">Everything you need</h2>
                 <p className="mt-2 text-3xl font-bold tracking-tight text-start text-gray-900 sm:text-4xl">IT Service Support Offerings</p>
-                <p className="mt-6 text-base leading-7 text-gray-600">Our comprehensive IT service support plays a pivotal role in upholding the reliability, security, and efficiency of organizational IT infrastructure. We tailor our services to accommodate the unique needs and scale of each client's business.</p>
+                <p className="mt-6 text-base leading-7 text-gray-600">Our comprehensive IT service support plays a pivotal role in upholding the reliability, security and efficiency of organizational IT infrastructure. We tailor our services to accommodate the unique needs and scale of each client's business.</p>
                 <img src={listImg} alt="" />
               </div>
               <div className="grid grid-cols-1 gap-y-6 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:gap-y-2">
@@ -92,7 +92,7 @@ const ServiceSupport = ({ Meta_Data }) => {
                   { title: "Technical Support", content: "Resolving complex technical challenges related to network issues, server management and system administration." },
                   { title: "Remote Monitoring and Management", content: "Proactively monitoring IT infrastructure remotely, performing automated maintenance and responding to alerts promptly." },
                   { title: "Incident Management and Resolution", content: "Logging and categorizing incidents, implementing escalation procedures for unresolved issues and conducting root cause analysis." },
-                  { title: "Patch Management", content: "Applying patches, updates and fixes to keep systems secure and optimize performance, while ensuring compatibility and stability through testing." },
+                  { title: "Patch Management", content: "Applying patches, updates and fixes to keep systems secure and optimize performance while ensuring compatibility and stability through testing." },
                   { title: "Backup and Disaster Recovery", content: "Implementing backup solutions and disaster recovery plans to protect data and ensure business continuity in case of data loss or system failure." }
                 ].map((item, index) => (
                   <div key={index} className="relative pl-9">
@@ -123,29 +123,34 @@ const ServiceSupport = ({ Meta_Data }) => {
             <div className="mx-auto mt-8 grid max-w-xl divide-y divide-neutral-200">
               {[
                 {
+                  key: 1,
                   question: "I'm considering software development services. How can you help me?",
                   answer:
                     "Our software development services are designed to help businesses like yours create custom software solutions tailored to your unique needs. From developing new applications to enhancing existing systems, we can help you every step of the way.",
                 },
                 {
+                  key: 2,
                   question: "What is the process for testing and quality analysis?",
                   answer:
-                    "Our Testing and Quality Analysis process is comprehensive and rigorous. We start by understanding your project requirements, then develop a testing plan that includes various types of testing such as functional, performance, security, and more. Our quality analysis involves detailed reviews and audits to ensure your project meets the highest standards.",
+                    "Our Testing and Quality Analysis process is comprehensive and rigorous. We start by understanding your project requirements, then develop a testing plan that includes various types of testing such as functional, performance, security and more. Our quality analysis involves detailed reviews and audits to ensure your project meets the highest standards.",
                 },
                 {
+                  key: 3,
                   question: "How can your CRM solutions improve my customer relationships?",
                   answer:
                     "Our Customer Relationship Management solutions help businesses like yours build stronger, more profitable customer relationships. We can optimize your existing.",
                 },
                 {
+                  key: 4,
                   question: "How can I benefit from your Artificial Intelligence solutions?",
                   answer:
-                    "Our Artificial Intelligence (AI) solutions leverage the latest advancements in machine learning and natural language processing to help businesses like yours automate tasks, gain valuable insights from data, and provide personalized experiences to customers. Our AI solutions are customizable and can be tailored to your unique business needs.",
+                    "Our Artificial Intelligence (AI) solutions leverage the latest advancements in machine learning and natural language processing to help businesses like yours automate tasks, gain valuable insights from data and provide personalized experiences to customers. Our AI solutions are customizable and can be tailored to your unique business needs.",
                 },
                 {
+                  key: 5,
                   question: "What are the advantages of Cloud Computing?",
                   answer:
-                    "Cloud Computing offers numerous advantages, including cost savings, scalability, flexibility, and improved collaboration. Our Cloud Computing services can help your business leverage these benefits by migrating your applications and infrastructure to the cloud, designing cloud-native applications, and optimizing your cloud environment for performance and cost efficiency.",
+                    "Cloud Computing offers numerous advantages, including cost savings, scalability, flexibility and improved collaboration. Our Cloud Computing services can help your business leverage these benefits by migrating your applications and infrastructure to the cloud, designing cloud-native applications and optimizing your cloud environment for performance and cost efficiency.",
                 },
               ].map((faq, index) => (
                 <div className="py-5" key={index}>

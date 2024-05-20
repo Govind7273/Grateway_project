@@ -9,26 +9,26 @@ const AIMLFaq = () => {
 
   const faqs = [
     {
-      question: "What is AI and ML, and why is it important for businesses?",
+      question: "What is AI and ML and why is it important for businesses?",
       answer:
-        "AI (Artificial Intelligence) and ML (Machine Learning) use computer algorithms to simulate human-like intelligence and learn from data. They're important for businesses because they automate tasks, analyze data for insights, personalize experiences, predict outcomes, increase efficiency, provide a competitive edge, and reduce costs.",
+        "AI (Artificial Intelligence) and ML (Machine Learning) use computer algorithms to simulate human-like intelligence and learn from data. They are important for businesses because they automate tasks, analyze data for insights, personalize experiences, predict outcomes, increase efficiency, provide a competitive edge and reduce costs.",
     },
     {
       question: "What are the key benefits of using AI and ML?",
       answer:
-        "key benefits of using AI and ML include automation, data analysis, personalization, predictive analytics, efficiency, competitive advantage, cost reduction, improved decision-making, scalability, and risk management.",
+        "key benefits of using AI and ML include automation, data analysis, personalization, predictive analytics, efficiency, competitive advantage, cost reduction, improved decision-making, scalability and risk management.",
     },
     {
       question:
         "What are some common challenges associated with implementing AI and ML?",
       answer:
-        "Common challenges associated with implementing AI and ML include data quality and quantity, lack of skilled talent, interpretability and bias concerns, integration with existing systems, cost and ROI, security and privacy, model maintenance, regulatory compliance, and cultural resistance.",
+        "Common challenges associated with implementing AI and ML include data quality and quantity, lack of skilled talent, interpretability and bias concerns, integration with existing systems, cost and ROI, security and privacy, model maintenance, regulatory compliance and cultural resistance.",
     },
     {
       question:
         "How can businesses measure the success of their AI and ML Initiatives?",
       answer:
-        "Businesses can measure the success of their AI and ML initiatives through metrics such as accuracy, ROI, customer satisfaction, time savings, business impact, risk reduction, data quality, employee productivity, innovation, competitive advantage, and regulatory compliance.",
+        "Businesses can measure the success of their AI and ML initiatives through metrics such as accuracy, ROI, customer satisfaction, time savings, business impact, risk reduction, data quality, employee productivity, innovation, competitive advantage and regulatory compliance.",
     },
   ];
 

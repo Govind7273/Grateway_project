@@ -143,7 +143,7 @@ const ServicesStaffing = ({Meta_Data}) => {
            {/* left */}
            <div className="col-span-2 flex flex-col justify-center px-10 gap-5">
             <h1 className="text-3xl font-headingFont font-bold text-white sm:mt-4 pt-3"><TfiReload size={50} className="animate-spin"/>Executive Search</h1>
-            <p className="text-lg font-serif text-violet-100">We assist in identifying and recruiting senior-level executives and leaders who possess the expertise and vision to drive your organization forward. Our executive search services focus on finding exceptional talent that aligns with your strategic goals.</p>
+            <p className="text-lg text-violet-100">We assist in identifying and recruiting senior-level executives and leaders who possess the expertise and vision to drive your organization forward. Our executive search services focus on finding exceptional talent that aligns with your strategic goals.</p>
            </div>
 
            {/* Right */}
@@ -164,7 +164,7 @@ const ServicesStaffing = ({Meta_Data}) => {
            {/* Right */}
            <div className="col-span-1 flex flex-col justify-center px-10 gap-5">
             <h1 className="text-3xl font-headingFont font-bold text-sky-950"><MdManageAccounts size={70} color="blue" className="animate-pulse"/>Managed Services </h1>
-            <p className="text-xl font-serif text-sky-950 sm:pb sm:mb-10">We offer managed staffing solutions to handle the entire staffing process, from recruitment and onboarding to performance management and retention. Our managed services ensure a streamlined and efficient staffing experience for your organization.</p>
+            <p className="text-lg text-sky-950 sm:pb sm:mb-10">We offer managed staffing solutions to handle the entire staffing process, from recruitment and onboarding to performance management and retention. Our managed services ensure a streamlined and efficient staffing experience for your organization.</p>
            </div>
       </div>
 

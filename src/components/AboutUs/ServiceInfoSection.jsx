@@ -20,7 +20,7 @@ export const ServiceInfoSection = () => {
       >
         <div className='relative'>
           <div className="bg-blue-900 w-[20rem] h-[12rem] sm:h-[8rem] sm:w-[40rem] md:w-[50rem] md:h-[18rem] lg:h-[14rem] lg:w-[70rem] flex flex-col items-center justify-center px-[1rem] md:px-[5rem] opacity-90 -translate-y-1/2"></div>
-          <h1 className="absolute inset-0 text-TopHeading-sm px-4 sm:p-4 md:p-12 md:text-TopHeading cursor-pointer -translate-y-1/2">
+          <h1 className="absolute inset-0 text-TopHeading-sm px-4 sm:p-4 md:p-12 md:text-TopHeading font-extrabold cursor-pointer -translate-y-1/2">
             Delivering high-quality IT services to your business is our commitment.
           </h1>
         </div>
