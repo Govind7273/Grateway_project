@@ -13,7 +13,7 @@ import logo from '../../src/components/Navbar/images/boxLogoGTW.png';
 const Footer = () => {
   return (
 
-    <footer className="px-3 pt-4 lg:px-5 border-t-2 bg-black text-white">
+    <footer className="px-3 pt-5 lg:px-5 border-t-2 bg-black text-white">
       {/* <div className="flex items-center py-3">
         <img src={logo} alt="logo" className="h-10 w-10 bg-slate-200 rounded-full p-1" />
         <span className="ml-2 text-xl font-bold tracking-wide">Greatway Software Pvt. Ltd.</span>
@@ -21,7 +21,7 @@ const Footer = () => {
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-2">
         <div className="lg:max-w-xl flex flex-col md:px-5">
-          <p className="text-lg text-justify text-slate-200">
+          <p className="text-md text-justify text-slate-200">
             <Link to='/'><b className="text-xl">Greatway Software Pvt. Ltd.</b></Link> is a comprehensive IT company offering end-to-end technology solutions. With expertise in software development, network infrastructure, cybersecurity, cloud services and IT consulting, we empower businesses to thrive in the digital era.
           </p>
           <div>
@@ -88,7 +88,7 @@ const Footer = () => {
 
               <div className="flex items-center mb-1 text-base text-slate-200">
                 <FontAwesomeIcon icon={faPhone} className="mr-3" />
-                <span>Phone - +91 70586 06885</span>
+                <span>Phone - +91 9172077273</span>
               </div>
               <div className="flex items-center mb-2 text-base">
                 <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
