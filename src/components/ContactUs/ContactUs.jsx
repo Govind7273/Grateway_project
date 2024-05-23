@@ -44,7 +44,7 @@ const ContactUs = ({Meta_Data}) => {
           <div className="flex gap-2 sm:items-center text-slate-900">
             <IoMdCall className="text-2xl "/>
             <span className="text-slate-800 font-headingFont">
-              +91 70586 06885
+              +91 9172077273
             </span>
           </div>
 
