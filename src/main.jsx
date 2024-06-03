@@ -9,17 +9,16 @@ import Chatbot from "./components/Chatbot.jsx";
 const queryClient = new QueryClient();
 
 const Root = () => {
-//   const location = useLocation();
-//   const isLandingPage = location.pathname === "/landingpage";
+   const location = useLocation();
+ const isLandingPage = location.pathname === "/landingpage";
 
   return (
     <>
       <QueryClientProvider client={queryClient}>
         <HelmetProvider>
-          {/* <App location={location} /> */}
-          <App/>
-          <Chatbot/>
-          {/* {!isLandingPage && <Chatbot />} */}
+          <App location={location} />
+        
+          {!isLandingPage && <Chatbot />}
         </HelmetProvider>
       </QueryClientProvider>
     </>
