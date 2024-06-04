@@ -7,16 +7,13 @@ import Pricingl from "./Sections/Pricingl";
 import Contactl from "./Sections/Contactl";
 const LandingPage = () => {
   return (
-    <main id="section3">
+    <main className="overflow-x-hidden">
       <Outlet />
-          <div >Landingpage</div>
-          <Herol />
-          <Servicesl />
-          <Clientl />
-          <Pricingl />
-          <Contactl/>
-          
-          
+      <Herol />
+      <Servicesl />
+      <Clientl />
+      <Pricingl />
+      <Contactl />
     </main>
   );
 };
