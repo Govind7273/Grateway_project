@@ -6,6 +6,7 @@ import { IoSend } from "react-icons/io5";
 const InputBox = ({ name, type }) => {
   const placeholder = `Enter your ${name}`;
   return (
+
     <div className="flex flex-col gap-4 my-5">
       <div className="relative h-11 w-full min-w-[200px]">
         <input
@@ -50,11 +51,16 @@ const Textarea = ({ message }) => {
 
 const Contactl = () => {
   return (
-    <section className="text-gray-600 body-font">
+    <section id="mysectionBG" className="text-gray-600 body-font ">
+      
       <div className="container flex flex-col md:flex-row lg:max-w-5xl w-full px-5 py-12 md:py-24 mx-auto section" id="contact-form">
+      
         <div className="md:w-1/3 w-full">
-          <h1 className="text-4xl text-gray-800 sm:text-4xl font-bold title-font mb-4">Contact Us</h1>
-          <p className="leading-relaxed text-xl text-gray-900">
+        <div class="relative inline-block">
+          <h1 className="text-4xl text-gray-800 sm:text-4xl font-bold title-font ">Contact Us</h1>
+  <span class="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-orange-400 to-yellow-600 rounded-full"></span>
+</div>
+          <p className="leading-relaxed text-xl text-gray-900 py-2">
             If you have any questions or need assistance, please feel free to reach out to us.
             <br />
             You can also email us at
