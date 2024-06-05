@@ -1,83 +1,108 @@
 import React from "react";
-
+import { Button } from "../../ui/moving-border";
 const cardData = [
   {
     id: 1,
     title: "Custom Web Development",
-    description: "This is the first card.",
+    description:
+      "Tailor-made web development services that cater to your specific business needs, ensuring functionality, scalability, and a seamless user experience across various devices and platforms.",
   },
   {
     id: 2,
     title: "Responsive Web Design",
-    description: "This is the second card.",
+    description:
+      "Design websites that adapt seamlessly to any screen size or device, providing an optimal viewing experience and improved user engagement for desktop, tablet, and mobile users.",
   },
   {
     id: 3,
     title: "Website maintenance and support",
-    description: "This is the third card.",
+    description:
+      "Ongoing maintenance and support to keep your website updated, secure, and running smoothly, including regular backups, software updates, and troubleshooting.",
   },
   {
     id: 4,
     title: "SEO Optimization",
-    description: "This is the fourth card.",
+    description:
+      "Enhance your website's visibility on search engines like Google and Bing through comprehensive on-page and off-page SEO strategies to drive organic traffic and improve search rankings.",
   },
   {
     id: 5,
     title: "Performance Optimization",
-    description: "This is the fifth card.",
+    description:
+      "Enhance your website's speed and performance through code optimization, image compression, caching techniques, and other best practices to ensure a fast, reliable user experience.",
   },
   {
     id: 6,
     title: "Web Hosting Services",
-    description: "This is the sixth card.",
+    description:
+      "Reliable and secure web hosting solutions that provide the necessary resources, uptime, and support for your website, ensuring it remains accessible and performs well under varying traffic loads.",
   },
   {
     id: 7,
     title: "Digital Marketing",
-    description: "This is the seventh card.",
+    description:
+      "Comprehensive digital marketing services, including social media management, content marketing, PPC campaigns, and email marketing, designed to enhance your online presence and drive conversions.",
   },
   {
     id: 8,
     title: "Consultancy & Strategy",
-    description: "This is the eighth card.",
+    description:
+      "Expert consulting services to develop and implement effective digital strategies, helping you achieve your business goals through informed decision-making and innovative solutions.",
   },
   {
     id: 9,
     title: "UI/UX Design",
-    description: "This is the ninth card.",
+    description:
+      "User Interface (UI) and User Experience (UX) design services that focus on creating intuitive, visually appealing, and user-friendly interfaces, ensuring a satisfying experience for your website visitors.",
   },
 ];
 
 const Card = ({ title, description }) => (
-  <div className="w-96 h-80 mx-auto bg-gray-100 rounded-xl shadow-xl m-4">
-    <div className="flex items-center p-3">
-      <div className="px-1">
-        <span className="w-4 h-4 rounded-full inline-block bg-violet-500 cursor-pointer"></span>
-      </div>
-      <div className="px-1">
-        <span className="w-4 h-4 rounded-full inline-block bg-cyan-400 cursor-pointer"></span>
-      </div>
-      <div className="px-1">
-        <span className="w-4 h-4 rounded-full inline-block bg-black cursor-pointer"></span>
-      </div>
-    </div>
-    <div className="p-4 flex flex-col justify-center items-center">
-      <h3 className="font-bold text-2xl text-[#6B37BD]">{title}</h3>
-      <p className="mt-4">{description}</p>
-    </div>
-  </div>
+  // Our services cards
+  <>
+    <section className="px-2">
+      {/* moving border */}
+      <Button borderRadius="1px">
+        <div className="w-full md:w-86 md:h-auto mx-auto p-1 bg-stone-50 py-10 border flex flex-col h-full">
+          <div className="flex items-start justify-start p-2">
+            <div className="px-1">
+              <span className="w-4 h-4 rounded-full inline-block bg-violet-500 cursor-pointer"></span>
+            </div>
+            <div className="px-1">
+              <span className="w-4 h-4 rounded-full inline-block bg-cyan-400 cursor-pointer"></span>
+            </div>
+            <div className="px-1">
+              <span className="w-4 h-4 rounded-full inline-block bg-black cursor-pointer"></span>
+            </div>
+          </div>
+
+          {/* cards title desc */}
+          <div className=" dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 flex-grow flex flex-col justify-center">
+            <div className="p-2 flex flex-col justify-center items-center flex-grow">
+              <h3 className="font-semibold text-xl md:text-2xl text-black text-center">
+                {title}
+              </h3>
+              <p className="mt-4 text-center text-sm md:text-base">
+                {description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </Button>
+    </section>
+  </>
 );
 
 const Servicesl = () => {
   return (
     <main>
       {/* Rewamp section */}
-      <section className="mx-auto max-w-fullxl px-4 sm:px-6 lg:px-8 py-4">
-        <h2 className="font-headline text-2xl font-extrabold sm:text-3xl text-center">
+      <section className="mx-auto max-w-full px-4 sm:px-6 lg:px-8 py-4">
+        <h2 className="font-headline text-2xl font-extrabold sm:text-4xl text-center pt-2 text-[#6B37BD]">
           Revamp Your Website in Three Steps
         </h2>
-        <div className="grid sm:grid-cols-3 gap-16 sm:gap-10 mt-16 sm:mt-16 shadow-xl md:p-8">
-          <div className="text-center border-r-2 border-violet-300">
+        <div className="grid sm:grid-cols-3 bg-stone-50 gap-16 sm:gap-10 mt-12 sm:mt-16 shadow-lg shadow-gray-500 md:p-8">
+          <div className="text-center md:border-r-2 xs:border-b-2 border-violet-400 py-2 px-2">
             <div className="relative w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto left-2">
               <div className="z-10 relative w-full h-full bg-white rounded-full border border-gray-300 shadow flex items-center justify-center">
                 <svg
@@ -99,14 +124,14 @@ const Servicesl = () => {
               <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-blue-700 rounded-full"></div>
             </div>
             {/* Reimagine */}
-            <h3 className="font-bold text-xl text-[#6B37BD] sm:text-2xl mt-6 sm:mt-10">
+            <h3 className="font-bold text-2xl text-black sm:text-2xl mt-6 sm:mt-10">
               1. Reimagine
             </h3>
-            <p className="leading-relaxed mt-4">
+            <p className="leading-relaxed mt-4 text-center px-1">
               Begin by envisioning the new look and features for your website.
             </p>
           </div>
-          <div className="text-center border-l-2 border-r-2 border-violet-300">
+          <div className="text-center md:border-l-2 xs:border-b-2 py-2 md:border-r-2 border-violet-400">
             <div className="relative w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto left-2">
               <div className="z-10 relative w-full h-full bg-white rounded-full border border-gray-300 shadow flex items-center justify-center">
                 <svg
@@ -128,15 +153,15 @@ const Servicesl = () => {
               <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-blue-700 rounded-full"></div>
             </div>
             {/* redesign */}
-            <h3 className="font-bold text-xl text-[#6B37BD] sm:text-2xl mt-6 sm:mt-10">
+            <h3 className="font-bold text-2xl text-black sm:text-2xl mt-6 sm:mt-10">
               2. Redesign
             </h3>
-            <p className="leading-relaxed mt-4">
+            <p className="leading-relaxed mt-4 text-center px-1">
               Collaborate with your design and development team to give your
               website a fresh and modern design.
             </p>
           </div>
-          <div className="text-center border-l-2 border-violet-300">
+          <div className="text-center md:border-l-2 xs:border-b-2 py-2 border-violet-400">
             <div className="relative w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto left-2">
               <div className="z-10 relative w-full h-full bg-white rounded-full border border-gray-300 shadow flex items-center justify-center">
                 <svg
@@ -158,20 +183,22 @@ const Servicesl = () => {
               <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-blue-700 rounded-full"></div>
             </div>
             {/* Relaunch */}
-            <h3 className="font-bold text-xl text-[#6B37BD] sm:text-2xl mt-6 sm:mt-10">
+            <h3 className="font-bold text-2xl text-black sm:text-2xl mt-6 sm:mt-10">
               3. Relaunch
             </h3>
-            <p className="leading-relaxed mt-4">
+            <p className="leading-relaxed mt-4 text-center px-1">
               After the redesign, relaunch your website and welcome your
               audience to the new experience.
             </p>
           </div>
         </div>
       </section>
-      {/* Our services */}
+      {/* Our services map */}
       <section className="flex flex-col justify-center items-center h-full w-full">
-        <h1 className="p-2 py-4 font-extrabold md:text-5xl ">Our Services</h1>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3  w-screen">
+        <h1 className="p-2 py-4 text-3xl font-extrabold md:text-4xl text-[#6B37BD] ">
+          Our Services
+        </h1>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 h-auto  w-screen">
           {cardData.map(({ id, title, description }) => (
             <Card key={id} title={title} description={description} />
           ))}
