@@ -1,4 +1,6 @@
-import shield from '../shield.gif'
+import social from '../social.gif'
+import idea from '../idea.gif'
+
 "use client"
 import React, { useState } from 'react';
 import { FaCheckCircle } from "react-icons/fa";
@@ -46,22 +48,23 @@ const Chooseusl = () => {
   const [selectedIndustry, setSelectedIndustry] = useState((Object.keys(industryData)[0]));
   return (
     <section>
-      <h1 class="mb-4 text-2xl  text-center font-extrabold text-gray-900 dark:text-white md:text-4xl lg:text-4xl"> Why <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Choose Us</span></h1>
-      <p class="text-lg font-normal text-center text-gray-500 lg:text-xl dark:text-gray-400">With a portfolio of successful projects across various industries, our proven track record speaks for itself. We consistently deliver high-quality software solutions on time and within budget. Trust us to bring your project to life with reliability and excellence.</p>
-
-      <div className="w-[100vw] mb-[1rem] sm:mb-[4rem] overflow-hidden bg-opacity-100 sm:pt-12 flex justify-center items-center">
+      <div className='text-center px-2'>
+      <h1 className="mb-4 text-3xl  text-center font-extrabold text-gray-900 dark:text-white md:text-4xl lg:text-4xl"> Why <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Choose Us</span></h1>
+      <p className="text-lg font-normal text-center text-gray-500 lg:text-xl dark:text-gray-400">With a portfolio of successful projects across various industries, our proven track record speaks for itself. We consistently deliver high-quality software solutions on time and within budget. Trust us to bring your project to life with reliability and excellence.</p>
+      </div>
+      <div className="w-[100vw] overflow-hidden bg-opacity-100  flex justify-center items-center">
         <div>
-          <div className="w-[100%] flex flex-col items-center justify-center">
+          <div className="w-[100%] flex flex-col items-center justify-center py-10">
 
 
             {/* Flip cards */}
             <div className="flex flex-wrap gap-2 sm:gap-10 items-center justify-center ">
 
-              <div className="card bg-white cursor-pointer rounded-xl w-[400px] md:w-[400px] h-[230px] preserve-3d perspective bg-inherit">
+              <div className="card bg-white cursor-pointer rounded-xl w-[300px] md:w-[400px] h-[230px] preserve-3d perspective bg-inherit text-center">
                 {/* front face */}
                 <div className="front-face absolute text-[#fff] w-[100%] h-[100%] overflow-hidden shadow-[0_15px_35px_rgba(0,_0,_0,_0.1)] rounded-[15px] bg-[rgba(255,_255,_255,_0.06)] preserve-3d transition-[0.5s] border-t-[1px_solid_#ddd] border-l-[1px_solid_#ddd] backface-invisible flex flex-col items-center justify-center ">
                   <div className="text-black flex flex-col items-center">
-                    <img src={shield} alt="icon" className="h-20 w-20 mb-2" />
+                    <img src={idea} alt="icon" className="h-20 w-20 mb-2" />
                     <div className="tracking-[2px] font-semibold text-xl p-5">
                       <span>Expertise and Innovation</span>
                     </div>
@@ -78,11 +81,11 @@ const Chooseusl = () => {
               </div>
 
               {/* ---------- */}
-              <div className="card bg-white rounded-xl w-[400px] md:w-[400px] h-[230px] preserve-3d perspective bg-inherit">
+              <div className="card bg-white rounded-xl w-[300px] md:w-[400px] h-[230px] preserve-3d perspective bg-inherit text-center">
                 {/* front face */}
                 <div className="front-face absolute text-[#fff] w-[100%] h-[100%] overflow-hidden shadow-[0_15px_35px_rgba(0,_0,_0,_0.1)] rounded-[15px] bg-[rgba(255,_255,_255,_0.06)] preserve-3d transition-[0.5s] border-t-[1px_solid_#ddd] border-l-[1px_solid_#ddd] backface-invisible flex flex-col items-center justify-center ">
                   <div className="text-black flex flex-col items-center">
-                    <img src={shield} alt="icon" className="h-20 w-20 mb-2" />
+                    <img src={social} alt="icon" className="h-20 w-20 mb-2" />
                     <div className="tracking-[2px] font-semibold text-xl p-5">
                       <span>Client-Centric Approach</span>
                     </div>

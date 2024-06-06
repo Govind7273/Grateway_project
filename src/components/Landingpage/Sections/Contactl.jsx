@@ -1,33 +1,65 @@
-import React from 'react';
+
 import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoSend } from "react-icons/io5";
 
-const InputBox = ({ name, type }) => {
-  const placeholder = `Enter your ${name}`;
-  return (
+import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
+import toast, { Toaster } from "react-hot-toast";
 
+import { ContactScheama } from "../../../Yupschema/ContactUsScheama";
+import { contactEmail } from "../../../functions/EmailSendFunction";
+
+
+
+const Contactl = () => {
+
+  const [error, seterror] = useState({});
+  const [ContactDetails, setContactDetails] = useState({
+    name: "",
+    email: "",
+    number: "",
+    message: "",
+  });
+
+const InputBox = (name, type,error) => {
+  const placeholder = ("Enter Your " + name).toString();
+  return (
     <div className="flex flex-col gap-4 my-5">
       <div className="relative h-11 w-full min-w-[200px]">
         <input
           name={name}
           id={name}
+        
           type={type}
-          placeholder=''
-          className="peer h-full w-full rounded-md border border-gray-900 bg-transparent px-3 py-3 font-sans text-sm font-normal text-gray-900 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-cyan-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-gray-50"
+          placeholder={name}
+          value={ContactDetails[`${name.toLowerCase()}`]}
+            onChange={(e) =>
+              setContactDetails({
+                ...ContactDetails,
+                [e.target.name]: e.target.value,
+              })
+            }
+            className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
         />
         <label
           htmlFor={name}
-          className="before:content-[' '] after:content-[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-gray-800 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-cyan-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-cyan-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-cyan-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+          className="pb-1 text-xs uppercase tracking-wider"
         >
-          {placeholder}
+      
         </label>
+
+        {error ? (
+            <div className="text-red-500 text-xs">{error}</div>
+          ) : (
+            ""
+          )}
       </div>
     </div>
   );
 };
 
-const Textarea = ({ message }) => {
+const Textarea = (message,error) => {
   return (
     <div className="flex flex-col gap-4 my-5">
       <div className="relative w-full min-w-[200px]">
@@ -35,30 +67,79 @@ const Textarea = ({ message }) => {
           id='message'
           name={message}
           rows="4"
-          placeholder=''
-          className="peer h-full w-full rounded-md border border-gray-900 bg-transparent px-3 py-3 font-sans text-sm font-normal text-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-cyan-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-gray-50 resize-none"
+          placeholder={message}
+          value={ContactDetails[message]}
+          onChange={(e) =>
+            setContactDetails({
+              ...ContactDetails,
+              [e.target.name]: e.target.value,
+            })
+          }
+          className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
         ></textarea>
         <label
           htmlFor={message}
-          className="before:content-[' '] after:content-[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[4.1] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-cyan-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-cyan-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-cyan-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+          className="pb-1 text-xs uppercase tracking-wider"
         >
-          Message
+    
         </label>
+        {error ? <div className="text-red-500 text-xs">{error}</div> : ""}
       </div>
     </div>
   );
 };
 
-const Contactl = () => {
+// function to send query by mail
+const { mutate: SendQuery, isPending } = useMutation({
+  mutationKey: "SendQuery",
+  mutationFn: (ContactDetails) => contactEmail(ContactDetails),
+  onSuccess: (res) => {
+    toast.success(res);
+    setContactDetails({
+      name: "",
+      email: "",
+      number: "",
+      subject: "",
+      message: "",
+    });
+    seterror({});
+    document.getElementById("subject").value = "";
+    captch.current.reset();
+  },
+  onError: (err) => toast.error(err),
+});
+
+// handle sumbit for Contact Us
+const handlesendQuery = async (e) => {
+  e.preventDefault();
+  try {
+    await ContactScheama.validate(ContactDetails, { abortEarly: false });
+    if (!CaptchValue) {
+      toast.error("Please fill the captcha");
+      return; // Do not continue if captcha is empty
+    }
+    SendQuery(ContactDetails);
+  } catch (validationError) {
+    toast.error("please check the form data");
+    const newError = {};
+    validationError.inner.forEach((err) => {
+      newError[err.path.toLowerCase()] = err.message;
+    });
+    seterror(newError);
+  }
+};
+
+
   return (
     <section id="mysectionBG" className="text-gray-600 body-font ">
-      
+            <Toaster />
+
       <div className="container flex flex-col md:flex-row lg:max-w-5xl w-full px-5 py-12 md:py-24 mx-auto section" id="contact-form">
       
         <div className="md:w-1/3 w-full">
-        <div class="relative inline-block">
+        <div className="relative inline-block">
           <h1 className="text-4xl text-gray-800 sm:text-4xl font-bold title-font ">Contact Us</h1>
-  <span class="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-orange-400 to-yellow-600 rounded-full"></span>
+  <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-orange-400 to-yellow-600 rounded-full"></span>
 </div>
           <p className="leading-relaxed text-xl text-gray-900 py-2">
             If you have any questions or need assistance, please feel free to reach out to us.
@@ -86,17 +167,20 @@ const Contactl = () => {
         </div>
         <div className="md:w-2/3 w-full mt-10 md:mt-0 md:pl-28">
           <h1 className="text-4xl text-gray-800 sm:text-4xl font-bold title-font mb-4">Send us message</h1>
-          <form>
-            <InputBox name="name" type="text" />
-            <InputBox name="email" type="email" />
-            <InputBox name="number" type="text" />
-            <Textarea name="message" />
+          <form
+          onSubmit={(e) => handlesendQuery(e)}
+          >
+          {InputBox("name", "text", error.name)}
+          {InputBox("email", "email", error.email)}
+          {InputBox("number", "text",error.number)}
+          {Textarea("message",error.message)}
+
             <div className="w-full">
               <button
                 type="submit"
                 className="flex items-center bg-blue-500 text-white gap-1 px-4 py-2 cursor-pointer font-semibold tracking-widest hover:bg-blue-400 duration-300 hover:gap-2 hover:translate-x-3"
               >
-                Send
+              {isPending ? "sending..." : "Send Message"}
                 <IoSend className='text-white mt-[2px]' />
               </button>
             </div>
