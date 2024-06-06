@@ -45,10 +45,7 @@ export function Button({
       </div>
 
       <div
-        className={cn(
-          "relative   antialiased",
-          className
-        )}
+        className={cn("relative   antialiased", className)}
         style={{
           borderRadius: `calc(${borderRadius} * 1.96)`,
         }}

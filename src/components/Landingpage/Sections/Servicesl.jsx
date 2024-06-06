@@ -1,5 +1,7 @@
 import React from "react";
 import { Button } from "../../ui/moving-border";
+import { motion } from "framer-motion";
+import { fadein } from "../../../variants";
 const cardData = [
   {
     id: 1,
@@ -58,13 +60,13 @@ const cardData = [
 ];
 
 const Card = ({ title, description }) => (
-  // Our services cards
   <>
-    <section className="px-2">
-      {/* moving border */}
+    <section className="px-4">
+      {/* Our services cards*/}
+      {/*  moving border */}
       <Button borderRadius="1px">
-        <div className="w-full md:w-86 md:h-auto mx-auto p-1 bg-stone-50 py-10 border flex flex-col h-full">
-          <div className="flex items-start justify-start p-2">
+        <div className="w-full md:w-86  hover:cursor-pointer hover:scale-105 transition-transform  mx-auto p-1 bg-stone-50 py-10 border flex flex-col md:h-[50vh]">
+          <div className="flex md:items-start justify-center md:justify-start p-2">
             <div className="px-1">
               <span className="w-4 h-4 rounded-full inline-block bg-violet-500 cursor-pointer"></span>
             </div>
@@ -79,12 +81,10 @@ const Card = ({ title, description }) => (
           {/* cards title desc */}
           <div className=" dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 flex-grow flex flex-col justify-center">
             <div className="p-2 flex flex-col justify-center items-center flex-grow">
-              <h3 className="font-semibold text-xl md:text-2xl text-black text-center">
+              <h3 className="font-bold text-2xl text-black text-center">
                 {title}
               </h3>
-              <p className="mt-4 text-center text-sm md:text-base">
-                {description}
-              </p>
+              <p className="mt-4 text-center text-md">{description}</p>
             </div>
           </div>
         </div>
@@ -97,13 +97,20 @@ const Servicesl = () => {
   return (
     <main>
       {/* Rewamp section */}
-      <section className="mx-auto max-w-full px-4 sm:px-6 lg:px-8 py-4">
-        <h2 className="font-headline text-2xl font-extrabold sm:text-4xl text-center pt-2 text-[#6B37BD]">
+      <section className="mx-auto max-w-full px-4 sm:px-6 lg:px-8 py-4 relative">
+        <motion.h2
+          variants={fadein("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.8 }}
+          className="font-headline text-2xl font-semibold sm:text-4xl text-center pt-2 text-[#6B37BD]"
+        >
           Revamp Your Website in Three Steps
-        </h2>
+        </motion.h2>
         <div className="grid sm:grid-cols-3 bg-stone-50 gap-16 sm:gap-10 mt-12 sm:mt-16 shadow-lg shadow-gray-500 md:p-8">
-          <div className="text-center md:border-r-2 xs:border-b-2 border-violet-400 py-2 px-2">
-            <div className="relative w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto left-2">
+          {/* Reimagine */}
+          <div className="text-center hover:cursor-pointer hover:scale-105 transition-transform md:border-r-2 xs:border-b-2 border-violet-400 py-2 px-2">
+            <div className="relative  w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto left-2">
               <div className="z-10 relative w-full h-full bg-white rounded-full border border-gray-300 shadow flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -127,11 +134,12 @@ const Servicesl = () => {
             <h3 className="font-bold text-2xl text-black sm:text-2xl mt-6 sm:mt-10">
               1. Reimagine
             </h3>
-            <p className="leading-relaxed mt-4 text-center px-1">
+            <p className="leading-relaxed mt-4 text-center px-2">
               Begin by envisioning the new look and features for your website.
             </p>
           </div>
-          <div className="text-center md:border-l-2 xs:border-b-2 py-2 md:border-r-2 border-violet-400">
+          {/* Redesign */}
+          <div className="text-center hover:cursor-pointer hover:scale-105 transition-transform md:border-l-2 xs:border-b-2 py-2 md:border-r-2 border-violet-400">
             <div className="relative w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto left-2">
               <div className="z-10 relative w-full h-full bg-white rounded-full border border-gray-300 shadow flex items-center justify-center">
                 <svg
@@ -152,16 +160,16 @@ const Servicesl = () => {
               </div>{" "}
               <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-blue-700 rounded-full"></div>
             </div>
-            {/* redesign */}
             <h3 className="font-bold text-2xl text-black sm:text-2xl mt-6 sm:mt-10">
               2. Redesign
             </h3>
-            <p className="leading-relaxed mt-4 text-center px-1">
+            <p className="leading-relaxed mt-4 text-center px-2">
               Collaborate with your design and development team to give your
               website a fresh and modern design.
             </p>
           </div>
-          <div className="text-center md:border-l-2 xs:border-b-2 py-2 border-violet-400">
+          {/* Relaunch */}
+          <div className="text-center hover:cursor-pointer hover:scale-105 transition-transform md:border-l-2 xs:border-b-2 py-2 border-violet-400">
             <div className="relative w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto left-2">
               <div className="z-10 relative w-full h-full bg-white rounded-full border border-gray-300 shadow flex items-center justify-center">
                 <svg
@@ -182,11 +190,10 @@ const Servicesl = () => {
               </div>
               <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-blue-700 rounded-full"></div>
             </div>
-            {/* Relaunch */}
             <h3 className="font-bold text-2xl text-black sm:text-2xl mt-6 sm:mt-10">
               3. Relaunch
             </h3>
-            <p className="leading-relaxed mt-4 text-center px-1">
+            <p className="leading-relaxed mt-4 text-center px-2">
               After the redesign, relaunch your website and welcome your
               audience to the new experience.
             </p>
@@ -195,10 +202,16 @@ const Servicesl = () => {
       </section>
       {/* Our services map */}
       <section className="flex flex-col justify-center items-center h-full w-full">
-        <h1 className="p-2 py-4 text-3xl font-extrabold md:text-4xl text-[#6B37BD] ">
+        <motion.h1
+          variants={fadein("up", 0.2)}
+          initial="hidden"
+          whileInView={"show"}
+          viewport={{ once: true, amount: 0.8 }}
+          className="p-2 py-4 text-3xl font-semibold md:text-4xl text-[#6B37BD] "
+        >
           Our Services
-        </h1>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 h-auto  w-screen">
+        </motion.h1>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 h-full w-screen">
           {cardData.map(({ id, title, description }) => (
             <Card key={id} title={title} description={description} />
           ))}

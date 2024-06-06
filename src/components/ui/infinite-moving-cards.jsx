@@ -34,9 +34,15 @@ export const InfiniteMovingCards = ({
   const getDirection = () => {
     if (containerRef.current) {
       if (direction === "left") {
-        containerRef.current.style.setProperty("--animation-direction", "forwards");
+        containerRef.current.style.setProperty(
+          "--animation-direction",
+          "forwards"
+        );
       } else {
-        containerRef.current.style.setProperty("--animation-direction", "reverse");
+        containerRef.current.style.setProperty(
+          "--animation-direction",
+          "reverse"
+        );
       }
     }
   };
@@ -65,17 +71,17 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex min-w-full shrink-0 gap-2 w-max flex-nowrap",
+          "flex min-w-full shrink-0 gap-4 w-max flex-nowrap",
           start && "animate-scroll",
           pauseOnHover && "hover:animation-play-state:paused"
         )}
       >
         {items.map((item, idx) => (
-            <div key={item.id} className="md:w-[20rem] w-[10rem]">
-             <div className="">
-                <img src={item.img} alt="" className="md:h-[10rem] h-[7rem]"/>
-             </div>
+          <div key={item.id} className="md:w-[25vw] w-[70vw]">
+            <div className="">
+              <img src={item.img} alt="" className="md:h-[25vh] h-[25vh]" />
             </div>
+          </div>
         ))}
       </ul>
     </div>
