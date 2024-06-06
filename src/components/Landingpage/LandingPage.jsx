@@ -8,12 +8,12 @@ import Pricingl from "./Sections/Pricingl";
 import Contactl from "./Sections/Contactl";
 const LandingPage = () => {
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-hidden h-screen scrollbar-thin overflow-y-scroll">
       <Outlet />
       <Herol />
       <Servicesl />
       <Clientl />
-      <Chooseusl/>
+      <Chooseusl />
       <Pricingl />
       <Contactl />
     </main>
