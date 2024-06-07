@@ -15,7 +15,7 @@ const Testimonials = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.8 }} className="flex md:p-5 p-2 md:justify-center text-start">
-        <h1 className="md:text-MainHeading text-MainHeading-sm font-extrabold">Explore Our Company's Vision, Mission and Value</h1>
+        <h1 className="md:text-MainHeading text-MainHeading-sm font-extrabold p-2">Explore Our Company's Vision, Mission and Value</h1>
       </motion.div>
 
       <div className="max-w-screen-xl mx-auto md:p-4 p-1">

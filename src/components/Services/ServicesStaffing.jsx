@@ -138,7 +138,7 @@ const ServicesStaffing = ({ Meta_Data }) => {
     </section>
 
     {/* why choose us */}
-    <section id="bg2" className="p-2 md:p-5">
+    <section id="section2" className="p-2 md:p-5">
 
     <div className="grid lg:grid-cols-2 items-center justify-items-center gap-5">
         <div className="order-1 lg:order-1 shadow-2xl cursor-pointer">
@@ -161,7 +161,7 @@ const ServicesStaffing = ({ Meta_Data }) => {
     </section>
 
     {/* process */}
-    <section className="bg-gray-50 md:py-12 py-3">
+    <section className="md:py-12 py-3">
     <div className="mx-auto w-[95%] px-4 sm:px-6 lg:px-8">
         <h2 className="flex items-center text-black justify-center text-3xl md:text-4xl font-semibold p-4 cursor-pointer">How It Works?</h2>
         <ul className="mx-auto mt-6 md:mt-12 grid max-w-md grid-cols-1 gap-10 sm:mt-16 lg:mt-20 lg:max-w-5xl lg:grid-cols-5">
@@ -203,64 +203,79 @@ const ServicesStaffing = ({ Meta_Data }) => {
 </section>
 
 
-    <section className=" bg-black">
+    <section className="bg-gray-200">
 
-      {/* Third Section */}
-      <div className="grid md:grid-cols-3 grid-cols-1 gap-8 border-b border-slate-400 bg-indigo-200">
-           {/* left */}
-           <div className="col-span-2 flex flex-col justify-center px-10 gap-5 cursor-pointer">
-            <h1 className="text-3xl font-headingFont font-bold text-sky-950"><TfiReload size={50} className="animate-spin my-4"/>Executive Search</h1>
-            <p className="text-lg text-black font-medium">We assist in identifying and recruiting senior-level executives and leaders who possess the expertise and vision to drive your organization forward. Our executive search services focus on finding exceptional talent that aligns with your strategic goals.</p>
-           </div>
+    <div className="grid md:grid-cols-3 grid-cols-1 gap-8 border-b border-slate-400">
+          {/* left */}
+          <div className="col-span-2 flex flex-col justify-center px-10 gap-5">
+            <h1 className="text-3xl font-headingFont font-bold text-[#267CC3] sm:mt-4 pt-3">
+              <TfiReload size={50} className="animate-spin p-1" />
+              Executive Search
+            </h1>
+            <p className="text-lg text-[#4E4D4C]">
+              We assist in identifying and recruiting senior-level executives
+              and leaders who possess the expertise and vision to drive your
+              organization forward. Our executive search services focus on
+              finding exceptional talent that aligns with your strategic goals.
+            </p>
+          </div>
 
-           {/* Right */}
-           <div className="col-span-1 p-8 sm:pr-0 bg-gradient-to-l from-indigo-500 to-indigo-200 cursor-pointer">
-              <img src={WorkMenImage} alt="" className=" shadow-indigo-300 h-[40vh]"/>
-           </div>
-      </div>
-
-     
-      {/* Fourth section */}
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-4 bg-indigo-200">
-           {/* left */}
-           <div className="col-span-1 p-8 bg-gradient-to-r from-indigo-500 to-indigo-200 cursor-pointer">
-              <img src={WomenWorkImage} alt="" className="h-[40vh]"/>
-           </div>
-          
-
-           {/* Right */}
-           <div className="col-span-1 flex flex-col justify-center px-10 gap-5 cursor-pointer">
-            <h1 className="text-3xl font-headingFont font-bold text-blue-950"><MdManageAccounts size={70} className="text-blue-900"/>Managed Services </h1>
-            <p className="text-lg text-sky-950 sm:pb sm:mb-10">We offer managed staffing solutions to handle the entire staffing process, from recruitment and onboarding to performance management and retention. Our managed services ensure a streamlined and efficient staffing experience for your organization.</p>
-           </div>
-      </div>
-
-      {/* Fifth Section*/}
-      <div className="bg-white py-10">
-        <div className="container mx-auto">
-          <h1 className="text-3xl md:text-4xl font-semibold p-4 text-black text-center font-headingFont cursor-pointer">
-            OUR IMPACT
-          </h1>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          
-          {impact.map((feat)=>{
-            return(
-              <div key={feat.id} className=" p-4 flex justify-center shadow-lg flex-col items-center bg-slate-200 hover:scale-105 transition-all ease-linear cursor-pointer">
-                <div className="text-blue-900"><feat.icon size={70} /></div>
-                <ScrollTrigger onEnter={()=>setCounterOn(true)} onExit={()=>setCounterOn(false)}>
-                <h1 className="text-gray-700 text-4xl">{ counterOn && <CountUp start={0} end={feat.num} duration={6} />}+</h1>
-                </ScrollTrigger>
-                <p>{feat.desc}</p>
-              </div>
-            );
-          })}
-          
-          
+          {/* Right */}
+          <div className="col-span-1 p-8 sm:pr-0 bg-gradient-to-r from-[#267CC3] to-indigo-200 ">
+            <img src={WorkMenImage} alt="" className=" shadow-indigo-300 " />
+          </div>
         </div>
-       </div>
- </div>
-    </section>
+
+        {/* Fourth section */}
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-8 bg-gray-200">
+          {/* left */}
+          <div className="col-span-1 p-8 bg-gradient-to-r from-[#267CC3] to-indigo-200">
+            <img src={WomenWorkImage} alt="" />
+          </div>
+
+          {/* Right */}
+          <div className="col-span-1 flex flex-col justify-center px-10 gap-5">
+            <h1 className="text-3xl font-headingFont font-bold text-sky-950">
+              <MdManageAccounts
+                size={70}
+                color="blue"
+                className="animate-pulse"
+              />
+              Managed Services{" "}
+            </h1>
+            <p className="text-lg text-sky-950 sm:pb sm:mb-10">
+              We offer managed staffing solutions to handle the entire staffing
+              process, from recruitment and onboarding to performance management
+              and retention. Our managed services ensure a streamlined and
+              efficient staffing experience for your organization.
+            </p>
+          </div>
+        </div>
+
+        {/* Fifth Section*/}
+        <div id='section2' className="min-h-screen py-20">
+          <div className="container mx-auto ">
+            <h1 className="text-[3rem] text-[#267CC3] text-center font-bold font-headingFont mb-8 capitalize animate-bounce ">
+              OUR IMPACT
+            </h1>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-rows-8 gap-4 flex-wrap shadow-gray-60 shadow-border ">
+              <div className=" p-4 row-span-8 flex justify-center shadow-lg flex-col items-center pd-4 bg-gradient-to-r from-[#267CC3] to-indigo-100 hover:scale-125 transition-all ease-in">
+                <RiUserSearchFill size={70} />
+                <h1 className="text-orange-700 text-4xl">
+                  {counterOn && <CountUp start={0} end={75} duration={10} />}+
+                </h1>
+                <p>active tech resources</p>
+              </div>
+
+              <div className="bg-gray-200 p-4 row-span-4 flex justify-center flex-col items-center pd-4 bg-gradient-to-r from-[#267CC3] to-indigo-100  hover:scale-125 transition-all ease-in">
+                <FaRegCalendarCheck size={50} />
+                <h1 className="text-orange-700 text-4xl">
+                  {counterOn && <CountUp start={0} end={5} duration={10} />}+
+                </h1>
+                <p>years of service</p>
+              </div>
+
               <div className="bg-gray-200 p-4 row-span-4 flex justify-center flex-col items-center pd-4 bg-gradient-to-r from-[#267CC3] to-indigo-100 hover:scale-125 transition-all ease-in">
                 <IoIosPeople size={50} />
                 <h1 className="text-orange-700 text-4xl hover:text-indigo-900">
@@ -268,8 +283,35 @@ const ServicesStaffing = ({ Meta_Data }) => {
                 </h1>
                 <p>active clients</p>
               </div>
+
+              <div className="bg-gray-200 p-4 row-span-8 flex justify-center flex-col items-center pd-4 bg-gradient-to-r from-[#267CC3] to-indigo-100 hover:scale-125 transition-all ease-in">
+                <LuClock2 size={50} />
+                <h1 className="text-orange-700 text-4xl">
+                  {counterOn && <CountUp start={0} end={200} duration={10} />}+
+                </h1>
+                <p>hours completed</p>
+              </div>
+
+              <div className="bg-gray-200 p-4 row-span-4 flex justify-center flex-col items-center pd-4 bg-gradient-to-r from-[#267CC3] to-indigo-100 hover:scale-125 transition-all ease-in">
+                <GiSkills size={50} />
+                <h1 className="text-orange-700 text-4xl">
+                  {counterOn && <CountUp start={0} end={50} duration={10} />}+
+                </h1>
+                <p>skills served</p>
+              </div>
+
+              <div className="bg-gray-200 p-4 row-span-4 flex justify-center flex-col items-center pd-4 bg-gradient-to-r from-[#267CC3] to-indigo-100 hover:scale-125 transition-all ease-in">
+                <BsStars size={50} />
+                <h1 className="text-orange-700 text-4xl">
+                  {counterOn && <CountUp start={0} end={100} duration={10} />}+
+                </h1>
+                <p>active tech talent pool</p>
+              </div>
+              </div>
+              </div>
+        </div>
+        </section>
     {/* CTA */}
-  
     </>
   );
 };
