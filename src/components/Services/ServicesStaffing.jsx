@@ -18,7 +18,6 @@ import { VscDebugBreakpointLog } from "react-icons/vsc";
 import ScrollTrigger from "react-scroll-trigger";
 
 const ServiceCard = ({ title, description, image }) => {
-
   return (
     <div className="bg-white rounded-[10px] shadow-lg shadow-gray-500">
       <img src={image} alt={title} className="sm-4 rounded-t-[5px]" />
@@ -28,9 +27,10 @@ const ServiceCard = ({ title, description, image }) => {
     </div>
   );
 };
-const ServicesStaffing = ({Meta_Data}) => {
+const ServicesStaffing = ({ Meta_Data }) => {
   const { Title, Description, Link } = Meta_Data;
   const [counterOn, setCounterOn] = useState(false);
+
 
   const services=[
     {id:1, title:"Contract Staffing",desc:"Our contract staffing solutions provide you with the flexibility to scale your team based on project demands. We offer skilled professionals ready to contribute to your projects immediately."},
@@ -63,6 +63,7 @@ const ServicesStaffing = ({Meta_Data}) => {
     {id:6,icon:BsStars,num:100,desc:"active tech talent pool"},
   ]
  
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -74,9 +75,9 @@ const ServicesStaffing = ({Meta_Data}) => {
         setCounterOn(false);
       }
     };
-  
+
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -85,12 +86,11 @@ const ServicesStaffing = ({Meta_Data}) => {
 
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title>{Title}</title>
         <meta name="description" content={Description} />
         <link rel="canonical" href={Link} />
       </Helmet>
-
     {/* first section */}
     <section id="background">
     <div className="flex flex-wrap">
@@ -261,8 +261,13 @@ const ServicesStaffing = ({Meta_Data}) => {
        </div>
  </div>
     </section>
-
-
+              <div className="bg-gray-200 p-4 row-span-4 flex justify-center flex-col items-center pd-4 bg-gradient-to-r from-[#267CC3] to-indigo-100 hover:scale-125 transition-all ease-in">
+                <IoIosPeople size={50} />
+                <h1 className="text-orange-700 text-4xl hover:text-indigo-900">
+                  {counterOn && <CountUp start={0} end={20} duration={10} />}+
+                </h1>
+                <p>active clients</p>
+              </div>
     {/* CTA */}
   
     </>

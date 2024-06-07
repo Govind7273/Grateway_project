@@ -80,7 +80,7 @@ const ServiceSupport = ({ Meta_Data }) => {
           <div className="mx-auto max-w-7xl p-6 lg:px-8 border-4">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
               <div className="flex flex-col items-center">
-                <h2 className="text-lg font-semibold leading-8 tracking-tight text-start text-indigo-600">Everything you need</h2>
+                <h2 className="text-lg font-semibold leading-8 tracking-tight text-start text-[#4465bf]">Everything you need</h2>
                 <p className="mt-2 text-3xl font-bold tracking-tight text-start text-gray-900 sm:text-4xl">IT Service Support Offerings</p>
                 <p className="mt-6 text-base leading-7 text-gray-600">Our comprehensive IT service support plays a pivotal role in upholding the reliability, security and efficiency of organizational IT infrastructure. We tailor our services to accommodate the unique needs and scale of each client's business.</p>
                 <img src={listImg} alt="" />

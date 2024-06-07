@@ -25,7 +25,7 @@ const ContactUs = ({Meta_Data}) => {
 
       <div className="w-full overflow-x-hidden pt-5 px-3 flex flex-col justify-center items-center gap-4 bg-white dark:text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center">
-          <h2 class="md:text-5xl text-2xl font-extrabold text-violet-800">Contact Us</h2>
+          <h2 class="md:text-5xl text-2xl font-extrabold text-[#1a2d72]">Contact Us</h2>
           <p class="pt-4 pb-4 text-base max-w-2xl text-center m-auto dark:text-gray-400">
             Want to contact us? Fill the below form and we'll be happy to show you how we can transform your experience.
           </p>

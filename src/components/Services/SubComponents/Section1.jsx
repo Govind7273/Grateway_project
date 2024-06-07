@@ -47,7 +47,7 @@ const Section1 = ({obj}) => {
             <div className="to-blue-50  via-blue-900 from-cyan-700 bg-gradient-to-t sm:h-8 h-4 sm:w-8 w-4 rounded-bl-full rounded-tr-full"></div>
            </div>
            <div className="col-span-1 py-6 md:py-0 w-full grid  grid-cols-1 justify-center items-center ">
-            <h2 className="md:text-4xl text-3xl mb-4 font-headingFont  text-center md:text-start font-bold text-violet-700 ">
+            <h2 className="md:text-4xl text-3xl mb-4 font-headingFont  text-center md:text-start font-bold text-blue-900 ">
               {obj.content.heading}
             </h2>
             <p className="text-md font-navlistFont md:text-start text-center font-semibold  text-slate-800">{obj.content.message}

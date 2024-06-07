@@ -104,7 +104,7 @@ const Internship = ({ Meta_Data }) => {
                      initial="hidden"
                      whileInView={"show"}
                      viewport={{ once: false, amount: 0.8 }}
-                     className="font-semibold text-3xl pb-4 text-indigo-800">Career Development</motion.h1>
+                     className="font-semibold text-3xl pb-4 text-blue-800">Career Development</motion.h1>
                     <motion.p
                      variants={fadein("up", 0.2)}
                      initial="hidden"
