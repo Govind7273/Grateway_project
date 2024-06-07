@@ -6,17 +6,26 @@ import Servicesl from "./Sections/Servicesl";
 import Clientl from "./Sections/Clientl";
 import Pricingl from "./Sections/Pricingl";
 import Contactl from "./Sections/Contactl";
-const LandingPage = () => {
+import { Helmet } from "react-helmet-async";
+const LandingPage = ({ Meta_Data }) => {
+  const { Title, Description, Link1 } = Meta_Data;
   return (
-    <main className="overflow-x-hidden h-screen scrollbar-thin overflow-y-scroll">
-      <Outlet />
-      <Herol />
-      <Servicesl />
-      <Clientl />
-      <Chooseusl />
-      <Pricingl />
-      <Contactl />
-    </main>
+    <>
+      <Helmet>
+        <title>{Title}</title>
+        <meta name="description" content={Description} />
+        <link rel="canonical" href={Link1} />
+      </Helmet>
+      <main className="overflow-x-hidden h-screen scrollbar-thin overflow-y-scroll">
+        <Outlet />
+        <Herol />
+        <Servicesl />
+        <Clientl />
+        <Chooseusl />
+        <Pricingl />
+        <Contactl />
+      </main>
+    </>
   );
 };
 

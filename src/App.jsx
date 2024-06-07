@@ -44,7 +44,7 @@ import {
 } from "./components/Services/ServiceData/SoftDevServices";
 import GenerativeAIDescriptive from "./components/Services/SubComponents/GenerativeAIDescriptive";
 import DataAnalyticsDescriptive from "./components/Services/SubComponents/DataAnalyticsDescriptive";
-import LandingPage from "./components/Landingpage/LandingPage";
+const LandingPage = lazy(() => import("./components/Landingpage/LandingPage"));
 const Intership = lazy(() => import("./components/Internship/Internship"));
 const InternshipDetails = lazy(() =>
   import("./components/Internship/InternshipDetails")
@@ -61,11 +61,8 @@ function App() {
       <Suspense fallback={<Loading />}>
         <ScrollToTop />
         <Routes>
-          <Route
-            exact
-            path="/"
-            element={<Home Meta_Data={Meta_Data.home} />}
-          ></Route>
+          <Route path="/" element={<Home Meta_Data={Meta_Data.home} />}></Route>
+
           <Route
             exact
             path="/AboutUs"
@@ -202,7 +199,11 @@ function App() {
           {/* <Route path="/landingpage" element={<landingpage />}>
             <Route index element={<Landingpage />} />
           </Route> */}
-          <Route exact path="/LandingPage"element={<LandingPage/>}/>
+          <Route
+            exact
+            path="/landingpage"
+            element={<LandingPage Meta_Data={Meta_Data.landingpage} />}
+          />
         </Routes>
       </Suspense>
       {!isLandingPage && <Footer />}
