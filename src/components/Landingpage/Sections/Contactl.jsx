@@ -1,4 +1,3 @@
-
 import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoSend } from "react-icons/io5";
@@ -11,10 +10,7 @@ import { ContactScheama } from "../../../Yupschema/ContactUsScheama";
 import { contactEmail } from "../../../functions/EmailSendFunction";
 import { Link } from "react-router-dom";
 
-
-
 const Contactl = () => {
-
   const [error, seterror] = useState({});
   const [ContactDetails, setContactDetails] = useState({
     name: "",
@@ -31,7 +27,6 @@ const Contactl = () => {
           <input
             name={name}
             id={name}
-
             type={type}
             placeholder={placeholder}
             value={ContactDetails[`${name.toLowerCase()}`]}
@@ -46,15 +41,9 @@ const Contactl = () => {
           <label
             htmlFor={name}
             className="pb-1 text-xs uppercase tracking-wider"
-          >
+          ></label>
 
-          </label>
-
-          {error ? (
-            <div className="text-red-500 text-xs">{error}</div>
-          ) : (
-            ""
-          )}
+          {error ? <div className="text-red-500 text-xs">{error}</div> : ""}
         </div>
       </div>
     );
@@ -63,11 +52,10 @@ const Contactl = () => {
   const Textarea = (message, error) => {
     const placeholder = ("Enter Your " + message).toString();
     return (
-
       <div className="flex flex-col gap-4 my-5">
         <div className="relative w-full min-w-[200px]">
           <textarea
-            id='message'
+            id="message"
             name={message}
             rows="4"
             placeholder={placeholder}
@@ -83,9 +71,7 @@ const Contactl = () => {
           <label
             htmlFor={message}
             className="pb-1 text-xs uppercase tracking-wider"
-          >
-
-          </label>
+          ></label>
           {error ? <div className="text-red-500 text-xs">{error}</div> : ""}
         </div>
       </div>
@@ -132,47 +118,69 @@ const Contactl = () => {
     }
   };
 
-
   return (
     <section id="mysectionBG" className="text-gray-600 body-font ">
       <Toaster />
 
-      <div className="container flex flex-col md:flex-row lg:max-w-5xl w-full px-5 py-4 md:py-24 mx-auto section" id="contact-form">
-
+      <div
+        className="container flex flex-col md:flex-row lg:max-w-5xl w-full px-5 py-4 md:py-24 mx-auto section"
+        id="contact-form"
+      >
         <div className="md:w-1/3 w-full">
-          <div className="relative inline-block">
-            <h1 className="text-4xl text-gray-800 sm:text-4xl font-bold title-font ">Contact Us</h1>
+          <div className="relative inline-block mt-10">
+            <h1 className="text-4xl text-gray-800 sm:text-4xl font-bold title-font ">
+              Contact Us
+            </h1>
             <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-orange-400 to-yellow-600 rounded-full"></span>
           </div>
-          <p className="leading-relaxed text-xl  text-gray-900 py-2">
-            If you have any questions or need assistance, please feel free to reach out to us.
+          <p className="leading-relaxed text-xl  text-gray-900 md:pt-4">
+            If you have any questions or need assistance, please feel free to
+            reach out to us.
             <br />
-           <span className="font-bold"> You can also email us at </span>
-            <Link to="mailto:hr@greateway.com" className="font-semibold"> hr@greateway.com</Link>
+            <span className="font-bold"> You can also email us at </span>
+            <Link
+              to="mailto:hr@greateway.com"
+              className="font-semibold border-b-4"
+            >
+              {" "}
+              hr@greateway.com
+            </Link>
           </p>
-          <p className="leading-relaxed text-xl text-gray-900 font-bold  md:mt-8">
+          <p className="leading-relaxed text-xl text-gray-900 font-bold md:mt-4">
             Connect with us on social media:
           </p>
           <span className="inline-flex justify-center sm:justify-start">
-            <Link to="" className="md:w-8 w-10 md:h-8 h-10 m-2 rounded-full transition-all duration-500 flex justify-center items-center bg-[#33CCFF] hover:bg-gray-900">
-              <FaXTwitter className='text-white' />
+            <Link
+              to=""
+              className="md:w-8 w-10 md:h-8 h-10 m-2 rounded-full transition-all duration-500 flex justify-center items-center bg-[#33CCFF] hover:bg-gray-900"
+            >
+              <FaXTwitter className="text-white" />
             </Link>
-            <Link to="https://www.facebook.com/profile.php?id=61557537305066&mibextid=ZbWKwL" className="relativemd:w-8 w-10 md:h-8 h-10 m-2 rounded-full transition-all duration-500 flex justify-center items-center bg-blue-700  hover:bg-gray-900 ">
-              <FaFacebook className='text-white' />
+            <Link
+              to="https://www.facebook.com/profile.php?id=61557537305066&mibextid=ZbWKwL"
+              className="relative md:w-8 w-10 md:h-8 h-10 m-2 rounded-full transition-all duration-500 flex justify-center items-center bg-blue-700  hover:bg-gray-900 "
+            >
+              <FaFacebook className="text-white" />
             </Link>
-            <Link to="https://www.instagram.com/greateway_software_pvt.ltd?igsh=OGNtMmd3Y2VlcXFl" className="relative md:w-8 w-10 md:h-8 h-10 m-2 rounded-full transition-all duration-500 flex justify-center items-center bg-[linear-gradient(45deg,#FEE411_6.9%,#FEDB16_10.98%,#FEC125_17.77%,#FE983D_26.42%,#FE5F5E_36.5%,#FE2181_46.24%,#9000DC_85.57%)]  hover:bg-gradient-to-b from-gray-900 to-gray-900  ">
-              <FaInstagram className='text-white' />
+            <Link
+              to="https://www.instagram.com/greateway_software_pvt.ltd?igsh=OGNtMmd3Y2VlcXFl"
+              className="relative md:w-8 w-10 md:h-8 h-10 m-2 rounded-full transition-all duration-500 flex justify-center items-center bg-[linear-gradient(45deg,#FEE411_6.9%,#FEDB16_10.98%,#FEC125_17.77%,#FE983D_26.42%,#FE5F5E_36.5%,#FE2181_46.24%,#9000DC_85.57%)]  hover:bg-gradient-to-b from-gray-900 to-gray-900  "
+            >
+              <FaInstagram className="text-white" />
             </Link>
-            <Link to="https://www.linkedin.com/company/greateway-software-pvt-ltd/" className="relative md:w-8 w-10 md:h-8 h-10 m-2 rounded-full transition-all duration-500 flex justify-center items-center bg-blue-500  hover:bg-gray-900 ">
-              <FaLinkedin className='text-white' />
+            <Link
+              to="https://www.linkedin.com/company/greateway-software-pvt-ltd/"
+              className="relative md:w-8 w-10 md:h-8 h-10 m-2 rounded-full transition-all duration-500 flex justify-center items-center bg-blue-500  hover:bg-gray-900 "
+            >
+              <FaLinkedin className="text-white" />
             </Link>
           </span>
         </div>
         <div className="md:w-2/3 w-full mt-5 md:mt-0 md:pl-28">
-          <h1 className="text-4xl text-gray-800 sm:text-4xl font-bold title-font mb-4">Send us message</h1>
-          <form
-            onSubmit={(e) => handlesendQuery(e)}
-          >
+          <h1 className="text-4xl text-gray-800 sm:text-4xl font-bold title-font mb-4">
+            Send us message
+          </h1>
+          <form onSubmit={(e) => handlesendQuery(e)}>
             {InputBox("name", "text", error.name)}
             {InputBox("email", "email", error.email)}
             {InputBox("number", "text", error.number)}
@@ -184,7 +192,7 @@ const Contactl = () => {
                 className="flex items-center bg-blue-500 text-white gap-1 px-4 py-2 cursor-pointer font-semibold tracking-widest hover:bg-blue-400 duration-300 hover:gap-2 hover:translate-x-3"
               >
                 {isPending ? "sending..." : "Send Message"}
-                <IoSend className='text-white mt-[2px]' />
+                <IoSend className="text-white mt-[2px]" />
               </button>
             </div>
           </form>
