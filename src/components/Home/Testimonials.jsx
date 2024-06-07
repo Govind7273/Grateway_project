@@ -25,7 +25,7 @@ const Testimonials = () => {
           <motion.div variants={fadein("left", 0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.8 }} className="hover:bg-[#97d8d8] transform transition-transform hover:shadow-xl hover:-translate-y-4 p-4 ease-in-out bg-slate-200 mb-2 duration-500 max-w-sm rounded overflow-hidden shadow-lg">
+            viewport={{ once: false, amount: 0.8 }} className="hover:bg-[#ccd6ad] transform transition-transform hover:shadow-xl hover:-translate-y-4 p-4 ease-in-out bg-slate-200 mb-2 duration-500 max-w-sm rounded overflow-hidden shadow-lg">
             <div className="py-4 md:px-8 px-2">
               <img src={vision} alt="" className="rounded-full h-12 w-12 mb-4" />
               <a href="#">
@@ -44,7 +44,7 @@ const Testimonials = () => {
           <motion.div variants={fadein("up", 0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.8 }} className="hover:bg-[#97d8d8] transform transition-transform hover:shadow-xl hover:-translate-y-4 p-4 ease-in-out bg-slate-200 mb-2 duration-500 max-w-sm rounded overflow-hidden shadow-lg">
+            viewport={{ once: false, amount: 0.8 }} className="hover:bg-[#ccd6ad] transform transition-transform hover:shadow-xl hover:-translate-y-4 p-4 ease-in-out bg-slate-200 mb-2 duration-500 max-w-sm rounded overflow-hidden shadow-lg">
             <div className="py-4 md:px-8 px-2">
               <img src={mission} alt="" className="rounded-full h-12 w-12 mb-4" />
               <a href="#">
@@ -63,7 +63,7 @@ const Testimonials = () => {
           <motion.div variants={fadein("right", 0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.8 }} className="hover:bg-[#97d8d8] transform transition-transform hover:shadow-xl hover:-translate-y-4 p-4 ease-in-out bg-slate-200 mb-2 duration-500 max-w-sm rounded overflow-hidden shadow-lg">
+            viewport={{ once: false, amount: 0.8 }} className="hover:bg-[#ccd6ad] transform transition-transform hover:shadow-xl hover:-translate-y-4 p-4 ease-in-out bg-slate-200 mb-2 duration-500 max-w-sm rounded overflow-hidden shadow-lg">
             <div className="py-4 md:px-8 px-2">
               <img src={value} alt="" className="rounded-full h-12 w-12 mb-4 bg-white" />
               <a href="#">
