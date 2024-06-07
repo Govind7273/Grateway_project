@@ -10,7 +10,7 @@ import {
 import { cn } from "../../utils/cn";
 
 export function Button({
-  borderRadius = "1.75rem",
+  borderRadius = "2rem",
   children,
   as: Component = "button",
   containerClassName,
@@ -22,7 +22,7 @@ export function Button({
   return (
     <Component
       className={cn(
-        " relative text-md h-auto w-auto p-[5px] overflow-hidden",
+        "bg-transparent relative text-md h-auto w-auto p-[4px] overflow-hidden",
         containerClassName
       )}
       style={{
@@ -34,10 +34,10 @@ export function Button({
         className="absolute inset-0"
         style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
       >
-        <MovingBorder duration={duration} rx="50%" ry="50%">
+        <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={cn(
-              "h-40 w-60  opacity-[0.8 bg-[radial-gradient(var(--sky-400)_40%,transparent_10%)]",
+              "h-40 w-40  opacity-[0.8 bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)]",
               borderClassName
             )}
           />
@@ -45,9 +45,9 @@ export function Button({
       </div>
 
       <div
-        className={cn("relative   antialiased", className)}
+        className={cn("relative antialiased", className)}
         style={{
-          borderRadius: `calc(${borderRadius} * 1.96)`,
+          borderRadius: `calc(${borderRadius} * 0.96)`,
         }}
       >
         {children}
@@ -58,7 +58,7 @@ export function Button({
 
 export const MovingBorder = ({
   children,
-  duration = 7000,
+  duration = 6000,
   rx,
   ry,
   ...otherProps

@@ -44,7 +44,7 @@ const Herol = () => {
             <img
               src={hero}
               className="absolute inset-0 object-cover w-full h-full"
-              alt=""
+              alt="hero img"
             />
             <div className="relative flex items-center justify-center h-full bg-black bg-opacity-50">
               <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">

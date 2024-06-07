@@ -17,8 +17,8 @@ function Clientl() {
         variants={fadein("up", 0.2)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: false, amount: 0.8 }}
-        className="md:text-4xl py-4 text-2xl font-bold text-[#6B37BD] text-center"
+        viewport={{ once: true, amount: 0.8 }}
+        className="md:text-4xl py-4 text-2xl font-bold tracking-wide text-[#6B37BD] text-center"
       >
         Our Beneficiaries
       </motion.h1>
