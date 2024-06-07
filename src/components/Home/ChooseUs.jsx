@@ -7,10 +7,10 @@ function ChooseUs() {
     return (
         <div className="w-[100%] h-[100%] md:p-0 p-4 col-span-1 text-white flex flex-col md:bg-black justify-center items-center relative">
             <img src={Choose} alt="" className="w-full h-full md:opacity-35" />
-            <motion.div variants={fadein("down", 0.2)}
+            <motion.div variants={fadein("left", 0.2)}
                 initial="hidden"
                 whileInView={"show"}
-                viewport={{ once: false, amount: 0.8 }} className="md:absolute md:w-[80%] w-full flex-row">
+                viewport={{ once: false, amount: 0.8 }}  className="md:absolute md:w-[80%] w-full flex-row">
                 <div className="md:w-[65%] w-full md:py-4 md:px-2 p-0">
                     <h1 className="md:text-6xl md:text-white text-MainHeading-sm font-extrabold sm:text-center">Why Choose Us?</h1>
                 </div>
@@ -18,7 +18,10 @@ function ChooseUs() {
                     <h1 className="md:text-2xl md:text-white text-SubHeading-sm font-bold">Empowering Your Vision with Smart Software Solutions.</h1>
                 </div>
                 <div>
-                    <ul className="md:text-white text-Paragraph-sm rounded-lg list-inside list-disc w-auto">
+                    <motion.ul variants={fadein("left", 0.2)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: false, amount: 0.8 }} className="md:text-white text-Paragraph-sm rounded-lg list-inside list-disc w-auto">
                         <li data-aos="fade-left" className="md:px-6 md:py-2 border-b border-gray-400 w-full rounded-t-lg hover:bg-[#2c3493] list-disc md:text-nowrap">
                             <b>Innovative Solutions: </b>We are at the forefront of innovation, developing cutting-edge software solutions that redefine industry standards.
                         </li>
@@ -37,7 +40,7 @@ function ChooseUs() {
                         <li data-aos="fade-right" className="md:px-6 md:py-2 border-b border-gray-400 w-full hover:bg-[#2c3493]">
                             <b>Client-Centric Focus: </b>Your satisfaction is our priority. We work closely with you to exceed your expectations throughout the development process.
                         </li>
-                    </ul>
+                    </motion.ul>
                 </div>
             </motion.div>
         </div>

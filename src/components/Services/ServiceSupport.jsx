@@ -37,13 +37,13 @@ const ServiceSupport = ({ Meta_Data }) => {
       <Helmet>
         <title>{Title}</title>
         <meta name="description" content={Description} />
-        <link rel="canonical" href={link} />
+        <link rel="canonical" href={link} /> 
       </Helmet>
       {/* hero section */}
       <section className="relative w-full h-full overflow-hidden pharma_section bg-black">
         {/* first */}
-        <div className="pharma_img md:w-[100%] md:h-auto pt-16 opacity-45">
-          <img className="h-full w-full" src={bg} alt="support_bg" />
+        <div className="pharma_img md:w-[100%] md:h-[100vh] pt-16 opacity-45">
+          <img className="h-full w-full object-cover" src={bg} alt="support_bg" />
         </div>
         {/* second */}
         <div className="pahrma_text absolute overflow-hidden top-12 w-full left-0 md:gap-5 gap-2 flex-col h-full flex justify-center ">
@@ -76,7 +76,7 @@ const ServiceSupport = ({ Meta_Data }) => {
       {/* Third Section */}
       <section>
         {/* Main Content */}
-        <div className="bg-white py-12">
+        <div className="bg-white py-5">
           <div className="mx-auto max-w-7xl p-6 lg:px-8 border-4">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
               <div className="flex flex-col items-center">

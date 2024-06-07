@@ -26,7 +26,7 @@ const CARDS = [
   {
     id: 0,
     name: "Construction",
-    designation: "Greateway Software Solutions",
+    designation: "Greateway Software Pvt.Ltd",
     content: (
       <>
         <h1 className="font-bold text-CardHeading text-center">Construction</h1>
@@ -42,7 +42,7 @@ const CARDS = [
   {
     id: 1,
     name: "Banking",
-    designation: "Greateway Software Solutions",
+    designation: "Greateway Software Pvt.Ltd",
     content: (
       <>
         <h1 className="font-bold text-CardHeading text-center">
@@ -59,7 +59,7 @@ const CARDS = [
   {
     id: 2,
     name: "Education",
-    designation: "Greateway Software Solutions",
+    designation: "Greateway Software Pvt.Ltd",
     content: (
       <>
         <h1 className=" font-bold text-CardHeading text-center">Education</h1>
@@ -74,7 +74,7 @@ const CARDS = [
   {
     id: 4,
     name: "Professional Services",
-    designation: "Greateway Software Solutions",
+    designation: "Greateway Software Pvt.Ltd",
     content: (
       <>
         <h1 className=" font-bold text-CardHeading text-center">
@@ -91,7 +91,7 @@ const CARDS = [
   {
     id: 5,
     name: "Field Services",
-    designation: "Greateway Software Solutions",
+    designation: "Greateway Software Pvt.Ltd",
     content: (
       <>
         <h1 className=" font-bold text-CardHeading text-center">
@@ -212,7 +212,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="font-bold text-xl text-[#1a2229]"
+                      className="font-bold text-center text-xl text-[#1a2229]"
                     >
                       Learning Management System
                     </motion.h3>
@@ -241,7 +241,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.8 }}
-                      className="font-bold text-xl text-[#1a2229]"
+                      className="font-bold text-center text-xl text-[#1a2229]"
                     >
                       Virtual Classroom Solutions
                     </motion.h3>
@@ -270,7 +270,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.8 }}
-                      className="font-bold text-xl text-[#1a2229]"
+                      className="font-bold text-center text-xl text-[#1a2229]"
                     >
                       Online Assessment and Proctoring
                     </motion.h3>
@@ -353,7 +353,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="font-bold text-xl px-2 text-[#1a2229]"
+                      className="font-bold text-center text-xl px-2 text-[#1a2229]"
                     >
                       Wireless Communication
                     </motion.h3>
@@ -395,9 +395,8 @@ const Indrustry = ({ Meta_Data }) => {
                     >
                       At the nexus of virtualization and cloud, we architect
                       digital ecosystems that defy gravity, empowering
-                      businesses to transcend limitations, accelerate growth
-                      and achieve unprecedented levels of agility and
-                      scalability.
+                      businesses to transcend limitations, accelerate growth and
+                      achieve unprecedented levels of agility and scalability.
                     </motion.p>
                   </div>
                 </div>
@@ -477,11 +476,11 @@ const Indrustry = ({ Meta_Data }) => {
                       className="text-Paragraph "
                     >
                       Systems empower, ensuring no wrecks. Remote monitoring, a
-                      lifeline they extend, keeping patients connected on
-                      health they depend. With real-time alerts and data
-                      insights clear, they empower clinicians, dispelling fear.
-                      In the landscape of health, their role profound, IT
-                      service providers, care's champions found.
+                      lifeline they extend, keeping patients connected on health
+                      they depend. With real-time alerts and data insights
+                      clear, they empower clinicians, dispelling fear. In the
+                      landscape of health, their role profound, IT service
+                      providers, care's champions found.
                     </motion.p>
                   </div>
                 </div>

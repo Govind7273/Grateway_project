@@ -175,7 +175,7 @@ const FeaturesSection = () => {
           <motion.div variants={fadein("right", 0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.8 }} aria-hidden="true" className="mt-10 lg:mt-0">
+            viewport={{ once: true, amount: 0.8 }} aria-hidden="true" className="mt-10 lg:mt-0">
             <img
               src={features}
               alt="Feature"

@@ -84,16 +84,16 @@ const AiAndMLService = ({ Meta_Data }) => {
           <div className="w-full h-full lg:w-6/10">
             <img className="w-full h-full" src={Expansion} alt="" />
           </div>
-          <div className="max-w-lg bg-slate-200 md:max-w-5xl border-2 hover:shadow-md hover:shadow-blue2 md:z-5 md:shadow-lg  lg:w-4/5   lg:ml-[-10%] xl:ml-[-20%] flex justify-center items-center">
+          <div className="max-w-lg bg-slate-200 md:max-w-5xl border-2 hover:shadow-md hover:shadow-blue2 md:z-5 md:shadow-lg lg:w-4/5 lg:ml-[-10%] xl:ml-[-20%] flex justify-center items-center pt-5">
             <div className="flex flex-col px-2 py-2 md:px-8 items-center gap-4">
-              <h2 className="md:text-MainHeading text-MainHeading-sm font-extrabold lg:text-3xl ">
+              <h2 className="text-center md:text-MainHeading text-MainHeading-sm font-extrabold lg:text-3xl ">
                 AI & Machine Learning Service
               </h2>
-              <h3 className="md:text-SubHeading text-SubHeading-sm  font-bold text-center">
+              <h3 className="md:text-SubHeading text-SubHeading-sm font-bold text-center">
                 Unleashing the Power of AI and Machine Learning: Where
                 Innovation Meets Intelligence
               </h3>
-              <p className="  md:text-Paragraph text-Paragraph-sm ">
+              <p className="p-4 md:text-Paragraph text-Paragraph-sm ">
                 Step into the Future with our Advanced Artificial Intelligence
                 and Machine Learning Services, meticulously crafted to
                 revolutionize businesses across diverse sectors. Delve into the
@@ -117,7 +117,7 @@ const AiAndMLService = ({ Meta_Data }) => {
             Visualizing AI and Machine Learning Progress
           </div>
           {/* Second */}
-          <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 w-[100%] px-10">
+          <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 w-[100%] px-5">
             {/* card */}
             {percentList.map((item) => (
               <div
@@ -143,7 +143,7 @@ const AiAndMLService = ({ Meta_Data }) => {
         <div className="w-[100%] col-span-1 pt-10 px-6 bg-white flex flex-col  gap-x-6 py-6 justify-center items-center">
           <div className=" w-full flex md:flex-row flex-col flex-col-2 gap-6 items-center">
             {/*left */}
-            <div className="flex-1 px-6">
+            <div className="flex-1">
               <h2 className=" md:text-MainHeading text-MainHeading-sm font-extrabold ">
                 Why Business Needs AI and Machine Learning?
               </h2>
@@ -162,20 +162,20 @@ const AiAndMLService = ({ Meta_Data }) => {
               </p>
             </div>
             {/*right */}
-            <div className="w-full h-full flex-1 ">
-              <img src={AiAndMlImage1} alt="" className="w-full h-full " />
+            <div className="w-full h-full flex-1">
+              <img src={AiAndMlImage1} alt="" className="w-full h-full"/>
             </div>
           </div>
         </div>
 
         {/* fourth section*/}
         <div className="w-[100%] col-span-1 pt-8 px-6 bg-white flex flex-col text-black gap-x-6 py-6 justify-center items-center">
-          <div className="flex flex-col py-2 md:px-8 items-start ">
+          <div className="flex flex-col py-2 md:px-8 items-center ">
             <h2 className="md:text-MainHeading text-MainHeading-sm font-extrabold">
               Our Services
             </h2>
           </div>
-          <div className="w-full flex flex-col md:flex-row flex-col-2 gap-4 items-center ">
+          <div className="w-screen flex justify-evenly flex-col md:flex-row flex-col-2 gap-6 md:gap-96 items-center">
             <div className="flex gap-2 flex-row flex-col-2">
               <div className=" flex-1">
                 <img
@@ -186,8 +186,8 @@ const AiAndMLService = ({ Meta_Data }) => {
                   className=" "
                 />
               </div>
-              <div className="flex-2 gap-2  flex justify-center items-center  ">
-                <h2 className=" md:text-SubHeading text-SubHeading-sm font-bold hover:text-blue-800">
+              <div className="flex-2 gap-2  flex justify-center items-center">
+                <h2 className=" md:text-SubHeading text-SubHeading-sm font-bold hover:text-blue-800 items-center">
                   <HashLink to={"#AI"}>Generative AI</HashLink>
                 </h2>
               </div>
@@ -213,8 +213,8 @@ const AiAndMLService = ({ Meta_Data }) => {
         {/*fifth section */}
         <div></div>
         {/* sixth Section */}
-        <div className=" w-full flex flex-col py-5 justify-center items-center">
-          <h2 className=" md:text-MainHeading text-MainHeading-sm font-extrabold">
+        <div className=" w-full flex flex-col py-5 justify-center  items-center">
+          <h2 className="text-center md:text-MainHeading text-MainHeading-sm font-extrabold">
             Discover Our Offerings
           </h2>
           <p className="md:text-Paragraph text-Paragraph-sm w-4/5   pt-6">
@@ -247,7 +247,7 @@ const AiAndMLService = ({ Meta_Data }) => {
               <img src={GenerativeAIImage} alt="" className="w-full h-full " />
             </div>
             {/*right */}
-            <div className="flex-1 px-10">
+            <div className="flex-1 px-2">
               <h2 className=" md:text-MainHeading text-MainHeading-sm font-extrabold">
                 Generative AI
               </h2>
@@ -275,7 +275,7 @@ const AiAndMLService = ({ Meta_Data }) => {
         >
           <div className=" w-full flex flex-col md:flex-row flex-col-2 gap-6 items-center">
             {/*left */}
-            <div className="flex-1 px-10">
+            <div className="flex-1 px-2">
               <h2 className="md:text-MainHeading text-MainHeading-sm font-extrabold">
                 Data Analytics and AI/Ml
               </h2>
