@@ -37,18 +37,18 @@ export const SoftDevServices =
       content: {
         heading: "Software Development",
         message:
-          "At Greateway Software Pvt. Ltd., we provide comprehensive software development services to help businesses build robust, scalable, and customized software solutions that meet their unique needs and drive digital transformation.",
+          "At Greateway Software Pvt. Ltd., we provide comprehensive software development services to help businesses build robust, scalable and customized software solutions that meet their unique needs and drive digital transformation.",
       },
       imageUrl:
         SoftDevImage,
-      bgClass:'bg-[linear-gradient(to_top,_#fbc2eb_0%,_#a6c1ee_100%)]',
+      bgClass: '',
     },
     cards: [
       {
         imageUrl:EnterpriseSoftDevImg,
         heading: "Enterprise Application Development",
         description:
-          "We create powerful and scalable enterprise applications that streamline your business processes and improve operational efficiency. Our enterprise application development services cover a wide range of functionalities, including CRM, ERP, HR management, and more.",
+          "We create powerful and scalable enterprise applications that streamline your business processes and improve operational efficiency. Our enterprise application development services cover a wide range of functionalities including CRM, ERP, HR management and more.",
       },
       {
         imageUrl:CustomSoftDevImg,
@@ -60,21 +60,21 @@ export const SoftDevServices =
         imageUrl:RequirementAnlysisSoftDevImg,
         heading:'Requirement Analysis',
         description:
-          "Requirement analysis is a crucial phase where stakeholders' needs are gathered, documented, and prioritized to define project scope accurately. Through meticulous documentation, prioritization, and validation, analysts ensure that the resulting solution aligns with business objectives.",
+          "Requirement analysis is a crucial phase where stakeholders' needs are gathered, documented and prioritized to define project scope accurately. Through meticulous documentation, prioritization, and validation, analysts ensure that the resulting solution aligns with business objectives.",
       },
       {
         imageUrl:AgileSoftDevImg,
         heading:'Agile Development',
         description:
-          "Agile development methodologies prioritize iterative, collaborative, and adaptive processes, fostering customer satisfaction and responsiveness to evolving project requirements effectively.",
+          "Agile development methodologies prioritize iterative, collaborative and adaptive processes, fostering customer satisfaction and responsiveness to evolving project requirements effectively.",
       },
     ],
     third:{
         imageUrl:WebDesignSoftDevImg,
         content:{
-            heading:'Web Designing Services',
-            description:'Our professional web developers analyze your target audience and craft an engaging, frictionless, and superior user journey using aesthetic designs and trending UI components. We also test your prototypes under different situations to ensure a glitch-free experience over multiple platforms.',
-            list:['UI/UX Optimization','Responsive Design','Custom Development','E-Commerce Solutions']
+            heading:'Software Development Services',
+            description:'Our professional Software developers analyze your target audience and craft an engaging, frictionless and superior user journey using aesthetic designs and trending UI components. We also test your prototypes under different situations to ensure a glitch-free experience over multiple platforms.',
+            list:['API Integration','Responsive Design','Custom Software Development','Database Management']
         }
     },
     fourth:{
@@ -88,9 +88,9 @@ export const SoftDevServices =
     fifth:{
         imageUrl:WebDevSoftDevImg,
         content:{
-            heading:'Web Application Development',
-            description:'We design and develop secure and responsive web applications that cater to your specific business needs. Our web applications are built using cutting-edge technologies and frameworks, ensuring scalability, performance, and a smooth user experience.',
-            list:['Full Stack Development','Agile Methodology','API Development','Cloud Deployment']
+            heading:'Custom Software Development',
+            description:'We design and develop secure and responsive software solutions that cater to your specific business needs. Our software applications are built using cutting-edge technologies and frameworks, ensuring scalability, performance and a smooth user experience.',
+            
     }
     },
   }
@@ -103,7 +103,7 @@ export const CloudServices =
       content: {
         heading: "Cloud Computing",
         message:
-          "Cloud computing revolutionizes IT infrastructure, offering scalable, on-demand access to computing resources over the internet, enhancing flexibility, scalability, and cost-effectiveness for organizations worldwide.",
+          "Cloud computing revolutionizes IT infrastructure, offering scalable, on-demand access to computing resources over the internet, enhancing flexibility, scalability and cost-effectiveness for organizations worldwide.",
       },
       imageUrl:
         CloudStorageImage,
@@ -115,32 +115,32 @@ export const CloudServices =
         imageUrl:CloudMigration,
         heading: "Cloud Migration",
         description:
-          "We offer seamless migration services, enabling you to smoothly transition your existing systems and applications to the cloud. Our experts handle data migration, application reconfiguration, and performance optimization to ensure a successful and hassle-free migration process.",
+          "We offer seamless migration services, enabling you to smoothly transition your existing systems and applications to the cloud. Our experts handle data migration, application reconfiguration and performance optimization to ensure a successful and hassle-free migration process.",
       },
       {
         imageUrl:CloudSecurityImage,
         heading: "Cloud Security",
         description:
-          "We prioritize the security and privacy of your data in the cloud. Our team implements advanced security measures, including data encryption, access controls, and threat monitoring, to safeguard your sensitive information and ensure compliance with industry regulations.",
+          "We prioritize the security and privacy of your data in the cloud. Our team implements advanced security measures including data encryption, access controls and threat monitoring, to safeguard your sensitive information and ensure compliance with industry regulations.",
       },
       {
         imageUrl:CloudCapacityPlanning,
         heading: "Capacity Planning",
         description:
-          "Capacity planning is a strategic process that involves analyzing historical data, predicting future resource demands, and optimizing infrastructure to efficiently meet workload requirements in cloud environments.",
+          "Capacity planning is a strategic process that involves analyzing historical data, predicting future resource demands and optimizing infrastructure to efficiently meet workload requirements in cloud environments.",
       },
       {
         imageUrl:CloudStorageBackoupImage,
         heading: "Backup Strategy",
         description:
-          "We are offering a robust backup strategy for cloud storage, ensuring regular data backups, redundancy, encryption, and periodic testing for data integrity.",
+          "We are offering a robust backup strategy for cloud storage, ensuring regular data backups, redundancy, encryption and periodic testing for data integrity.",
       },
     ],
     third:{
         imageUrl:CloudManagementImage,
         content:{
             heading:'Cloud Management and Monitoring',
-            description:'We provide comprehensive cloud management and monitoring services to optimize the performance and availability of your cloud infrastructure. Our team handles provisioning, resource optimization, and continuous monitoring, allowing you to focus on your core business while we ensure the smooth operation of your cloud environment.',
+            description:'We provide comprehensive cloud management and monitoring services to optimize the performance and availability of your cloud infrastructure. Our team handles provisioning, resource optimization and continuous monitoring, allowing you to focus on your core business while we ensure the smooth operation of your cloud environment.',
             list:['Resource Allocation','Security Enforcement','Cost Optimization']
         }
     },
@@ -148,7 +148,7 @@ export const CloudServices =
             imageUrl:CostOptimizationImage,
             content:{
                 heading:'Cloud Cost Optimization',
-                description:'We help you optimize your cloud costs by analyzing your infrastructure, identifying cost-saving opportunities, and implementing strategies to minimize unnecessary expenses. Our experts provide recommendations to optimize resource allocation and leverage cost-effective cloud services.',
+                description:'We help you optimize your cloud costs by analyzing your infrastructure, identifying cost-saving opportunities and implementing strategies to minimize unnecessary expenses. Our experts provide recommendations to optimize resource allocation and leverage cost-effective cloud services.',
                 list:['Cost Analysis','Resource Optimization','Budget Management']
         }
     },
@@ -156,7 +156,7 @@ export const CloudServices =
         imageUrl:CloudStructureImage,
         content:{
             heading:'Cloud Infrastructure',
-            description:"Our team specializes in designing and implementing customized cloud infrastructures tailored to your specific requirements. Whether it's public, private, or hybrid cloud environments, we ensure seamless integration, optimal performance, and robust security for your applications and data.",
+            description:"Our team specializes in designing and implementing customized cloud infrastructures tailored to your specific requirements. Whether it's public, private or hybrid cloud environments, we ensure seamless integration, optimal performance and robust security for your applications and data.",
             list:[]
     }
     }
@@ -169,7 +169,7 @@ export const DevOpsServices =
       content: {
         heading: "DevOps Services",
         message:
-          "DevOps services encompass a range of practices and tools that streamline software development and IT operations. They facilitate collaboration, automation, continuous integration/continuous delivery (CI/CD), infrastructure as code (IaC), and monitoring for enhanced efficiency and agility.",
+          "DevOps services encompass a range of practices and tools that streamline software development and IT operations. They facilitate collaboration, automation, continuous integration/continuous delivery (CI/CD), infrastructure as code (IaC) and monitoring for enhanced efficiency and agility.",
       },
       imageUrl:
         DevOpsImage,
@@ -180,32 +180,32 @@ export const DevOpsServices =
         imageUrl:CiCdImage,
         heading: "Continuous Integration/Continuous Delivery (CI/CD)",
         description:
-          "Continuous Integration and Continuous Delivery (CI/CD) is a software development practice that integrates code changes regularly, automates testing, and deploys applications swiftly, ensuring rapid, reliable, and continuous delivery of high-quality software.",
+          "Continuous Integration and Continuous Delivery (CI/CD) is a software development practice that integrates code changes regularly, automates testing and deploys applications swiftly, ensuring rapid, reliable and continuous delivery of high-quality software.",
       },
       {
         imageUrl:DevopsInfraImage,
         heading: "Infrastructure as Code (IaC)",
         description:
-          "We offer Infrastructure as Code (IaC) services, enabling the automated provisioning and management of cloud infrastructure through code, enhancing scalability, consistency, and efficiency in IT operations and deployments.",
+          "We offer Infrastructure as Code (IaC) services, enabling the automated provisioning and management of cloud infrastructure through code, enhancing scalability, consistency and efficiency in IT operations and deployments.",
       },
       {
         imageUrl:DockerImage,
         heading: "Containerization (e.g., Docker)",
         description:
-          "We specialize in containerization services, leveraging Docker technology to package, deploy, and manage applications in lightweight, portable containers, ensuring seamless scalability, resource efficiency, and deployment consistency across diverse environments.",
+          "We specialize in containerization services, leveraging Docker technology to package, deploy and manage applications in lightweight, portable containers, ensuring seamless scalability, resource efficiency and deployment consistency across diverse environments.",
       },
       {
         imageUrl:KubernatesImage,
         heading: "Orchestration (e.g., Kubernetes)",
         description:
-          "Our expertise lies in orchestration services, harnessing Kubernetes to automate the deployment, scaling, and management of containerized applications, optimizing resource utilization, enhancing scalability, and ensuring high availability in dynamic environments.",
+          "Our expertise lies in orchestration services, harnessing Kubernetes to automate the deployment, scaling and management of containerized applications, optimizing resource utilization, enhancing scalability and ensuring high availability in dynamic environments.",
       },
     ],
     third:{
         imageUrl:CommunicationImage,
         content:{
             heading:'Collaboration and Communication',
-            description:'We promote collaboration and communication between development and operations teams by implementing collaborative tools and practices. This fosters transparency, improves efficiency, and facilitates faster decision-making throughout the software development lifecycle.',
+            description:'We promote collaboration and communication between development and operations teams by implementing collaborative tools and practices. This fosters transparency, improves efficiency and facilitates faster decision-making throughout the software development lifecycle.',
             list:[]
         }
     },
@@ -221,7 +221,7 @@ export const DevOpsServices =
         imageUrl:ContiniousIntegrationImage,
         content:{
             heading:'Continuous Integration and Deployment',
-            description:"We help you implement efficient CI/CD pipelines, automating the build, testing, and deployment processes. By integrating code changes frequently, you can deliver software updates faster and with higher quality.",
+            description:"We help you implement efficient CI/CD pipelines, automating the build, testing and deployment processes. By integrating code changes frequently, you can deliver software updates faster and with higher quality.",
             list:['Automation Pipeline','Rapid Deployment','Code Integration','Continuous Testing','Seamless Delivery']
     }
     }
@@ -247,7 +247,7 @@ export const WebDevServices =
         imageUrl:SeoOptimizationImg,
         heading: "SEO Optimization",
         description:
-          "We specialize in SEO optimization services, enhancing website visibility and ranking through strategic keyword research, content optimization, link building, and continuous monitoring to drive organic traffic and improve online presence.",
+          "We specialize in SEO optimization services, enhancing website visibility and ranking through strategic keyword research, content optimization, link building and continuous monitoring to drive organic traffic and improve online presence.",
       },
       {
         imageUrl:CustomWebImage,
@@ -265,14 +265,14 @@ export const WebDevServices =
         imageUrl:CMSImg,
         heading: "CMS Integration",
         description:
-          "Our CMS integration services seamlessly incorporate robust content management systems into websites, empowering clients to efficiently create, manage, and publish digital content with ease and flexibility.",
+          "Our CMS integration services seamlessly incorporate robust content management systems into websites, empowering clients to efficiently create, manage and publish digital content with ease and flexibility.",
       },
     ],
     third:{
         imageUrl:WebMaintainImg,
         content:{
             heading:'Website Maintenance and Support',
-            description:'We provide ongoing website maintenance and support services to ensure your website operates smoothly and remains up-to-date. Our team handles regular updates, security patches, performance monitoring, and technical support to keep your website running flawlessly.',
+            description:'We provide ongoing website maintenance and support services to ensure your website operates smoothly and remains up-to-date. Our team handles regular updates, security patches, performance monitoring and technical support to keep your website running flawlessly.',
             list:['UI/UX Optimization','Responsive Design','Custom Development']
         }
     },
@@ -288,7 +288,7 @@ export const WebDevServices =
         imageUrl:BackEndImage,
         content:{
             heading:'Back-end Development',
-            description:'Backend development involves designing and implementing server-side architectures, databases, and APIs to handle business logic, data storage, security, and integration, supporting robust functionality and scalability for web applications.',
+            description:'Backend development involves designing and implementing server-side architectures, databases and APIs to handle business logic, data storage, security and integration, supporting robust functionality and scalability for web applications.',
             list:['Database Management','API Development','Business Logic Handling','Security Implementation']
     }
     }

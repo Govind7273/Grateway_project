@@ -3,11 +3,13 @@ import { CardSection } from "./CardSection";
 import { FirstSocialProofSection } from "./FirstSocialProofSection";
 import { FoundersNote } from "./FoundersNote";
 import { SecondSection } from "./SecondSection";
-import { SecondSocialProof } from "./SecondSocialProof";
 import { ServiceInfoSection } from "./ServiceInfoSection";
-
+import { Ours } from "./Ours";
+import { Info } from "./Info";
+import { CTA } from "./CTA";
 
 const AboutUs = ({Meta_Data}) => {
+  
   const { Title, Description, Link } = Meta_Data;
 
   return (
@@ -18,12 +20,12 @@ const AboutUs = ({Meta_Data}) => {
         <link rel="canonical" href={Link} />
       </Helmet>
     
-    <div className="flex w-[100vw] relative  bg-black pt-12  justify-center items-center flex-col">
+    <div className="flex w-[100vw] overflow-hidden relative  bg-white pt-12  justify-center items-center flex-col">
       {/* first section which will be to show the it service info */}
-      <h2 className="mt-10 text-2xl uppercase font-bold text-violet-400 p-4 text-center font-headingFont">
-        About Our Company
-      </h2>
       {ServiceInfoSection()}
+
+      { Info() }
+      {FirstSocialProofSection()}
 
       {/* Second Section is for 'our social responsibility' section */}
       {SecondSection()}
@@ -31,14 +33,16 @@ const AboutUs = ({Meta_Data}) => {
       {/* Third section is for 'Features of our organization' */}
       {CardSection()}
 
-      {/* First social proof section */}
-      {FirstSocialProofSection()}
-
       {/* Founders Note Section */}
       {FoundersNote()}
+      
+      {/* {Our Values Section}
+      {OurValues()} */}
+      {Ours()}
 
-      {/* Second Social Proof */}
-      {SecondSocialProof()}
+
+      { CTA ()}
+
     </div>
     </>
   );

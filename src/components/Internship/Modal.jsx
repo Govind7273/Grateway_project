@@ -20,9 +20,9 @@ const Modal = ({ setModalOpen }) => {
 
   // input Component
   const InputField = (name, type, error) => {
-    const placeholder = `Enter Your ${name}`;
+    const placeholder = `Your ${name}`;
     return (
-      <div className="w-full">
+      <div className="w-full h-8 text-[15px] text-gray-600">
         <input
           required
           type={type}
@@ -31,7 +31,7 @@ const Modal = ({ setModalOpen }) => {
           onChange={(e) =>
             setCandidate({ ...Candidate, [e.target.name]: e.target.value })
           }
-          className="border outline-none w-full  border-slate-300 rounded-[6px] mb-2 px-2 py-2"
+          className="border outline-none w-full bg-transparent border-slate-400 rounded-[6px] mb-2 px-2 py-2"
           placeholder={placeholder}
         />
         {error ? <div className="text-red-500 text-xs">{error}</div> : ""}
@@ -89,7 +89,7 @@ const Modal = ({ setModalOpen }) => {
   return (
     <>
       <Toaster />
-      <main className="fixed inset-0 p-4 flex justify-center items-center backdrop-blur-sm drop-shadow-2xl">
+      <main className="fixed inset-0 p-4 z-50 flex justify-center items-center backdrop-blur-sm drop-shadow-2xl">
         <div className="  w-full md:w-[30rem] rounded-2xl p-5 bg-white">
           <form
             className="flex flex-col gap-4 w-full h-full "
@@ -97,7 +97,7 @@ const Modal = ({ setModalOpen }) => {
           >
             <div className="top flex justify-between items-center">
               <h2 className="text-center text-xl text-blue-600 font-headingFont font-bold">
-                Apply for Internship
+                Application
               </h2>
               <span
                 onClick={() => setModalOpen(false)}
@@ -107,10 +107,12 @@ const Modal = ({ setModalOpen }) => {
               </span>
             </div>
 
-            <div className="flex gap-3 flex-wrap md:flex-nowrap w-full justify-center items-center">
+            <div className="flex gap-3 flex-col md:flex-nowrap w-full justify-center items-center">
               {/* First Form Field*/}
               {InputField("Name", "text", error.name)}
+            </div>
 
+            <div>
               {/* Second Form Field */}
               {InputField("Email", "email", error.email)}
             </div>
@@ -120,17 +122,18 @@ const Modal = ({ setModalOpen }) => {
               {InputField("number", "text", error.number)}
 
               {/* Role Field */}
-              <div className="flex flex-col flex-wrap md:flex-nowrap w-full">
-                <label htmlFor="file">Upload Resume</label>
+              <div className="flex flex-col pt-2 flex-wrap md:flex-nowrap w-full">
+                <label className="text-[15px] pb-1" htmlFor="file">Upload Resume</label>
                 <input
                   id="file"
                   type="file"
                   name="resume"
                   onChange={(e) => setresume(e.target.files[0])}
+                  className="h-auto text-[13px]"
                 />
               </div>
             </div>
-            <div className=" flex justify-center w-full md:px-12 md:pl-2">
+            <div className="flex justify-center w-full">
               <select
                 onChange={(e) =>
                   setCandidate({
@@ -141,10 +144,10 @@ const Modal = ({ setModalOpen }) => {
                 id="role"
                 name="role"
                 placeholder="enter subject"
-                className="bg-transparent text-black border w-full hover:cursor-pointer border-slate-300  mb-1 py-2  outline-none rounded-[6px]"
+                className="bg-transparent px-1 text-gray-500 border w-full hover:cursor-pointer border-slate-400  mb-1 py-2  outline-none rounded-[6px]"
               >
-                <option className="text-gray-200 hidden" value="">
-                  select intership Domain
+                <option className="hidden " value="">
+                  Select Intership Domain
                 </option>
                 <option
                   className="text-black"
@@ -184,9 +187,9 @@ const Modal = ({ setModalOpen }) => {
               onChange={(value) => setCaptchaValue(value)}
             />
             <div type="submit" className="flex justify-center items-center">
-              <div className="bg-white min-h-[20px] flex items-center justify-center">
-                <button className="px-6 py-2 font-medium bg-indigo-500 text-white w-fit transition-all duration-70 shadow-[3px_3px_0px_black] active:shadow-none active:translate-x-[3px] active:translate-y-[3px]">
-                  {isPending ? "Sending..." : "Apply"}
+              <div className=" min-h-[20px] flex items-center justify-center">
+                <button className="rounded-xl bg-gradient-to-br from-[#44eb98] to-[#09bd99] px-6 py-2 text-base font-medium text-white transition duration-200 hover:shadow-lg hover:scale-110 hover:shadow-[#4481EB]/50">
+                  {isPending ? "Sending..." : "Submit"}
                 </button>
               </div>
             </div>
