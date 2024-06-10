@@ -73,7 +73,7 @@ const Card = ({ title, description }) => (
               <span className="w-4 h-4 rounded-full inline-block bg-cyan-500 cursor-pointer"></span>
             </div>
             <div className="px-1">
-              <span className="w-4 h-4 rounded-full inline-block bg-violet-600 cursor-pointer"></span>
+              <span className="w-4 h-4 rounded-full inline-block bg-[#BAD08C] cursor-pointer"></span>
             </div>
             <div className="px-1">
               <span className="w-4 h-4 rounded-full inline-block bg-black cursor-pointer"></span>
@@ -82,10 +82,10 @@ const Card = ({ title, description }) => (
           {/* cards title description */}
           <div className=" dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 flex-grow flex flex-col justify-center">
             <div className="p-2 flex flex-col justify-center items-center flex-grow">
-              <h3 className="font-bold text-2xl text-black text-center">
+              <h3 className="font-bold text-2xl text-[#505050] text-center">
                 {title}
               </h3>
-              <p className="mt-4 text-gray-600 text-center text-md">
+              <p className="mt-4 text-[#1a2229] text-center text-md">
                 {description}
               </p>
             </div>
@@ -106,13 +106,13 @@ const Servicesl = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true, amount: 0.8 }}
-          className="font-headline text-2xl font-semibold sm:text-4xl text-center py-5 text-[#6B37BD]"
+          className="font-headline text-2xl font-semibold sm:text-4xl text-center py-5 text-[#3c4c54]"
         >
           Revamp Your Website in Three Steps
         </motion.h2>
         <div className="grid sm:grid-cols-3 bg-stone-50 gap-16 sm:gap-10 py-3 shadow-lg shadow-gray-500 md:p-8">
           {/* Reimagine */}
-          <div className="text-center hover:cursor-pointer hover:scale-105 transition-transform md:border-r-2 xs:border-b-2 border-violet-400 py-2 px-2">
+          <div className="text-center hover:cursor-pointer hover:scale-105 transition-transform md:border-r-2 xs:border-b-2 border-[#4c9ddc] py-2 px-2">
             <div className="relative  w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto left-2">
               <div className="z-10 relative w-full h-full shadow-lg shadow-slate-500 bg-white rounded-full border border-gray-300 flex items-center justify-center">
                 <svg
@@ -121,7 +121,7 @@ const Servicesl = () => {
                   viewBox="0 0 24 24"
                   strokeWidth="0.9 "
                   stroke="currentColor"
-                  className="text-cyan-500 w-1/2 h-1/2"
+                  className="text-cyan-700 w-1/2 h-1/2"
                   alt="Import icon"
                 >
                   <path
@@ -131,17 +131,18 @@ const Servicesl = () => {
                   />
                 </svg>
               </div>
-              <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-blue-700 rounded-full"></div>
+              <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-[#BAD08C] rounded-full"></div>
             </div>
-            <h3 className="font-bold text-2xl text-black sm:text-2xl mt-6 sm:mt-10">
+            <h3 className="font-bold text-2xl text-[#505050] sm:text-2xl mt-6 sm:mt-10">
               1. Reimagine
             </h3>
-            <p className="leading-relaxed mt-4 text-gray-600 text-center px-2">
-              Begin by envisioning the new look and visually captivating website that seamlessly blends aesthetics and functionality.
+            <p className="leading-relaxed mt-4 text-[#1a2229] text-center px-2">
+              Begin by envisioning the new look and visually captivating website
+              that seamlessly blends aesthetics and functionality.
             </p>
           </div>
           {/* Redesign */}
-          <div className="text-center hover:cursor-pointer hover:scale-105 transition-transform md:border-l-2 xs:border-b-2 py-2 md:border-r-2 border-violet-400">
+          <div className="text-center hover:cursor-pointer hover:scale-105 transition-transform md:border-l-2 xs:border-b-2 py-2 md:border-r-2 border-[#4c9ddc]">
             <div className="relative w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto left-2">
               <div className="z-10 relative w-full h-full shadow-lg shadow-slate-500 bg-white rounded-full border border-gray-300 flex items-center justify-center">
                 <svg
@@ -150,7 +151,7 @@ const Servicesl = () => {
                   viewBox="0 0 24 24"
                   strokeWidth="0.9"
                   stroke="currentColor"
-                  className="text-cyan-500 w-1/2 h-1/2"
+                  className="text-cyan-700 w-1/2 h-1/2"
                   alt="Translate icon"
                 >
                   <path
@@ -160,18 +161,18 @@ const Servicesl = () => {
                   />
                 </svg>
               </div>{" "}
-              <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-blue-700 rounded-full"></div>
+              <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-[#BAD08C] rounded-full"></div>
             </div>
-            <h3 className="font-bold text-2xl text-black sm:text-2xl mt-6 sm:mt-10">
+            <h3 className="font-bold text-2xl text-[#505050] sm:text-2xl mt-6 sm:mt-10">
               2. Redesign
             </h3>
-            <p className="leading-relaxed mt-4 text-gray-600 text-center px-2">
+            <p className="leading-relaxed mt-4 text-[#1a2229] text-center px-2">
               Collaborate with your design and development team to give your
               website a fresh and modern design.
             </p>
           </div>
           {/* Relaunch */}
-          <div className="text-center hover:cursor-pointer hover:scale-105 transition-transform md:border-l-2 xs:border-b-2 py-2 border-violet-400">
+          <div className="text-center hover:cursor-pointer hover:scale-105 transition-transform md:border-l-2 xs:border-b-2 py-2 border-[#4c9ddc]">
             <div className="relative w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto left-2">
               <div className="z-10 relative w-full h-full shadow-lg shadow-slate-500 bg-white rounded-full border border-gray-300 flex items-center justify-center">
                 <svg
@@ -180,7 +181,7 @@ const Servicesl = () => {
                   viewBox="0 0 24 24"
                   strokeWidth="0.9"
                   stroke="currentColor"
-                  className="text-cyan-500 w-1/2 h-1/2"
+                  className="text-cyan-700 w-1/2 h-1/2"
                   alt="Export icon"
                 >
                   <path
@@ -190,12 +191,12 @@ const Servicesl = () => {
                   />
                 </svg>
               </div>
-              <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-blue-700 rounded-full"></div>
+              <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-[#BAD08C] rounded-full"></div>
             </div>
-            <h3 className="font-bold text-2xl text-black sm:text-2xl mt-6 sm:mt-10">
+            <h3 className="font-bold text-2xl text-[#505050] sm:text-2xl mt-6 sm:mt-10">
               3. Relaunch
             </h3>
-            <p className="leading-relaxed mt-4 text-gray-600 text-center px-2">
+            <p className="leading-relaxed mt-4 text-[#1a2229] text-center px-2">
               After the redesign, relaunch your website and welcome your
               audience to the new experience.
             </p>
@@ -209,7 +210,7 @@ const Servicesl = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true, amount: 0.8 }}
-          className="p-2 py-4 text-3xl font-semibold md:text-4xl text-[#6B37BD] "
+          className="p-2 py-4 text-3xl font-semibold md:text-4xl text-[#3c4c54] "
         >
           Our Services
         </motion.h1>

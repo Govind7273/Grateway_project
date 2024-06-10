@@ -12,13 +12,14 @@ import { fadein } from "../../../variants";
 
 function Clientl() {
   return (
+    // Heading & framer section
     <div className="py-2">
       <motion.h1
         variants={fadein("up", 0.2)}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: true, amount: 0.8 }}
-        className="md:text-4xl py-4 text-2xl font-bold tracking-wide text-[#6B37BD] text-center"
+        className="md:text-4xl py-4 text-2xl font-bold tracking-wide text-[#3c4c54] text-center"
       >
         Our Beneficiaries
       </motion.h1>
