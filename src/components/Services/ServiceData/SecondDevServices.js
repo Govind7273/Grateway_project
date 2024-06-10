@@ -28,14 +28,14 @@ export const TestingAndQAServices={
     first:{
         content:{
             title:'Testing & Quality Analysis',
-            description:'Delivering excellence through meticulous software testing and quality analysis. Our expert team ensures robustness, reliability, and user satisfaction, guaranteeing seamless performance and error-free functionality for your software solutions.'
+            description:'Delivering excellence through meticulous software testing and quality analysis. Our expert team ensures robustness, reliability and user satisfaction, guaranteeing seamless performance and error-free functionality for your software solutions.'
         },
         imageUrl:TestingAndQaImage
     },
 
     second:{
         titleName:'Testing And QA',
-        description:"Select Greatway Software for testing and QA and unlock the path to excellence. With our seasoned experts, innovative methodologies, and        unwavering dedication, we guarantee your software's reliability,        security, and user satisfaction. Trust us to deliver unparalleled        quality and ensure your products shine in today's competitive market        landscape.",
+        description:"Select Greatway Software for testing and QA and unlock the path to excellence. With our seasoned experts, innovative methodologies and        unwavering dedication, we guarantee your software's reliability,        security and user satisfaction. Trust us to deliver unparalleled        quality and ensure your products shine in today's competitive market        landscape.",
         circleItems:[{title:'Full-cycle QA', image:fullqa},{title:'Independent Testing', image:indtesting},{title:'Functional Testing', image:testing}]
     },
 
@@ -58,7 +58,7 @@ export const TestingAndQAServices={
             },
             {
                 title:'Test Planning',
-                message:'We develop a comprehensive test plan outlining the scope, objectives, resources, and schedule for the testing activities.'
+                message:'We develop a comprehensive test plan outlining the scope, objectives, resources and schedule for the testing activities.'
             },
             {
                 title:'Test Design',
@@ -70,7 +70,7 @@ export const TestingAndQAServices={
             },
             {
                 title:'Defect Reporting',
-                message:'Identified defects are logged, categorized, and prioritized, providing you with clear and actionable insights.'
+                message:'Identified defects are logged, categorized and prioritized, providing you with clear and actionable insights.'
             },
             {
                 title:'Retesting and Regression Testing',
@@ -78,7 +78,7 @@ export const TestingAndQAServices={
             },
             {
                 title:' Final Reporting',
-                message:'We provide a detailed report summarizing the testing activities, findings, and recommendations for improvement.'
+                message:'We provide a detailed report summarizing the testing activities, findings and recommendations for improvement.'
             },
             {
                 title:'Continuous Improvement',
@@ -87,7 +87,7 @@ export const TestingAndQAServices={
         
         ],
         main:'Ready to Elevate Your Software Quality?',
-        desc:'Don’t leave the quality of your software to chance. Choose our premier testing and quality analysis services to ensure your product is reliable, secure, and user-friendly. Let us help you deliver excellence with confidence.',
+        desc:'Don’t leave the quality of your software to chance. Choose our premier testing and quality analysis services to ensure your product is reliable, secure and user-friendly. Let us help you deliver excellence with confidence.',
         cta: cta1
     }
 }
@@ -103,7 +103,7 @@ export const CRMServices={
 
     second:{
         titleName:'CRM',
-        description:"At our CRM firm, we prioritize client-centricity, leveraging cutting-edge technology and tailored strategies to optimize customer relationships. Our approach emphasizes seamless integration, data-driven insights, and continuous improvement, ensuring sustained growth and client satisfaction.",
+        description:"At our CRM firm, we prioritize client-centricity, leveraging cutting-edge technology and tailored strategies to optimize customer relationships. Our approach emphasizes seamless integration, data-driven insights and continuous improvement, ensuring sustained growth and client satisfaction.",
         circleItems:[{title:'Trusted Industry Leader', image:trusted},{title:'Superior Service Quality', image:quality},{title:'Tailored CRM Solutions', image:crm}]
     },
 
@@ -122,7 +122,7 @@ export const CRMServices={
         cards:[
             {
                 title:'Needs Assessment',
-                message:'We begin by understanding your business needs, goals, and challenges to recommend the best CRM solution.'
+                message:'We begin by understanding your business needs, goals and challenges to recommend the best CRM solution.'
             },
             {
                 title:'CRM Selection',
@@ -155,7 +155,7 @@ export const CRMServices={
         ],
 
         main:'Enhance Your Customer Relationships Today', 
-        desc:'Unlock the potential of your customer interactions with our top-tier CRM services. Benefit from customized solutions designed to improve engagement, satisfaction, and overall business performance.',
+        desc:'Unlock the potential of your customer interactions with our top-tier CRM services. Benefit from customized solutions designed to improve engagement, satisfaction and overall business performance.',
         cta: cta2
     }   
 }

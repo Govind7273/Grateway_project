@@ -37,7 +37,7 @@ const BigDataService = ({ Meta_Data }) => {
       img: DataSecurityIcon,
       title: "Data Security",
       message:
-        "Our lowest-cost VPS hosting plan offers numerous premium features, including a dedicated IP.",
+        "Our lowest-cost VPS hosting plan offers numerous premium features including a dedicated IP.",
     },
     {
       img: AiIcon,
@@ -140,7 +140,7 @@ const BigDataService = ({ Meta_Data }) => {
       </section>
 
       {/* Third Section */}
-      <section className="w-[100vw] h-full overflow-x-hidden  flex flex-col bg-white justify-center items-center">
+      <section className="w-[100vw] h-auto overflow-x-hidden  flex flex-col bg-white justify-center items-center">
         {/* Third-1 */}
         <section className="flex justify-evenly w-screen md:h-[60vh] flex-col md:flex-row ">
           <div className="space-y-4 py-4 px-1 lg:w-[50%] md:flex-col ">
@@ -163,7 +163,7 @@ const BigDataService = ({ Meta_Data }) => {
               Data Collection and Integration are crucial processes in modern
               data management. Data collection involves systematically gathering
               information from various internal and external sources, using
-              methods such as automated tools, APIs, and sensors. Data
+              methods such as automated tools, APIs and sensors. Data
               integration combines this collected data from disparate sources
               into a unified view, often employing ETL or ELT processes. This
               integration enables comprehensive analysis and informed
@@ -172,9 +172,9 @@ const BigDataService = ({ Meta_Data }) => {
               that is vital for business intelligence and strategic planning.
             </motion.p>
           </div>
-          <div className="h-auto py-2 lg:w-[40vw]">
+          <div className="h-auto py-2 lg:w-[40vw] px-5">
             <img
-              className="lg:h-[55vh]  object-cover  rounded-xl shadow-xl"
+              className="lg:h-[50vh]  object-cover  rounded-xl shadow-xl"
               src={DataCollectionImg}
               width={2500}
               height={1000}
@@ -184,7 +184,7 @@ const BigDataService = ({ Meta_Data }) => {
         </section>
 
         {/* Third-2 */}
-        <section className="w-[100vw] flex md:flex-row flex-col  md:h-[61vh] p-2 overflow-y-hidden overflow-x-hidden gap-5 px-4">
+        <section className="w-[100vw] flex md:flex-row flex-col md:h-[70vh] h-[80vh] p-2 overflow-y-hidden overflow-x-hidden gap-20 px-4">
           {/* left section */}
           <div>
             <img
@@ -196,7 +196,7 @@ const BigDataService = ({ Meta_Data }) => {
           </div>
 
           {/* right section */}
-          <div className=" px-4 flex gap-4 flex-col">
+          <div className=" px-4 flex gap-4 flex-col pt-4">
             <motion.h1
               variants={fadein("right", 0.1)}
               initial="hidden"
@@ -214,10 +214,10 @@ const BigDataService = ({ Meta_Data }) => {
               className="text-Paragraph p-2"
             >
               We design and implement robust data storage and management
-              solutions that can handle the velocity, volume, and variety of Big
-              Data. Our experts utilize scalable and distributed systems, such
-              as Hadoop and cloud-based platforms, to store, organize, and
-              process large datasets efficiently.
+              solutions that can handle the velocity, volume and variety of Big
+              Data. Our experts utilize scalable and distributed systems such as
+              Hadoop and cloud-based platforms, to store, organize and process
+              large datasets efficiently.
             </motion.p>
             <h4 className="text-xl text-black font-bold">Storages:</h4>
             <ul className="list-disc ms-6 font-bold leading-loose w-2/3 ">

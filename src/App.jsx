@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
+// import LandingPageLayout from "./LandingPageLayout";
 import Home from "./components/Home/Home";
 import {
   CRMServices,
@@ -43,22 +44,25 @@ import {
 } from "./components/Services/ServiceData/SoftDevServices";
 import GenerativeAIDescriptive from "./components/Services/SubComponents/GenerativeAIDescriptive";
 import DataAnalyticsDescriptive from "./components/Services/SubComponents/DataAnalyticsDescriptive";
+const LandingPage = lazy(() => import("./components/Landingpage/LandingPage"));
 const Intership = lazy(() => import("./components/Internship/Internship"));
 const InternshipDetails = lazy(() =>
   import("./components/Internship/InternshipDetails")
 );
+
 function App() {
+  const location = useLocation();
+
+  const isLandingPage = location.pathname === "/landingpage";
+
   return (
     <>
-      <Navbar />
+      {!isLandingPage && <Navbar />}
       <Suspense fallback={<Loading />}>
         <ScrollToTop />
         <Routes>
-          <Route
-            exact
-            path="/"
-            element={<Home Meta_Data={Meta_Data.home} />}
-          ></Route>
+          <Route path="/" element={<Home Meta_Data={Meta_Data.home} />}></Route>
+
           <Route
             exact
             path="/AboutUs"
@@ -191,9 +195,18 @@ function App() {
             path="/internshipDetails/:id"
             element={<InternshipDetails Meta_Data={Meta_Data.Internship} />}
           ></Route>
+          {/* Landing Page Layout Route */}
+          {/* <Route path="/landingpage" element={<landingpage />}>
+            <Route index element={<Landingpage />} />
+          </Route> */}
+          <Route
+            exact
+            path="/landingpage"
+            element={<LandingPage Meta_Data={Meta_Data.landingpage} />}
+          />
         </Routes>
       </Suspense>
-      <Footer />
+      {!isLandingPage && <Footer />}
     </>
   );
 }

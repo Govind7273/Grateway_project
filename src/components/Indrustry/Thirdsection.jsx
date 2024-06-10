@@ -30,7 +30,7 @@ export const Thirdsection = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.8 }}
-                className="max-w-[700px] text-SubHeading"
+                className="max-w-[700px] md:text-xl text-SubHeading"
               >
                 Our industry-focused solutions are designed to help you overcome
                 your unique challenges and drive innovation in your field.
@@ -56,7 +56,7 @@ export const Thirdsection = () => {
                 <p className="mt-4 text-Paragraph">
                   Optimize your processes and increase efficiency with our
                   industry-specific tools and integrations. Automate repetitive
-                  tasks, improve collaboration, and focus on what matters most.
+                  tasks, improve collaboration and focus on what matters most.
                 </p>
                 <img
                   alt="Streamlined Workflows"
@@ -111,8 +111,7 @@ export const Thirdsection = () => {
                   Regulatory Compliance
                 </motion.h2>
                 <p className="mt-4 text-Paragraph">
-                  Ensure your business stays compliant with industry regulations
-                  and standards. Our solutions help you navigate the complex
+                  Keep your business compliant with industry regulations and standards. Our solutions help you navigate the complex
                   compliance landscape, reducing the risk of costly penalties
                   and maintaining the trust of your customers and stakeholders.
                 </p>
@@ -140,8 +139,7 @@ export const Thirdsection = () => {
                   Scalable Infrastructure
                 </motion.h2>
                 <p className="mt-4 text-Paragraph">
-                  Adapt to changing business needs with a flexible and scalable
-                  platform. Our solutions are designed to grow with your
+                  Stay agile and responsive to evolving business needs with a flexible and scalable platform. Our solutions are designed to grow with your
                   organization, ensuring you have the resources and
                   infrastructure to support your long-term success.
                 </p>

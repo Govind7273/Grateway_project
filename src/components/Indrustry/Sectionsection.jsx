@@ -140,8 +140,8 @@ export const Secondsection = () => {
   return (
     <>
       {/*Our Solutions*/}
-      <section className="w-full md:h-[40vh] h-[30vh] py-12 md:py-24 lg:py-16 overflow-x-hidden overflow-y-hidden">
-        <div className="container  px-4 md:px-6">
+      <section className="w-full md:h-[30vh] auto flex justify-center py-10  items-center overflow-x-hidden overflow-y-hidden">
+        <div className="container px-4 md:px-6">
           <div className=" text-center">
             <motion.h1
               variants={fadein("up", 0.1)}
@@ -158,7 +158,7 @@ export const Secondsection = () => {
       </section>
       {/*Whole card section*/}
       <section className="w-full md:py-24 lg:py-10 bg-gray-200 dark:bg-gray-800 overflow-x-hidden px-3">
-        <div className="pb-10 px-2">
+        <div className="py-10 px-2">
           <motion.h1
             variants={fadein("down", 0.1)}
             initial="hidden"
@@ -170,7 +170,7 @@ export const Secondsection = () => {
           </motion.h1>
         </div>
         {/*Sub card section*/}
-        <div className="container grid grid-cols-1 gap-6 px-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10">
+        <div className="container pb-5 grid grid-cols-1 gap-6 px-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10">
           {/*Construction below */}
           <motion.div
             variants={fadein("right", 0.1)}
@@ -195,7 +195,7 @@ export const Secondsection = () => {
               </h3>
               <p className="mt-2 text-Paragraph-sm line-clamp-3 dark:text-gray-400">
                 Your trusted partner for construction IT, delivering reliability
-                and innovation,Maximizing construction project success through
+                and innovation, Maximizing construction project success through
                 strategic IT implementations.
               </p>
             </div>
@@ -220,7 +220,7 @@ export const Secondsection = () => {
               </h3>
               <p className="mt-2 text-Paragraph-sm line-clamp-3 dark:text-gray-400">
                 From online banking to mobile payments, we enable seamless
-                customer experiences,Transforming banking compliance and risk
+                customer experiences, Transforming banking compliance and risk
                 management.
               </p>
             </div>
@@ -249,8 +249,8 @@ export const Secondsection = () => {
               </h3>
               <p className="mt-2 text-Paragraph-sm  line-clamp-3 dark:text-gray-400">
                 Streamlining field service workflows with custom-built IT
-                solutions,Enabling real-time communication and collaboration for
-                field service teams.
+                solutions, Enabling real-time communication and collaboration
+                for field service teams.
               </p>
             </div>
           </motion.div>
@@ -278,8 +278,8 @@ export const Secondsection = () => {
               </h3>
               <p className="mt-2 text-Paragraph-sm line-clamp-3 dark:text-gray-400">
                 Maximizing efficiency in manufacturing and supply chain
-                management with IT innovation,Enabling personalized medicine and
-                patient care with tailored IT services.
+                management with IT innovation, Enabling personalized medicine
+                and patient care with tailored IT services.
               </p>
             </div>
           </motion.div>
@@ -303,7 +303,7 @@ export const Secondsection = () => {
               </h3>
               <p className="mt-2 text-Paragraph-sm  line-clamp-3 dark:text-gray-400">
                 Transforming professional services operations with cutting-edge
-                technology,Driving efficiency and profitability in professional
+                technology, Driving efficiency and profitability in professional
                 services through advanced IT services.
               </p>
             </div>
@@ -331,7 +331,7 @@ export const Secondsection = () => {
                 Finance
               </h3>
               <p className="mt-2 text-Paragraph-sm  line-clamp-3 dark:text-gray-400">
-                Ensuring security and compliance in financial IT systems,From
+                Ensuring security and compliance in financial IT systems, From
                 banking to investments, we optimize every aspect with IT
                 excellence.
               </p>

@@ -45,25 +45,25 @@ export const CardSection = () => {
     {
       title: "E-waste Management",
       content:
-        "IT companies should take responsibility for proper e-waste disposal and recycling. They can establish e-waste recycling programs, offer trade-in or take-back options for electronic devices, and ensure responsible sourcing and recycling of electronic components.",
+        "IT companies should take responsibility for proper e-waste disposal and recycling. They can establish e-waste recycling programs, offer trade-in or take-back options for electronic devices and ensure responsible sourcing and recycling of electronic components.",
       image: Ewaste,
     },
     {
       title: "Ethical Sourcing and Supply Chain",
       content:
-        "IT companies should ensure their supply chain follows ethical practices, such as fair labor standards and responsible sourcing of raw materials. Engaging suppliers who share similar ethical values can help maintain a responsible supply chain.",
+        "IT companies should ensure their supply chain follows ethical practices such as fair labor standards and responsible sourcing of raw materials. Partnering with suppliers who uphold similar ethical values can contribute to maintaining a responsible supply chain.",
       image: Source,
     },
     {
       title: "Privacy and Data Security",
       content:
-        "Data protection and privacy are crucial considerations for IT companies. They should prioritize the security of user data, comply with relevant regulations, and implement robust measures to safeguard against data breaches and unauthorized access.",
+        "Ensuring data protection and privacy is paramount for IT companies. They should prioritize the security of user data, comply with relevant regulations and implement robust measures to safeguard against data breaches and unauthorized access.",
       image: Privacy,
     },
     {
       title: "Access to Technology",
       content:
-        "IT companies can contribute to bridging the digital divide by promoting access to technology in underserved communities. This can include initiatives like providing affordable or free devices, internet connectivity, and digital literacy programs.",
+        "IT companies have the opportunity to narrow the digital divide by advocating for increased access to technology in underserved communities. This can include initiatives like providing affordable or free devices, internet connectivity and digital literacy programs.",
       image: Access,
     },
     {
@@ -75,13 +75,13 @@ export const CardSection = () => {
     {
       title: "Skills Development and Education",
       content:
-        "IT companies can support initiatives that enhance technology skills and education. This can involve offering internships, scholarships, and training programs, as well as partnering with educational institutions to promote STEM education.",
+        "IT companies can endorse initiatives aimed at improving technology skills and education. This can involve offering internships, scholarships and training programs as well as partnering with educational institutions to promote STEM education.",
       image: Develop,
     },
     {
       title: "Responsible Product Development",
       content:
-        "IT companies should consider the social and environmental impact of their products and services. They can design products with energy efficiency in mind, reduce packaging waste, and strive for sustainability throughout the product lifecycle.",
+        "IT companies ought to contemplate the social and environmental repercussions of their products and services. They can design products with energy efficiency in mind, reduce packaging waste and strive for sustainability throughout the product lifecycle.",
       image: Product,
     },
   ];
@@ -93,14 +93,14 @@ export const CardSection = () => {
             key={item.title}
             className="flex flex-col justify-center items-center text-center bg-opacity-70 gap-4 rounded-xl hover:bg-opacity-30 hover:scale-105 transition-all duration-150 ease-linear cursor-pointer"
           >
-            <h4 className="text-CardHeading-sm md:text-CardHeading font-bold pt-4 h-[5rem]">
+            <h4 className="text-xl md:text-CardHeading font-bold p-4 md:h-[14vh] h-auto">
               {item.title}
             </h4>
-            <div className="relative flex items-center justify-center rounded-xl group h-[25rem]">
-              <img className="object-fit h-full w-full rounded-xl" src={item.image} ></img>
+            <div className="relative flex items-center justify-center rounded-xl group bg-black h-[25rem]">
+              <img className="object-fit h-full w-full rounded-xl opacity-60" src={item.image} ></img>
               <span className="absolute inset-0 opacity-40 bg-blue-950 rounded-xl"></span>
               <div className="absolute inset-0 opacity-100 duration-300 flex justify-center items-center">
-                <p className="text-white font-headingFont p-4 text-md sm:text-xl">{item.content}</p>
+                <p className="text-Paragraph text-gray-200 p-4 text sm:text-xl">{item.content}</p>
               </div>
             </div>
           </div>

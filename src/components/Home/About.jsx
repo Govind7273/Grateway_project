@@ -16,13 +16,13 @@ const About = () => {
                                 whileInView={"show"}
                                 viewport={{ once: false, amount: 0.8 }}>
                                 <h2 className="font-extrabold md:text-MainHeading text-MainHeading-sm py-4">About Us</h2>
-                                <h4 className='md:text-xl font-bold md:text-SubHeading text-SubHeading-sm'>We empower businesses and individuals with innovative software solutions, guided by our commitment to excellence and customer satisfaction.</h4>
+                                <h4 className='md:text-xl font-bold md:text-SubHeading text-SubHeading-sm'>We empower businesses and individuals with innovative software solutions guided by our commitment to excellence and customer satisfaction.</h4>
                             </motion.div>
                             <motion.div variants={fadein("up", 0.2)}
                                 initial="hidden"
                                 whileInView={"show"}
                                 viewport={{ once: false, amount: 0.8 }}>
-                                <p className="md:text-Paragraph text-Paragraph-sm font-base py-4">Greatway Software Pvt. Ltd. specializes in custom software solutions for global businesses. Our dedicated team delivers innovative, high-quality products tailored to client needs, including custom development and mobile/web applications, using cutting-edge technologies for business growth and success.</p>
+                                <p className="md:text-Paragraph text-Paragraph-sm font-base py-4">Greatway Software Pvt. Ltd. specializes in custom software solutions for global businesses. Our dedicated team delivers innovative, high-quality products tailored to client needs including custom development and mobile/web applications using cutting-edge technologies for business growth and success.</p>
                                 <div className="">
                                     <Link to="/AboutUs" className="md:text-hyperlinks text-hyperlinks-sm hover:text-blue-600 font-medium py-4">Learn more about us
                                         <span className="ml-2">&#8594;</span>

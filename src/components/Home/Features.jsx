@@ -167,15 +167,15 @@ const FeaturesSection = () => {
                 </div>
                 <div className="ml-4">
                   <h4 className="md:text-lg text-base font-medium leading-6">Regular Updates and Support</h4>
-                  <p className="mt-2 md:text-lg text-sm">Deliver prompt updates, bug fixes, and responsive customer assistance.</p>
+                  <p className="mt-2 md:text-lg text-sm">Deliver prompt updates, bug fixes and responsive customer assistance.</p>
                 </div>
               </motion.div>
             </div>
           </div>
-          <motion.div variants={fadein("left", 0.2)}
+          <motion.div variants={fadein("right", 0.2)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: false, amount: 0.8 }} aria-hidden="true" className="mt-10 lg:mt-0">
+            viewport={{ once: true, amount: 0.8 }} aria-hidden="true" className="mt-10 lg:mt-0">
             <img
               src={features}
               alt="Feature"

@@ -16,7 +16,7 @@ const Section5 = ({obj}) => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once:false, amount: 0.5 }}
-              className="text-3xl font-headingFont text-violet-700 font-bold">
+              className="text-3xl font-headingFont text-[#75A238] font-bold">
               {obj.content.heading}
             </motion.h3>
 

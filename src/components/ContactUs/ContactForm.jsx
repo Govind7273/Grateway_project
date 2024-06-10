@@ -220,7 +220,7 @@ const ContactForm = () => {
         />
         <button
           type="submit"
-          className="md:w-[30%] w-full bg-violet-700 transition-all duration-150 ease-linear hover:bg-violet-900  hover:text-white font-semibold text-white px-4 py-2 mt-4 rounded-2xl lg:ml-[250px]"
+          className="md:w-[30%] w-full bg-[#4E77BF] transition-all duration-150 ease-linear hover:bg-[#1b2d4b]  hover:text-white font-semibold text-white px-4 py-2 mt-4 rounded-2xl lg:ml-[250px]"
         >
           {isPending ? "sending..." : "Send Message"}
         </button>
