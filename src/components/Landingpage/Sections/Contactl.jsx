@@ -128,7 +128,7 @@ const Contactl = () => {
       >
         <div className="md:w-1/3 w-full">
           <div className="relative inline-block mt-10">
-            <h1 className="text-4xl text-gray-800 sm:text-4xl font-bold title-font ">
+            <h1 className="text-4xl text-[#3c4c54] sm:text-4xl font-bold title-font ">
               Contact Us
             </h1>
             <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-orange-400 to-yellow-600 rounded-full"></span>
@@ -177,7 +177,7 @@ const Contactl = () => {
           </span>
         </div>
         <div className="md:w-2/3 w-full mt-5 md:mt-0 md:pl-28">
-          <h1 className="text-4xl text-gray-800 sm:text-4xl font-bold title-font mb-4">
+          <h1 className="text-4xl text-[#3c4c54] sm:text-4xl font-bold title-font mb-4">
             Send us message
           </h1>
           <form onSubmit={(e) => handlesendQuery(e)}>

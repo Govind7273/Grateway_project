@@ -1,6 +1,6 @@
 import React from "react";
 import hero from "../hero1.jpg";
-import GTW from "../GTW.jpg";
+import GTW from "../../Navbar/images/GTW.png";
 import { HashLink as Link } from "react-router-hash-link";
 import { TextGenerateEffect } from "../../ui/text-generate-effect";
 import { motion } from "framer-motion";
@@ -58,7 +58,7 @@ const Herol = () => {
                       initial="hidden"
                       whileInView={"show"}
                       viewport={{ once: true, amount: 0.8 }}
-                      className="max-w-xl mb-4 text-base  sm:text-lg"
+                      className="max-w-xl mb-4 text-base text-[#4c9ddc] sm:text-lg"
                     >
                       Partner with Us to Create User-Centric Websites that
                       Captivate Audiences and Drive Results. We transform your

@@ -1,28 +1,42 @@
-import React from 'react'
+import React from "react";
 import { MdVerified } from "react-icons/md";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Pricingl = () => {
   return (
     <section className="bg-transparent">
       <div className="py-6 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-6">
         <div className="mx-auto max-w-screen-md text-center mb-6 lg:mb-10">
-          <h2 className="mb-3 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">Designed for business teams like yours</h2>
-          <p className="mb-4 font-light text-gray-600 sm:text-lg">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+          <h2 className="mb-3 text-3xl tracking-tight font-semibold text-[#3c4c54] sm:text-4xl">
+            Designed for business teams like yours
+          </h2>
+          <p className="mb-4 font-light text-[#1a2229] sm:text-lg">
+            Here at Flowbite we focus on markets where technology, innovation,
+            and capital can unlock long-term value and drive economic growth.
+          </p>
         </div>
         <div className="space-y-6 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-8 lg:space-y-0">
           {/* Starter Plan */}
-          <div id='about' className="hover:cursor-pointer hover:scale-105 transition-transform flex flex-col p-5 mx-auto max-w-lg border-y-4 hover:border-x-2 hover:border-x-blue-600 
-          border-y-blue-700 rounded-xl text-center text-gray-900 hover:bg-white border bg-slate-100 border-gray-700 shadow">
-
-            <h3 className="mb-3 text-xl text-blue-800 font-semibold">Starter</h3>
-            <p className="font-light text-gray-500 sm:text-base">Best option for personal use & for your next project.</p>
+          <div
+            id="about"
+            className="hover:cursor-pointer hover:scale-105 transition-transform flex flex-col p-5 mx-auto max-w-lg border-y-4 hover:border-x-2 hover:border-x-blue-600 
+          border-y-blue-700 rounded-xl text-center text-gray-900 hover:bg-white border bg-slate-100 border-gray-700 shadow"
+          >
+            <h3 className="mb-3 text-xl text-blue-800 font-semibold">
+              Starter
+            </h3>
+            <p className="font-light text-gray-500 sm:text-base">
+              Best option for personal use & for your next project.
+            </p>
             <div className="flex justify-center items-baseline my-6">
               <span className="mr-2 text-4xl font-extrabold">24,999</span>
               <span className="text-gray-500">/Project</span>
             </div>
 
-            <ul role="list" className="mb-6 space-y-3 text-left text-sm sm:text-base">
+            <ul
+              role="list"
+              className="mb-6 space-y-3 text-left text-sm sm:text-base"
+            >
               <li className="flex items-center space-x-3">
                 <MdVerified className="flex-shrink-0 w-5 h-5 text-green-500" />
                 <span>Basic project tools</span>
@@ -61,25 +75,32 @@ const Pricingl = () => {
               </li>
             </ul>
             <Link
-               to="/ContactUs"
+              to="/ContactUs"
               className="relative group inline-block w-full py-3 px-5 text-center text-gray-50 bg-gray-900 font-semibold rounded-full overflow-hidden transition duration-200"
             >
-              <div
-                className="absolute top-0 right-full w-full h-full bg-blue-600 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"
-              ></div>
+              <div className="absolute top-0 right-full w-full h-full bg-blue-600 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
               <span className="relative">Get Now</span>
             </Link>
           </div>
           {/* Pro Plan */}
-          <div className="hover:cursor-pointer hover:scale-105 transition-transform relative flex flex-col p-5 mx-auto max-w-lg border-y-4 border-x-2 hover:border-x-2 border-x-orange-500 border-y-orange-500 rounded-xl text-center text-gray-900 border bg-white hover:bg-slate-100 border-gray-700 shadow">
-            <div className="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold py-1 px-3 rounded-tr rounded-bl-xl">Most Popular</div>
-             <h3 className="mb-3 text-xl text-blue-800 font-semibold">Pro Plan</h3> 
-            <p className="font-light text-gray-500 sm:text-base">Relevant for multiple users, extended & premium support.</p>
+          <div className="hover:cursor-pointer hover:scale-105 transition-transform relative flex flex-col p-5 mx-auto max-w-lg border-y-4 border-x-2 hover:border-x-2 border-x-[#BAD08C] border-y-[#BAD08C] rounded-xl text-center text-gray-900 border bg-white hover:bg-slate-100 border-gray-700 shadow">
+            <div className="absolute top-0 right-0 bg-[#BAD08C] text-black text-xs font-bold py-1 px-3 rounded-tr rounded-bl-xl">
+              Most Popular
+            </div>
+            <h3 className="mb-3 text-xl text-blue-800 font-semibold">
+              Pro Plan
+            </h3>
+            <p className="font-light text-gray-500 sm:text-base">
+              Relevant for multiple users, extended & premium support.
+            </p>
             <div className="flex justify-center items-baseline my-6">
               <span className="mr-2 text-4xl font-extrabold">49,999</span>
               <span className="text-gray-500">/Project</span>
             </div>
-            <ul role="list" className="mb-6 space-y-3 text-left text-sm sm:text-base">
+            <ul
+              role="list"
+              className="mb-6 space-y-3 text-left text-sm sm:text-base"
+            >
               <li className="flex items-center space-x-3">
                 <MdVerified className="flex-shrink-0 w-5 h-5 text-green-500" />
                 <span>Advanced project tools</span>
@@ -125,23 +146,34 @@ const Pricingl = () => {
                 <span>Basic e-commerce features</span>
               </li>
             </ul>
-            <Link  to="/ContactUs" className="relative group inline-block w-full py-3 px-5 text-center text-gray-100 hover:text-gray-50 bg-gray-900 font-semibold rounded-full overflow-hidden transition duration-200">
-              <div className="absolute top-0 right-full w-full h-full bg-orange-600 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
+            <Link
+              to="/ContactUs"
+              className="relative group inline-block w-full py-3 px-5 text-center text-gray-100 hover:text-gray-900 bg-gray-900 font-semibold rounded-full overflow-hidden transition duration-200"
+            >
+              <div className="absolute top-0 right-full w-full h-full bg-[#BAD08C] transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
               <span className="relative">Get Now</span>
             </Link>
           </div>
           {/* Business Plan */}
-          <div className="hover:cursor-pointer hover:scale-105 transition-transform flex flex-col p-5 mx-auto max-w-lg border-y-4 hover:border-x-2 hover:border-x-blue-600 
-          border-y-blue-700 rounded-xl text-center text-gray-900 hover:bg-white border bg-slate-100 border-gray-700 shadow">
-
-            <h3 className="mb-3 text-xl text-blue-800 font-semibold">Business Plan</h3>
-            <p className="font-light text-gray-500 sm:text-base">Best for large scale uses and extended redistribution rights.</p>
+          <div
+            className="hover:cursor-pointer hover:scale-105 transition-transform flex flex-col p-5 mx-auto max-w-lg border-y-4 hover:border-x-2 hover:border-x-blue-600 
+          border-y-blue-700 rounded-xl text-center text-gray-900 hover:bg-white border bg-slate-100 border-gray-700 shadow"
+          >
+            <h3 className="mb-3 text-xl text-blue-800 font-semibold">
+              Business Plan
+            </h3>
+            <p className="font-light text-gray-500 sm:text-base">
+              Best for large scale uses and extended redistribution rights.
+            </p>
             <div className="flex justify-center items-baseline my-6">
               <span className="mr-2 text-4xl font-extrabold">74,999</span>
               <span className="text-gray-500">/Project</span>
             </div>
 
-            <ul role="list" className="mb-6 space-y-3 text-left text-sm sm:text-base">
+            <ul
+              role="list"
+              className="mb-6 space-y-3 text-left text-sm sm:text-base"
+            >
               <li className="flex items-center space-x-3">
                 <MdVerified className="flex-shrink-0 w-5 h-5 text-green-500" />
                 <span>Comprehensive project suite</span>
@@ -199,16 +231,14 @@ const Pricingl = () => {
               to="/ContactUs"
               className="relative group inline-block w-full py-3 px-5 text-center text-gray-50 bg-gray-900 font-semibold rounded-full overflow-hidden transition duration-200"
             >
-              <div
-                className="absolute top-0 right-full w-full h-full bg-blue-600 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"
-              ></div>
+              <div className="absolute top-0 right-full w-full h-full bg-blue-600 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
               <span className="relative">Get Now</span>
             </Link>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default Pricingl;
