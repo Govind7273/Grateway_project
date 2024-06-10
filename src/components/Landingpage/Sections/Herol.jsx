@@ -31,7 +31,7 @@ const Herol = () => {
               </button>
             </Link>
             <a
-              href="http://localhost:5173/ContactUs"
+              href="https://greateway.com/ContactUs"
               className="hover:bg-gray-400 p-3 rounded-xl font-bold shadow-md animate-pulse shadow-blue-400"
             >
               Connect with us
@@ -64,7 +64,7 @@ const Herol = () => {
                       Captivate Audiences and Drive Results. We transform your
                       vision into captivating websites.
                     </motion.p>
-                    <a href="http://localhost:5173/  ">
+                    <a href="https://greateway.com/  ">
                       <button className=" px-8 py-2  motion-reduce:animate-bounce rounded-xl bg-teal-500 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-teal-500">
                         Discover us
                       </button>
