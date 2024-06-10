@@ -19,10 +19,9 @@ const Pricingl = () => {
           {/* Starter Plan */}
           <div
             id="about"
-            className="hover:cursor-pointer hover:scale-105 transition-transform flex flex-col p-5 mx-auto max-w-lg border-y-4 hover:border-x-2 hover:border-x-blue-600 
-          border-y-blue-700 rounded-xl text-center text-gray-900 hover:bg-white border bg-slate-100 border-gray-700 shadow"
+            className="hover:cursor-pointer hover:scale-105 transition-transform flex flex-col p-5 mx-auto max-w-lg border-y-4 hover:border-x-2 border-x-[#4c9ddc] border-y-[#4c9ddc] rounded-xl text-center text-gray-900 hover:bg-white border bg-slate-50 border-gray-700 shadow relative"
           >
-            <h3 className="mb-3 text-xl text-blue-800 font-semibold">
+            <h3 className="mb-3 text-xl text-[#4c9ddc] font-semibold">
               Starter
             </h3>
             <p className="font-light text-gray-500 sm:text-base">
@@ -37,6 +36,7 @@ const Pricingl = () => {
               role="list"
               className="mb-6 space-y-3 text-left text-sm sm:text-base"
             >
+              {/* List items */}
               <li className="flex items-center space-x-3">
                 <MdVerified className="flex-shrink-0 w-5 h-5 text-green-500" />
                 <span>Basic project tools</span>
@@ -74,20 +74,23 @@ const Pricingl = () => {
                 <span>1 year of free website hosting</span>
               </li>
             </ul>
-            <Link
-              to="/ContactUs"
-              className="relative group inline-block w-full py-3 px-5 text-center text-gray-50 bg-gray-900 font-semibold rounded-full overflow-hidden transition duration-200"
-            >
-              <div className="absolute top-0 right-full w-full h-full bg-blue-600 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
-              <span className="relative">Get Now</span>
-            </Link>
+
+            <div className="mt-auto">
+              <Link
+                to="/ContactUs"
+                className="relative group inline-block w-full py-3 px-5 text-center text-gray-50 hover:text-black bg-gray-900 font-semibold rounded-full overflow-hidden transition duration-200"
+              >
+                <div className="absolute top-0 right-full w-full h-full bg-[#4c9ddc] transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
+                <span className="relative">Get Now</span>
+              </Link>
+            </div>
           </div>
           {/* Pro Plan */}
-          <div className="hover:cursor-pointer hover:scale-105 transition-transform relative flex flex-col p-5 mx-auto max-w-lg border-y-4 border-x-2 hover:border-x-2 border-x-[#BAD08C] border-y-[#BAD08C] rounded-xl text-center text-gray-900 border bg-white hover:bg-slate-100 border-gray-700 shadow">
-            <div className="absolute top-0 right-0 bg-[#BAD08C] text-black text-xs font-bold py-1 px-3 rounded-tr rounded-bl-xl">
+          <div className="hover:cursor-pointer hover:scale-105 transition-transform relative flex flex-col p-5 mx-auto max-w-lg border-y-4 border-x-3 hover:border-x-2 border-x-blue-600 border-y-blue-600 rounded-xl text-center text-gray-900 border bg-white hover:bg-slate-50 border-gray-700 shadow">
+            <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold py-1 px-3 rounded-bl-xl rounded-tr-[8px]">
               Most Popular
             </div>
-            <h3 className="mb-3 text-xl text-blue-800 font-semibold">
+            <h3 className="mb-3 text-xl text-blue-600 font-semibold">
               Pro Plan
             </h3>
             <p className="font-light text-gray-500 sm:text-base">
@@ -101,6 +104,7 @@ const Pricingl = () => {
               role="list"
               className="mb-6 space-y-3 text-left text-sm sm:text-base"
             >
+              {/* List items */}
               <li className="flex items-center space-x-3">
                 <MdVerified className="flex-shrink-0 w-5 h-5 text-green-500" />
                 <span>Advanced project tools</span>
@@ -146,20 +150,20 @@ const Pricingl = () => {
                 <span>Basic e-commerce features</span>
               </li>
             </ul>
-            <Link
-              to="/ContactUs"
-              className="relative group inline-block w-full py-3 px-5 text-center text-gray-100 hover:text-gray-900 bg-gray-900 font-semibold rounded-full overflow-hidden transition duration-200"
-            >
-              <div className="absolute top-0 right-full w-full h-full bg-[#BAD08C] transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
-              <span className="relative">Get Now</span>
-            </Link>
+            <div className="mt-auto">
+              <Link
+                to="/ContactUs"
+                className="relative group inline-block w-full py-3 px-5 text-center text-gray-100 bg-gray-900 font-semibold rounded-full overflow-hidden transition duration-200"
+              >
+                <div className="absolute top-0 right-full w-full h-full bg-blue-600 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
+                <span className="relative">Get Now</span>
+              </Link>
+            </div>
           </div>
+
           {/* Business Plan */}
-          <div
-            className="hover:cursor-pointer hover:scale-105 transition-transform flex flex-col p-5 mx-auto max-w-lg border-y-4 hover:border-x-2 hover:border-x-blue-600 
-          border-y-blue-700 rounded-xl text-center text-gray-900 hover:bg-white border bg-slate-100 border-gray-700 shadow"
-          >
-            <h3 className="mb-3 text-xl text-blue-800 font-semibold">
+          <div className="hover:cursor-pointer hover:scale-105 transition-transform relative flex flex-col p-5 mx-auto max-w-lg border-y-4 hover:border-x-2 border-x-[#4c9ddc] border-y-[#4c9ddc] rounded-xl text-center text-gray-900 hover:bg-white border bg-slate-50 border-gray-700 shadow">
+            <h3 className="mb-3 text-xl text-[#4c9ddc] font-semibold">
               Business Plan
             </h3>
             <p className="font-light text-gray-500 sm:text-base">
@@ -169,11 +173,11 @@ const Pricingl = () => {
               <span className="mr-2 text-4xl font-extrabold">74,999</span>
               <span className="text-gray-500">/Project</span>
             </div>
-
             <ul
               role="list"
               className="mb-6 space-y-3 text-left text-sm sm:text-base"
             >
+              {/* List items */}
               <li className="flex items-center space-x-3">
                 <MdVerified className="flex-shrink-0 w-5 h-5 text-green-500" />
                 <span>Comprehensive project suite</span>
@@ -227,13 +231,15 @@ const Pricingl = () => {
                 <span>Regular backups & maintenance</span>
               </li>
             </ul>
-            <Link
-              to="/ContactUs"
-              className="relative group inline-block w-full py-3 px-5 text-center text-gray-50 bg-gray-900 font-semibold rounded-full overflow-hidden transition duration-200"
-            >
-              <div className="absolute top-0 right-full w-full h-full bg-blue-600 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
-              <span className="relative">Get Now</span>
-            </Link>
+            <div className="mt-auto">
+              <Link
+                to="/ContactUs"
+                className="relative group inline-block w-full py-3 px-5 text-center text-gray-50 bg-gray-900 hover:text-black font-semibold rounded-full overflow-hidden transition duration-200"
+              >
+                <div className="absolute top-0 right-full w-full h-full bg-[#4c9ddc]  transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
+                <span className="relative">Get Now</span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
