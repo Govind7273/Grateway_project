@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="lg:max-w-xl flex flex-col md:px-5">
           <p className="text-md text-justify text-slate-200">
             <Link to="/">
-              <b className="text-xl">Greatway Software Pvt. Ltd.</b>
+              <b className="text-xl">Greateway Software Pvt. Ltd.</b>
             </Link>{" "}
             is a comprehensive IT company offering end-to-end technology
             solutions. With expertise in software development, network

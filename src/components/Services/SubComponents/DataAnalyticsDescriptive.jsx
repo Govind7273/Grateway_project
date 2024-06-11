@@ -41,7 +41,7 @@ function DataAnalyticsDescriptive() {
               business growth.
             </p>
             <p className="md:text-Paragraph text-Paragraph-sm pt-2">
-              At Greatway, we offer a comprehensive suite of Data Analytics and
+              At Greateway, we offer a comprehensive suite of Data Analytics and
               AI/ML solutions designed to unlock the hidden potential within
               your data. Our team of data scientists and machine learning
               engineers leverages cutting-edge technologies and methodologies to
@@ -76,7 +76,7 @@ function DataAnalyticsDescriptive() {
         </div>
         <div className="px-2">
           <div className="px-2 md:text-Paragraph text-Paragraph-sm py-2">
-            At Greatway, we excel in harnessing the potential of data through
+            At Greateway, we excel in harnessing the potential of data through
             advanced analytics and Artificial Intelligence (AI) solutions. Our
             expert team leverages cutting-edge technologies and methodologies to
             extract actionable insights from vast datasets, enabling data-driven

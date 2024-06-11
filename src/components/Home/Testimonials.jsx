@@ -38,7 +38,7 @@ const Testimonials = () => {
               <img src={Eye} alt="" className="w-full hidden md:block" />
 
               <hr className="mt-4" />
-              &nbsp;<span className="text-xs text-gray-500">Greatway Software Pvt. Ltd.</span>
+              &nbsp;<span className="text-xs text-gray-500">Greateway Software Pvt. Ltd.</span>
             </div>
           </motion.div>
 
@@ -59,7 +59,7 @@ const Testimonials = () => {
               <img src={Miss} alt="" className="w-full hidden md:block" />
 
               <hr className="mt-4" />
-              &nbsp;<span className="text-xs text-gray-500">Greatway Software Pvt. Ltd.</span>
+              &nbsp;<span className="text-xs text-gray-500">Greateway Software Pvt. Ltd.</span>
             </div>
           </motion.div>
 
@@ -85,7 +85,7 @@ const Testimonials = () => {
               <img src={CValue} alt="" className="w-full hidden md:block" />
 
               <hr className="md:mt-4" />
-              &nbsp;<span className="text-xs text-gray-500">Greatway Software Pvt. Ltd.</span>
+              &nbsp;<span className="text-xs text-gray-500">Greateway Software Pvt. Ltd.</span>
             </div>
           </motion.div>
 
