@@ -255,7 +255,7 @@ const AiAndMLService = ({ Meta_Data }) => {
                 Redefining the Boundaries of What's Possible
               </p>
               <h3 className="md:text-Paragraph text-Paragraph-sm pt-4">
-                Unleash the power of Generative AI with Greatway. From artistic
+                Unleash the power of Generative AI with Greateway. From artistic
                 creations to innovative problem-solving, we help generate
                 creative content formats like text, code and images using
                 cutting-edge AI models.
@@ -283,7 +283,7 @@ const AiAndMLService = ({ Meta_Data }) => {
                 Animating your data for enhanced insights
               </p>
               <h3 className="md:text-Paragraph text-Paragraph-sm pt-4">
-                Leverage Greatway's extensive proficiency in Data Analytics and
+                Leverage Greateway's extensive proficiency in Data Analytics and
                 AI/ML to propel your business forward. Our tailored approach
                 encompasses the creation of bespoke machine learning models and
                 the delivery of holistic AI consulting services, ensuring that

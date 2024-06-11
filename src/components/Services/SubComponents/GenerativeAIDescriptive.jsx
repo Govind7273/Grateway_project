@@ -36,7 +36,7 @@ function GenerativeAIDescriptive() {
           {/*left */}
           <div className="flex-1 ">
             <h2 className=" md:text-Paragraph text-Paragraph-sm pt-6">
-              At Greatway Gen AI Solutions, we stand as the vanguard of business
+              At Greateway Gen AI Solutions, we stand as the vanguard of business
               transformation, pioneering a new era of innovation through
               cutting-edge artificial intelligence technologies. Our
               meticulously crafted approach to Gen AI is not just a solution;
@@ -51,7 +51,7 @@ function GenerativeAIDescriptive() {
               of sustainable growth and enduring success. By harnessing the
               power of AI, we empower organizations to unlock untapped
               potential, driving efficiency, productivity and profitability to
-              unprecedented heights. With Greatway Gen AI Solutions by your side,
+              unprecedented heights. With Greateway Gen AI Solutions by your side,
               the future isn't just a vision—it's a tangible reality, brimming
               with limitless possibilities for evolution and advancement. Join
               us as we embark on a journey to redefine the very fabric of

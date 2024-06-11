@@ -17,7 +17,7 @@ function Collaboration() {
       <motion.p variants={fadein("up", 0.2)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: false, amount: 0.8 }} className='md:text-Paragraph text-Paragraph-sm py-3'>At Greatway Software Pvt. Ltd., embark on a journey of endless possibilities. Join our dynamic team to immerse yourself in innovative projects, thrive in a collaborative environment, benefit from ongoing learning opportunities and pave the way for your career growth. Discover the perfect setting to unleash your full potential in the ever-evolving realm of IT.</motion.p>
+        viewport={{ once: false, amount: 0.8 }} className='md:text-Paragraph text-Paragraph-sm py-3'>At Greateway Software Pvt. Ltd., embark on a journey of endless possibilities. Join our dynamic team to immerse yourself in innovative projects, thrive in a collaborative environment, benefit from ongoing learning opportunities and pave the way for your career growth. Discover the perfect setting to unleash your full potential in the ever-evolving realm of IT.</motion.p>
       <motion.div variants={fadein("up", 0.2)}
         initial="hidden"
         whileInView={"show"}
