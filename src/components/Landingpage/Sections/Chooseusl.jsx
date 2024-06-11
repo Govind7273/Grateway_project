@@ -54,9 +54,9 @@ const Chooseusl = () => {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: true, amount: 0.8 }}
-        className="text-center p-10"
+        className="text-center py-4 px-2"
       >
-        <h1 className="m-4 text-3xl  text-center font-semibold text-[#3c4c54] dark:text-white md:text-4xl lg:text-4xl">
+        <h1 className="py-4 text-3xl  text-center font-semibold text-[#3c4c54] dark:text-white md:text-4xl lg:text-4xl">
           {" "}
           Why Choose Us
         </h1>

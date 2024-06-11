@@ -25,7 +25,7 @@ function Clientl() {
       </motion.h1>
       <div
         id="bg2"
-        className="h-auto md:py-4 py-2 rounded-md flex flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05]  items-center justify-center relative overflow-hidden"
+        className="md:h-auto h-[20vh] md:py-4 rounded-md flex flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05]  items-center justify-center relative overflow-hidden"
       >
         <InfiniteMovingCards
           items={testimonials}
