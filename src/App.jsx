@@ -45,6 +45,10 @@ import {
 import GenerativeAIDescriptive from "./components/Services/SubComponents/GenerativeAIDescriptive";
 import DataAnalyticsDescriptive from "./components/Services/SubComponents/DataAnalyticsDescriptive";
 import InstitueAcademicServices from "./components/Services/InstitueAcademicServices";
+import TrainingProgram from "./components/CorporateTraining/TrainingProgram/TrainingProgram";
+import DevelopmentProgram from "./components/CorporateTraining/DevelopmentProgram/DevelopmentProgram";
+import EnterpriseServices from "./components/CorporateTraining/EnterpriseServices/EnterpriseServices";
+import MicrosoftOffice from "./components/CorporateTraining/MicrosoftOffice365/MicrosoftOffice";
 const LandingPage = lazy(() => import("./components/Landingpage/LandingPage"));
 const Intership = lazy(() => import("./components/Internship/Internship"));
 const InternshipDetails = lazy(() =>
@@ -167,7 +171,7 @@ function App() {
           <Route
             exact
             path="/institute-academy"
-            element={<InstitueAcademicServices Meta_Data={Meta_Data.Service_AI} />}
+            element={<InstitueAcademicServices Meta_Data={Meta_Data.institue_academic} />}
           ></Route>
           <Route
             exact
@@ -191,6 +195,31 @@ function App() {
               <ServicesStaffing Meta_Data={Meta_Data.Service_Staffing} />
             }
           ></Route>
+
+          {/* All Routes for the corporate training program */}
+          <Route
+            exact
+            path="/training-program"
+            element={<TrainingProgram Meta_Data={Meta_Data.training_program} />}
+          ></Route>
+          <Route
+            exact
+            path="/management-dev-program"
+            element={<DevelopmentProgram Meta_Data={Meta_Data.management_dev_program} />}
+          ></Route>
+          <Route
+            exact
+            path="/enterprise-services"
+            element={<EnterpriseServices Meta_Data={Meta_Data.enterprise_services} />}
+          ></Route>
+          <Route
+            exact
+            path="/microsoft-office"
+            element={<MicrosoftOffice Meta_Data={Meta_Data.microsoft_office} />}
+          ></Route>
+
+
+          {/* End of the corporate training program dropdown  */}
           <Route
             exact
             path="/Internship"
