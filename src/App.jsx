@@ -44,6 +44,7 @@ import {
 } from "./components/Services/ServiceData/SoftDevServices";
 import GenerativeAIDescriptive from "./components/Services/SubComponents/GenerativeAIDescriptive";
 import DataAnalyticsDescriptive from "./components/Services/SubComponents/DataAnalyticsDescriptive";
+import InstitueAcademicServices from "./components/Services/InstitueAcademicServices";
 const LandingPage = lazy(() => import("./components/Landingpage/LandingPage"));
 const Intership = lazy(() => import("./components/Internship/Internship"));
 const InternshipDetails = lazy(() =>
@@ -162,6 +163,12 @@ function App() {
             path="/Service-AI"
             element={<AiAndMLService Meta_Data={Meta_Data.Service_AI} />}
           ></Route>
+
+          <Route
+            exact
+            path="/institute-academy"
+            element={<InstitueAcademicServices Meta_Data={Meta_Data.Service_AI} />}
+          ></Route>
           <Route
             exact
             path="/GenerativeAi"
@@ -205,8 +212,9 @@ function App() {
             element={<LandingPage Meta_Data={Meta_Data.landingpage} />}
           />
         </Routes>
-      </Suspense>
-      {!isLandingPage && <Footer />}
+      </Suspense >
+      {!isLandingPage && <Footer />
+      }
     </>
   );
 }

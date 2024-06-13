@@ -96,6 +96,12 @@ const Meta_Data = {
       "Ensure smooth operations and minimize downtime with our reliable IT support services.",
     Link: "http://www.greateway/Service-Support",
   },
+  institue_academic: {
+    Title: "Institutional Excellence Tech Solutions services",
+    Description:
+      "Institutional Excellence Tech Solutions: Empowering Institutes and Academies with Cutting-Edge Tools.",
+    Link: "http://www.greateway/institute-academy",
+  },
 
   Service_Staffing: {
     Title: "Staffing Solutions - GreateWay Software Solution",
