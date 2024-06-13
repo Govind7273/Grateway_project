@@ -7,6 +7,7 @@ import { ServiceInfoSection } from "./ServiceInfoSection";
 import { Ours } from "./Ours";
 import { Info } from "./Info";
 import { CTA } from "./CTA";
+import {CertifiedLogo} from "../ui/CertifiedLogo"
 
 const AboutUs = ({Meta_Data}) => {
   
@@ -40,6 +41,8 @@ const AboutUs = ({Meta_Data}) => {
       {OurValues()} */}
       {Ours()}
 
+      {/* Certified Logo */}
+      {CertifiedLogo()}
 
       { CTA ()}
 
