@@ -17,6 +17,7 @@ import ChooseUs from "./ChooseUs";
 import Collaboration from "./Collaboration";
 import { motion } from "framer-motion";
 import { fadein } from "../../../src/variants";
+import CertifiedLogo from "../ui/CertifiedLogo";
 
 
 const VideoComponent = ({ video, title, desc, link, isVisible }) => (
@@ -126,6 +127,8 @@ const Home = ({ Meta_Data }) => {
       <Special />
 
       <ChooseUs />
+
+      <CertifiedLogo />
 
       <InfiniteMovingCardsDemo />
 
