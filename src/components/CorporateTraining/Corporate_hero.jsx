@@ -24,19 +24,18 @@ const Corporate_hero = ({ TechnologyProgram }) => {
                             <div className="flex items-center p-5">
                                 <div className="md:w-1/2 w-full">
                                     <h1
-                                        className="text-4xl md:text-5xl font-extrabold mb-6"
+                                        className="text-MainHeading font-extrabold mb-6"
                                     >
                                         Welcome to Our {TechnologyProgram?.title}
                                     </h1>
                                     <p
                                         className="text-paragraph font-medium mb-8"
                                     >
-                                        Unlock the full potential of your team with our specialized
-                                        corporate training programs.
+                                        Unlock your team's potential with our advanced corporate training programs. Master new tech trends and software through expert-led, hands-on sessions. Tailored to keep your team ahead, our courses ensure your organization thrives.
                                     </p>
                                     <Link
                                         to={"/ContactUs"} // Use 'to' prop instead of 'href' for routing with react-router-dom
-                                        className="bg-golden2 px-4 py-2 text-button rounded-md hover:bg-golden3 transition-all duration-300 ease-linear text-white hover:text-black"
+                                        className="bg-zinc-900 rounded-[7px] text-white px-5 py-3 font-headingFont text-sm  transition-all duration-150 ease-linear hover:bg-zinc-700"
                                     >
                                         Connect with us
                                     </Link>
