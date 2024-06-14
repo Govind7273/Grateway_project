@@ -97,9 +97,9 @@ const Meta_Data = {
     Link: "http://www.greateway.com/Service-Support",
   },
   institue_academic: {
-    Title: "Institutional Excellence Tech Solutions services",
+    Title: "Institutional Tech Solution - GreateWay Software Solution",
     Description:
-      "Institutional Excellence Tech Solutions: Empowering Institutes and Academies with Cutting-Edge Tools.",
+      "Institutional Tech Solution: Empowering Institutes and Academies with Cutting-Edge Tools.",
     Link: "http://www.greateway.com/institute-academy",
   },
 
@@ -123,28 +123,32 @@ const Meta_Data = {
   },
 
   training_program: {
-    Title: "Technology Training Program",
-    Description: "The Technology Training Program delivers key skills in software development, cybersecurity, and data analytics, gearing participants for top tech roles.",
-    Link: "http://www.greateway.com/training-program"
+    Title: "Technology Training Program - GreateWay Software Solution",
+    Description:
+      "The Technology Training Program delivers key skills in software development, cybersecurity, and data analytics, gearing participants for top tech roles.",
+    Link: "http://www.greateway.com/training-program",
   },
 
   management_dev_program: {
-    Title: "Management Development Program",
-    Description: "The Management Development Program imparts critical leadership and strategic skills, preparing participants for advanced management roles.",
-    Link: "http://www.greateway.com/management-dev-program"
+    Title: "Management Development Program - GreateWay Software Solution",
+    Description:
+      "The Management Development Program imparts critical leadership and strategic skills, preparing participants for advanced management roles.",
+    Link: "http://www.greateway.com/management-dev-program",
   },
 
   enterprise_services: {
-    Title: "Enterprise Services",
-    Description: "The Enterprise Services Program provides essential skills in managing and optimizing business services, preparing participants for key roles in enterprise environments.",
-    Link: "http://www.greateway.com/enterprise-services"
+    Title: "Enterprise Services - GreateWay Software Solution",
+    Description:
+      "The Enterprise Services Program provides essential skills in managing and optimizing business services, preparing participants for key roles in enterprise environments.",
+    Link: "http://www.greateway.com/enterprise-services",
   },
 
   microsoft_office: {
-    Title: "Microsoft Office 365",
-    Description: "The Microsoft Office 365 Program teaches essential skills in using Office 365 tools, preparing participants for efficient, modern workplace productivity.",
-    Link: "http://www.greateway.com/microsoft-office"
-  }
+    Title: "Microsoft Office 365 - GreateWay Software Solution",
+    Description:
+      "The Microsoft Office 365 Program teaches essential skills in using Office 365 tools, preparing participants for efficient, modern workplace productivity.",
+    Link: "http://www.greateway.com/microsoft-office",
+  },
 };
 
 export default Meta_Data;
