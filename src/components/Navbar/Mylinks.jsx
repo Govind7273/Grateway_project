@@ -61,36 +61,35 @@ export const links = [
   },
   {
     id: 13,
-    name: "Institutional Excellence Tech Solutions",
+    name: "Institutional Tech Solutions",
     link: "/institute-academy",
-    desc: "Institutional Excellence Tech Solutions: Empowering Institutes and Academies with Cutting-Edge Tools.",
+    desc: "Empowering Institutes and Academies with Cutting-Edge Tools.",
   },
 ];
-
 
 export const corporateTrainingLinks = [
   {
     id: 1,
-    name: "Technology Training Program",
+    name: "Technology Training",
     link: "/training-program",
-    desc: "The Technology Training Program delivers key skills in software development, cybersecurity, and data analytics, gearing participants for top tech roles."
+    desc: "Key skills in software development, cybersecurity, and data analytics.",
   },
   {
     id: 2,
-    name: "Management Development Program",
+    name: "Management Development",
     link: "/management-dev-program",
-    desc: "The Management Development Program imparts critical leadership and strategic skills, preparing participants for advanced management roles."
+    desc: "Critical leadership and strategic skills for advanced management roles.",
   },
   {
     id: 3,
     name: "Enterprise Services",
     link: "/enterprise-services",
-    desc: "The Enterprise Services Program provides essential skills in managing and optimizing business services, preparing participants for key roles in enterprise environments."
+    desc: "Skills in managing and optimizing business services for enterprise roles.",
   },
   {
     id: 4,
     name: "Microsoft Office 365",
     link: "/microsoft-office",
-    desc: "The Microsoft Office 365 Program teaches essential skills in using Office 365 tools, preparing participants for efficient, modern workplace productivity."
-  }
-]
+    desc: "Skills in Office 365 tools for modern workplace productivity.",
+  },
+];
