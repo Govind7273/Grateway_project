@@ -39,7 +39,7 @@ export const Technology_Program = {
     secondSection: {
         heading: "Empower Your Team with Technology Training",
         subheading:
-            "In today's rapidly evolving digital landscape, the scarcity of IT expertise poses a significant hurdle for businesses. With a staggering 86% of respondents foreseeing its continued impact on cloud initiatives, staying ahead necessitates a proactive approach. Our Technology Training Program at Fusion Institute is crafted to address this challenge head-on.",
+            "In today's rapidly evolving digital landscape, the scarcity of IT expertise poses a significant hurdle for businesses. With 86% of respondents foreseeing its continued impact on cloud initiatives, staying ahead requires a proactive approach. Our Technology Training Program at Greateway Software is crafted to address this challenge head-on.",
         image: EmpowerTrainingImage,
     },
     whychooseus: [
