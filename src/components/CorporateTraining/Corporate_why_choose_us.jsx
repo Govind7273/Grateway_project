@@ -18,11 +18,11 @@ const Corporate_why_choose_us = ({ Technology_Program }) => {
                             <p className="text-paragraph text-black">
                                 {Technology_Program?.secondSection?.subheading}
                             </p>
-                            <Link href={"/AboutUs"}>
-                                <button className="bg-zinc-900 rounded-[7px] text-white px-5 py-3 font-headingFont text-sm  transition-all duration-150 ease-linear hover:bg-zinc-700">
-                                    About us
-                                </button>
-                            </Link>
+                            <div>
+                                <Link to={"/AboutUs"} className="bg-zinc-900 rounded-[7px] text-white px-5 py-3 font-headingFont text-sm  transition-all duration-150 ease-linear hover:bg-zinc-700">
+                                    About Us
+                                </Link>
+                            </div>
                         </div>
                         <div className="p-3 order-1">
                             <img
