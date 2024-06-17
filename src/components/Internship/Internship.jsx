@@ -10,7 +10,6 @@ import { HashLink as Link } from 'react-router-hash-link';
 import { motion } from "framer-motion"
 import { fadein } from "./variant"
 
-
 const Internship = ({ Meta_Data }) => {
   const [ModalOpen, setModalOpen] = useState(false);
   const { Title, Description, Link1 } = Meta_Data;
@@ -33,20 +32,47 @@ const Internship = ({ Meta_Data }) => {
               <div className="h-2 w-1 bg-white"></div>
               <div className="h-2 w-12 bg-blue-900"></div>
             </div>
-            <h1 className="sm:text-3xl text-1xl font-medium md:text-5xl text-center text-white">
+            <motion.h1
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.2,
+                x: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }}
+              className="sm:text-3xl text-1xl font-medium md:text-5xl text-center text-white">
               Join our internship <br />program
-            </h1>
-            <p className="text-center text-[10px] md:text-lg text-slate-200 px-2 py-2 sm:px-10 sm:pt-8 max-w-[45rem]">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.2,
+                x: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }}
+              className="text-center text-[10px] md:text-lg text-slate-200 px-2 py-2 sm:px-10 sm:pt-8 max-w-[45rem]">
               "To gain invaluable hands-on experience,
               mentorship and networking opportunities that will propel your
               career forward. Discover your potential and build the foundation for
               a successful career with us."
-            </p>
-            <div className="flex justify-center sm:pt-4">
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.2,
+                y: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }}
+              className="flex justify-center sm:pt-4">
               <Link smooth to={"#Cards"} className="px-6  py-2 sm:text-base text-[10px] bg-blue-900 hover:bg-blue-800 text-white rounded-xl">
                 Explore all internships
               </Link>
-            </div>
+            </motion.div>
           </motion.div>
           <div className="h-auto sm:pt-10 w-full">
             <img
@@ -145,7 +171,16 @@ const Internship = ({ Meta_Data }) => {
 
           {IntershipDetails.map((detail) => {
             return (
-              <div key={detail.id} className="sm:w-[500px] w-auto flex flex-col rounded-xl border-dashed shadow-lg shadow-slate-300 items-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  delay: 0.2,
+                  scale: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.6 },
+                  ease: "easeInOut"
+                }}
+                key={detail.id} className="sm:w-[500px] w-auto flex flex-col rounded-xl border-dashed shadow-lg shadow-slate-300 items-center">
                 <div className="flex h-1 w-full rounded-full items-start bg-gradient-to-br from-[#4481EB] via-pink-300 to-[#04BEFE]"></div>
                 <Card
                   id={detail.id}
@@ -165,7 +200,7 @@ const Internship = ({ Meta_Data }) => {
                   </button>
                   <Link to={`/internshipDetails/${detail.id}`} className="flex justify-center border rounded-xl border-blue-800 text-blue-800 px-4 py-1 h-8 hover:scale-105 transition duration-200 ">View Details</Link>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </section>

@@ -15,7 +15,7 @@ const TrainingProgram = ({ Meta_Data }) => {
                 <meta name="description" content={Description} />
                 <link rel="canonical" href={Link} />
             </Helmet>
-            <div>
+            <div className='overflow-hidden'>
                 <Corporate_hero TechnologyProgram={Technology_Program} />
                 <Corporate_why_choose_us Technology_Program={Technology_Program} />
                 <Technology Technology_Program={Technology_Program} />

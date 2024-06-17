@@ -1,7 +1,7 @@
 import React from "react";
 import { GiTeacher } from "react-icons/gi";
 import seminarImg from "./images/seminar.jpg";
-
+import { motion } from "framer-motion";
 const InstituteSeminar = () => {
   return (
     <section class=" bg-blueGray-200 -mt-24">
@@ -15,36 +15,79 @@ const InstituteSeminar = () => {
         </div>
         <div class="flex flex-wrap items-center mt-16">
           <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">
+            <motion.h2
+              initial={{ opacity: 0, y: -100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.2,
+                y: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }}
+              className="mb-4 text-MainHeading tracking-tight font-extrabold ">
               Seminar
-            </h2>
-            <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.2,
+                y: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }}
+              class="text-Paragraph  leading-relaxed mt-4 mb-4">
               We offer comprehensive seminar services designed to enhance your
               team's skills and knowledge. Our expert-led sessions provide
               valuable insights and practical tips across various topics.
-            </p>
-            <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.2,
+                y: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }} class="text-Paragraph leading-relaxed mt-0 mb-4">
               Our seminars are tailored to meet the specific needs of your
               organization. Each session is interactive, engaging, and packed
               with useful information that your team can immediately apply in
               their roles.
-            </p>
-            <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.2,
+                y: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }} class="text-Paragraph leading-relaxed mt-0 mb-4">
               Contact us to schedule a seminar and take the first step towards
               empowering your team with the latest industry knowledge and
               skills. Let us help you achieve your professional development
               goals.
-            </p>
+            </motion.p>
           </div>
 
           <div class="w-full md:w-4/12 px-4 sm:p-6 mr-auto ml-auto">
-            <div class="relative flex flex-col   min-w-0 break-words bg-white text-black w-full mb-2 shadow-lg rounded-xl ">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                delay: 0.2,
+                scale: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }}
+              class="relative flex flex-col   min-w-0 break-words bg-white text-black w-full mb-2 shadow-lg rounded-xl ">
               <img
                 alt="seminar_image"
                 src={seminarImg}
                 class="w-full align-middle rounded-t-lg rounded-lg"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

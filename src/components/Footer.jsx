@@ -8,16 +8,11 @@ import { Link } from "react-router-dom";
 import facebookIco from "../assets/icon/facebook.svg";
 import instagramIco from "../assets/icon/instagram.svg";
 import linkedin from "../assets/icon/linkedin.svg";
-import logo from "../../src/components/Navbar/images/boxLogoGTW.png";
+
 
 const Footer = () => {
   return (
     <footer className="px-3 pt-5 lg:px-5 border-t-2 bg-black text-white">
-      {/* <div className="flex items-center py-3">
-        <img src={logo} alt="logo" className="h-10 w-10 bg-slate-200 rounded-full p-1" />
-        <span className="ml-2 text-xl font-bold tracking-wide">Greatway Software Pvt. Ltd.</span>
-      </div> */}
-
       <div className="grid sm:grid-cols-2 lg:grid-cols-2">
         <div className="lg:max-w-xl flex flex-col md:px-5">
           <p className="text-md text-justify text-slate-200">
@@ -84,6 +79,19 @@ const Footer = () => {
               <Link to="/ContactUs">
                 <p className="hover:text-[#06b6d4]">Contact</p>
               </Link>
+
+              <Link to="/training-program">
+                <p className="hover:text-[#06b6d4]">Technology Training</p>
+              </Link>
+              <Link to="/management-dev-program">
+                <p className="hover:text-[#06b6d4]">Management Development</p>
+              </Link>
+              <Link to="/enterprise-services">
+                <p className="hover:text-[#06b6d4]">Enterprise Services</p>
+              </Link>
+              <Link to="/microsoft-office">
+                <p className="hover:text-[#06b6d4]">Microsoft Office 365</p>
+              </Link>
             </div>
           </div>
         </div>
@@ -128,6 +136,9 @@ const Footer = () => {
               </Link>
               <Link to="/Service-Support">
                 <p className="hover:text-[#06b6d4]">IT Service Support</p>
+              </Link>
+              <Link to="/institute-academy">
+                <p className="hover:text-[#06b6d4]">Institutional Tech Solutions</p>
               </Link>
             </div>
             <div className="md:pt-8 pt-2">

@@ -93,9 +93,9 @@ const EnterpriseServices = ({ Meta_Data }) => {
                 <section>
                     <div className="flex flex-col md:flex-row bg-dot-slate-300 md:h-[90vh]">
                         {/* Left side */}
-                        <div className="w-full sm:w-8/12 mb-6">
-                            <div className="container mx-auto h-full sm:p-10">
-                                <header className="container px-2 lg:flex pt-16 items-center h-full lg:mt-0">
+                        <div className="w-full mb-6">
+                            <div className="md:container mx-auto h-full">
+                                <header className="container px-2 lg:flex pt-6 items-center h-full lg:mt-0">
                                     <div className="w-full">
                                         <motion.h1
                                             initial={{ opacity: 0, scale: 1.3 }}
@@ -106,7 +106,7 @@ const EnterpriseServices = ({ Meta_Data }) => {
                                                 opacity: { duration: 0.6 },
                                                 ease: "easeInOut",
                                             }}
-                                            className="text-MainHeading font-extrabold"
+                                            className="md:text-MainHeading text-MainHeading-sm font-extrabold"
                                         >
                                             Empower Your
                                             <span className=""> Enterprise </span> with Our Enterprise Services
@@ -167,7 +167,7 @@ const EnterpriseServices = ({ Meta_Data }) => {
                                 opacity: { duration: 0.6 },
                                 ease: "easeInOut",
                             }}
-                            className="mb-8 text-center text-MainHeading font-extrabold"
+                            className="mb-8 text-center md:text-MainHeading text-MainHeading-sm font-extrabold"
                         >
                             Our Job Oriented Courses
                         </motion.h2>
@@ -191,8 +191,8 @@ const EnterpriseServices = ({ Meta_Data }) => {
                                         alt={course.title}
                                     />
                                     <div>
-                                        <div className="font-semibold text-black text-cardHeading mb-2">{course.title}</div>
-                                        <div className="text-paragraph opacity-75">{course.description}</div>
+                                        <div className="font-semibold text-black text-center text-cardHeading mb-2">{course.title}</div>
+                                        <div className="text-paragraph text-center opacity-75">{course.description}</div>
                                     </div>
                                 </motion.div>
                             ))}
@@ -201,7 +201,7 @@ const EnterpriseServices = ({ Meta_Data }) => {
                 </section>
 
                 <section className="bg-white py-12">
-                    <div className="container flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
+                    <div className="container flex flex-col justify-between h-full max-w-6xl md:px-10 px-4 mx-auto xl:px-0">
                         <motion.h2
                             initial={{ opacity: 0, x: 100 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -244,7 +244,7 @@ const EnterpriseServices = ({ Meta_Data }) => {
                                 >
                                     <div className="relative h-full ml-0 sm:mr-10">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
-                                        <div className="relative h-full p-8 bg-white border-2 border-indigo-500 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                        <div className="relative h-full md:p-8 p-4 bg-white border-2 border-indigo-500 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                                             <div className="flex items-center -mt-1">
                                                 <h3 className="my-2 ml-3 text-lg font-bold text-black">
                                                     Permanent Staffing
@@ -275,7 +275,7 @@ const EnterpriseServices = ({ Meta_Data }) => {
                                 >
                                     <div className="relative h-full ml-0 md:mr-10">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-purple-500 rounded-lg"></span>
-                                        <div className="relative h-full p-8 bg-white border-2 border-purple-500 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                        <div className="relative h-full md:p-8 p-4 bg-white border-2 border-purple-500 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                                             <div className="flex items-center -mt-1">
                                                 <h3 className="my-2 ml-3 text-lg font-bold text-black">
                                                     Contract Staffing
@@ -310,7 +310,7 @@ const EnterpriseServices = ({ Meta_Data }) => {
                                 >
                                     <div className="relative h-full ml-0 sm:mr-10">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
-                                        <div className="relative h-full p-8 bg-white border-2 border-blue-400 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                        <div className="relative h-full md:p-8 p-4 bg-white border-2 border-blue-400 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                                             <div className="flex items-center -mt-1">
                                                 <h3 className="my-2 ml-3 text-lg font-bold text-black">
                                                     Contract to Hire
@@ -343,7 +343,7 @@ const EnterpriseServices = ({ Meta_Data }) => {
                                 >
                                     <div className="relative h-full ml-0 sm:mr-10">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-400 rounded-lg"></span>
-                                        <div className="relative h-full p-8 bg-white border-2 border-yellow-400 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                        <div className="relative h-full md:p-8 p-4 bg-white border-2 border-yellow-400 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                                             <div className="flex items-center -mt-1">
                                                 <h3 className="my-2 ml-3 text-lg font-bold text-black">
                                                     Part-Time Staffing
@@ -375,7 +375,7 @@ const EnterpriseServices = ({ Meta_Data }) => {
                                 >
                                     <div className="relative h-full ml-0 md:mr-10">
                                         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-green-500 rounded-lg"></span>
-                                        <div className="relative h-full p-8 bg-white border-2 border-green-500 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                        <div className="relative h-full md:p-8 p-4 bg-white border-2 border-green-500 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                                             <div className="flex items-center -mt-1">
                                                 <h3 className="my-2 ml-3 text-lg font-bold text-black">
                                                     Assessment Services
@@ -398,7 +398,7 @@ const EnterpriseServices = ({ Meta_Data }) => {
                 </section>
 
                 {/* Technical expertise section */}
-                <section className=" bg-slate-100 bg-dot-slate-300 text-black p-5">
+                <section className=" bg-slate-100 bg-dot-slate-300 text-black md:p-5">
                     <div className="container max-w-xl p-4 mx-auto space-y-12 lg:px-8 lg:max-w-7xl">
                         <div>
                             <motion.h2
