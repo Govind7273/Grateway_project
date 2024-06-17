@@ -1,5 +1,6 @@
 import React from "react";
-
+import FacultyDevProgram from "./images/FDP.jpg";
+import { motion } from "framer-motion";
 const FDP = () => {
   const FDP_Features = [
     {
@@ -43,41 +44,77 @@ const FDP = () => {
   return (
     <main className="py-8">
       <div className="flex items-center flex-col gap-4">
-        <h2 className="text-2xl font-bold text-gray-800 lg:text-3xl px-2">
+        <motion.h2
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.2,
+            y: { type: "spring", stiffness: 30 },
+            opacity: { duration: 0.6 },
+            ease: "easeInOut"
+          }}
+          className="text-MainHeading font-bold px-2">
           Faculty Development Program (FDP)
-        </h2>
+        </motion.h2>
 
-        <p className=" max-w-screen-lg text-gray-500 md:block px-4">
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.2,
+            y: { type: "spring", stiffness: 30 },
+            opacity: { duration: 0.6 },
+            ease: "easeInOut"
+          }}
+          className=" max-w-screen-lg text-Paragraph text-center md:block px-4">
           At Greateway, we are dedicated to fostering academic excellence
           through our meticulously designed Faculty Development Programs (FDP).
           Our programs are tailored to enhance the teaching, research, and
           professional skills of faculty members, ensuring they are
           well-equipped to inspire and educate the next generation of leaders.
-        </p>
+        </motion.p>
       </div>
       <div className="max-w-screen-xl mx-auto py-8 px-4 lg:py-16 lg:px-6">
         <div className="flex flex-col md:flex-row">
           {/* <!-- can help image --> */}
-          <div className="mr-0 md:mr-8 mb-6 md:mb-0">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              delay: 0.2,
+              scale: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.6 },
+              ease: "easeInOut"
+            }}
+            className="mr-0 md:mr-8 mb-6 md:mb-0 flex justify-center items-center">
             <img
-              className=" md:w-full mx-auto"
-              src="https://images.pexels.com/photos/3183165/pexels-photo-3183165.jpeg?auto=compress&cs=tinysrgb&w=600"
+              className="md:w-[500px] mx-auto"
+              src={FacultyDevProgram}
               alt="can_help_banner"
             />
-          </div>
+          </motion.div>
           {/* <!-- end can help image --> */}
 
           <div className="flex-1 flex flex-col sm:flex-row flex-wrap -mx-2">
             {FDP_Features.map((feat) => {
               return (
-                <div key={feat?.id} className="w-full sm:w-1/2 mb-4 px-2 ">
+                <motion.div
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{
+                    delay: 0.2,
+                    x: { type: "spring", stiffness: 30 },
+                    opacity: { duration: 0.6 },
+                    ease: "easeInOut"
+                  }}
+                  key={feat?.id} className="w-full sm:w-1/2 mb-4 px-2 ">
                   <div className="h-full py-4 px-6 border border-blue-900 border-t-0 border-l-0 rounded-br-xl">
-                    <h3 className="text-2xl font-bold text-md mb-4">
+                    <h3 className="text-CardHeading font-bold text-md mb-4">
                       {feat?.title}
                     </h3>
-                    <p className="text-sm">{feat?.description}</p>
+                    <p className="text-Paragraph">{feat?.description}</p>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
