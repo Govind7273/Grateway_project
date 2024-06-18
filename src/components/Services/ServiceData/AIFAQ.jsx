@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { motion } from "framer-motion";
 const AIMLFaq = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -35,8 +35,17 @@ const AIMLFaq = () => {
   return (
     <>
       {/* Faq section */}
-      <section data-aos="zoom-in" className="w-[100vw] md:py-10 py-6">
-        <div className="relative w-full bg-white md:px-6 px-4 pt-8 md:pb-8 pb-4  shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
+      <section data-aos="zoom-in" className="w-[100vw] md:py-10 py-6 bg-slate-200 bg-dot-slate-400">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.6 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{
+            delay: 0.2,
+            scale: { type: "spring", stiffness: 30 },
+            opacity: { duration: 0.6 },
+            ease: "easeInOut"
+          }}
+          className="relative w-full bg-white md:px-6 px-4 pt-8 md:pb-8 pb-4  shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
           <div className="mx-auto md:px-5 px-2">
             <div className="flex flex-col items-center">
               <h2 className="md:text-MainHeading text-MainHeading-sm font-extrabold">
@@ -56,9 +65,8 @@ const AIMLFaq = () => {
                     >
                       <span>{faq.question}</span>
                       <span
-                        className={`transition ${
-                          openIndex === index ? "group-open:rotate-180" : ""
-                        }`}
+                        className={`transition ${openIndex === index ? "group-open:rotate-180" : ""
+                          }`}
                       >
                         <svg
                           fill="none"
@@ -85,7 +93,7 @@ const AIMLFaq = () => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );

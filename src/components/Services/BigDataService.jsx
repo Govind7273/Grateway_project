@@ -62,10 +62,19 @@ const BigDataService = ({ Meta_Data }) => {
       </Helmet>
       {/* Hero Section */}
       <section>
-        <div className=" flex lg:flex-row flex-col lg:h-[100vh] md:pt-20 lg:pt-20 pt-10">
-          <div className="flex flex-col items-center justify-center lg:h-[screen] h-auto overflow-y-hidden w-full xl:w-[55%] p-12 bg-white">
-            <div className="flex shadow-xl w-auto h-auto shadow-slate-300 rounded-2xl  p-4 flex-col items-center  space-y-8">
-              <h2 className="md:text-5xl text-lg text-[#3c4c54] text-center font-bold leading-tight">
+        <div className=" flex lg:flex-row flex-col lg:h-[100vh] md:pt-20 lg:pt-20 pt-10 bg-slate-200 bg-dot-slate-400">
+          <div className="flex flex-col items-center justify-center lg:h-[screen] h-auto overflow-y-hidden w-full xl:w-[55%] p-12 bg-slate-200 bg-dot-slate-400">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.7 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                delay: 0.2,
+                scale: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }}
+              className="flex shadow-md w-auto h-auto shadow-slate-300 bg-white rounded-2xl p-6 flex-col items-center space-y-8">
+              <h2 className="text-MainHeading text-center font-extrabold leading-tight capitalize">
                 Unlock the Power of
                 <br />
                 Big Data Analytics
@@ -75,7 +84,7 @@ const BigDataService = ({ Meta_Data }) => {
                   Connect
                 </button>
               </Link>
-            </div>
+            </motion.div>
           </div>
 
           <div
@@ -96,43 +105,79 @@ const BigDataService = ({ Meta_Data }) => {
       {/* Second Section */}
       <section>
         <div className="w-full py-16 md:py-24 lg:py-10 flex items-center">
-          <div className="lg:h-[40vh] py-2 w-full dark:bg-black  dark:bg-dot-white/[0.2] bg-dot-black/[0.3] relative flex items-center justify-center">
+          <div className="lg:h-[40vh] py-2 w-full  bg-dot-black/[0.1] relative flex items-center justify-center">
             {/* Radial gradient for the container to give a faded look */}
-            <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+            <div className="absolute pointer-events-none inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
             <div className="container mx-auto px-4 md:px-6 lg:px-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div className="flex flex-col items-center text-center space-y-4 hover:cursor-pointer">
-                  <PieChartIcon className="h-12 w-12 text-[#0077B6] " />
-                  <h3 className="text-xl font-bold">Advanced Analytics</h3>
-                  <p className="text-gray-500">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.6 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    delay: 0.2,
+                    scale: { type: "spring", stiffness: 30 },
+                    opacity: { duration: 0.6 },
+                    ease: "easeInOut"
+                  }}
+                  className="flex flex-col items-center text-center space-y-4 hover:cursor-pointer">
+                  <PieChartIcon className="h-12 w-12 text-[#00A8E8] " />
+                  <h3 className="text-CardHeading font-bold">Advanced Analytics</h3>
+                  <p className="text-Paragraph">
                     Leverage powerful analytics tools to uncover insights and
                     trends from your data.
                   </p>
-                </div>
-                <div className="flex flex-col items-center text-center space-y-4 hover:cursor-pointer">
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.6 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    delay: 0.2,
+                    scale: { type: "spring", stiffness: 30 },
+                    opacity: { duration: 0.6 },
+                    ease: "easeInOut"
+                  }}
+                  className="flex flex-col items-center text-center space-y-4 hover:cursor-pointer">
                   <ScalingIcon className="h-12 w-12 text-[#00A8E8]" />
-                  <h3 className="text-xl font-bold">Scalable Infrastructure</h3>
-                  <p className="text-gray-500">
+                  <h3 className="text-CardHeading font-bold">Scalable Infrastructure</h3>
+                  <p className="text-Paragraph">
                     Our platform scales seamlessly to handle even the largest
                     data sets.
                   </p>
-                </div>
-                <div className="flex flex-col items-center text-center space-y-4 hover:cursor-pointer">
-                  <LockIcon className="h-12 w-12 text-[#0077B6]" />
-                  <h3 className="text-xl font-bold">Secure Data Management</h3>
-                  <p className="text-gray-500">
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.6 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    delay: 0.2,
+                    scale: { type: "spring", stiffness: 30 },
+                    opacity: { duration: 0.6 },
+                    ease: "easeInOut"
+                  }}
+                  className="flex flex-col items-center text-center space-y-4 hover:cursor-pointer">
+                  <LockIcon className="h-12 w-12 text-[#00A8E8]" />
+                  <h3 className="text-CardHeading font-bold">Data Management</h3>
+                  <p className="text-Paragraph">
                     Keep your data safe with our robust security and compliance
                     features.
                   </p>
-                </div>
-                <div className="flex flex-col items-center text-center space-y-4 hover:cursor-pointer">
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    delay: 0.2,
+                    scale: { type: "spring", stiffness: 30 },
+                    opacity: { duration: 0.6 },
+                    ease: "easeInOut"
+                  }}
+                  className="flex flex-col items-center text-center space-y-4 hover:cursor-pointer">
                   <BotIcon className="h-12 w-12 text-[#00A8E8]" />
-                  <h3 className="text-xl font-bold">Automated Workflows</h3>
-                  <p className="text-gray-500">
+                  <h3 className="text-CardHeading font-bold">Automated Workflows</h3>
+                  <p className="text-Paragraph">
                     Streamline your data processing with our automated
                     workflows.
                   </p>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -145,19 +190,27 @@ const BigDataService = ({ Meta_Data }) => {
         <section className="flex justify-evenly w-screen md:h-[60vh] flex-col md:flex-row ">
           <div className="space-y-4 py-4 px-1 lg:w-[50%] md:flex-col ">
             <motion.h1
-              variants={fadein("right", 0.1)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.8 }}
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.2,
+                scale: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }}
               className="md:text-MainHeading text-2xl xs:text-center font-bold p-2"
             >
               Data Collection and Integration
             </motion.h1>
             <motion.p
-              variants={fadein("left", 0.1)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.8 }}
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.2,
+                scale: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }}
               className="text-Paragraph h-auto p-2"
             >
               Data Collection and Integration are crucial processes in modern
@@ -173,7 +226,15 @@ const BigDataService = ({ Meta_Data }) => {
             </motion.p>
           </div>
           <div className="h-auto py-2 lg:w-[40vw] px-5">
-            <img
+            <motion.img
+              initial={{ opacity: 0, scale: 0.6 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                delay: 0.2,
+                scale: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }}
               className="lg:h-[50vh]  object-cover  rounded-xl shadow-xl"
               src={DataCollectionImg}
               width={2500}
@@ -187,7 +248,15 @@ const BigDataService = ({ Meta_Data }) => {
         <section className="w-[100vw] flex md:flex-row flex-col md:h-[70vh] h-[80vh] p-2 overflow-y-hidden overflow-x-hidden gap-20 px-4">
           {/* left section */}
           <div>
-            <img
+            <motion.img
+              initial={{ opacity: 0, scale: 0.6 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                delay: 0.2,
+                scale: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }}
               className="border  rounded-2xl shadow-md lg:h-[55vh]"
               src={ServerRackImage}
               width={1500}
@@ -198,19 +267,27 @@ const BigDataService = ({ Meta_Data }) => {
           {/* right section */}
           <div className=" px-4 flex gap-4 flex-col pt-4">
             <motion.h1
-              variants={fadein("right", 0.1)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.8 }}
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.2,
+                x: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }}
               className="md:text-MainHeading text-2xl font-bold"
             >
               Data Storage and Management
             </motion.h1>
             <motion.p
-              variants={fadein("left", 0.1)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.8 }}
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.2,
+                x: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }}
               className="text-Paragraph p-2"
             >
               We design and implement robust data storage and management
@@ -219,8 +296,26 @@ const BigDataService = ({ Meta_Data }) => {
               Hadoop and cloud-based platforms, to store, organize and process
               large datasets efficiently.
             </motion.p>
-            <h4 className="text-xl text-black font-bold">Storages:</h4>
-            <ul className="list-disc ms-6 font-bold leading-loose w-2/3 ">
+            <motion.h4
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.2,
+                x: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }}
+              className="text-xl text-[#3c4c54] font-bold">Storages:</motion.h4>
+            <motion.ul
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.2,
+                x: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }}
+              className="list-disc ms-6 font-bold leading-loose w-2/3 text-[#3c4c54]">
               <motion.li
                 variants={fadein("up", 0.1)}
                 initial="hidden"
@@ -248,7 +343,7 @@ const BigDataService = ({ Meta_Data }) => {
               >
                 Microsoft Azure Blob Storage
               </motion.li>
-              <motion.li
+              {/* <motion.li
                 variants={fadein("up", 0.1)}
                 initial="hidden"
                 whileInView="show"
@@ -256,15 +351,15 @@ const BigDataService = ({ Meta_Data }) => {
                 className="border-b-2 border-gray-500"
               >
                 IBM Cloud Object Storage
-              </motion.li>
-            </ul>
+              </motion.li> */}
+            </motion.ul>
           </div>
         </section>
 
         {/* Fourth Section */}
-        <section className="w-[100%] bg-white flex flex-col items-center text-gray-500 py-4">
+        <section className="w-[100%] bg-white flex flex-col items-center text-gray-500">
           {/* Heading */}
-          <div className="w-[90%] flex flex-col items-center p-8 gap-2">
+          <div className="w-[90%] flex flex-col items-center gap-2 py-4">
             <motion.h2
               variants={fadein("right", 0.1)}
               initial="hidden"
@@ -279,7 +374,7 @@ const BigDataService = ({ Meta_Data }) => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.8 }}
-              className="md:text-SubHeading text-SubHeading-sm py-3"
+              className="md:text-SubHeading text-SubHeading-sm"
             >
               Vigorously spearhead cutting-edge opportunities ahead of
               developing leadership.
@@ -293,10 +388,14 @@ const BigDataService = ({ Meta_Data }) => {
             <div className="w-[80%] grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-items-center items-center gap-x-6 gap-y-12 ">
               {card.map((item) => (
                 <motion.div
-                  variants={fadein("up", 0.1)}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true, amount: 0.8 }}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    delay: 0.2,
+                    scale: { type: "spring", stiffness: 30 },
+                    opacity: { duration: 0.6 },
+                    ease: "easeInOut"
+                  }}
                   key={item.title}
                   className="flex flex-col bg-white border hover:shadow-xl transition duration-100 ease-in-out hover:cursor-pointer hover:scale-125 border-t-8 border-cyan-700 items-center  gap-2"
                 >
@@ -313,7 +412,7 @@ const BigDataService = ({ Meta_Data }) => {
           </div>
         </section>
         <section>
-          <div className="w-[100vw] py-12 md:py-10 bg-gray-100 dark:bg-gray-800">
+          <div className="w-[100vw] py-12 md:py-10 bg-gray-100 bg-dot-slate-300">
             <div className="container px-4 md:px-6">
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
                 <div className="space-y-4 flex flex-col justify-center">
@@ -322,7 +421,7 @@ const BigDataService = ({ Meta_Data }) => {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: false, amount: 0.8 }}
-                    className=" font-bold tracking-tighter text-2xl md:text-MainHeading text-MainHeading-sm"
+                    className="text-MainHeading font-bold"
                   >
                     Unparalleled Big Data Analytics Expertise
                   </motion.h2>
@@ -331,17 +430,26 @@ const BigDataService = ({ Meta_Data }) => {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: false, amount: 0.8 }}
-                    className="max-w-[600px] md:text-SubHeading text-SubHeading-sm font-extrabold"
+                    className="max-w-[600px] md:text-SubHeading text-SubHeading-sm font-bold"
                   >
                     Discover why our Big Data Analytics solutions are the best
                     choice for your business.
                   </motion.p>
                 </div>
                 <div className="grid gap-4">
-                  <div className="flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm transition-all hover:scale-105 hover:shadow-md dark:bg-gray-950 dark:hover:bg-gray-800">
+                  <motion.div
+                    initial={{ opacity: 0, x: 100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      delay: 0.2,
+                      x: { type: "spring", stiffness: 30 },
+                      opacity: { duration: 0.6 },
+                      ease: "easeInOut"
+                    }}
+                    className="flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm transition-all hover:scale-105 hover:shadow-md dark:bg-gray-950 dark:hover:bg-gray-800">
                     <RocketIcon className="h-8 w-8 text-gray-500 dark:text-gray-400" />
                     <div>
-                      <h3 className="text-lg font-semibold">
+                      <h3 className="text-CardHeading font-semibold">
                         Cutting-Edge Technology
                       </h3>
                       <p className="text-gray-500 dark:text-gray-400">
@@ -349,11 +457,20 @@ const BigDataService = ({ Meta_Data }) => {
                         frameworks to drive innovation.
                       </p>
                     </div>
-                  </div>
-                  <div className="flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm transition-all hover:scale-105 hover:shadow-md dark:bg-gray-950 dark:hover:bg-gray-800">
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, x: 100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      delay: 0.2,
+                      x: { type: "spring", stiffness: 30 },
+                      opacity: { duration: 0.6 },
+                      ease: "easeInOut"
+                    }}
+                    className="flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm transition-all hover:scale-105 hover:shadow-md dark:bg-gray-950 dark:hover:bg-gray-800">
                     <BriefcaseIcon className="h-8 w-8 text-gray-500 dark:text-gray-400" />
                     <div>
-                      <h3 className="text-lg font-semibold">
+                      <h3 className="text-CardHeading font-semibold">
                         Experienced Professionals
                       </h3>
                       <p className="text-gray-500 dark:text-gray-400">
@@ -361,11 +478,20 @@ const BigDataService = ({ Meta_Data }) => {
                         Analytics specialists.
                       </p>
                     </div>
-                  </div>
-                  <div className="flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm transition-all hover:scale-105 hover:shadow-md dark:bg-gray-950 dark:hover:bg-gray-800">
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, x: 100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{
+                      delay: 0.2,
+                      x: { type: "spring", stiffness: 30 },
+                      opacity: { duration: 0.6 },
+                      ease: "easeInOut"
+                    }}
+                    className="flex items-center gap-4 rounded-lg bg-white p-4 shadow-sm transition-all hover:scale-105 hover:shadow-md dark:bg-gray-950 dark:hover:bg-gray-800">
                     <TimerIcon className="h-8 w-8 text-gray-500 dark:text-gray-400" />
                     <div>
-                      <h3 className="text-lg font-semibold">
+                      <h3 className="text-CardHeading font-semibold">
                         Proven Track Record
                       </h3>
                       <p className="text-gray-500 dark:text-gray-400">
@@ -373,7 +499,7 @@ const BigDataService = ({ Meta_Data }) => {
                         results.
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
@@ -381,7 +507,7 @@ const BigDataService = ({ Meta_Data }) => {
         </section>
 
         {/*Ending section */}
-        <section className=" w-full py-6 md:py-20 lg:py-8 bg-stone-100">
+        <section className=" w-full py-6 md:py-20 lg:py-8 bg-white">
           <div className="container grid items-center justify-center gap-6 px-4 md:px-20 lg:gap-10">
             <div className="space-y-2">
               <motion.h2
@@ -389,7 +515,7 @@ const BigDataService = ({ Meta_Data }) => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.8 }}
-                className="font-extrabold tracking-tight text-center text-2xl  md:text-MainHeading"
+                className="font-extrabold text-center text-2xl  md:text-MainHeading"
               >
                 Ready to Unlock the Power of Big Data?
               </motion.h2>
@@ -398,11 +524,14 @@ const BigDataService = ({ Meta_Data }) => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.8 }}
-                className="md:text-SubHeading text-SubHeading-sm text-center "
+                className="md:text-SubHeading text-SubHeading-sm text-center font-bold "
               >
                 Contact us today to learn how our Big Data Analytics service can
                 transform your business.
               </motion.p>
+              <Link to={"/ContactUs"} className="text-center flex justify-center items-center">
+                <button className="items-start w-fit bg-cyan-300 px-3 py-1 border border-cyan-300 md:px-4 md:py-2 rounded-xl font-bold text-slate-800 hover:bg-white hover:text-cyan-600 transition-all 0.2 ease-out hover:border">Contact us</button>
+              </Link>
             </div>
           </div>
         </section>

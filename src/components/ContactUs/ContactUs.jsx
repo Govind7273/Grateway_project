@@ -11,8 +11,8 @@ import { IoLocation } from "react-icons/io5";
 import { IoMdCall } from "react-icons/io";
 import { IoMail } from "react-icons/io5";
 import ContactUs1 from "./image/ContactUs1.jpg";
-
-const ContactUs = ({Meta_Data}) => {
+import { motion } from "framer-motion";
+const ContactUs = ({ Meta_Data }) => {
   const { Title, Description, Link } = Meta_Data;
 
   return (
@@ -24,52 +24,115 @@ const ContactUs = ({Meta_Data}) => {
       </Helmet>
 
       <div className="w-full overflow-x-hidden pt-5 px-3 flex flex-col justify-center items-center gap-4 bg-white dark:text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center">
-          <h2 class="md:text-5xl text-2xl font-extrabold text-[#1a2d72]">Contact Us</h2>
-          <p class="pt-4 pb-4 text-base max-w-2xl text-center m-auto dark:text-gray-400">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.2,
+              y: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.3 },
+              ease: "easeInOut"
+            }}
+            className="md:text-MainHeading text-MainHeading-sm font-extrabold">Contact Us</motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.2,
+              y: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.3 },
+              ease: "easeInOut"
+            }}
+            className="pt-4 pb-4 text-Paragraph max-w-2xl text-center m-auto">
             Want to contact us? Fill the below form and we'll be happy to show you how we can transform your experience.
-          </p>
+          </motion.p>
         </div>
-        
+
 
         <div className="flex flex-col sm:flex-row gap-2 sm:gap-16">
-          <div className="flex gap-2 sm:items-center text-slate-900">
-            <IoLocation  className="text-2xl "/>
-            <p className="font-navlistFont text-sm ">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.7 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              delay: 0.2,
+              scale: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.5 },
+              ease: "easeInOut"
+            }}
+            className="flex gap-2 sm:items-center text-slate-900">
+            <IoLocation className="text-2xl " />
+            <p className="text-Paragraph">
               Office No: 503, 06th Floor, Stellar Spaces, <br />
               Opposite Zensar IT Park, Kharadi, Pune 411014
             </p>
-          </div>
+          </motion.div>
 
-          <div className="flex gap-2 sm:items-center text-slate-900">
-            <IoMdCall className="text-2xl "/>
-            <span className="text-slate-800 font-headingFont">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.6 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              delay: 0.2,
+              scale: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.5 },
+              ease: "easeInOut"
+            }}
+            className="flex gap-2 sm:items-center text-slate-900">
+            <IoMdCall className="text-2xl " />
+            <span className="text-Paragraph">
               +91 9172077273
             </span>
-          </div>
+          </motion.div>
 
-          <div className="flex gap-2 sm:items-center text-slate-900">
-  <IoMail className="text-2xl" />
-  <a href="mailto:hr@greateway.com" className="text-md  hover:text-blue-600">
-    hr@greateway.com
-  </a>
-</div>
-</div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.6 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              delay: 0.2,
+              scale: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.5 },
+              ease: "easeInOut"
+            }}
+            className="flex gap-2 sm:items-center text-slate-900">
+            <IoMail className="text-2xl" />
+            <a href="mailto:hr@greateway.com" className="text-Paragraph">
+              hr@greateway.com
+            </a>
+          </motion.div>
+        </div>
 
         <hr className="my-4 w-full border-t-2 border-gray-400" />
-        <div className="flex w-[100%] overflow-x-hidden mt-4  md:flex-row flex-col flex-wrap justify-center  bg-white">
+        <div className="flex w-[100%] overflow-x-hidden mt-4  md:flex-row flex-col flex-wrap justify-center bg-white">
           {/* left section */}
           <div className="flex  md:w-[40%] w-full flex-col flex-wrap gap-0 p-6 bg-white ">
             {/* first part */}
             <div className="mb-2 rounded-lg">
               <div className="mb-2">
                 {/* Adding the image here */}
-                <img src={ContactUs1} alt="My Image" className="w-full shadow-xl border-2 border-sky-500 rounded-2xl" />
+                <motion.img
+                  initial={{ opacity: 0, scale: 0.6 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    delay: 0.2,
+                    scale: { type: "spring", stiffness: 30 },
+                    opacity: { duration: 0.5 },
+                    ease: "easeInOut"
+                  }}
+                  src={ContactUs1} alt="My Image" className="w-full shadow-xl border-2 border-sky-500 rounded-2xl" />
               </div>
             </div>
             {/* second part */}
-            <div className="text-lg font-bold text-violet-700 text-center mt-5">
-              <p className="mb-2">Follow Us On</p>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.6 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                delay: 0.2,
+                scale: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.5 },
+                ease: "easeInOut"
+              }}
+              className="text-lg font-bold text-center mt-5">
+              <p className="mb-2 text-Paragraph">Follow Us On</p>
               <div className="flex flex-col items-center">
                 <div className="flex gap-4">
                   <a
@@ -98,14 +161,23 @@ const ContactUs = ({Meta_Data}) => {
 
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
           {/* right section */}
           <ContactForm />
           <hr className="w-full border-t-2 border-gray-400" />
         </div>
-        <span class="inline-block rounded-lg text-blue-900 my-5 bg-blue-100 px-2  p-2 text-xl relative font-semibold">Let the map be your guide to finding us</span>
-        
+        <motion.span
+          initial={{ opacity: 0, scale: 0.4 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{
+            delay: 0.2,
+            scale: { type: "spring", stiffness: 30 },
+            opacity: { duration: 0.5 },
+            ease: "easeInOut"
+          }}
+          class="inline-block rounded-lg text-blue-900 my-5 bg-blue-100 px-2  p-2 text-xl relative font-semibold">Let the map be your guide to finding us</motion.span>
+
         <AddressMap />
       </div>
     </>

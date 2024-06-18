@@ -217,6 +217,14 @@ const JobsCard = ({ setModal }) => {
         {/* card info */}
         {cardData.map((cardItem) => (
           <motion.div
+            initial={{ opacity: 0, scale: 0.6 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              delay: 0.2,
+              scale: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.6 },
+              ease: "easeInOut"
+            }}
             key={cardItem.position}
             className="p-4 bg-opacity-20 bg-slate-50 border rounded-xl flex flex-col gap-4 hover:cursor-pointer transition-all duration-300 shadow-lg ease-linear"
           >

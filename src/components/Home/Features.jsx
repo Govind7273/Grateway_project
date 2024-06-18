@@ -5,7 +5,7 @@ import { fadein } from "../../../src/variants";
 
 const FeaturesSection = () => {
   return (
-    <section className="bg-slate-100">
+    <section className="bg-slate-100 overflow-hidden">
       <div className="container max-w-xl p-6 mx-auto space-y-6 lg:px-8 lg:max-w-7xl">
         <div>
           <motion.h2 variants={fadein("up", 0.2)}
@@ -48,7 +48,7 @@ const FeaturesSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h4 className="md:text-lg text-base font-medium leading-6">Compatibility and Integration</h4>
+                  <h4 className="md:text-lg text-base font-bold leading-6">Compatibility and Integration</h4>
                   <p className="mt-2 md:text-lg text-sm">Ensure compatibility across devices/platforms and support integration with third-party services.</p>
                 </div>
               </motion.div>
@@ -77,7 +77,7 @@ const FeaturesSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h4 className="md:text-lg text-base font-medium leading-6">Security and Data Protection</h4>
+                  <h4 className="md:text-lg text-base font-bold leading-6">Security and Data Protection</h4>
                   <p className="mt-2 md:text-lg text-sm">Employing strong security protocols to safeguard user data and prevent unauthorized access.</p>
                 </div>
               </motion.div>
@@ -107,7 +107,7 @@ const FeaturesSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h4 className="md:text-lg text-base font-medium leading-6">Scalability and Performance</h4>
+                  <h4 className="md:text-lg text-base font-bold leading-6">Scalability and Performance</h4>
                   <p className="mt-2 md:text-lg text-sm">Ensure the software can scale efficiently and maintains optimal performance.</p>
                 </div>
               </motion.div>
@@ -136,7 +136,7 @@ const FeaturesSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h4 className="md:text-lg text-base font-medium leading-6">User-Centric Design</h4>
+                  <h4 className="md:text-lg text-base font-bold leading-6">User-Centric Design</h4>
                   <p className="mt-2 md:text-lg text-sm">Focus on intuitive UX/UI design for a positive user experience.</p>
                 </div>
               </motion.div>
@@ -166,7 +166,7 @@ const FeaturesSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h4 className="md:text-lg text-base font-medium leading-6">Regular Updates and Support</h4>
+                  <h4 className="md:text-lg text-base font-bold leading-6">Regular Updates and Support</h4>
                   <p className="mt-2 md:text-lg text-sm">Deliver prompt updates, bug fixes and responsive customer assistance.</p>
                 </div>
               </motion.div>
