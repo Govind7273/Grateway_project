@@ -127,9 +127,8 @@ const CareersPage = ({ Meta_Data }) => {
             {images.map((image, index) => (
               <motion.div
                 key={index}
-                className={`absolute inset-0 flex items-center justify-center ${
-                  index === currentIndex ? "block" : "hidden"
-                }`}
+                className={`absolute inset-0 flex items-center justify-center ${index === currentIndex ? "block" : "hidden"
+                  }`}
                 initial="hidden"
                 animate="visible"
                 variants={slideVariants} // Use simplified slideVariants
@@ -146,7 +145,7 @@ const CareersPage = ({ Meta_Data }) => {
         </section>
 
         {/* Second Section */}
-        <section className="py-12">
+        <section className="py-8">
           <div className="lg:h-screen lg:w-screen flex flex-col gap-2 justify-center items-center">
             <div className="py-4 flex items-center justify-center">
               <div className="w-32 aspect-square rounded-full relative flex justify-center items-center animate-[spin_3s_linear_infinite] z-40 bg-[conic-gradient(white_0deg,white_300deg,transparent_270deg,transparent_360deg)] before:animate-[spin_2s_linear_infinite] before:absolute before:w-[60%] before:aspect-square before:rounded-full before:z-[80] before:bg-[conic-gradient(white_0deg,white_270deg,transparent_180deg,transparent_360deg)] after:absolute after:w-3/4 after:aspect-square after:rounded-full after:z-[60] after:animate-[spin_3s_linear_infinite] after:bg-[conic-gradient(#06b6d4_0deg,#06b6d4_180deg,transparent_180deg,transparent_360deg)]">
@@ -158,7 +157,7 @@ const CareersPage = ({ Meta_Data }) => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.8 }}
-                className="md:text-MainHeading text-lg text-[#3c4c54] text-center font-extrabold px-2 uppercase"
+                className="md:text-MainHeading text-lg  text-center font-extrabold px-2 uppercase"
               >
                 Welcome to Greateway Softwares, India
               </motion.h1>
@@ -216,27 +215,24 @@ const CareersPage = ({ Meta_Data }) => {
                 src={CareerAdv}
                 width="550"
               />
-              <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
+              <div className="flex flex-col justify-center">
+                <div className="">
                   <motion.h1
                     variants={fadein("down", 0.2)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: false, amount: 0.8 }}
-                    className="text-3xl text-black  font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                    className="text-MainHeading font-extrabold capitalize pb-4"
                   >
                     Step into the Future of{" "}
-                    <span className="block text-blue-900 pt-1">
-                      {" "}
-                      Technology
-                    </span>
+                    Technology
                   </motion.h1>
                   <motion.p
                     variants={fadein("up", 0.2)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{ once: true, amount: 0.8 }}
-                    className="max-w-[600px] text-Paragraph leading-Paragraph md:text-lg dark:text-gray-400"
+                    className="max-w-[600px] text-Paragraph leading-Paragraph md:text-lg pb-4"
                   >
                     We believe in pioneering the future of technology. Join us
                     on a transformative journey where creativity meets
@@ -263,7 +259,7 @@ const CareersPage = ({ Meta_Data }) => {
 
         {/* Fourth Section */}
         <section>
-          <div className="flex justify-center items-center gap-2 py-12">
+          <div className="flex justify-center items-center gap-2 py-6">
             <div className="w-32 aspect-square rounded-full relative flex justify-center items-center animate-[spin_3s_linear_infinite] z-40 bg-[conic-gradient(white_0deg,white_300deg,transparent_270deg,transparent_360deg)] before:animate-[spin_2s_linear_infinite] before:absolute before:w-[60%] before:aspect-square before:rounded-full before:z-[80] before:bg-[conic-gradient(white_0deg,white_270deg,transparent_180deg,transparent_360deg)] after:absolute after:w-3/4 after:aspect-square after:rounded-full after:z-[60] after:animate-[spin_3s_linear_infinite] after:bg-[conic-gradient(#06b6d4_0deg,#06b6d4_180deg,transparent_180deg,transparent_360deg)]">
               <span className="absolute w-[85%] aspect-square rounded-full z-[60] animate-[spin_5s_linear_infinite] bg-[conic-gradient(#2c3493_0deg,#2c3493_180deg,transparent_180deg,transparent_360deg)]"></span>
             </div>
@@ -272,7 +268,7 @@ const CareersPage = ({ Meta_Data }) => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.8 }}
-              className=" md:text-MainHeading text-lg text-[#3c4c54]  text-center font-extrabold px-2 uppercase"
+              className="md:text-MainHeading text-lg text-[#3c4c54]  text-center font-extrabold px-2 uppercase"
             >
               Hear it from our Team
             </motion.h1>

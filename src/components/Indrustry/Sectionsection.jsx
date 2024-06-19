@@ -148,7 +148,7 @@ export const Secondsection = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.5 }}
-              className="text-2xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-[#504d69]"
+              className="font-extrabold capitalize md:text-MainHeading text-MainHeading-sm px-4"
             >
               Our solutions are tailored to meet the unique needs of businesses
               across a wide range of industries.
@@ -157,68 +157,64 @@ export const Secondsection = () => {
         </div>
       </section>
       {/*Whole card section*/}
-      <section className="w-full md:py-24 lg:py-10 bg-gray-200 dark:bg-gray-800 overflow-x-hidden px-3">
-        <div className="py-10 px-2">
+      <section className="w-full bg-slate-100 bg-dot-slate-300 overflow-x-hidden px-3">
+        <div className="py-4 px-2">
           <motion.h1
             variants={fadein("down", 0.1)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.5 }}
-            className="md:text-4xl text-center font-bold text-3xl text-[#504d69]"
+            className="md:text-MainHeading text-MainHeading-sm font-extrabold text-center"
           >
             Discover Solution For Your Industry
           </motion.h1>
         </div>
         {/*Sub card section*/}
-        <div className="container pb-5 grid grid-cols-1 gap-6 px-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10">
+        <div className="container pb-8 grid grid-cols-1 gap-6 px-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10">
           {/*Construction below */}
           <motion.div
-            variants={fadein("right", 0.1)}
-            initial="hidden"
-            whileInView={"show"}
-            whileHover={{ scale: 1.1 }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "spring",
-              stiffness: 80,
-              damping: 10,
-              amount: 0.1,
+              delay: 0.2,
+              scale: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.5 },
+              ease: "easeInOut"
             }}
-            viewport={{ once: true, amount: 0.5 }}
-            className=" group relative overflow-hidden rounded-lg bg-white shadow-md hover:cursor-pointer transition-all ease-linear hover:shadow-xl hover:scale-125 dark:bg-gray-950"
+            className=" group relative overflow-hidden rounded-lg bg-white shadow-md hover:cursor-pointer transition-all ease-linear hover:shadow-xl hover:scale-125 "
           >
-            <div className="flex h-24 items-center justify-center bg-gray-100 p-4 dark:bg-gray-800">
-              <BuildingIcon className="h-8 w-8 text-gray-500 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-50" />
+            <div className="flex h-16 items-center justify-center bg-white p-2 dark:bg-gray-800">
+              <BuildingIcon className="h-10 w-10 text-gray-500 group-hover:text-gray-900" />
             </div>
             <div className="p-4 ">
-              <h3 className=" text-center text-CardHeading font-bold ">
+              <h3 className=" text-center text-CardHeading font-bold">
                 Construction
               </h3>
-              <p className="mt-2 text-Paragraph-sm line-clamp-3 dark:text-gray-400">
-                Your trusted partner for construction IT, delivering reliability
-                and innovation, Maximizing construction project success through
-                strategic IT implementations.
+              <p className="mt-2 text-Paragraph-sm text-center line-clamp-3 dark:text-gray-400">
+                Your trusted partner for construction IT, delivering reliability and innovation, maximizing construction success through strategic IT implementations.
               </p>
             </div>
           </motion.div>
           {/*Banking below */}
           <motion.div
-            whileHover={{ scale: 1.1 }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "spring",
-              stiffness: 80,
-              damping: 10,
-              amount: 0.1,
+              delay: 0.2,
+              scale: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.5 },
+              ease: "easeInOut"
             }}
-            className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950"
+            className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md "
           >
-            <div className="flex h-24 items-center justify-center bg-gray-100 p-4 dark:bg-gray-800">
-              <BriefcaseIcon className="h-8 w-8 text-gray-500 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-50" />
+            <div className="flex h-16 items-center justify-center bg-white p-2 dark:bg-gray-800">
+              <BriefcaseIcon className="h-10 w-10 text-gray-500 group-hover:text-gray-900 " />
             </div>
             <div className="p-4">
-              <h3 className="text-center text-CardHeading font-bold group-hover:text-gray-900 dark:group-hover:text-gray-50">
+              <h3 className=" text-center text-CardHeading font-bold">
                 Banking
               </h3>
-              <p className="mt-2 text-Paragraph-sm line-clamp-3 dark:text-gray-400">
+              <p className="mt-2 text-Paragraph-sm text-center line-clamp-3">
                 From online banking to mobile payments, we enable seamless
                 customer experiences, Transforming banking compliance and risk
                 management.
@@ -227,27 +223,24 @@ export const Secondsection = () => {
           </motion.div>
           {/*field Services below*/}
           <motion.div
-            variants={fadein("left", 0.1)}
-            initial="hidden"
-            whileInView={"show"}
-            whileHover={{ scale: 1.1 }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "spring",
-              stiffness: 80,
-              damping: 10,
-              amount: 0.1,
+              delay: 0.2,
+              scale: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.5 },
+              ease: "easeInOut"
             }}
-            viewport={{ once: true, amount: 0.5 }}
-            className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950"
+            className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md"
           >
-            <div className="flex h-24 items-center justify-center bg-gray-100 p-4 dark:bg-gray-800">
-              <TruckIcon className="h-8 w-8 text-gray-500 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-50" />
+            <div className="flex h-16 items-center justify-center bg-white p-2">
+              <TruckIcon className="h-10 w-10 text-gray-500 group-hover:text-gray-900" />
             </div>
             <div className="p-4">
-              <h3 className="text-center text-CardHeading font-bold group-hover:text-gray-900 dark:group-hover:text-gray-50">
+              <h3 className=" text-center text-CardHeading font-bold">
                 Field Services
               </h3>
-              <p className="mt-2 text-Paragraph-sm  line-clamp-3 dark:text-gray-400">
+              <p className="mt-2 text-Paragraph-sm text-center line-clamp-3">
                 Streamlining field service workflows with custom-built IT
                 solutions, Enabling real-time communication and collaboration
                 for field service teams.
@@ -256,81 +249,72 @@ export const Secondsection = () => {
           </motion.div>
           {/*Pharmaceutical below */}
           <motion.div
-            variants={fadein("right", 0.1)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: true, amount: 0.5 }}
-            whileHover={{ scale: 1.1 }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "spring",
-              stiffness: 80,
-              damping: 10,
-              amount: 0.1,
+              delay: 0.2,
+              scale: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.5 },
+              ease: "easeInOut"
             }}
-            className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950"
+            className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md"
           >
-            <div className="flex h-24 items-center justify-center bg-gray-100 p-4 dark:bg-gray-800">
-              <BeakerIcon className="h-8 w-8 text-gray-500 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-50" />
+            <div className="flex h-16 items-center justify-center bg-white p-2">
+              <BeakerIcon className="h-10 w-10 text-gray-500 group-hover:text-gray-900" />
             </div>
             <div className="p-4">
-              <h3 className="text-center text-CardHeading font-bold group-hover:text-gray-900 dark:group-hover:text-gray-50">
+              <h3 className=" text-center text-CardHeading font-bold">
                 Pharmaceutical
               </h3>
-              <p className="mt-2 text-Paragraph-sm line-clamp-3 dark:text-gray-400">
-                Maximizing efficiency in manufacturing and supply chain
-                management with IT innovation, Enabling personalized medicine
-                and patient care with tailored IT services.
+              <p className="mt-2 text-Paragraph-sm text-center line-clamp-3">
+                Maximizing efficiency in manufacturing and supply chain with IT innovation, enabling personalized medicine and patient care with tailored services.
               </p>
             </div>
           </motion.div>
           {/*Professional services below */}
           <motion.div
-            whileHover={{ scale: 1.1 }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "spring",
-              stiffness: 80,
-              damping: 10,
-              amount: 0.1,
+              delay: 0.2,
+              scale: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.5 },
+              ease: "easeInOut"
             }}
-            className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950"
+            className="group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md"
           >
-            <div className="flex h-24 items-center justify-center bg-gray-100 p-4 dark:bg-gray-800">
-              <NewspaperIcon className="h-8 w-8 text-gray-500 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-50" />
+            <div className="flex h-16 items-center justify-center bg-white p-2">
+              <NewspaperIcon className="h-10 w-10 text-gray-500 group-hover:text-gray-900 " />
             </div>
             <div className="p-4">
-              <h3 className="text-center text-CardHeading font-bold group-hover:text-gray-900 dark:group-hover:text-gray-50">
+              <h3 className=" text-center text-CardHeading font-bold">
                 Professional Services
               </h3>
-              <p className="mt-2 text-Paragraph-sm  line-clamp-3 dark:text-gray-400">
-                Transforming professional services operations with cutting-edge
-                technology, Driving efficiency and profitability in professional
-                services through advanced IT services.
+              <p className="mt-2 text-Paragraph-sm text-center line-clamp-3">
+                Transforming professional services with cutting-edge technology, driving efficiency and profitability through advanced IT services.
               </p>
             </div>
           </motion.div>
           {/*finance Below */}
           <motion.div
-            variants={fadein("left", 0.1)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: true, amount: 0.5 }}
-            whileHover={{ scale: 1.1 }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "spring",
-              stiffness: 80,
-              damping: 10,
-              amount: 0.1,
+              delay: 0.2,
+              scale: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.5 },
+              ease: "easeInOut"
             }}
             className=" group relative overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-md dark:bg-gray-950"
           >
-            <div className="flex h-24 items-center justify-center bg-gray-100 p-4 dark:bg-gray-800">
-              <TelecomIcon className="h-8 w-8  group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-gray-50" />
+            <div className="flex h-16 items-center justify-center bg-white p-2">
+              <TelecomIcon className="h-10 w-10  group-hover:text-gray-900" />
             </div>
             <div className="p-4">
-              <h3 className="text-center text-CardHeading font-bold group-hover:text-gray-900 dark:group-hover:text-gray-50">
+              <h3 className=" text-center text-CardHeading font-bold">
                 Finance
               </h3>
-              <p className="mt-2 text-Paragraph-sm  line-clamp-3 dark:text-gray-400">
+              <p className="mt-2 text-Paragraph-sm text-center  line-clamp-3">
                 Ensuring security and compliance in financial IT systems, From
                 banking to investments, we optimize every aspect with IT
                 excellence.

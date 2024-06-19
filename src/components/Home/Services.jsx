@@ -80,7 +80,7 @@ const Services = () => {
   ];
 
   return (
-    <main className="bg-white py-5 px-2">
+    <main className="bg-white py-5 px-2 overflow-x-hidden">
       <motion.div variants={fadein("up", 0.2)}
         initial="hidden"
         whileInView={"show"}
@@ -97,8 +97,9 @@ const Services = () => {
               <span className={`grid h-20 w-20 place-items-center rounded-full transition-all duration-300 group-hover:bg-${service.theme}-400`}>
                 <img src={service.logo} width={30} alt="" />
               </span>
-              <div className="space-y-2  text-[#646464] transition-all duration-300 group-hover:text-white/90">
-                <h1 className="md:text-CardHeading text-CardHeading-sm p-1 font-bold">{service.title}</h1>
+              <div className="space-y-2 transition-all duration-300 group-hover:text-white/90 py-2">
+                <h1 className="text-[24px]
+                 p-1 font-bold">{service.title}</h1>
                 <p className="md:text-Paragraph text-Paragraph-sm">
                   {service.desc}
                 </p>

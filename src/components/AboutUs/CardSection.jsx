@@ -10,7 +10,7 @@ import Product from "./images/Product.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-
+import { motion } from "framer-motion";
 
 export const CardSection = () => {
   var settings = {
@@ -19,7 +19,7 @@ export const CardSection = () => {
     speed: 600,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay:true,
+    autoplay: true,
     easing: "linear",
     responsive: [
       {
@@ -87,9 +87,17 @@ export const CardSection = () => {
   ];
   return (
     <div className="sm:mt-5 w-[100%] h-auto flex justify-center items-center p-2 sm:p-6">
-     <Slider {...settings} className="w-full sm:w-[90%] justify-center">
-     {cardItems.map((item) => (
-          <div
+      <Slider {...settings} className="w-full sm:w-[90%] justify-center">
+        {cardItems.map((item) => (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.6 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              delay: 0.2,
+              scale: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.6 },
+              ease: "easeInOut"
+            }}
             key={item.title}
             className="flex flex-col justify-center items-center text-center bg-opacity-70 gap-4 rounded-xl hover:bg-opacity-30 hover:scale-105 transition-all duration-150 ease-linear cursor-pointer"
           >
@@ -103,10 +111,10 @@ export const CardSection = () => {
                 <p className="text-Paragraph text-gray-200 p-4 text sm:text-xl">{item.content}</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         )
         )}
-     </Slider>
+      </Slider>
     </div>
   );
 };

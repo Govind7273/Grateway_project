@@ -11,7 +11,7 @@ export const Thirdsection = () => {
     <div className="px-3 pt-4">
       {/*Main div */}
       {/*Main Section*/}
-      <section className="w-full py-12 md:py-24 lg:py-20 bg-[#F9FAFB] dark:bg-gray-800 overflow-x-hidden">
+      <section className="w-full py-8 bg-white dark:bg-gray-800 overflow-hidden">
         <div className="container px-4 md:px-6">
           <div className="mx-auto max-w-5xl space-y-8">
             {/*Revolutionise section */}
@@ -21,7 +21,7 @@ export const Thirdsection = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.8 }}
-                className="text-2xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-[#3c4c54]"
+                className="md:text-MainHeading text-MainHeading-sm font-extrabold"
               >
                 Revolutionize Your Industry
               </motion.h1>
@@ -30,7 +30,7 @@ export const Thirdsection = () => {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.8 }}
-                className="max-w-[700px] md:text-xl text-SubHeading"
+                className="max-w-[700px] font-bold text-SubHeading"
               >
                 Our industry-focused solutions are designed to help you overcome
                 your unique challenges and drive innovation in your field.
@@ -49,7 +49,7 @@ export const Thirdsection = () => {
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.5 }}
-                  className="text-2xl font-bold tracking-tighter text-[#1a2229]"
+                  className="text-CardHeading font-bold"
                 >
                   Streamlined Workflows
                 </motion.h2>
@@ -77,7 +77,7 @@ export const Thirdsection = () => {
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.5 }}
-                  className="text-2xl font-bold tracking-tighter text-[#1a2229]"
+                  className="text-CardHeading font-bold"
                 >
                   Actionable Insights
                 </motion.h2>
@@ -106,7 +106,7 @@ export const Thirdsection = () => {
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.5 }}
-                  className="text-2xl font-bold tracking-tighter text-[#1a2229]"
+                  className="text-CardHeading font-bold"
                 >
                   Regulatory Compliance
                 </motion.h2>
@@ -134,7 +134,7 @@ export const Thirdsection = () => {
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.5 }}
-                  className="text-2xl font-bold tracking-tighter text-[#1a2229]"
+                  className="text-CardHeading font-bold"
                 >
                   Scalable Infrastructure
                 </motion.h2>
@@ -156,13 +156,13 @@ export const Thirdsection = () => {
         </div>
       </section>
       {/*Help & Button Section*/}
-      <div className="flex flex-col justify-center items-center overflow-x-hidden py-3 h-full gap-6">
-        <h1 className="text-2xl text-center font-bold tracking-tighter sm:text-3xl md:text-4xl flex-grow text-[#504d69] ">
+      <div className="flex flex-col justify-center items-center overflow-x-hidden py-3 h-full md:gap-4 gap-6 md:py-8">
+        <h1 className="md:text-MainHeading text-MainHeading-sm text-center font-extrabold flex-grow  ">
           Here To Help Your Every Business Need !
         </h1>
         <Link to={"/ContactUs"}>
           <button className="bg-zinc-900 rounded-[7px] tex-white px-5 py-3 font-headingFont text-sm text-white  transition-all duration-150 ease-linear hover:bg-zinc-700">
-            Connect
+            Contact Us
           </button>
         </Link>
       </div>

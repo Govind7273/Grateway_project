@@ -124,19 +124,27 @@ const Indrustry = ({ Meta_Data }) => {
           <Firstsection /> {/*Images slider section */}
           <div className="absolute overflow-hidden top-0 w-screen left-0 p-4 flex-col h-full gap-4 flex justify-center items-center">
             <motion.h1
-              variants={fadein("down", 0.1)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: true, amount: 0.5 }}
+              initial={{ opacity: 0, y: -100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.2,
+                y: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.5 },
+                ease: "easeInOut"
+              }}
               className="md:text-TopHeading text-TopHeading-sm font-extrabold text-wrap"
             >
               Industries
             </motion.h1>
             <motion.p
-              variants={fadein("up", 0.1)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: true, amount: 0.5 }}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.2,
+                y: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.5 },
+                ease: "easeInOut"
+              }}
               className="text-xl font-bold text-white text-center w-[70vw] "
             >
               Navigating the complexities of modern industries demands versatile
@@ -145,6 +153,8 @@ const Indrustry = ({ Meta_Data }) => {
             </motion.p>
           </div>
         </section>
+
+
         {/*CardsSlider Section*/}{" "}
         <section className="md:h-[50vh] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.1] bg-grid-black/[0.1] relative flex items-center justify-center">
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
@@ -154,22 +164,30 @@ const Indrustry = ({ Meta_Data }) => {
             </div>
             <motion.div className="w-full md:w-auto flex flex-col pb-3 md:py-7">
               <motion.h1
-                variants={fadein("right", 0.2)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.8 }}
+                initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.2,
+                  y: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: "easeInOut"
+                }}
                 className=" text-center font-extrabold py-4 text-MainHeading"
               >
                 Industry-specific IT,
                 <span className="text-MainHeading font-extrabold text-center">
-                  Infinite possibilities
+                  &nbsp;Infinite possibilities
                 </span>
               </motion.h1>
               <motion.p
-                variants={fadein("left", 0.2)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.8 }}
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.2,
+                  y: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: "easeInOut"
+                }}
                 className="text-Paragraph md:text-lg md:text-center w-full md:w-[60vw] px-2"
               >
                 With a proven track record of success and a team of experienced
@@ -181,30 +199,72 @@ const Indrustry = ({ Meta_Data }) => {
             </motion.div>
           </div>
         </section>
+
+
         {/* {Education section} */}
         <section className="h-full w-full">
           <div className="relative h-[40vh] md:h-[70vh] w-full flex items-center justify-center text-white bg-black">
             <img
               src={edu2}
-              className="absolute h-full w-full object-cover opacity-55"
+              className="absolute h-full w-full object-cover opacity-35"
               alt="linear board demo"
             />
-            <h1 className="relative text-5xl md:text-6xl font-bold text-center pt-3 z-20">
-              Education
-            </h1>
+            <div className="flex flex-col justify-center items-center px-2 gap-2">
+              <motion.h1
+                initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.2,
+                  y: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: "easeInOut"
+                }}
+                className="relative text-5xl md:text-6xl font-bold text-center pt-3 z-20">
+                Education
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.2,
+                  y: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: "easeInOut"
+                }}
+                className="md:w-[60%] text-Paragraph font-bold text-white z-20 text-center">Our IT services enhance education with advanced e-learning platforms, secure data management, and customized solutions for seamless, innovative, and efficient learning experiences.</motion.p>
+            </div>
           </div>
-          <div className="w-full">
-            <h2 className="text-MainHeading font-extrabold text-center w-full pt-3">
+
+          <div className="w-full bg-dot-slate-400">
+            <motion.h2
+              initial={{ opacity: 0, y: -100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.2,
+                y: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.5 },
+                ease: "easeInOut"
+              }}
+              className="text-MainHeading font-extrabold text-center w-full pt-3">
               Services We Serve
-            </h2>
+            </motion.h2>
           </div>
-          <section className="px-3">
+          <section className="px-3 bg-dot-slate-400">
             <div
               data-aos="zoom-out"
               className="mx-auto grid justify-center py-6 gap-10 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3"
             >
               {/* First card */}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 transition-transform text-black bg-stone-100 overflow-hidden border p-2 h-auto md:h-auto">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  delay: 0.2,
+                  scale: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: "easeInOut"
+                }}
+                className="relative  hover:scale-105 transition-transform text-black bg-slate-100 overflow-hidden border p-2 h-auto md:h-auto shadow-xl">
                 <div className="flex flex-col justify-between rounded-md p-6 h-full">
                   <div className="space-y-4">
                     <motion.h3
@@ -212,7 +272,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="font-bold text-center text-xl text-[#1a2229]"
+                      className="text-CardHeading font-semibold text-center"
                     >
                       Learning Management System
                     </motion.h3>
@@ -221,7 +281,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.8 }}
-                      className="text-[#646464] py-2"
+                      className="text-Paragraph text-center"
                     >
                       Empower your organization with our cutting-edge Learning
                       Management System (LMS) solutions. At our IT services
@@ -231,9 +291,18 @@ const Indrustry = ({ Meta_Data }) => {
                     </motion.p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/* Second card */}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 transition-transform text-black bg-stone-100 overflow-hidden border p-2 h-auto md:h-auto">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  delay: 0.2,
+                  scale: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: "easeInOut"
+                }}
+                className="shadow-lg relative hover:scale-105 transition-transform text-black bg-slate-100 overflow-hidden border p-2 h-auto md:h-auto">
                 <div className="flex flex-col justify-between rounded-md p-6 h-full">
                   <div className="space-y-4">
                     <motion.h3
@@ -241,7 +310,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.8 }}
-                      className="font-bold text-center text-xl text-[#1a2229]"
+                      className="text-CardHeading font-semibold text-center"
                     >
                       Virtual Classroom Solutions
                     </motion.h3>
@@ -250,7 +319,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="text-[#646464]"
+                      className="text-Paragraph text-center"
                     >
                       Cultivate engaging virtual learning experiences with our
                       specialized IT services tailored for virtual classrooms.
@@ -260,9 +329,18 @@ const Indrustry = ({ Meta_Data }) => {
                     </motion.p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/* Third card */}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 transition-transform text-black bg-stone-100 overflow-hidden border p-2 h-auto md:h-auto">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  delay: 0.2,
+                  scale: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: "easeInOut"
+                }}
+                className="shadow-lg relative hover:scale-105 transition-transform text-black bg-slate-100 overflow-hidden border p-2 h-auto md:h-auto">
                 <div className="flex flex-col justify-between rounded-md p-6 h-full">
                   <div className="space-y-4">
                     <motion.h3
@@ -270,7 +348,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.8 }}
-                      className="font-bold text-center text-xl text-[#1a2229]"
+                      className="text-CardHeading font-semibold text-center"
                     >
                       Online Assessment and Proctoring
                     </motion.h3>
@@ -279,7 +357,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="text-[#646464]"
+                      className="text-Paragraph text-center"
                     >
                       Our advanced assessment platforms incorporate robust
                       proctoring features such as live monitoring, AI-based
@@ -289,26 +367,58 @@ const Indrustry = ({ Meta_Data }) => {
                     </motion.p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </section>
         </section>
+
+
         {/*Telecom Section */}
-        <section className="h-full w-full">
+        <section className="h-full w-full bg-white bg-dot-slate-400">
           <div className="relative h-[40vh] md:h-[70vh] w-full flex items-center justify-center text-white bg-black">
             <img
               src={tele}
-              className="absolute h-full w-full object-cover opacity-55"
+              className="absolute h-full w-full object-cover opacity-35"
               alt="linear board demo"
             />
-            <h1 className="relative text-5xl md:text-6xl font-bold text-center pt-3 z-20">
-              Telecom Services
-            </h1>
+            <div className="flex justify-center items-center flex-col gap-4">
+              <motion.h1
+                initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.2,
+                  y: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: "easeInOut"
+                }}
+                className="relative text-5xl md:text-6xl font-bold text-center pt-3 z-20">
+                Telecom Services
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.2,
+                  y: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: "easeInOut"
+                }}
+                className="md:w-[60%] text-center z-20 font-semibold">Our IT services for telecom enhance network performance, security, and customer engagement with advanced solutions for seamless, reliable, and efficient communication.</motion.p>
+            </div>
           </div>
           <div>
-            <h2 className="text-MainHeading font-extrabold text-center text-3xl w-full pt-3">
+            <motion.h2
+              initial={{ opacity: 0, y: -100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.2,
+                y: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.5 },
+                ease: "easeInOut"
+              }}
+              className="text-MainHeading font-extrabold text-center w-full pt-3">
               Services We Serve
-            </h2>
+            </motion.h2>
           </div>
           <section className="h-full px-3">
             <div
@@ -316,7 +426,16 @@ const Indrustry = ({ Meta_Data }) => {
               className="mx-auto grid justify-center py-6 gap-10 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 h-auto"
             >
               {/* First card */}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border p-2 h-auto">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.6 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  delay: 0.3,
+                  scale: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: "easeInOut"
+                }}
+                className="shadow-lg relative  hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-2 h-auto">
                 <div className="flex flex-col justify-between rounded-md p-6 h-full">
                   <div className="space-y-4">
                     <motion.h3
@@ -324,7 +443,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.8 }}
-                      className="font-bold text-center text-xl px-2 text-[#1a2229]"
+                      className="font-semibold text-center text-CardHeading px-2"
                     >
                       Network Management
                     </motion.h3>
@@ -333,7 +452,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="text-[#646464]"
+                      className="text-Paragraph text-center"
                     >
                       Ensuring reliability and uptime with proactive network
                       monitoring and management. Your partner in network
@@ -343,9 +462,18 @@ const Indrustry = ({ Meta_Data }) => {
                     </motion.p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/* Second card */}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border p-2 h-auto">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.6 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  delay: 0.3,
+                  scale: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: "easeInOut"
+                }}
+                className="shadow-lg relative  hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-2 h-auto">
                 <div className="flex flex-col justify-between rounded-md p-6 h-full">
                   <div className="space-y-4">
                     <motion.h3
@@ -353,7 +481,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="font-bold text-center text-xl px-2 text-[#1a2229]"
+                      className="font-semibold text-center text-CardHeading px-2"
                     >
                       Wireless Communication
                     </motion.h3>
@@ -362,7 +490,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="text-[#646464]"
+                      className="text-Paragraph text-center"
                     >
                       Revolutionizing wireless communication landscapes, we
                       engineer seamless connectivity solutions that transcend
@@ -372,9 +500,18 @@ const Indrustry = ({ Meta_Data }) => {
                     </motion.p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/* Third card */}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border p-2 h-auto">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.6 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  delay: 0.3,
+                  scale: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: "easeInOut"
+                }}
+                className="shadow-lg relative hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-2 h-auto">
                 <div className="flex flex-col justify-between rounded-md p-6 h-full">
                   <div className="space-y-4">
                     <motion.h3
@@ -382,7 +519,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.8 }}
-                      className="font-bold text-xl text-center px-2 text-[#1a2229]"
+                      className="font-semibold text-center text-CardHeading px-2"
                     >
                       Virtualization And Cloud
                     </motion.h3>
@@ -391,7 +528,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="text-[#646464]"
+                      className="text-Paragraph text-center"
                     >
                       At the nexus of virtualization and cloud, we architect
                       digital ecosystems that defy gravity, empowering
@@ -400,34 +537,75 @@ const Indrustry = ({ Meta_Data }) => {
                     </motion.p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </section>
         </section>
+
+
         {/* healthcare Section */}
-        <section>
+        <section className="h-full w-full bg-white bg-dot-slate-400">
           <div className="md:h-[70vh] h-[40vh] w-full flex items-center justify-center text-white bg-black">
             <img
               src={doc}
-              className="absolute md:h-[70vh] h-[40vh] w-full object-cover opacity-55"
+              className="absolute md:h-[70vh] h-[40vh] w-full object-cover opacity-35"
               alt="linear board demo"
             />
-            <h1 className="relative md:text-6xl text-4xl font-bold text-center pt-3 z-20">
-              Healthcare
-            </h1>
+            <div className="flex flex-col justify-center items-center gap-4">
+              <motion.h1
+                initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.2,
+                  y: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: "easeInOut"
+                }}
+                className="relative md:text-6xl text-4xl font-bold text-center pt-3 z-20">
+                Healthcare
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.2,
+                  y: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: "easeInOut"
+                }}
+                className="md:w-[60%] text-center z-20 font-semibold">Our IT services for healthcare improve patient care, data security, and operational efficiency with advanced, reliable, and secure healthcare technology solutions.</motion.p>
+            </div>
           </div>
           <div>
-            <h2 className="text-MainHeading font-extrabold text-center text-3xl w-screen pt-3">
+            <motion.h2
+              initial={{ opacity: 0, y: -100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.2,
+                y: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.5 },
+                ease: "easeInOut"
+              }}
+              className="text-MainHeading font-extrabold text-center text-3xl w-screen pt-3">
               Services We Serve
-            </h2>
+            </motion.h2>
           </div>
           <section className="h-full px-3">
             <div
               data-aos="zoom-out"
-              className="mx-auto grid justify-center py-6 gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:max-w-[64rem] h-auto"
+              className="mx-auto grid justify-center py-8 gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:max-w-[64rem] h-auto"
             >
               {/* First card */}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border p-4 min-h-[30vh]">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  delay: 0.2,
+                  scale: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: "easeInOut"
+                }}
+                className="shadow-lg relative  hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-4 min-h-[30vh]">
                 <div className="flex flex-col justify-between rounded-md p-4">
                   <div className="space-y-4">
                     <motion.h3
@@ -435,7 +613,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.8 }}
-                      className="font-bold text-xl text-center px-2 text-[#1a2229]"
+                      className="font-semibold text-center text-CardHeading px-2"
                     >
                       Healthcare Cloud Solutions
                     </motion.h3>
@@ -444,7 +622,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="text-Paragraph "
+                      className="text-Paragraph text-center"
                     >
                       From patient records to remote consultations, their
                       platforms unite, fostering innovations. Securing data with
@@ -454,9 +632,18 @@ const Indrustry = ({ Meta_Data }) => {
                     </motion.p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/* Second card*/}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border p-4 min-h-[30vh]">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  delay: 0.2,
+                  scale: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: "easeInOut"
+                }}
+                className="shadow-lg relative hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-4 min-h-[30vh]">
                 <div className="flex flex-col justify-between rounded-md p-4">
                   <div className="space-y-4">
                     <motion.h3
@@ -464,16 +651,16 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="font-bold text-xl text-center px-2 text-[#1a2229]"
+                      className="font-semibold text-center text-CardHeading px-2"
                     >
-                      Remote Monitoring
+                      Remote Monitoring Solutions
                     </motion.h3>
                     <motion.p
                       variants={fadein("left", 0.1)}
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="text-Paragraph "
+                      className="text-Paragraph text-center "
                     >
                       Systems empower, ensuring no wrecks. Remote monitoring, a
                       lifeline they extend, keeping patients connected on health
@@ -484,9 +671,18 @@ const Indrustry = ({ Meta_Data }) => {
                     </motion.p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
               {/* Third card */}
-              <div className="shadow-lg relative hover:cursor-pointer hover:scale-105 bg-stone-100 text-black transition-all overflow-hidden border p-4 min-h-[30vh]">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  delay: 0.2,
+                  scale: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.5 },
+                  ease: "easeInOut"
+                }}
+                className="shadow-lg relative hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-4 min-h-[30vh]">
                 <div className="flex flex-col justify-between rounded-md p-4">
                   <div className="space-y-4">
                     <motion.h3
@@ -494,7 +690,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.8 }}
-                      className="font-bold text-xl text-center px-2 text-[#1a2229]"
+                      className="font-semibold text-center text-CardHeading px-2"
                     >
                       Healthcare Analytics
                     </motion.h3>
@@ -503,7 +699,7 @@ const Indrustry = ({ Meta_Data }) => {
                       initial="hidden"
                       whileInView="show"
                       viewport={{ once: true, amount: 0.5 }}
-                      className="text-Paragraph"
+                      className="text-Paragraph text-center"
                     >
                       We provide to empower, driving innovation. Healthcare
                       analytics, a beacon they ignite, guiding decisions,
@@ -514,7 +710,7 @@ const Indrustry = ({ Meta_Data }) => {
                     </motion.p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </section>
         </section>

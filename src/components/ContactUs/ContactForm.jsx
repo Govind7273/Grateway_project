@@ -9,7 +9,7 @@ import { ContactScheama } from "../../Yupschema/ContactUsScheama";
 import ReCAPTCHA from "react-google-recaptcha";
 import { contactEmail } from "../../functions/EmailSendFunction";
 import { useCareerForm } from "../../utils/useCareerForm";
-
+import { motion } from "framer-motion";
 
 const ContactForm = () => {
   const captch = useRef();
@@ -144,14 +144,23 @@ const ContactForm = () => {
   return (
     <>
       <Toaster />
-      <form
+      <motion.form
+        initial={{ opacity: 0, scale: 0.6 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          delay: 0.2,
+          scale: { type: "spring", stiffness: 30 },
+          opacity: { duration: 0.5 },
+          ease: "easeInOut"
+        }}
         onSubmit={(e) => handlesendQuery(e)}
         className="md:w-[60%] justify-top flex gap-2 flex-col w-full font-navlistFont flex-1 px-4 py-6"
       >
-        <h1 className="text-4xl font-headingFont  font-extrabold text-sky-500 flex justify-center">
+        <h1
+          className="md:text-MainHeading text-MainHeading-sm font-extrabold flex justify-center capitalize">
           Send us message
         </h1>
-        <h1 className="text-xl font-headingFont text-gray-700 flex justify-center mb-0 ">Our friendly team would love to hear from you.</h1>
+        <h1 className="text-Paragraph flex justify-center mb-0">Our friendly team would love to hear from you.</h1>
         <div className="flex w-full md:gap-8 flex-col md:flex-row justify-center">
           {/* Your Full name input box */}
           {InputBox("name", "text", error.name)}
@@ -225,7 +234,7 @@ const ContactForm = () => {
           {isPending ? "sending..." : "Send Message"}
         </button>
 
-      </form>
+      </motion.form>
     </>
   );
 };

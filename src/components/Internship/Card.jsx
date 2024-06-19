@@ -13,18 +13,18 @@ const Card = ({ id, logo, Post_Name, quotes, Exp, skills, setModalOpen }) => {
         key={id}
         className="flex rounded-xl gap-3 pt-2 md:w-[100%] h-full flex-col items-center w-full m-2 px-6 justify-between"
       >
-        
+
         <div className="1st part flex gap-4 md:flex-row flex-col items-center">
           <div className="bg-gray-200 p-2 rounded-full">
-          
+
             <img width={90} height={90} src={logo} alt="" />
           </div>
           <div className="job_Desc flex flex-col ">
-            <h1 className="title text-2xl px-3 pt-3 gap-1 flex-col text-blue-800 flex">
-              <Link to={`/internshipDetails/${id}`} className="font-medium ">{Post_Name}</Link>
-             
+            <h1 className="title text-2xl px-3 pt-3 gap-1 flex-col text-[#4c9ddc] flex">
+              <Link to={`/internshipDetails/${id}`} className="font-semibold ">{Post_Name}</Link>
+
             </h1>
-            <p className="font-normal p-3 text-[14px] text-gray-800">{quotes}</p>
+            <p className="p-3 text-Paragraph">{quotes}</p>
             <div className="flex  flex-col gap-2 md:gap-5  justify-center h-full">
               <span
                 className="ex flex gap-3
@@ -44,7 +44,7 @@ const Card = ({ id, logo, Post_Name, quotes, Exp, skills, setModalOpen }) => {
             </div>
           </div>
         </div>
-        
+
       </section>
     </>
   );

@@ -102,7 +102,7 @@ const Home = ({ Meta_Data }) => {
         <meta name="description" content={Description} />
         <link rel="canonical" href={Link} />
       </Helmet>
-      <main>
+      <main className="overflow-hidden">
         <section className="flex relative bg-black overflow-x-hidden">
           {Video_Array.map((vid, idx) => (
             <VideoComponent
