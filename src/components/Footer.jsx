@@ -9,11 +9,10 @@ import facebookIco from "../assets/icon/facebook.svg";
 import instagramIco from "../assets/icon/instagram.svg";
 import linkedin from "../assets/icon/linkedin.svg";
 
-
 const Footer = () => {
   return (
     <footer className="px-3 pt-5 lg:px-5 border-t-2 bg-black text-white">
-      <div className="grid sm:grid-cols-2 lg:grid-cols-2">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5">
         <div className="lg:max-w-xl flex flex-col md:px-5">
           <p className="text-md text-justify text-slate-200">
             <Link to="/">
@@ -32,7 +31,8 @@ const Footer = () => {
               >
                 <img
                   src={facebookIco}
-                  className="mr-3 size-12 hover:scale-105 transition-all duration-200 ease-linear  hover:cursor-pointer "
+                  className="mr-3 size-12 hover:scale-105 transition-all duration-200 ease-linear  hover:cursor-pointer"
+                  alt="Facebook"
                 />
               </a>
               <a
@@ -41,7 +41,8 @@ const Footer = () => {
               >
                 <img
                   src={instagramIco}
-                  className="mr-3 size-12 hover:scale-105 transition-all duration-200 ease-linear hover:cursor-pointer "
+                  className="mr-3 size-12 hover:scale-105 transition-all duration-200 ease-linear hover:cursor-pointer"
+                  alt="Instagram"
                 />
               </a>
               <a
@@ -50,7 +51,8 @@ const Footer = () => {
               >
                 <img
                   src={linkedin}
-                  className="mr-3 size-12 hover:scale-105 transition-all duration-200 ease-linear  hover:cursor-pointer "
+                  className="mr-3 size-12 hover:scale-105 transition-all duration-200 ease-linear  hover:cursor-pointer"
+                  alt="LinkedIn"
                 />
               </a>
             </div>
@@ -60,7 +62,7 @@ const Footer = () => {
               <span className="text-xl font-semibold mb-4">Resources</span>
               <hr className="border-white py-2"></hr>
             </div>
-            <div className="grid md:grid-cols-3 grid-col text-base gap-x-2 gap-y-1 text-slate-200">
+            <div className="grid md:grid-cols-3 grid-cols-1 text-base gap-x-2 gap-y-1 text-slate-200">
               <Link to="/AboutUs">
                 <p className="hover:text-[#06b6d4]">About Us</p>
               </Link>

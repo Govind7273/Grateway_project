@@ -1,10 +1,22 @@
-import * as Yup from "yup"
+import * as Yup from 'yup';
 
-const IntershipScheama = Yup.object({
-    name: Yup.string().required("Name is required").min(5,"name must be at least 5 characters long"),
-    email: Yup.string().email("Invalid Email Adreess").required("Email is required"),
-    number: Yup.string().matches(/^[0-9]\d{9}$/, "Must be a 10-digit phone number").required("Phone is required"),
-    role: Yup.string().required("Domain is required"),
-  })
-  
-  export {IntershipScheama}
+export const InternshipSchema = Yup.object().shape({
+  name: Yup.string()
+    .min(2, 'Name is too short!')
+    .max(50, 'Name is too long!')
+    .required('Name is required'),
+  email: Yup.string()
+    .email('Invalid email')
+    .required('Email is required'),
+  number: Yup.string()
+    .matches(/^\d{10}$/, 'Number must be exactly 10 digits')
+    .required('Number is required'),
+  role: Yup.string()
+    .oneOf([
+      'Java Developer - Internship',
+      'Data Science - Internship',
+      'Data Analyst - Internship',
+      'Web Development - Internship'
+    ], 'Invalid role')
+    .required('Role is required')
+});

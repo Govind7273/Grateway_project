@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
-    <main className="bg-white p-5 flex flex-col justify-center items-center min-h-lvh overflow-x-hidden">
+    <main className="bg-white p-5 flex flex-col justify-center items-center min-h-lvh overflow-hidden">
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -20,7 +20,7 @@ const Testimonials = () => {
           ease: "easeInOut"
         }}
         className="flex md:p-5 p-2 md:justify-center text-start">
-        <h1 className="md:text-MainHeading text-MainHeading-sm font-extrabold p-2">Explore Our Company's Vision, Mission and Value</h1>
+        <h1 className="md:text-MainHeading text-MainHeading-sm font-extrabold p-2 capitalize">Explore Our Company's Vision, Mission and Value</h1>
       </motion.div>
 
       <div className="max-w-screen-xl mx-auto md:p-4 p-1 overflow-hidden">

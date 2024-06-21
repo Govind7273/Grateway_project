@@ -7,10 +7,10 @@ const Pricingl = () => {
     <section className="bg-transparent">
       <div className="py-6 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-6">
         <div className="mx-auto max-w-screen-md text-center mb-6 lg:mb-10">
-          <h2 className="mb-3 text-3xl tracking-tight font-semibold text-[#3c4c54] sm:text-4xl">
+          <h2 className="mb-3 text-MainHeading font-extrabold">
             Designed for business teams like yours
           </h2>
-          <p className="mb-4 font-light text-[#1a2229] sm:text-lg">
+          <p className="mb-4 text-Paragraph">
             Here at Flowbite we focus on markets where technology, innovation,
             and capital can unlock long-term value and drive economic growth.
           </p>
@@ -21,10 +21,10 @@ const Pricingl = () => {
             id="about"
             className="hover:cursor-pointer hover:scale-105 transition-transform flex flex-col p-5 mx-auto max-w-lg border-y-4 hover:border-x-2 border-x-[#4c9ddc] border-y-[#4c9ddc] rounded-xl text-center text-gray-900 hover:bg-white border bg-slate-50 border-gray-700 shadow relative"
           >
-            <h3 className="mb-3 text-xl text-[#4c9ddc] font-semibold">
+            <h3 className="mb-3 text-SubHeading text-[#4c9ddc] font-bold">
               Starter
             </h3>
-            <p className="font-light text-gray-500 sm:text-base">
+            <p className="font-normal text-gray-500 sm:text-base">
               Best option for personal use & for your next project.
             </p>
             <div className="flex justify-center items-baseline my-6">
@@ -90,10 +90,10 @@ const Pricingl = () => {
             <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold py-1 px-3 rounded-bl-xl rounded-tr-[8px]">
               Most Popular
             </div>
-            <h3 className="mb-3 text-xl text-blue-600 font-semibold">
+            <h3 className="mb-3 text-SubHeading text-blue-600 font-bold">
               Pro Plan
             </h3>
-            <p className="font-light text-gray-500 sm:text-base">
+            <p className="font-normal text-gray-500 sm:text-base">
               Relevant for multiple users, extended & premium support.
             </p>
             <div className="flex justify-center items-baseline my-6">
@@ -163,10 +163,10 @@ const Pricingl = () => {
 
           {/* Business Plan */}
           <div className="hover:cursor-pointer hover:scale-105 transition-transform relative flex flex-col p-5 mx-auto max-w-lg border-y-4 hover:border-x-2 border-x-[#4c9ddc] border-y-[#4c9ddc] rounded-xl text-center text-gray-900 hover:bg-white border bg-slate-50 border-gray-700 shadow">
-            <h3 className="mb-3 text-xl text-[#4c9ddc] font-semibold">
+            <h3 className="mb-3 text-SubHeading text-[#4c9ddc] font-bold">
               Business Plan
             </h3>
-            <p className="font-light text-gray-500 sm:text-base">
+            <p className="font-normal text-gray-500 sm:text-base">
               Best for large scale uses and extended redistribution rights.
             </p>
             <div className="flex justify-center items-baseline my-6">

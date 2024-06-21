@@ -21,7 +21,7 @@ import CertifiedLogo from "../ui/CertifiedLogo";
 
 
 const VideoComponent = ({ video, title, desc, link, isVisible }) => (
-  <div className={`relative ${isVisible ? "" : "hidden"} h-[30rem] md:h-full w-[100vw]`}>
+  <div className={`relative ${isVisible ? "" : "hidden"} h-[30rem] md:h-full w-[100vw] overflow-hidden`}>
     <video
       className="w-full h-full object-cover opacity-50"
       src={video}
@@ -103,7 +103,7 @@ const Home = ({ Meta_Data }) => {
         <link rel="canonical" href={Link} />
       </Helmet>
       <main className="overflow-hidden">
-        <section className="flex relative bg-black overflow-x-hidden">
+        <section className="flex relative bg-black overflow-hidden">
           {Video_Array.map((vid, idx) => (
             <VideoComponent
               key={vid.video}

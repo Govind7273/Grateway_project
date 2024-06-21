@@ -213,7 +213,7 @@ const JobsCard = ({ setModal }) => {
       </div>
 
       {/* Multiple Cards */}
-      <div className="w-[100%] grid md:grid-cols-3 px-8 sm:grid-cols-2 grid-cols-1 flex-wrap mt-10 gap-x-14 gap-y-10 justify-around items-center">
+      <div className="w-[100%] grid md:grid-cols-3 md:px-8 sm:grid-cols-2 grid-cols-1 flex-wrap mt-10 gap-x-14 gap-y-10 justify-around items-center">
         {/* card info */}
         {cardData.map((cardItem) => (
           <motion.div

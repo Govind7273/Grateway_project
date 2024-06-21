@@ -6,18 +6,23 @@ import Client4 from './assets/image/clients/client-4.png';
 import Client6 from './assets/image/clients/client-6.png';
 import Client7 from './assets/image/clients/client-7.png';
 import Client8 from './assets/image/clients/client-8.png';
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { InfiniteMovingCards } from "../../components/ui/infinite-moving-cards";
 import { motion } from "framer-motion";
-import { fadein } from "../../../src/variants";
 
 export function InfiniteMovingCardsDemo() {
     return (
         <div className="bg-slate-100 p-6">
-            <motion.h1 variants={fadein("up", 0.2)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{ once: false, amount: 0.8 }} className="md:text-MainHeading text-MainHeading-sm font-extrabold text-center">Our Clients</motion.h1>
+            <motion.h1
+                initial={{ opacity: 0, y: -100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                    delay: 0.2,
+                    y: { type: "spring", stiffness: 30 },
+                    opacity: { duration: 0.6 },
+                    ease: "easeInOut"
+                }}
+                className="md:text-MainHeading text-MainHeading-sm font-extrabold text-center">Our Clients</motion.h1>
             <div className="h-auto md:py-4 py-2 rounded-md flex flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
                 <InfiniteMovingCards
                     items={testimonials}

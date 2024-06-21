@@ -19,19 +19,35 @@ const ModalForm = ({ setModal }) => {
   });
   const [resume, setResume] = useState(null);
 
+  const validateField = async (name, value) => {
+    try {
+      await JobSchema.validateAt(name, { ...contact, [name]: value });
+      setError((prevError) => ({ ...prevError, [name]: "" }));
+    } catch (validationError) {
+      setError((prevError) => ({
+        ...prevError,
+        [name]: validationError.message,
+      }));
+    }
+  };
+
   const InputField = (label, name, type, error) => {
+    const handleChange = async (e) => {
+      const { name, value } = e.target;
+      setContact({ ...contact, [name]: value });
+      await validateField(name, value);
+    };
+
     return (
       <div className="w-full">
         <input
-          required
           type={type}
           value={contact[name]}
           name={name}
-          onChange={(e) =>
-            setContact({ ...contact, [e.target.name]: e.target.value })
-          }
+          onChange={handleChange}
           className="border-b-2 outline-none w-full border-slate-300 md:h-10 h-4 pl-2 py-3"
           placeholder={label}
+          maxLength={type === "number" ? 10 : undefined}
         />
         {error && <div className="text-red-500 text-xs">{error}</div>}
       </div>
@@ -89,8 +105,8 @@ const ModalForm = ({ setModal }) => {
   return (
     <>
       <Toaster />
-      <div className="fixed z-40 px-2 inset-0 flex justify-center items-center bg-opacity-30 backdrop-blur-sm bg-black">
-        <div className="py-8 px-4 relative md:top-[30px] top-[50px] bg-white shadow-[0px_0px_10px] shadow-slate-500 text-black rounded-xl">
+      <div className="fixed z-50 px-2 inset-0 flex justify-center items-center bg-opacity-30 backdrop-blur-sm bg-black">
+        <div className="py-4 px-4 relative md:top-[30px] top-[50px] bg-white shadow-[0px_0px_10px] shadow-slate-500 text-black rounded-xl">
           <span
             onClick={() => setModal(false)}
             className="absolute right-4 top-2 font-extrabold text-2xl text-blue-800 py-2 hover:bg-slate-200 px-4 hover:cursor-pointer rounded-[5px]"
@@ -99,45 +115,31 @@ const ModalForm = ({ setModal }) => {
           </span>
 
           <form
-            className="flex flex-col lg:gap-4 gap-2 lg:w-[350px] w-[300px] px-2"
+            className="flex flex-col gap-2 lg:w-[350px] w-[300px] px-2"
             onSubmit={handleSendApplication}
           >
             <h2 className="text-center text-lg md:text-2xl text-[#3c4c54] font-headingFont font-bold">
               Application Form
             </h2>
 
-            <div className="flex gap-3 justify-center items-center flex-wrap md:flex-nowrap">
-              <label htmlFor="name" className="text-right lg:w-20 h-3">
-                Name
-              </label>
-              {InputField("Jhon Decos", "name", "text", error.name)}
+            <div className="flex flex-col gap-3 justify-center flex-wrap md:flex-nowrap">
+              {InputField("Enter your name", "name", "text", error.name)}
             </div>
 
-            <div className="flex justify-center items-center gap-3 flex-wrap md:flex-nowrap">
-              <label htmlFor="email" className="text-right lg:w-20 h-3">
-                E-mail
-              </label>
-              {InputField("jhon@gmail.com", "email", "email", error.email)}
+            <div className="flex flex-col gap-3 justify-center flex-wrap md:flex-nowrap">
+              {InputField("Email", "email", "email", error.email)}
             </div>
 
-            <div className="flex justify-center items-center gap-3 flex-wrap md:flex-nowrap">
-              <label htmlFor="number" className="text-right lg:w-20 h-3">
-                Phone
-              </label>
-              {InputField("xxx-xxxx-xxx", "number", "text", error.number)}
+            <div className="flex flex-col gap-3 justify-center flex-wrap md:flex-nowrap">
+              {InputField("Mobile number", "number", "number", error.number)}
             </div>
 
-            <div className="flex justify-center items-center gap-3 flex-wrap md:flex-nowrap">
-              <label htmlFor="Designation" className="text-right lg:w-20 h-3">
-                Job Role
-              </label>
+            <div className="flex flex-col gap-3 justify-center flex-wrap md:flex-nowrap">
               {InputField("Job Role", "role", "text", error.role)}
             </div>
 
-            <div className="grid w-full max-w-xs items-center justify-center gap-1.5">
-              <label className="text-sm text-gray-400 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                Upload Resume
-              </label>
+            <div className="grid w-full max-w-xs items-center justify-center gap-2">
+              <label className="text-sm">Upload Resume</label>
               <input
                 id="resume"
                 type="file"

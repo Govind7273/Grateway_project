@@ -9,7 +9,7 @@ export const IntershipDetails = [
   {
     id: 1,
     logo: java,
-    Post_Name: " Java Developer Internship",
+    Post_Name: " Java Development Internship",
     quotes: "Searching for standout Java Developer Interns.",
     Exp: "0 - 6 Months",
     skills: "Java, Springboot, Hibernate ,Spring MVC",

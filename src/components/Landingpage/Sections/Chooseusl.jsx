@@ -56,11 +56,11 @@ const Chooseusl = () => {
         viewport={{ once: true, amount: 0.8 }}
         className="text-center py-4 px-2"
       >
-        <h1 className="py-4 text-3xl  text-center font-semibold text-[#3c4c54] dark:text-white md:text-4xl lg:text-4xl">
+        <h1 className="py-4 md:text-MainHeading text-MainHeading-sm font-extrabold">
           {" "}
           Why Choose Us
         </h1>
-        <p className="text-lg font-normal text-center text-[#1a2229] lg:text-xl dark:text-gray-400">
+        <p className="text-center text-Paragraph">
           With a portfolio of successful projects across various industries, our
           proven track record speaks for itself. We consistently deliver
           high-quality software solutions on time and within budget. Trust us to
@@ -83,14 +83,14 @@ const Chooseusl = () => {
                 <div className="front-face absolute text-[#fff] w-[100%] h-[100%] overflow-hidden shadow-[0_15px_35px_rgba(0,_0,_0,_0.1)] rounded-[15px] bg-[rgba(255,_255,_255,_0.06)] preserve-3d transition-[0.5s] border-t-[1px_solid_#ddd] border-l-[1px_solid_#ddd] backface-invisible flex flex-col items-center justify-center ">
                   <div className="text-[#505050] flex flex-col items-center">
                     <img src={idea} alt="icon" className="h-20 w-20 mb-2" />
-                    <div className="tracking-[2px] font-semibold text-xl p-5">
+                    <div className="tracking-[2px] text-MainHeading font-bold p-5">
                       <span>Expertise and Innovation</span>
                     </div>
                   </div>
                 </div>
                 {/* back face */}
                 <div className="back-face bg-[#4c9ddc] px-[20px] py-[30px] text-center select-none absolute flex flex-col items-center justify-center w-[100%] h-[100%] overflow-hidden shadow-[0_15px_35px_rgba(0,_0,_0,_0.1)] rounded-[15px] preserve-3d transition-[0.5s] border-t-[1px_solid_#ddd] border-l-[1px_solid_#ddd] backface-invisible">
-                  <div className="p-5 text-white">
+                  <div className="p-5 text-white text-Paragraph">
                     We offer cutting-edge solutions with a team of highly
                     skilled professionals who adopt the latest advancements in
                     technology, ensuring your project is built to the highest
@@ -111,7 +111,7 @@ const Chooseusl = () => {
                 <div className="front-face absolute text-[#fff] w-[100%] h-[100%] overflow-hidden shadow-[0_15px_35px_rgba(0,_0,_0,_0.1)] rounded-[15px] bg-[rgba(255,_255,_255,_0.06)] preserve-3d transition-[0.5s] border-t-[1px_solid_#ddd] border-l-[1px_solid_#ddd] backface-invisible flex flex-col items-center justify-center ">
                   <div className="text-[#505050] flex flex-col items-center">
                     <img src={social} alt="icon" className="h-20 w-20 mb-2" />
-                    <div className="tracking-[2px] font-semibold text-xl p-5">
+                    <div className="tracking-[2px] text-MainHeading font-bold p-5">
                       <span>Client-Centric Approach</span>
                     </div>
                   </div>
@@ -139,9 +139,8 @@ const Chooseusl = () => {
             {Object.entries(industryMapping).map(([displayName, key]) => (
               <li key={key}>
                 <div
-                  className={`p-4 w-fit cursor-pointer border-b-2 border-transparent rounded-t-lg ${
-                    selectedIndustry === key ? "text-black bg-[#BAD08C]" : ""
-                  }`}
+                  className={`p-4 w-fit cursor-pointer border-b-2 border-transparent rounded-t-lg ${selectedIndustry === key ? "text-black bg-[#BAD08C]" : ""
+                    }`}
                   onClick={() => handleIndustryChange(key)}
                 >
                   {displayName}

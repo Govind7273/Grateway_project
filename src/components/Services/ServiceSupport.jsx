@@ -43,7 +43,7 @@ const ServiceSupport = ({ Meta_Data }) => {
       {/* hero section */}
       <section className="relative w-full h-full overflow-hidden pharma_section bg-black">
         {/* first */}
-        <div className="pharma_img md:w-[100%] md:h-[100vh] pt-16 opacity-35">
+        <div className="pharma_img md:w-[100%] md:h-[100vh] opacity-35 overflow-hidden">
           <img className="h-full w-full object-cover" src={bg} alt="support_bg" />
         </div>
         {/* second */}
@@ -76,7 +76,7 @@ const ServiceSupport = ({ Meta_Data }) => {
       </section>
 
       {/* second section */}
-      <section>
+      <section className="overflow-hidden">
         <div className="flex flex-wrap top-3 md:top-0 justify-center items-center gap-10 md:p-5 pt-2">
           {Supports.map((s) => {
             return (
@@ -102,7 +102,7 @@ const ServiceSupport = ({ Meta_Data }) => {
       </section>
 
       {/* Third Section */}
-      <section>
+      <section className="overflow-hidden">
         {/* Main Content */}
         <div className="bg-white">
           <div className="mx-auto max-w-7xl p-6 lg:px-8 border-4">
@@ -197,7 +197,8 @@ const ServiceSupport = ({ Meta_Data }) => {
             opacity: { duration: 0.5 },
             ease: "easeInOut"
           }}
-          className="relative w-full bg-white px-6 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10 py-2">
+          className="relative w-full bg-white px-6 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10 py-2"
+        >
           <div className="mx-auto px-5">
             <div className="flex flex-col items-center">
               <h2 className="text-center text-MainHeading font-bold tracking-tight">FAQ</h2>
@@ -237,8 +238,19 @@ const ServiceSupport = ({ Meta_Data }) => {
                 },
               ].map((faq, index) => (
                 <div className="py-5" key={index}>
-                  <details className="group">
-                    <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                  <details className="group" onClick={(e) => e.preventDefault()}>
+                    <summary
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const details = e.target.closest('details');
+                        if (details.open) {
+                          details.removeAttribute('open');
+                        } else {
+                          details.setAttribute('open', 'open');
+                        }
+                      }}
+                      className="flex cursor-pointer list-none items-center justify-between font-medium select-none"
+                    >
                       <span className="font-semibold text-Paragraph">{faq.question}</span>
                       <span className="transition group-open:rotate-180">
                         <svg
@@ -264,6 +276,7 @@ const ServiceSupport = ({ Meta_Data }) => {
           </div>
         </motion.div>
       </section>
+
 
       <div className="flex relative top-0 mb-0 h-[30vh] md:h-full justify-center w-full items-center gap-6 flex-col md:fl-row md:gap-6 p-3 md:p-5">
         <motion.h1
