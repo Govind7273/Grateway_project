@@ -145,7 +145,7 @@ const Indrustry = ({ Meta_Data }) => {
                 opacity: { duration: 0.5 },
                 ease: "easeInOut"
               }}
-              className="text-xl font-bold text-white text-center w-[70vw] "
+              className="text-xl font-bold text-white text-center md:w-[70vw] "
             >
               Navigating the complexities of modern industries demands versatile
               IT solutions. From marketing to logistics, we offer comprehensive

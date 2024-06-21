@@ -80,18 +80,32 @@ const Services = () => {
   ];
 
   return (
-    <main className="bg-white py-5 px-2 overflow-x-hidden">
-      <motion.div variants={fadein("up", 0.2)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.8 }} className="flex justify-center md:p-5 p-2 text-gray-700">
-
-        <h1 className="md:text-MainHeading text-MainHeading-sm font-extrabold">Our Services</h1>
-      </motion.div>
-      <div className="flex flex-wrap md:gap-10 gap-5 justify-center overflow-hidden bg-white">
+    <main className="bg-white py-5 px-2 overflow-hidden">
+      <div className="flex justify-center md:p-5 p-2 text-gray-700">
+        <motion.h1
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.2,
+            y: { type: "spring", stiffness: 30 },
+            opacity: { duration: 0.5 },
+            ease: "easeInOut"
+          }}
+          className="md:text-MainHeading text-MainHeading-sm font-extrabold">Our Services</motion.h1>
+      </div>
+      <div className="flex flex-wrap md:gap-10 gap-5 justify-center px-2 overflow-hidden bg-white">
         {Services_List.map((service) => {
 
-          return <div key={service.title} className="group relative overflow-hidden md:p-8 p-2 bg-slate-200 pt-10 md:pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:px-10 rounded-[10px]">
+          return <motion.div
+            initial={{ opacity: 0, scale: 0.6 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              delay: 0.2,
+              scale: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.4 },
+              ease: "easeInOut"
+            }}
+            key={service.title} className="group relative overflow-hidden md:p-8 p-2 bg-slate-200 pt-10 md:pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:px-10 rounded-[10px]">
             <span style={{ background: `${service.theme}` }} className={`absolute top-10 z-0 h-20 w-20 rounded-full bg-${service.theme}-500 transition-all duration-300 group-hover:scale-[10]`}></span>
             <div className="relative z-10 mx-auto max-w-md">
               <span className={`grid h-20 w-20 place-items-center rounded-full transition-all duration-300 group-hover:bg-${service.theme}-400`}>
@@ -115,7 +129,7 @@ const Services = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         })
         }
       </div>

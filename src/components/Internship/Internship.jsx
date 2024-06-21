@@ -21,11 +21,11 @@ const Internship = ({ Meta_Data }) => {
         <link rel="canonical" href={Link1} />
       </Helmet>
       <main className="main__screen bg-gray-300 relative overflow-hidden">
-        <section className="max-w-full h-full flex justify-center lg:pt-8 sm:pt-6 pt-20 flex-col items-end">
+        <section className="max-w-full h-full flex justify-center lg:pt-8 sm:pt-6 pt-20 flex-col items-center">
           <motion.div
             animate={{ y: [-100, 0] }}
-            className="flex absolute w-[600px] sm:w-fit flex-col sm:px-10 sm:py-10 z-40">
-            <div className="sm:pb-6 flex justify-start sm:pl-[150px] pl-20">
+            className="flex absolute md:w-[600px] sm:w-fit flex-col   sm:px-10 sm:py-10 z-40">
+            <div className="sm:pb-6 md:flex hidden justify-start sm:pl-[150px] pl-20">
               <div className="h-2 w-1 bg-white"></div>
               <div className="h-2 w-12 bg-green-300"></div>
             </div>
@@ -39,7 +39,7 @@ const Internship = ({ Meta_Data }) => {
                 opacity: { duration: 0.6 },
                 ease: "easeInOut"
               }}
-              className="sm:text-3xl text-1xl font-extrabold md:text-5xl text-center text-white capitalize">
+              className="sm:text-3xl text-xl font-extrabold md:text-5xl text-center text-white capitalize">
               Join our internship <br />program
             </motion.h1>
 
@@ -52,7 +52,7 @@ const Internship = ({ Meta_Data }) => {
                 opacity: { duration: 0.6 },
                 ease: "easeInOut"
               }}
-              className="text-center text-[10px] md:text-lg text-slate-200 px-2 py-2 sm:px-10 sm:pt-8 max-w-[45rem] font-semibold">
+              className="text-center text-md md:text-lg text-slate-200 px-2 py-2 sm:px-10 sm:pt-8 md:max-w-[45rem] font-semibold">
               "To gain invaluable hands-on experience,
               mentorship and networking opportunities that will propel your
               career forward. Discover your potential and build the foundation for
@@ -76,7 +76,7 @@ const Internship = ({ Meta_Data }) => {
           </motion.div>
 
 
-          <div className="h-screen w-full bg-black bg-cover">
+          <div className="md:h-screen h-[40vh] w-full bg-black bg-cover">
             <img
               className="h-full w-full object-fill opacity-45"
               src={mainCarer}
@@ -172,7 +172,7 @@ const Internship = ({ Meta_Data }) => {
           className="flex absolute z-10 sm:h-10 h-6 sm:w-20 w-10 items-center rounded-s-3xl right-0 flex-col justify-evenly bg-[#4c9ddc]">
         </motion.div>
 
-        <section id="Cards" className="flex sm:px-20 px-10 justify-evenly flex-wrap  py-28 gap-8 bg-slate-50">
+        <section id="Cards" className="flex px-4 justify-evenly flex-wrap  py-28 gap-8 bg-slate-50">
 
           {IntershipDetails.map((detail) => {
             return (

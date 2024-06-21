@@ -11,7 +11,23 @@ import InternetOfThingsIcon from "./Images/BigDataIcons/internet-things.svg";
 import MachineLearningIcon from "./Images/BigDataIcons/machine-learning.svg";
 import DataCollectionImg from "./Images/DataCollection.jpg";
 import ServerRackImage from "./Images/ServerRack.jpg";
+import { useEffect, useState } from "react";
 const BigDataService = ({ Meta_Data }) => {
+
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024); // Tailwind's lg breakpoint is 1024px
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Initial check
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   const { Title, Description, Link: link } = Meta_Data;
 
   const card = [
@@ -62,8 +78,8 @@ const BigDataService = ({ Meta_Data }) => {
       </Helmet>
       {/* Hero Section */}
       <section>
-        <div className=" flex lg:flex-row flex-col lg:h-[100vh] md:pt-20 lg:pt-20 pt-10 bg-slate-200 bg-dot-slate-400">
-          <div className="flex flex-col items-center justify-center lg:h-[screen] h-auto overflow-y-hidden w-full xl:w-[55%] p-12 bg-slate-200 bg-dot-slate-400">
+        <div className="flex lg:flex-row flex-col lg:h-[100vh] md:pt-20 lg:pt-20 pt-10 bg-slate-200 bg-dot-slate-400">
+          <div className="flex flex-col items-center justify-center lg:h-screen h-auto overflow-y-hidden w-full xl:w-[55%] p-12 bg-slate-200 bg-dot-slate-400">
             <motion.div
               initial={{ opacity: 0, scale: 0.7 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -87,24 +103,20 @@ const BigDataService = ({ Meta_Data }) => {
             </motion.div>
           </div>
 
-          <div
-            className="flex-grow  bg-black"
-            style={{ clipPath: "polygon(15% 0, 100% 0%, 100% 100%, 0 100%)" }}
-          >
+          <div className={`flex-grow md:h-screen ${isLargeScreen ? 'lg:clip-path-polygon' : ''}`} style={isLargeScreen ? { clipPath: "polygon(15% 0, 100% 0%, 100% 100%, 0 100%)" } : {}}>
             <img
               src={BigDataImage}
-              height={1000}
-              width={1000}
-              className="h-full bg-cover"
+              className="h-full w-full lg:w-auto lg:bg-cover"
               alt=""
             />
           </div>
         </div>
       </section>
 
+
       {/* Second Section */}
-      <section>
-        <div className="w-full py-16 md:py-24 lg:py-10 flex items-center">
+      <section className="md:pt-16">
+        <div className="w-full py-16 md:py-20 lg:py-10 flex items-center">
           <div className="lg:h-[40vh] py-2 w-full  bg-dot-black/[0.1] relative flex items-center justify-center">
             {/* Radial gradient for the container to give a faded look */}
             <div className="absolute pointer-events-none inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
@@ -245,7 +257,7 @@ const BigDataService = ({ Meta_Data }) => {
         </section>
 
         {/* Third-2 */}
-        <section className="w-[100vw] flex md:flex-row flex-col md:h-[70vh] h-[80vh] p-2 overflow-y-hidden overflow-x-hidden gap-20 px-4">
+        <section className="w-[100vw] flex md:flex-row flex-col md:h-[70vh] h-[80vh] p-2 overflow-y-hidden overflow-x-hidden md:gap-20 gap-10 px-4">
           {/* left section */}
           <div>
             <motion.img
@@ -265,7 +277,7 @@ const BigDataService = ({ Meta_Data }) => {
           </div>
 
           {/* right section */}
-          <div className=" px-4 flex gap-4 flex-col pt-4">
+          <div className="md:px-4 px-2 flex gap-4 flex-col">
             <motion.h1
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -365,7 +377,7 @@ const BigDataService = ({ Meta_Data }) => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.8 }}
-              className="text-3xl md:text-MainHeading text-MainHeading-sm font-extrabold"
+              className="text-3xl md:text-MainHeading text-MainHeading-sm font-extrabold text-center md:text-start"
             >
               Ensuring the highest quality of services
             </motion.h2>
@@ -374,7 +386,7 @@ const BigDataService = ({ Meta_Data }) => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.8 }}
-              className="md:text-SubHeading text-SubHeading-sm"
+              className="md:text-SubHeading text-SubHeading-sm text-center md:text-start"
             >
               Vigorously spearhead cutting-edge opportunities ahead of
               developing leadership.

@@ -82,10 +82,10 @@ const Card = ({ title, description }) => (
           {/* cards title description */}
           <div className=" dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 flex-grow flex flex-col justify-center">
             <div className="p-2 flex flex-col justify-center items-center flex-grow">
-              <h3 className="font-bold text-2xl text-[#505050] text-center">
+              <h3 className="font-bold text-CardHeading text-center">
                 {title}
               </h3>
-              <p className="mt-4 text-[#1a2229] text-center text-md">
+              <p className="mt-4 text-Paragraph text-center text-md">
                 {description}
               </p>
             </div>
@@ -106,7 +106,7 @@ const Servicesl = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true, amount: 0.8 }}
-          className="font-headline text-2xl font-semibold sm:text-4xl text-center py-5 text-[#3c4c54]"
+          className="font-headline md:text-MainHeading text-MainHeading-sm font-extrabold text-center py-5"
         >
           Revamp Your Website in Three Steps
         </motion.h2>
@@ -133,10 +133,10 @@ const Servicesl = () => {
               </div>
               <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-[#BAD08C] rounded-full"></div>
             </div>
-            <h3 className="font-bold text-2xl text-[#505050] sm:text-2xl mt-6 sm:mt-10">
+            <h3 className="font-bold text-CardHeading mt-6 sm:mt-10">
               1. Reimagine
             </h3>
-            <p className="leading-relaxed mt-4 text-[#1a2229] text-center px-2">
+            <p className="leading-relaxed mt-4 text-Paragraph text-center px-2">
               Begin by envisioning the new look and visually captivating website
               that seamlessly blends aesthetics and functionality.
             </p>
@@ -163,10 +163,10 @@ const Servicesl = () => {
               </div>{" "}
               <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-[#BAD08C] rounded-full"></div>
             </div>
-            <h3 className="font-bold text-2xl text-[#505050] sm:text-2xl mt-6 sm:mt-10">
+            <h3 className="font-bold text-CardHeading mt-6 sm:mt-10">
               2. Redesign
             </h3>
-            <p className="leading-relaxed mt-4 text-[#1a2229] text-center px-2">
+            <p className="leading-relaxed mt-4 text-Paragraph text-center px-2">
               Collaborate with your design and development team to give your
               website a fresh and modern design.
             </p>
@@ -193,10 +193,10 @@ const Servicesl = () => {
               </div>
               <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-[#BAD08C] rounded-full"></div>
             </div>
-            <h3 className="font-bold text-2xl text-[#505050] sm:text-2xl mt-6 sm:mt-10">
+            <h3 className="font-bold text-CardHeading mt-6 sm:mt-10">
               3. Relaunch
             </h3>
-            <p className="leading-relaxed mt-4 text-[#1a2229] text-center px-2">
+            <p className="leading-relaxed mt-4 text-Paragraph text-center px-2">
               After the redesign, relaunch your website and welcome your
               audience to the new experience.
             </p>
@@ -210,7 +210,7 @@ const Servicesl = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: true, amount: 0.8 }}
-          className="p-2 py-4 text-3xl font-semibold md:text-4xl text-[#3c4c54] "
+          className="p-2 py-4 text-MainHeading font-extrabold "
         >
           Our Services
         </motion.h1>

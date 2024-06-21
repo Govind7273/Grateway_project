@@ -19,7 +19,7 @@ function Clientl() {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: true, amount: 0.8 }}
-        className="md:text-4xl py-4 text-2xl font-bold tracking-wide text-[#3c4c54] text-center"
+        className="md:text-MainHeading text-MainHeading-sm py-4 font-extrabold tracking-wide  text-center"
       >
         Our Beneficiaries
       </motion.h1>

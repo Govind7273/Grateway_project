@@ -96,21 +96,21 @@ const CareersPage = ({ Meta_Data }) => {
 
       <div className="md:pt-16 text-white overflow-x-hidden h-auto ">
         {/* First header section */}
-        <section>
-          <div className="flex flex-col items-center gap-6  absolute z-10 lg:h-auto w-auto h-auto lg:w-[700px] lg:top-[60%] lg:left-[50%] transform lg:-translate-y-1/2 lg:-translate-x-1/2 -translate-y-1/2 -translate-x-1/2 top-[50%] left-[50%] px-2">
+        <section className="md:h-[100vh] h-[60vh] relative">
+          <div className="flex flex-col justify-center items-center gap-4 absolute z-10 w-full h-full px-2">
             <motion.h1
               className="md:text-TopHeading text-TopHeading-sm text-center font-extrabold"
-              variants={headingVariants}
-              initial="hidden"
-              animate="visible"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, type: "spring", stiffness: 50 }}
             >
               Elevate your career with Us!
             </motion.h1>
             <motion.h4
-              className="lg:w-[550px] font-bold text-center text-xs lg:text-xl text-white"
-              variants={headingVariants}
-              initial="hidden"
-              animate="visible"
+              className="lg:w-[550px] w-full font-bold text-center text-xs lg:text-xl text-white"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, type: "spring", stiffness: 50 }}
             >
               We believe purposeful technology has the potential to address the
               most significant challenges of our era. Join the team and unlock
@@ -118,20 +118,18 @@ const CareersPage = ({ Meta_Data }) => {
             </motion.h4>
             <button
               onClick={scrollTo}
-              className="loop_video_btn items-start w-fit bg-cyan-300 px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold text-slate-800 hover:bg-white hover:text-cyan-700 transition-all 0.2 ease-out hover:border"
+              className="loop_video_btn items-start w-fit bg-cyan-300 px-3 py-1 md:px-4 md:py-2 rounded-xl font-bold text-slate-800 hover:bg-white hover:text-cyan-700 transition-all duration-200 ease-out hover:border"
             >
               Apply now
             </button>
           </div>
-          <div className="hero-section relative overflow-hidden lg:h-[91vh] h-[80vh] bg-black ">
+          <div className="hero-section relative overflow-hidden h-full w-full bg-black">
             {images.map((image, index) => (
               <motion.div
                 key={index}
-                className={`absolute inset-0 flex items-center justify-center ${index === currentIndex ? "block" : "hidden"
-                  }`}
-                initial="hidden"
-                animate="visible"
-                variants={slideVariants} // Use simplified slideVariants
+                className={`absolute inset-0 flex items-center justify-center ${index === currentIndex ? "block" : "hidden"}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
               >
                 <img
@@ -143,6 +141,7 @@ const CareersPage = ({ Meta_Data }) => {
             ))}
           </div>
         </section>
+
 
         {/* Second Section */}
         <section className="py-8">

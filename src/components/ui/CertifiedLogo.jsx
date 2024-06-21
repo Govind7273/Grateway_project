@@ -5,23 +5,15 @@ import { motion } from "framer-motion";
 export const CertifiedLogo = () => {
   return (
     <>
-      <section className="w-full py-12 md:py-10 lg:py-10">
+      <section className="w-full py-12 md:py-10 lg:py-10 overflow-hidden">
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 lg:gap-10">
           <div className="space-y-4">
             <div className="inline-block rounded-xl bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
-              <motion.div
-                initial={{ opacity: 0, y: -100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: 0.2,
-                  y: { type: "spring", stiffness: 30 },
-                  opacity: { duration: 0.6 },
-                  ease: "easeInOut"
-                }}
+              <div
                 className="flex items-center gap-2">
                 <MdVerifiedUser />
                 <span className="font-semibold">AICTE Approved</span>
-              </motion.div>
+              </div>
             </div>
             <motion.h2
               initial={{ opacity: 0, x: -100 }}
@@ -32,7 +24,7 @@ export const CertifiedLogo = () => {
                 opacity: { duration: 0.6 },
                 ease: "easeInOut"
               }}
-              className="text-MainHeading-sm font-bold tracking-tighter sm:text-MainHeading md:text-MainHeading">
+              className="text-MainHeading-sm font-bold tracking-tighter sm:text-MainHeading md:text-MainHeading capitalize">
               Providing high-caliber Internship programs.
             </motion.h2>
             <motion.p

@@ -427,11 +427,11 @@ const ServicesStaffing = ({ Meta_Data }) => {
                   ease: "easeInOut"
                 }}
                 className="p-4 row-span-8 flex justify-center shadow-2xl flex-col items-center pd-4 bg-white border hover:scale-105 transition-all ease-in">
-                <RiUserSearchFill size={70} />
-                <h1 className="text-orange-700 text-4xl">
+                <RiUserSearchFill size={70} className="text-[#3c4c54]" />
+                <h1 className="text-4xl text-[#3c4c54] font-bold mt-2">
                   {counterOn && <CountUp start={0} end={75} duration={10} />}+
                 </h1>
-                <p>active tech resources</p>
+                <p className="font-bold text-Paragraph capitalize mt-2 text-[#3c4c54]">active tech resources</p>
               </motion.div>
 
               <motion.div
@@ -444,11 +444,11 @@ const ServicesStaffing = ({ Meta_Data }) => {
                   ease: "easeInOut"
                 }}
                 className="p-4 row-span-4 flex justify-center flex-col items-center pd-4 bg-white hover:scale-105 border shadow-xl transition-all ease-in">
-                <FaRegCalendarCheck size={50} />
-                <h1 className="text-orange-700 text-4xl">
+                <FaRegCalendarCheck size={50} className="text-[#3c4c54]" />
+                <h1 className="text-4xl text-[#3c4c54] font-bold mt-2">
                   {counterOn && <CountUp start={0} end={5} duration={10} />}+
                 </h1>
-                <p>years of service</p>
+                <p className="font-bold text-Paragraph capitalize mt-2 text-[#3c4c54]">years of service</p>
               </motion.div>
 
               <motion.div
@@ -461,11 +461,11 @@ const ServicesStaffing = ({ Meta_Data }) => {
                   ease: "easeInOut"
                 }}
                 className="p-4 shadow-xl row-span-4 flex justify-center flex-col items-center pd-4 bg-white border hover:scale-105 transition-all ease-in">
-                <IoIosPeople size={50} />
-                <h1 className="text-orange-700 text-4xl hover:text-indigo-900">
+                <IoIosPeople size={50} className="text-[#3c4c54]" />
+                <h1 className="text-4xl text-[#3c4c54] font-bold mt-2">
                   {counterOn && <CountUp start={0} end={20} duration={10} />}+
                 </h1>
-                <p>active clients</p>
+                <p className="font-bold text-Paragraph capitalize mt-2 text-[#3c4c54]">active clients</p>
               </motion.div>
 
               <motion.div
@@ -478,11 +478,11 @@ const ServicesStaffing = ({ Meta_Data }) => {
                   ease: "easeInOut"
                 }}
                 className="shadow-2xl p-4 row-span-8 flex justify-center flex-col items-center pd-4 bg-white border hover:scale-105 transition-all ease-in">
-                <LuClock2 size={50} />
-                <h1 className="text-orange-700 text-4xl">
+                <LuClock2 size={50} className="text-[#3c4c54]" />
+                <h1 className="text-4xl text-[#3c4c54] font-bold mt-2">
                   {counterOn && <CountUp start={0} end={200} duration={10} />}+
                 </h1>
-                <p>hours completed</p>
+                <p className="font-bold text-Paragraph capitalize mt-2 text-[#3c4c54]">hours completed</p>
               </motion.div>
 
               <motion.div
@@ -495,11 +495,11 @@ const ServicesStaffing = ({ Meta_Data }) => {
                   ease: "easeInOut"
                 }}
                 className="shadow-xl p-4 row-span-4 flex justify-center flex-col items-center pd-4 bg-white border hover:scale-105 transition-all ease-in">
-                <GiSkills size={50} />
-                <h1 className="text-orange-700 text-4xl">
+                <GiSkills size={50} className="text-[#3c4c54]" />
+                <h1 className="text-4xl text-[#3c4c54] font-bold mt-2">
                   {counterOn && <CountUp start={0} end={50} duration={10} />}+
                 </h1>
-                <p>skills served</p>
+                <p className="font-bold text-Paragraph capitalize mt-2 text-[#3c4c54]">skills served</p>
               </motion.div>
 
               <motion.div
@@ -512,11 +512,11 @@ const ServicesStaffing = ({ Meta_Data }) => {
                   ease: "easeInOut"
                 }}
                 className="shadow-xl p-4 row-span-4 flex justify-center flex-col items-center pd-4 bg-white border hover:scale-105 transition-all ease-in">
-                <BsStars size={50} />
-                <h1 className="text-orange-700 text-4xl">
+                <BsStars size={50} className="text-[#3c4c54]" />
+                <h1 className="text-4xl text-[#3c4c54] font-bold mt-2">
                   {counterOn && <CountUp start={0} end={100} duration={10} />}+
                 </h1>
-                <p>active tech talent pool</p>
+                <p className="font-bold text-Paragraph capitalize mt-2 text-[#3c4c54]">active tech talent pool</p>
               </motion.div>
             </div>
           </div>

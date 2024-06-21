@@ -18,7 +18,7 @@ const InstitueAcademicServices = ({ Meta_Data }) => {
         <link rel="canonical" href={Link} />
       </Helmet>
 
-      <main className=" text-black pt-12">
+      <main className=" text-black pt-12 overflow-hidden">
         <InstituteHero />
         <InstituteSeminar />
         <InstituteGuest />

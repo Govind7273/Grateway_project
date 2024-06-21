@@ -14,12 +14,12 @@ const Contactl = () => {
     name: "",
     email: "",
     number: "",
-    subject:"",
+    subject: "",
     message: "",
   });
 
-  
-  
+
+
   const InputBox = (name, type, error) => {
     const placeholder = `Enter Your ${name}`;
     return (
@@ -29,7 +29,7 @@ const Contactl = () => {
             type={type}
             name={name}
             id={name}
-            className="w-full rounded-xl border border-gray-800 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+            className="w-full rounded-xl border border-gray-800 py-2 pl-2 pr-4 shadow-md sm:mb-0"
             placeholder={placeholder}
             value={ContactDetails[name.toLowerCase()]}
             onChange={(e) =>
@@ -114,21 +114,21 @@ const Contactl = () => {
       >
         <div className="md:w-1/3 w-full">
           <div className="relative inline-block mt-10">
-            <h1 className="text-4xl text-[#3c4c54] sm:text-4xl font-bold title-font">
+            <h1 className="md:text-MainHeading text-MainHeading-sm font-extrabold title-font">
               Contact Us
             </h1>
             <span className="absolute -bottom-1 left-0 w-full h-1 bg-blue-600 rounded-full"></span>
           </div>
-          <p className="leading-relaxed text-xl text-gray-900 md:pt-4">
+          <p className="leading-relaxed text-Paragraph md:pt-4">
             If you have any questions or need assistance, please feel free to
             reach out to us.
             <br />
-            <span className="font-bold"> You can also email us at </span>
-            <Link to="mailto:hr@greateway.com" className="font-semibold border-b-2">
+            <span className="font-bold pt-4"> You can also email us at </span>
+            <Link to="mailto:hr@greateway.com" className="font-bold border-b-2">
               hr@greateway.com
             </Link>
           </p>
-          <p className="leading-relaxed text-xl text-gray-900 font-bold md:mt-4">
+          <p className="leading-relaxed text-xl text-gray-900 capitalize font-bold md:mt-4">
             Connect with us on social media:
           </p>
           <span className="flex lg:justify-start sm:justify-center">
@@ -139,18 +139,21 @@ const Contactl = () => {
               <FaXTwitter className="text-white" />
             </Link> */}
             <Link
+              target="_blank"
               to="https://www.facebook.com/profile.php?id=61557537305066&mibextid=ZbWKwL"
               className="relative md:w-8 w-10 md:h-8 h-10 m-2 rounded-full transition-all duration-500 flex justify-center items-center bg-blue-700 hover:bg-gray-900"
             >
               <FaFacebook className="text-white" />
             </Link>
             <Link
+              target="_blank"
               to="https://www.instagram.com/greateway_software_pvt.ltd?igsh=OGNtMmd3Y2VlcXFl"
               className="relative md:w-8 w-10 md:h-8 h-10 m-2 rounded-full transition-all duration-500 flex justify-center items-center bg-[linear-gradient(45deg,#FEE411_6.9%,#FEDB16_10.98%,#FEC125_17.77%,#FE983D_26.42%,#FE5F5E_36.5%,#FE2181_46.24%,#9000DC_85.57%)] hover:bg-gradient-to-b from-gray-900 to-gray-900"
             >
               <FaInstagram className="text-white" />
             </Link>
             <Link
+              target="_blank"
               to="https://www.linkedin.com/company/greateway-software-pvt-ltd/"
               className="relative md:w-8 w-10 md:h-8 h-10 m-2 rounded-full transition-all duration-500 flex justify-center items-center bg-blue-500 hover:bg-gray-900"
             >
@@ -159,16 +162,16 @@ const Contactl = () => {
           </span>
         </div>
         <div className="md:w-2/3 w-full mt-5 md:mt-0 md:pl-28">
-          <h1 className="text-4xl text-[#3c4c54] sm:text-4xl font-bold title-font mb-4">
+          <h1 className="md:text-MainHeading text-MainHeading-sm font-extrabold title-font mb-4">
             Send us a message
           </h1>
-          <form         onSubmit={(e) => handleSendQuery(e)}
+          <form onSubmit={(e) => handleSendQuery(e)}
           >
             {InputBox("name", "text", error.name)}
             {InputBox("email", "email", error.email)}
             {InputBox("number", "number", error.number)}
-            
-          <div>
+
+            <div>
               <div className="relative bg-inherit">
                 <div
                   className="flex flex-col p-2 h-10 lg:w-72 w-full rounded-xl text-black placeholder-transparent ring-1 px-2 ring-gray-700 focus:ring-sky-600 focus:outline-none focus:border-rose-600 transition-all bg-white"
@@ -201,24 +204,24 @@ const Contactl = () => {
                       Something Else
                     </option>
                   </select>
-              
+
+                </div>
               </div>
+              {error.subject ? (
+                <div className="text-red-500 text-xs ml-2">{error.subject}</div>
+              ) : (
+                ""
+              )}
             </div>
-            {error.subject ? (
-              <div className="text-red-500 text-xs ml-2">{error.subject}</div>
-            ) : (
-              ""
-            )}
-          </div>
             {Textarea("message", error.message)}
 
             <div className="w-full">
               <button
                 type="submit"
-                className="flex items-center bg-blue-600 my-5 rounded-xl text-white gap-1 px-4 py-2 cursor-pointer font-semibold tracking-widest hover:bg-blue-400 duration-300 hover:gap-2 hover:translate-x-3"
+                className="flex justify-center items-center gap-4 bg-cyan-300 px-3 py-1 border border-cyan-300 md:px-4 md:py-2 rounded-xl font-bold text-slate-800 hover:bg-white hover:text-cyan-600 transition-all 0.2 ease-out hover:border"
               >
                 {isPending ? "Sending..." : "Send Message"}
-                <IoSend className="text-white mt-[2px]" />
+                <IoSend className="mt-[2px]" />
               </button>
             </div>
           </form>

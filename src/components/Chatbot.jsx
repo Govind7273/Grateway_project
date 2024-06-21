@@ -37,10 +37,6 @@ const Chatbot = () => {
   }, []);
 
   return;
-  <>
-    <Toaster />
-    <div id="webchat" />;
-  </>;
 };
 
 export default Chatbot;
