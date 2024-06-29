@@ -1,14 +1,25 @@
-const CardComponent = ({card}) => {
+import { motion } from "framer-motion";
+
+const CardComponent = ({ card }) => {
   return (
-    <div className="h-auto flex flex-col gap-4 rounded-xl bg-slate-800 text-slate-700 hover:shadow-[5px_5px_30px] border border-violet-500 hover:shadow-violet-300 hover:cursor-pointer  r shadow-3xl  transition-all duration-200 ease-linear">
-      <img className="w-[100%]  rounded-t-xl" src={card.imageUrl} alt="" />
-      <div className="flex flex-col gap-2 p-2 flex-3 items-center">
-        <h2 className="text-2xl text-center font-headingFont font-semibold text-green-300">{card.heading}</h2>
-        <p className="text-sm text-center font-navlistFont text-white">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{
+        delay: 0.2,
+        scale: { type: "spring", stiffness: 30 },
+        opacity: { duration: 0.5 },
+        ease: "easeInOut"
+      }}
+      className="h-full w-[100%] pb-2 flex flex-col justify-between bg-white rounded-xl text-slate-700 shadow-lg shadow-gray-900 transition-all duration-200 ease-linear">
+      <img className="w-[100%] lg:h-40 h-auto rounded-t-xl" src={card.imageUrl} alt="" />
+      <div className="-mt-5 w-full h-full bg-white  rounded-t-3xl flex flex-col px-2 justify-between items-center py-6 gap-4">
+        <h2 className="text-CardHeading text-xl text-center font-headingFont font-semibold">{card.heading}</h2>
+        <p className="text-[14px] text-center font-navlistFont text-black">
           {card.description}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

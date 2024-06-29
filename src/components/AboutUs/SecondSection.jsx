@@ -1,30 +1,28 @@
- export const SecondSection = () => {
-    return (
-      <div className="flex w-[90%]  flex-wrap gap-10 p-6 ">
-        {/* first left part */}
-        {/* <div className="flex-2 text-white">
-          <img
-            className="w-[90%] h-[90%]"
-            src="https://d1krbhyfejrtpz.cloudfront.net/matellio-2019/img/cluud-bg.jpg"
-            alt=""
-          />
-        </div> */}
-        {/* right side part */}
-        <div className="flex-1 w-[50%] items-center flex justify-center flex-col gap-10  ">
-          {/* heading of component */}
-          <h1 className="text-4xl text-center p-4 font-bold  font-headingFont text-violet-400">
-            Our Corporate Social Responsibility
-          </h1>
+import { motion } from "framer-motion";
+export const SecondSection = () => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.6 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{
+        delay: 0.2,
+        scale: { type: "spring", stiffness: 30 },
+        opacity: { duration: 0.6 },
+        ease: "easeInOut"
+      }}
+      className="flex w-[90%]  flex-wrap gap-10 sm:p-6 sm:mt-10 bg-slate-200">
+      {/* right side part */}
+      <div className="flex-1 w-[90%] md:w-[50%] items-center flex justify-center flex-col gap-2 md:gap-10 ">
+        {/* heading of component */}
+        <h1 className="text-MainHeading-sm md:text-MainHeading text-center font-bold pt-4 md:p-4 cursor-pointer">
+          Our Corporate Social Responsibility
+        </h1>
 
-          {/* paragraph */}
-          <p className="text-md text-start font-navlistFont text-slate-400 font-[500]">
-            Corporate Social Responsibility (CSR) is a crucial aspect for IT
-            companies, as they have the opportunity to leverage their
-            technological expertise and influence to make a positive impact on
-            society and the environment. Here are some key areas where IT
-            companies can focus their CSR efforts:
-          </p>
-        </div>
+        {/* paragraph */}
+        <p className="text-Paragraph text-center cursor-pointer">
+          Corporate Social Responsibility (CSR) holds significant importance for IT companies, providing them with the unique opportunity to use their technological capabilities and influence to benefit society and the environment. Here are several key areas where IT companies can concentrate their CSR initiatives
+        </p>
       </div>
-    );
-  };
+    </motion.div>
+  );
+};

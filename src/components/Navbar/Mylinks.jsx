@@ -59,4 +59,37 @@ export const links = [
     link: "/Service-Support",
     desc: "IT Support Solutions to Keep Your Business Running Smoothly.",
   },
+  {
+    id: 13,
+    name: "Institutional Tech Solutions",
+    link: "/institute-academy",
+    desc: "Empowering Institutes and Academies with Cutting-Edge Tools.",
+  },
+];
+
+export const corporateTrainingLinks = [
+  {
+    id: 1,
+    name: "Technology Training",
+    link: "/training-program",
+    desc: "Key skills in software development, cybersecurity, and data analytics.",
+  },
+  {
+    id: 2,
+    name: "Management Development",
+    link: "/management-dev-program",
+    desc: "Critical leadership and strategic skills for advanced management roles.",
+  },
+  {
+    id: 3,
+    name: "Enterprise Services",
+    link: "/enterprise-services",
+    desc: "Skills in managing and optimizing business services for enterprise roles.",
+  },
+  {
+    id: 4,
+    name: "Microsoft Office 365",
+    link: "/microsoft-office",
+    desc: "Skills in Office 365 tools for modern workplace productivity.",
+  },
 ];

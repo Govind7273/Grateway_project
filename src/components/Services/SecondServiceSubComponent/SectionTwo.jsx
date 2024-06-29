@@ -1,29 +1,59 @@
-const SectionTwo = ({obj}) => {
+import { motion } from "framer-motion";
+const SectionTwo = ({ obj }) => {
+
   return (
-    <section className="w-[100%] py-10 flex justify-center bg-blue-900/25 items-center">
-      <div className="w-[100%] relative flex flex-col py-10 px-4 gap-6 justify-between items-center text-white">
-        {/* first */}
-        <h2 className="uppercase text-3xl font-headingFont font-bold text-violet-400">
-          Why to choose us for premium {obj.titleName} Services
-        </h2>
-        <p className="font-navlistFont text-sm font-semibold ">
-          {obj.description}
-        </p>
-        <div className="flex flex-wrap justify-center items-center gap-10 mt-4">
-          {
-            obj.circleItems?.map((item)=>(
-              <div key={Math.random()} className="w-[150px] h-[150px] rounded-full border-4 border-t-[#4158D0] border-l-[#C850C0] border-b-[#FFCC70] border-r-[#C850C0] flex justify-center items-center p-2 shadow-xl shadow-violet-400">
-            <h4 className=" font-headingFont font-bold text-xl text-center">
-              {item}
-            </h4>
+    <>
+      <section className="bg-slate-200">
+        <div className="flex items-center justify-center">
+          <div className="w-[100%] px-4 py-4 pt-6 sm:pt-0">
+
+            <motion.h2
+              initial={{ opacity: 0, y: -100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.2,
+                y: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }}
+              className="text-MainHeading capitalize md:text-MainHeading font-bold cursor-pointer text-center">
+              Why to choose us for premium {obj.titleName} Services
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 0.2,
+                y: { type: "spring", stiffness: 30 },
+                opacity: { duration: 0.6 },
+                ease: "easeInOut"
+              }}
+              className="text-Paragraph font-semibold cursor-pointer py-2 text-center">
+              {obj.description}
+            </motion.p>
+
+            <div className="flex flex-wrap items-center justify-center pt-10 gap-6 md:gap-0">
+              {obj.circleItems?.map((item) => (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.6 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    delay: 0.3,
+                    scale: { type: "spring", stiffness: 30 },
+                    opacity: { duration: 0.4 },
+                    ease: "easeInOut"
+                  }}
+                  className="flex flex-col items-center justify-center w-[100%] md:w-1/3 p-2 group hover:bg-blue-200 hover:scale-105 rounded-3xl cursor-pointer">
+                  <img className="rounded-3xl " src={item?.image}></img>
+                  <h4 className="text-CardHeading py-2 sm:text-CardHeading md:h-[4.5rem] lg:h-full">{item.title}</h4>
+                </motion.div>
+              ))}
+            </div>
           </div>
-            ))
-          }
         </div>
-        <span className="absolute w-[200px] h-[200px] bg-green-400 top-0 left-0 rounded-full blur-[170px]"></span>
-        <span className="absolute w-[200px] h-[200px] bg-violet-400 top-40 right-0 rounded-full blur-[130px]"></span>
-      </div>
-    </section>
+
+      </section>
+    </>
   );
 };
 

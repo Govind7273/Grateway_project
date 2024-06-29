@@ -1,12 +1,15 @@
 import Data from ".././Home/assets/svg/Data.svg";
 import analytics from ".././Home/assets/svg/analytics.svg";
 import java from ".././Home/assets/svg/java-logo.svg";
+import salesforce from "./Image/salesforce.svg";
+import aws from "./Image/aws.svg";
 import react from ".././Home/assets/svg/react-logo.svg";
+
 export const IntershipDetails = [
   {
     id: 1,
     logo: java,
-    Post_Name: " Java Developer Internship",
+    Post_Name: " Java Development Internship",
     quotes: "Searching for standout Java Developer Interns.",
     Exp: "0 - 6 Months",
     skills: "Java, Springboot, Hibernate ,Spring MVC",
@@ -164,6 +167,75 @@ export const IntershipDetails = [
             "Organize hackathons or coding challenges where interns can showcase their web development skills and creativity by building innovative web applications within a limited timeframe. These events foster collaboration, problem-solving, and creativity among participants.",
         },
       ],
+    },
+  },
+
+  {
+    id: 5,
+    logo: aws,
+    Post_Name: " AWS Internship",
+    quotes: "Searching for standout AWS Interns.",
+    Exp: "0 - 6 Months",
+    skills: "EC2, S3, Lambda, RDS, CloudFormation, CloudWatch",
+    description: {
+      para1:
+        "Embark on an exciting journey with an AWS internship at Greateway Software Pvt Ltd, designed to equip students and recent graduates with real-world experience in cloud computing using Amazon Web Services (AWS). As a leading cloud platform, AWS offers a comprehensive suite of services that interns will leverage to deploy, manage, and scale cloud applications. Through hands-on projects in cloud infrastructure, data analytics, and machine learning, interns will gain valuable insights and practical skills, preparing them for the forefront of the cloud technology landscape.",
+      para2:
+        "Greateway Software Pvt Ltd's AWS internships provide a gateway to careers in a diverse range of organizations, including tech giants, innovative startups, and financial institutions. While many internships are paid, some may offer stipends. Candidates are typically required to have a solid background in computer science and a good grasp of AWS services. Interns will tackle various projects such as configuring cloud environments, optimizing data pipelines, and developing scalable solutions. This experience is enriched by teamwork, participation in workshops, and presenting findings to stakeholders, ensuring a well-rounded professional development.",
+      para3:
+        "An AWS internship at Greateway Software Pvt Ltd is an excellent opportunity for students and recent graduates to hone their cloud computing skills. Interns will benefit from close mentorship, learning best practices, and gaining hands-on experience with AWS technologies. Additionally, the program offers robust networking opportunities, allowing interns to connect with industry experts and build a strong professional network. By the end of the internship, participants will have a comprehensive understanding of cloud computing and a portfolio of AWS projects, making them highly competitive in the job market.",
+      Benfits: [
+        {
+          id: "1",
+          title: "Interactive Projects",
+          description: "Provide interns with hands-on projects that simulate real-world scenarios, encouraging them to apply AWS concepts to practical problems. These projects could involve developing cloud-based applications, machine learning models, or enterprise software solutions."
+        },
+        {
+          id: "2",
+          title: "Mentorship Program",
+          description: "Implement a structured mentorship program where interns are paired with experienced AWS developers. This mentorship will not only help interns learn best practices but also foster a supportive learning environment."
+        },
+        {
+          id: "3",
+          title: "Specialized Tracks",
+          description: "Offer specialized tracks within the internship program, such as cloud computing, data analytics, or security, allowing interns to focus on areas of interest and gain expertise in specific domains."
+        }
+      ]
+
+    },
+  },
+
+  {
+    id: 6,
+    logo: salesforce,
+    Post_Name: " Salesforce Internship",
+    quotes: "Searching for standout Salesforce Interns.",
+    Exp: "0 - 6 Months",
+    skills: "Salesforce Apex, Visualforce, Lightning Components, Salesforce Administration",
+    description: {
+      para1:
+        "A Salesforce internship at Greateway Software is an excellent opportunity for students and recent graduates to gain hands-on experience in cloud-based software development and customer relationship management (CRM) using Salesforce technologies. As a leading platform, Salesforce is pivotal for building CRM solutions, custom applications, and automating business processes. During this internship, participants will delve into various Salesforce tools and technologies, including Apex, Visualforce, and Lightning Components, equipping them with the skills needed for a successful career in the ever-evolving field of cloud computing and CRM.",
+      para2:
+        "Internships at Greateway Software offer invaluable exposure to the tech industry, providing pathways to careers in diverse organizations, from innovative startups to established enterprises. These internships are often paid, though some may offer stipends. The qualifications for a Salesforce internship typically include a robust foundation in computer science and programming, along with familiarity with Salesforce's ecosystem. Interns at Greateway Software will engage in projects like developing custom Salesforce applications, creating automated workflows, and integrating Salesforce with other systems. They will also have opportunities to collaborate with experienced professionals, participate in training sessions, and present their projects to stakeholders, gaining critical professional experience and skills.",
+      para3:
+        "The Salesforce internship at Greateway Software not only imparts practical knowledge but also offers valuable networking opportunities, helping interns build a portfolio of work to present to future employers. Interns will work closely with mentors to learn industry best practices in Salesforce development and administration. Given the widespread adoption of Salesforce for robust CRM solutions, this internship prepares participants for a thriving career in cloud computing and CRM. By joining Greateway Software, interns will gain a solid grounding in Salesforce technologies, enhancing their prospects in this rapidly growing sector.",
+      Benfits: [
+        {
+          "id": "1",
+          "title": "Interactive Projects",
+          "description": "Provide interns with hands-on projects that simulate real-world scenarios, encouraging them to apply Salesforce concepts to practical problems. These projects could involve developing custom applications on the Salesforce platform, automating business processes, or implementing CRM solutions."
+        },
+        {
+          "id": "2",
+          "title": "Mentorship Program",
+          "description": "Implement a structured mentorship program where interns are paired with experienced Salesforce developers and administrators. This mentorship will not only help interns learn best practices but also foster a supportive learning environment."
+        },
+        {
+          "id": "3",
+          "title": "Specialized Tracks",
+          "description": "Offer specialized tracks within the internship program, such as Salesforce development, Salesforce administration, or Salesforce analytics, allowing interns to focus on areas of interest and gain expertise in specific domains."
+        }
+      ]
     },
   },
 ];

@@ -38,7 +38,7 @@ const Tech = () => {
   ];
 
   return (
-    <main className="w-[100%] bg-gray-700  flex justify-center items-center flex-col">
+    <main className="w-[100%] bg-gray-700 p-5 flex justify-center items-center flex-col">
       <div className="flex p-12 justify-center text-white">
         <h1 className="text-4xl font-black">Technologies we are working with</h1>
       </div>
