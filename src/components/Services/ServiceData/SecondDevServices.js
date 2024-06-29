@@ -12,22 +12,31 @@ import {
     faVialVirus,
     faWandSparkles,
 } from "@fortawesome/free-solid-svg-icons";
-import CustomerRelationship from "../Images/CustomerRelationship.jpg";
-import TestingAndQaImage from "../Images/TestingAndQA.jpg";
+import CustomerRelationship from "../Images/1crm.jpg";
+import TestingAndQaImage from "../Images/qatesting.jpg";
+import fullqa from "../Images/fullqa.jpg";
+import indtesting from "../Images/indtesting.jpg";
+import testing from "../Images/testing.jpg";
+import trusted from "../Images/tleader.jpg";
+import quality from "../Images/quality.jpg";
+import crm from "../Images/crm2.jpg";
+import cta1 from "../Images/cta1.jpg";
+import cta2 from "../Images/cta2.jpg";
+
 
 export const TestingAndQAServices={
     first:{
         content:{
-            title:'Testing And Quality Analysis',
-            description:'Delivering excellence through meticulous software testing and quality analysis. Our expert team ensures robustness, reliability, and user satisfaction, guaranteeing seamless performance and error-free functionality for your software solutions.'
+            title:'Testing & Quality Analysis',
+            description:'Delivering excellence through meticulous software testing and quality analysis. Our expert team ensures robustness, reliability and user satisfaction, guaranteeing seamless performance and error-free functionality for your software solutions.'
         },
         imageUrl:TestingAndQaImage
     },
 
     second:{
         titleName:'Testing And QA',
-        description:"Select Greatway Software for testing and QA and unlock the path to excellence. With our seasoned experts, innovative methodologies, and        unwavering dedication, we guarantee your software's reliability,        security, and user satisfaction. Trust us to deliver unparalleled        quality and ensure your products shine in today's competitive market        landscape.",
-        circleItems:['Full-cycle QA','Independent Testing','Functional Testing']
+        description:"Select Greateway Software for testing and QA and unlock the path to excellence. With our seasoned experts, innovative methodologies and        unwavering dedication, we guarantee your software's reliability,        security and user satisfaction. Trust us to deliver unparalleled        quality and ensure your products shine in today's competitive market        landscape.",
+        circleItems:[{title:'Full-cycle QA', image:fullqa},{title:'Independent Testing', image:indtesting},{title:'Functional Testing', image:testing}]
     },
 
     third:{
@@ -44,29 +53,49 @@ export const TestingAndQAServices={
     fourth:{
         cards:[
             {
-                title:'Gathering requirements and analysis',
-                message:'Ensuring software quality through meticulous requirement gathering and analysis is paramount. Our approach mirrors precision; we delve deep into every aspect, fostering robustness and reliability in testing procedures, thereby fortifying software integrity.'
+                title:'Requirement Analysis',
+                message:'We start by understanding your specific needs and objectives to tailor our testing approach accordingly.'
             },
             {
-                title:'Testing Proposal',
-                message:'Crafting a comprehensive testing proposal entails meticulous planning and strategic foresight. Our proposal mirrors dedication, outlining a tailored approach to ensure thorough testing, adherence to timelines, and delivery of high-quality results, ultimately optimizing software performance and reliability.'
+                title:'Test Planning',
+                message:'We develop a comprehensive test plan outlining the scope, objectives, resources and schedule for the testing activities.'
             },
             {
-                title:'Testing team setup',
-                message:'Establishing an effective testing team necessitates careful orchestration and strategic alignment. Our approach mirrors precision, assembling skilled individuals adept at diverse testing methodologies. Through collaboration and cohesion, we cultivate a dynamic team poised to tackle any testing challenge with proficiency and synergy.'
+                title:'Test Design',
+                message:'Our team designs detailed test cases and scenarios based on the specifications and requirements.'
             },
             {
-                title:'Scaling the testing team',
-                message:'Scaling the testing team requires strategic planning and meticulous execution. Our approach mirrors adaptability, leveraging a combination of talent acquisition, training, and process optimization. By fostering flexibility and agility, we ensure seamless expansion, empowering the team to meet evolving testing demands effectively.'
+                title:'Test Execution',
+                message:'We execute the test cases using both manual and automated testing methods, meticulously documenting the results.'
+            },
+            {
+                title:'Defect Reporting',
+                message:'Identified defects are logged, categorized and prioritized, providing you with clear and actionable insights.'
+            },
+            {
+                title:'Retesting and Regression Testing',
+                message:'We conduct retesting of resolved issues and perform regression testing to ensure new changes do not affect existing functionality.'
+            },
+            {
+                title:' Final Reporting',
+                message:'We provide a detailed report summarizing the testing activities, findings and recommendations for improvement.'
+            },
+            {
+                title:'Continuous Improvement',
+                message:'Post-launch, we offer continuous testing and support to ensure ongoing software quality and performance.'
             }
-        ]
+        
+        ],
+        main:'Ready to Elevate Your Software Quality?',
+        desc:'Don’t leave the quality of your software to chance. Choose our premier testing and quality analysis services to ensure your product is reliable, secure and user-friendly. Let us help you deliver excellence with confidence.',
+        cta: cta1
     }
 }
 
 export const CRMServices={
     first:{
         content:{
-            title:'Customer Relationship Management (CRM)',
+            title:'Customer Relationship Management',
             description:'In our CRM methodology, we champion personalized solutions, leveraging innovative technology and data-driven insights. Our commitment to seamless integration and continuous refinement ensures enduring client success and elevated customer experiences, driving sustained growth and satisfaction.'
         },
         imageUrl:CustomerRelationship
@@ -74,8 +103,8 @@ export const CRMServices={
 
     second:{
         titleName:'CRM',
-        description:"At our CRM firm, we prioritize client-centricity, leveraging cutting-edge technology and tailored strategies to optimize customer relationships. Our approach emphasizes seamless integration, data-driven insights, and continuous improvement, ensuring sustained growth and client satisfaction.",
-        circleItems:['Trusted Industry Leader','Superior Service Quality','Tailored CRM Solutions']
+        description:"At our CRM firm, we prioritize client-centricity, leveraging cutting-edge technology and tailored strategies to optimize customer relationships. Our approach emphasizes seamless integration, data-driven insights and continuous improvement, ensuring sustained growth and client satisfaction.",
+        circleItems:[{title:'Trusted Industry Leader', image:trusted},{title:'Superior Service Quality', image:quality},{title:'Tailored CRM Solutions', image:crm}]
     },
 
     third:{
@@ -92,22 +121,42 @@ export const CRMServices={
     fourth:{
         cards:[
             {
-                title:'CRM Implementation',
-                message:'Our CRM implementation process prioritizes precision and adaptability, ensuring seamless integration and alignment with your unique business needs. With expertise and diligence, we empower your organization to optimize customer relationships effectively.'
+                title:'Needs Assessment',
+                message:'We begin by understanding your business needs, goals and challenges to recommend the best CRM solution.'
             },
             {
-                title:'Customization and Configuration',
-                message:'With meticulous attention to detail, our customization and configuration services tailor CRM platforms to match your specific business requirements perfectly, empowering you to maximize efficiency and achieve optimal results.'
+                title:'CRM Selection',
+                message:'Based on your requirements, we help you select the most suitable CRM platform that aligns with your business objectives.'
             },
             {
-                title:'Integration Services',
-                message:'Our Integration Services seamlessly connect your CRM platform with essential business systems, streamlining data flow and enhancing functionality. With expertise and precision, we ensure smooth operations and maximize productivity.'
+                title:' Customization and Configuration',
+                message:'We customize and configure the CRM system to meet your specific needs, ensuring it integrates seamlessly with your existing processes and systems.'
             },
             {
-                title:'Data Migration and Cleansing',
-                message:'Assist clients in migrating existing customer data from legacy systems or spreadsheets to their new CRM platform, ensuring data accuracy, consistency, and integrity throughout the process.'
+                title:'Data Migration',
+                message:'We handle the migration of your existing customer data to the new CRM system, ensuring data integrity and continuity.'
+            },
+            {
+                title:'Implementation',
+                message:'Our team oversees the implementation process, ensuring a smooth and efficient setup of the CRM system.'
+            },
+            {
+                title:'Training',
+                message:'We provide comprehensive training for your team to ensure they are proficient in using the new CRM tools and features.'
+            },
+            {
+                title:'Support and Maintenance',
+                message:'Post-implementation, we offer ongoing support and maintenance to ensure the CRM system continues to operate smoothly and efficiently.'
+            },
+            {
+                title:'Continuous Improvement',
+                message:'We continuously monitor and optimize the CRM system, incorporating feedback and making adjustments to enhance performance and meet evolving business needs.'
             }
-        ]
+        ],
+
+        main:'Enhance Your Customer Relationships Today', 
+        desc:'Unlock the potential of your customer interactions with our top-tier CRM services. Benefit from customized solutions designed to improve engagement, satisfaction and overall business performance.',
+        cta: cta2
     }   
 }
 

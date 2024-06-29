@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
+// import LandingPageLayout from "./LandingPageLayout";
 import Home from "./components/Home/Home";
 import {
   CRMServices,
@@ -13,7 +14,7 @@ const CareersPage = lazy(() => import("./components/Careers/CareersPage"));
 const ContactUs = lazy(() => import("./components/ContactUs/ContactUs"));
 const Footer = lazy(() => import("./components/Footer"));
 const Navbar = lazy(() => import("./components/Navbar/Navbar"));
-const Indrustry = lazy(() => import("./components/Indrustry/Indrustry"));
+const Indrustry = lazy(() => import("./components/Indrustry/Industry"));
 const ServiceComponent = lazy(() =>
   import("./components/Services/ServiceComponent")
 );
@@ -41,22 +42,32 @@ import {
   SoftDevServices,
   WebDevServices,
 } from "./components/Services/ServiceData/SoftDevServices";
+import GenerativeAIDescriptive from "./components/Services/SubComponents/GenerativeAIDescriptive";
+import DataAnalyticsDescriptive from "./components/Services/SubComponents/DataAnalyticsDescriptive";
+import InstitueAcademicServices from "./components/Services/InstitueAcademicServices";
+import TrainingProgram from "./components/CorporateTraining/TrainingProgram/TrainingProgram";
+import DevelopmentProgram from "./components/CorporateTraining/DevelopmentProgram/DevelopmentProgram";
+import EnterpriseServices from "./components/CorporateTraining/EnterpriseServices/EnterpriseServices";
+import MicrosoftOffice from "./components/CorporateTraining/MicrosoftOffice365/MicrosoftOffice";
+const LandingPage = lazy(() => import("./components/Landingpage/LandingPage"));
 const Intership = lazy(() => import("./components/Internship/Internship"));
 const InternshipDetails = lazy(() =>
   import("./components/Internship/InternshipDetails")
 );
+
 function App() {
+  const location = useLocation();
+
+  const isLandingPage = location.pathname === "/landingpage";
+
   return (
     <>
-      <Navbar />
+      {!isLandingPage && <Navbar />}
       <Suspense fallback={<Loading />}>
         <ScrollToTop />
         <Routes>
-          <Route
-            exact
-            path="/"
-            element={<Home Meta_Data={Meta_Data.home} />}
-          ></Route>
+          <Route path="/" element={<Home Meta_Data={Meta_Data.home} />}></Route>
+
           <Route
             exact
             path="/AboutUs"
@@ -156,6 +167,22 @@ function App() {
             path="/Service-AI"
             element={<AiAndMLService Meta_Data={Meta_Data.Service_AI} />}
           ></Route>
+
+          <Route
+            exact
+            path="/institute-academy"
+            element={<InstitueAcademicServices Meta_Data={Meta_Data.institue_academic} />}
+          ></Route>
+          <Route
+            exact
+            path="/GenerativeAi"
+            element={<GenerativeAIDescriptive />}
+          ></Route>
+          <Route
+            exact
+            path="/DataAnalytics"
+            element={<DataAnalyticsDescriptive />}
+          ></Route>
           <Route
             exact
             path="/Service-Support"
@@ -168,6 +195,31 @@ function App() {
               <ServicesStaffing Meta_Data={Meta_Data.Service_Staffing} />
             }
           ></Route>
+
+          {/* All Routes for the corporate training program */}
+          <Route
+            exact
+            path="/training-program"
+            element={<TrainingProgram Meta_Data={Meta_Data.training_program} />}
+          ></Route>
+          <Route
+            exact
+            path="/management-dev-program"
+            element={<DevelopmentProgram Meta_Data={Meta_Data.management_dev_program} />}
+          ></Route>
+          <Route
+            exact
+            path="/enterprise-services"
+            element={<EnterpriseServices Meta_Data={Meta_Data.enterprise_services} />}
+          ></Route>
+          <Route
+            exact
+            path="/microsoft-office"
+            element={<MicrosoftOffice Meta_Data={Meta_Data.microsoft_office} />}
+          ></Route>
+
+
+          {/* End of the corporate training program dropdown  */}
           <Route
             exact
             path="/Internship"
@@ -179,9 +231,19 @@ function App() {
             path="/internshipDetails/:id"
             element={<InternshipDetails Meta_Data={Meta_Data.Internship} />}
           ></Route>
+          {/* Landing Page Layout Route */}
+          {/* <Route path="/landingpage" element={<landingpage />}>
+            <Route index element={<Landingpage />} />
+          </Route> */}
+          <Route
+            exact
+            path="/landingpage"
+            element={<LandingPage Meta_Data={Meta_Data.landingpage} />}
+          />
         </Routes>
-      </Suspense>
-      <Footer />
+      </Suspense >
+      {!isLandingPage && <Footer />
+      }
     </>
   );
 }

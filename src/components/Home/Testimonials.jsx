@@ -1,93 +1,117 @@
-import Stars from "./Stars";
+
+import vision from "./assets/image/Vision.jpeg";
+import mission from "./assets/image/Mission.jpeg";
+import value from "./assets/image/Value.png";
+import Eye from "./assets/image/Eye.jpeg";
+import CValue from "./assets/image/CValue.jpeg";
+import Miss from "./assets/image/miss.jpeg";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
-  const reviews = [
-    {
-      id: 1,
-      name: "Harshal Kharche",
-      message:
-        "GreateWay Software is not just a workplace; it's a community where your ideas are heard, your skills are honed. Proud to be a part of a company that not only excels in its industry but also cares deeply about its most valuable asset.",
-      stars: 5,
-    },
-    ,
-    {
-      id: 2,
-      name: "Pankaj Bhagat",
-      message:
-        "Working at GreateWay Software has been a rewarding experience. The dynamic work environment, focus on learning, and collaborative spirit make it an excellent place for professional growth. While there are areas for improvement",
-      stars: 5,
-    },
-    {
-      id: 3,
-      name: "Prashik kambale",
-      message:
-        "My experience at GreateWay Software India Pvt.Ltd was outstanding, thanks to its innovative culture, focus on employee development, and excellent work-life balance. Grateful for the enriching opportunities.",
-      stars: 5,
-    },
-    {
-      id: 4,
-      name: "Shantanu Arvindekar",
-      message:
-        "Serving DevOps role at GreateWay Software, thanks to its cooperative culture, focus on employee development, and excellent work balance. Grateful for the enriching opportunities and collaborative environment.",
-      stars: 5,
-    },
-    {
-      id: 5,
-      name: "Amol",
-      message:
-        "GreateWay Software fosters a vibrant company culture that values innovation. The work environment is dynamic, encouraging employees to bring their best ideas to the table, provides services in web development, Software development.",
-      stars: 5,
-    },
-    {
-      id: 6,
-      name: "Vishnu Jadhav",
-      message:
-        "GreateWay Software is recognized foe its good work culture and job stability. The organization provided me numerous opportunities to learn new things , to enhance my existing knowledge. That is all I felt.",
-      stars: 5,
-    },
-    {
-      id: 7,
-      name: "Yash Zore",
-      message:
-        "GreateWay Software is one of the leading providers in IT Solutions offering Software Development, Web Development, DevOps, Cloud Computing, Artificial Intelligence and Testing and QA. It helps to digitally transform and grow your business.",
-      stars: 5,
-    },
-    {
-      id: 8,
-      name: "Swapnil Jadhav",
-      message:
-        "GreateWay Software is one of the best Software company.Most amazing company when it comes to work life balance. Great management,  great infra and if you do will you will get visibility and opportunity.",
-      stars: 5,
-    },
-    
-  ];
-
   return (
-    <main className="bg-gray-700  p-5 flex flex-col justify-center items-center min-h-lvh">
-      <div className="flex p-5 justify-center text-white">
-        <h1 className="text-4xl font-black">Reviews from the clients </h1>
-      </div>
-      <div className="relative z-10 container flex flex-wrap justify-center items-center gap-4 bg-transparent">
-        {reviews.map((review) => (
-          <div className="box" key={review.id}>
-            <div className="body">
-              <div className="front gap-4 rounded-tr-[53px] bg-white p-4">
-                <p className="text-start font-semibold text-violet-500 text-lg">Client Review</p>
-                <h1 className="text-[1.5rem] font-bold text-violet-500 text-center">
-                  {review.name}
-                </h1>
-                <Stars />
-              </div>
-              <div className="back flex justify-center items-center flex-col">
-                <div className="">
-                  <p className="text-sm">{review.message}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+    <main className="bg-white p-5 flex flex-col justify-center items-center min-h-lvh overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          delay: 0.2,
+          scale: { type: "spring", stiffness: 30 },
+          opacity: { duration: 0.6 },
+          ease: "easeInOut"
+        }}
+        className="flex md:p-5 p-2 md:justify-center text-start">
+        <h1 className="md:text-MainHeading text-MainHeading-sm font-extrabold p-2 capitalize">Explore Our Company's Vision, Mission and Value</h1>
+      </motion.div>
 
+      <div className="max-w-screen-xl mx-auto md:p-4 p-1 overflow-hidden">
+        <div className="sm:grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-12 md:gap-12">
+
+          {/* First Article */}
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.2,
+              y: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.6 },
+              ease: "easeInOut",
+            }}
+            className="hover:bg-[#ccd6ad] transform transition-transform hover:shadow-xl hover:-translate-y-4 p-4 ease-in-out bg-slate-200 mb-2 duration-500 max-w-sm rounded overflow-hidden shadow-lg">
+
+            <div className="py-4 md:px-8 px-2">
+              <img src={vision} alt="" className="rounded-full h-12 w-12 mb-4" />
+              <a href="#">
+                <h4 className="text-lg mb-3 font-bold">Vision</h4>
+              </a>
+              <p className="mb-2 md:text-sm text-xs text-gray-600">At Greateway Software Pvt. Ltd., we are dedicated to leading innovation in crafting transformative digital solutions that empower businesses worldwide. Our vision is to revolutionize industries through cutting-edge technology, driving sustainable growth and delivering lasting value to our clients, employees and communities.</p>
+
+              <img src={Eye} alt="" className="w-full hidden md:block" />
+
+              <hr className="mt-4" />
+              &nbsp;<span className="text-xs text-gray-500">Greateway Software Pvt. Ltd.</span>
+            </div>
+          </motion.div>
+
+          {/* Second Article */}
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.2,
+              y: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.2 },
+              ease: "easeInOut"
+            }}
+            className="hover:bg-[#ccd6ad] transform transition-transform hover:shadow-xl hover:-translate-y-4 p-4 ease-in-out bg-slate-200 mb-2 duration-500 max-w-sm rounded overflow-hidden shadow-lg">
+
+            <div className="py-4 md:px-8 px-2">
+              <img src={mission} alt="" className="rounded-full h-12 w-12 mb-4" />
+              <a href="#">
+                <h4 className="text-lg mb-3 font-bold">Mission</h4>
+              </a>
+              <p className="mb-2 md:text-sm text-xs text-gray-600">At Greateway Software Pvt. Ltd., we strive to deliver IT excellence through advanced technologies like AI, Machine Learning, Cloud Computing and Software Development. With collaborative partnerships, rigorous research and continuous improvement, we aim to exceed client expectations, drive efficiency and catalyze business success.</p>
+
+              <img src={Miss} alt="" className="w-full hidden md:block" />
+
+              <hr className="mt-4" />
+              &nbsp;<span className="text-xs text-gray-500">Greateway Software Pvt. Ltd.</span>
+            </div>
+          </motion.div>
+
+          {/* Third Article */}
+          <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.2,
+              y: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.6 },
+              ease: "easeInOut",
+            }}
+            className="hover:bg-[#ccd6ad] transform transition-transform hover:shadow-xl hover:-translate-y-4 p-4 ease-in-out bg-slate-200 mb-2 duration-500 max-w-sm rounded overflow-hidden shadow-lg">
+
+            <div className="py-4 md:px-8 px-2">
+              <img src={value} alt="" className="rounded-full h-12 w-12 mb-4 bg-white" />
+              <a href="#">
+                <h4 className="text-lg mb-3 font-bold">Company Value</h4>
+              </a>
+              <p className="mb-2 md:text-sm text-xs text-gray-600">
+                At our company, we uphold a commitment to honesty, integrity and ethics in everything we do.
+                We foster innovation through teamwork, valuing diverse perspectives and treating everyone with respect.
+                These core values guide our actions and inspire us to create a positive impact in our work and communities.
+              </p>
+              <br />
+
+              {/* This image will be hidden on small screens and shown on medium screens */}
+              <img src={CValue} alt="" className="w-full hidden md:block" />
+
+              <hr className="md:mt-4" />
+              &nbsp;<span className="text-xs text-gray-500">Greateway Software Pvt. Ltd.</span>
+            </div>
+          </motion.div>
+
+        </div>
+      </div>
     </main>
   );
 };
