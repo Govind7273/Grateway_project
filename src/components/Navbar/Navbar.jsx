@@ -36,7 +36,7 @@ const Navbar = () => {
           <NavLink
             onClick={handleNavLinkClick}
             style={({ isActive }) =>
-              isActive ? { color: "violet" } : { color: "black" }
+              isActive ? { color: "#74A450" } : { color: "black" }
             }
             className="hover:bg-gray-300 p-2 rounded-xl font-bold"
             to={"/"}
@@ -46,7 +46,7 @@ const Navbar = () => {
           <NavLink
             onClick={handleNavLinkClick}
             style={({ isActive }) =>
-              isActive ? { color: "violet" } : { color: "black" }
+              isActive ? { color: "#74A450" } : { color: "black" }
             }
             className="hover:bg-gray-300 p-2 rounded-xl font-bold"
             to={"/AboutUs"}
@@ -66,7 +66,7 @@ const Navbar = () => {
           <NavLink
             onClick={handleNavLinkClick}
             style={({ isActive }) =>
-              isActive ? { color: "violet" } : { color: "black" }
+              isActive ? { color: "#74A450" } : { color: "black" }
             }
             className="hover:bg-gray-300 p-2 rounded-xl font-bold"
             to={"/Indrustry"}
@@ -86,7 +86,7 @@ const Navbar = () => {
           <NavLink
             onClick={handleNavLinkClick}
             style={({ isActive }) =>
-              isActive ? { color: "violet" } : { color: "black" }
+              isActive ? { color: "#74A450" } : { color: "black" }
             }
             className="hover:bg-gray-300 p-2 rounded-xl font-bold"
             to={"/Internship"}
@@ -97,7 +97,7 @@ const Navbar = () => {
           <NavLink
             onClick={handleNavLinkClick}
             style={({ isActive }) =>
-              isActive ? { color: "violet" } : { color: "black" }
+              isActive ? { color: "#74A450" } : { color: "black" }
             }
             className="hover:bg-gray-300 p-2 rounded-xl font-bold"
             to={"/Career"}
@@ -108,7 +108,7 @@ const Navbar = () => {
           <NavLink
             onClick={handleNavLinkClick}
             style={({ isActive }) =>
-              isActive ? { color: "violet" } : { color: "black" }
+              isActive ? { color: "#74A450" } : { color: "black" }
             }
             className="hover:bg-gray-300 p-2 rounded-xl font-bold"
             to={"/ContactUs"}

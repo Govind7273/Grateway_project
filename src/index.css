@@ -27,9 +27,9 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .imgPara {
   background-image: url('./components/AboutUs/images/imgpara.jpg');

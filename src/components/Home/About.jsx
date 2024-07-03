@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 const About = () => {
     return (
-        <div>
-            <section className="bg-slate-100 overflow-hidden py-4">
+        <div className='overflow-hidden'>
+            <section className="bg-slate-100 py-4">
                 <div className="container mx-auto md:py-4 px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
                         <div className="max-w-2xl">
