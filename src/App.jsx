@@ -61,9 +61,9 @@ function App() {
   const isLandingPage = location.pathname === "/landingpage";
 
   return (
-    <>
+    <main className="h-screen" >
       {!isLandingPage && <Navbar />}
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loading />} >
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home Meta_Data={Meta_Data.home} />}></Route>
@@ -244,7 +244,7 @@ function App() {
       </Suspense >
       {!isLandingPage && <Footer />
       }
-    </>
+    </main>
   );
 }
 
