@@ -3,9 +3,9 @@ import { Outlet } from "react-router-dom";
 import Herol from "./Sections/Herol";
 import Chooseusl from "./Sections/Chooseusl";
 import Servicesl from "./Sections/Servicesl";
-import Clientl from "./Sections/Clientl";
 import Pricingl from "./Sections/Pricingl";
 import Contactl from "./Sections/Contactl";
+import {InfiniteMovingCardsDemo} from "../Home/Clients"
 import { Helmet } from "react-helmet-async";
 const LandingPage = ({ Meta_Data }) => {
   const { Title, Description, Link1 } = Meta_Data;
@@ -20,7 +20,7 @@ const LandingPage = ({ Meta_Data }) => {
         <Outlet />
         <Herol />
         <Servicesl />
-        <Clientl />
+        <InfiniteMovingCardsDemo />
         <Chooseusl />
         <Pricingl />
         <Contactl />
