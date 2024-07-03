@@ -61,7 +61,7 @@ const cardData = [
 
 const Card = ({ title, description }) => (
   <>
-    <section className="px-4">
+    <section className="px-4 py-8">
       {/* Our services cards*/}
       {/*  moving border */}
       <Button borderRadius="1px">
