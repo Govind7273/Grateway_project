@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="flex gap-5 bg-white z-50 justify-between px-2 md:justify-evenly fixed w-full">
+    <header className="flex gap-1 bg-white z-50 justify-between px-2 md:justify-evenly fixed w-full">
       <div className="logo">
         <NavLink to={"/"}>
           <img src={GTW} alt="GreatWay" className="h-[65px]" />
@@ -31,14 +31,16 @@ const Navbar = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className={`${showNav ? "visible" : "hidden"} md:visible nav flex flex-col md:flex-row items-center justify-center md:justify-end md:gap-6 absolute md:static top-20 bg-white w-full -left-[2px] md:w-auto md:flex md:items-center`}
+          className={`${
+            showNav ? "visible" : "hidden"
+          } md:visible nav flex flex-col md:flex-row items-center justify-center md:justify-end md:gap-2 absolute md:static top-20 bg-white w-full -left-[2px] md:w-auto md:flex md:items-center`}
         >
           <NavLink
             onClick={handleNavLinkClick}
             style={({ isActive }) =>
               isActive ? { color: "#74A450" } : { color: "black" }
             }
-            className="hover:bg-gray-300 p-2 rounded-xl font-bold"
+            className="hover:bg-gray-300 p-2 rounded-xl font-semibold"
             to={"/"}
           >
             Home
@@ -48,7 +50,7 @@ const Navbar = () => {
             style={({ isActive }) =>
               isActive ? { color: "#74A450" } : { color: "black" }
             }
-            className="hover:bg-gray-300 p-2 rounded-xl font-bold"
+            className="hover:bg-gray-300 p-2 rounded-xl font-semibold"
             to={"/AboutUs"}
           >
             About Us
@@ -57,7 +59,7 @@ const Navbar = () => {
           <FlyoutLink FlyoutContent={PricingContent} handleNavLinkClick={handleNavLinkClick}>
             <NavLink
               to={"/Service-softDev"}
-              className="hover:bg-gray-300 p-2 rounded-xl font-bold text-black"
+              className="hover:bg-gray-300 p-2 rounded-xl font-semibold text-black"
             >
               Services
             </NavLink>
@@ -68,16 +70,30 @@ const Navbar = () => {
             style={({ isActive }) =>
               isActive ? { color: "#74A450" } : { color: "black" }
             }
-            className="hover:bg-gray-300 p-2 rounded-xl font-bold"
+            className="hover:bg-gray-300 p-2 rounded-xl font-semibold"
             to={"/Indrustry"}
           >
             Industries
           </NavLink>
 
-          <FlyoutLink FlyoutContent={TrainingContent} handleNavLinkClick={handleNavLinkClick}>
+          <NavLink
+            onClick={handleNavLinkClick}
+            style={({ isActive }) =>
+              isActive ? { color: "#74A450" } : { color: "black" }
+            }
+            className="hover:bg-gray-300 p-2 rounded-xl font-semibold"
+            to={"/Mou"}
+          >
+            MOU With Collages
+          </NavLink>
+
+          <FlyoutLink
+            FlyoutContent={TrainingContent}
+            handleNavLinkClick={handleNavLinkClick}
+          >
             <NavLink
               to={"/training-program"}
-              className="hover:bg-gray-300 p-2 rounded-xl font-bold text-black"
+              className="hover:bg-gray-300 p-2 rounded-xl font-semibold text-black"
             >
               Corporate Training
             </NavLink>
@@ -88,7 +104,7 @@ const Navbar = () => {
             style={({ isActive }) =>
               isActive ? { color: "#74A450" } : { color: "black" }
             }
-            className="hover:bg-gray-300 p-2 rounded-xl font-bold"
+            className="hover:bg-gray-300 p-2 rounded-xl font-semibold"
             to={"/Internship"}
           >
             Internship
@@ -99,7 +115,7 @@ const Navbar = () => {
             style={({ isActive }) =>
               isActive ? { color: "#74A450" } : { color: "black" }
             }
-            className="hover:bg-gray-300 p-2 rounded-xl font-bold"
+            className="hover:bg-gray-300 p-2 rounded-xl font-semibold"
             to={"/Career"}
           >
             Career
@@ -110,7 +126,7 @@ const Navbar = () => {
             style={({ isActive }) =>
               isActive ? { color: "#74A450" } : { color: "black" }
             }
-            className="hover:bg-gray-300 p-2 rounded-xl font-bold"
+            className="hover:bg-gray-300 p-2 rounded-xl font-semibold"
             to={"/ContactUs"}
           >
             Contact
@@ -160,12 +176,12 @@ const FlyoutLink = ({ children, FlyoutContent, handleNavLinkClick }) => {
 
 const PricingContent = ({ handleNavLinkClick }) => {
   return (
-    <div className="md:w-[50rem] bg-white overflow-y-scroll h-[20rem] md:h-full w-[21rem] gap-3 md:overflow-hidden flex flex-col p-4 md:grid md:grid-cols-2 shadow-lg rounded-lg">
+    <div className="md:w-[50rem] bg-white overflow-y-scroll h-[20rem] md:h-full w-[21rem] gap-1 md:overflow-hidden flex flex-col p-4 md:grid md:grid-cols-2 shadow-lg rounded-lg">
       {links.map((l) => {
         return (
           <div key={l.id} className="hover:bg-gray-200 rounded-xl p-2">
             <NavLink to={l.link} onClick={handleNavLinkClick}>
-              <h1 className="font-bold w-fit">{l.name}</h1>
+              <h1 className="font-semibold w-fit">{l.name}</h1>
               <span className="text-xs">{l.desc}</span>
             </NavLink>
           </div>
@@ -177,12 +193,12 @@ const PricingContent = ({ handleNavLinkClick }) => {
 
 const TrainingContent = ({ handleNavLinkClick }) => {
   return (
-    <div className="md:w-[50rem] bg-white overflow-y-scroll h-[20rem] md:h-full w-[21rem] gap-3 md:overflow-hidden flex flex-col p-4 md:grid md:grid-cols-2 shadow-lg rounded-lg">
+    <div className="md:w-[50rem] bg-white overflow-y-scroll h-[20rem] md:h-full w-[21rem] gap-1 md:overflow-hidden flex flex-col p-4 md:grid md:grid-cols-2 shadow-lg rounded-lg">
       {corporateTrainingLinks.map((l) => {
         return (
           <div key={l.id} className="hover:bg-gray-200 rounded-xl p-2">
             <NavLink to={l.link} onClick={handleNavLinkClick}>
-              <h1 className="font-bold w-fit">{l.name}</h1>
+              <h1 className="font-semibold w-fit">{l.name}</h1>
               <span className="text-xs">{l.desc}</span>
             </NavLink>
           </div>

@@ -15,6 +15,7 @@ const ContactUs = lazy(() => import("./components/ContactUs/ContactUs"));
 const Footer = lazy(() => import("./components/Footer"));
 const Navbar = lazy(() => import("./components/Navbar/Navbar"));
 const Indrustry = lazy(() => import("./components/Indrustry/Industry"));
+const Mou =lazy(()=>import("./components/Mou/Mou"));
 const ServiceComponent = lazy(() =>
   import("./components/Services/ServiceComponent")
 );
@@ -88,6 +89,12 @@ function App() {
             exact
             path="/Indrustry"
             element={<Indrustry Meta_Data={Meta_Data.indrustry} />}
+          ></Route>
+          
+           <Route
+            exact
+            path="/Mou"
+            element={<Mou Meta_Data={Meta_Data.Mou} />}
           ></Route>
           <Route
             exact
