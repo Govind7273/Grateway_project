@@ -59,6 +59,27 @@ const Footer = () => {
           </div>
           <div className="py-4">
             <div>
+              <span className="text-xl font-semibold mb-4">Corporate Training</span>
+              <hr className="border-white py-2"></hr>
+            </div>
+            <div className="grid md:grid-cols-2 grid-cols-1 text-base gap-x-2 gap-y-1 text-slate-200">
+
+              <Link to="/training-program">
+                <p className="hover:text-[#06b6d4]">Technology Training</p>
+              </Link>
+              <Link to="/management-dev-program">
+                <p className="hover:text-[#06b6d4]">Management Development</p>
+              </Link>
+              <Link to="/enterprise-services">
+                <p className="hover:text-[#06b6d4]">Enterprise Services</p>
+              </Link>
+              <Link to="/microsoft-office">
+                <p className="hover:text-[#06b6d4]">Microsoft Office 365</p>
+              </Link>
+            </div>
+          </div>
+          <div className="py-4">
+            <div>
               <span className="text-xl font-semibold mb-4">Resources</span>
               <hr className="border-white py-2"></hr>
             </div>
@@ -80,19 +101,6 @@ const Footer = () => {
               </Link>
               <Link to="/ContactUs">
                 <p className="hover:text-[#06b6d4]">Contact</p>
-              </Link>
-
-              <Link to="/training-program">
-                <p className="hover:text-[#06b6d4]">Technology Training</p>
-              </Link>
-              <Link to="/management-dev-program">
-                <p className="hover:text-[#06b6d4]">Management Development</p>
-              </Link>
-              <Link to="/enterprise-services">
-                <p className="hover:text-[#06b6d4]">Enterprise Services</p>
-              </Link>
-              <Link to="/microsoft-office">
-                <p className="hover:text-[#06b6d4]">Microsoft Office 365</p>
               </Link>
             </div>
           </div>

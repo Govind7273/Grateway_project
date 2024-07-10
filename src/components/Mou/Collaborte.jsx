@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 import { motion } from "framer-motion";
-import { Link } from 'react-router-dom';
-
-function Collaboration() {
+import { Link } from "react-router-dom";
+const Collaborte = () => {
   return (
-    <div className='md:py-12 p-4 text-center md:px-40'>
+    <section id='section3'>
+      <div className='md:py-12 p-4 text-center md:px-40 overflow-x-hidden'>
       <motion.h1
         initial={{ opacity: 0, y: -100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ function Collaboration() {
           opacity: { duration: 0.6 },
           ease: 'easeInOut'
         }}
-        className='md:text-Paragraph text-Paragraph-sm py-3'>At Greateway Software Pvt. Ltd., embark on a journey of endless possibilities. Join our dynamic team to immerse yourself in innovative projects, thrive in a collaborative environment, benefit from ongoing learning opportunities and pave the way for your career growth. Discover the perfect setting to unleash your full potential in the ever-evolving realm of IT.</motion.p>
+        className='md:text-Paragraph text-Paragraph-sm py-3'>Our company has established strategic Memorandums of Understanding (MOUs) with a diverse array of colleges, marking a significant step towards mutual growth and innovation in education. These partnerships aim to leverage each institution's strengths, fostering a dynamic environment for knowledge sharing, research collaboration, and student development. Together, we aim to redefine educational paradigms, creating opportunities that transcend boundaries and empower future generations.</motion.p>
       <div className="flex justify-center items-center">
         <Link to='/ContactUs'><motion.button
           initial={{ opacity: 0, scale: 1.3 }}
@@ -47,11 +47,12 @@ function Collaboration() {
           }}
           className="bg-zinc-900 rounded-[7px] text-white px-5 py-3 font-headingFont text-sm  transition-all duration-150 ease-linear hover:bg-zinc-700"
         >
-           Contact Us
+          Contact Us
         </motion.button></Link>
       </div>
     </div>
+      </section>
   )
 }
 
-export default Collaboration;
+export default Collaborte
