@@ -13,7 +13,7 @@ export const textItems = [
       ],
     },
     {
-      text: "The Marathwada Mitramandal's Institute of Technology, Lohgaon",
+      text: "The Marathwada Mitramandal's Institute of Technology, Lohgaon, Pune",
       images: [
         {
           src: MarathWadaCLG,
@@ -21,7 +21,7 @@ export const textItems = [
       ],
     },
     {
-      text: "Shree Ramchandra Engineering College, Lonikand Pune",
+      text: "Shree Ramchandra Engineering College, Lonikand, Pune",
       images: [
         {
           src: ramChandraCLG,
