@@ -84,9 +84,8 @@ const Navbar = () => {
             className="hover:bg-gray-300 p-2 rounded-xl font-semibold"
             to={"/Mou"}
           >
-            MOU With Collages
+            MOU with Colleges
           </NavLink>
-
           <FlyoutLink
             FlyoutContent={TrainingContent}
             handleNavLinkClick={handleNavLinkClick}

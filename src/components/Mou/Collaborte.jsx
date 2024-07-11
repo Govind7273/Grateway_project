@@ -14,7 +14,7 @@ const Collaborte = () => {
           opacity: { duration: 0.6 },
           ease: 'easeInOut'
         }}
-        className='md:text-MainHeading text-MainHeading-sm font-extrabold md:py-2 py-1 capitalize'>Interested in collaborating with us?</motion.h1>
+        className='md:text-MainHeading text-CardHeading font-extrabold md:py-2 py-1 capitalize'>Interested In Collaborating With Us?</motion.h1>
       <motion.h4
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ const Collaborte = () => {
           opacity: { duration: 0.4 },
           ease: "easeInOut"
         }}
-        className='text-2xl md:text-SubHeading text-SubHeading-sm font-bold italic md:py-2 py-1'>Let's collaborate and create something extraordinary!</motion.h4>
+        className='text-2xl md:text-SubHeading text-SubHeading-sm font-bold italic md:py-2 py-1'>Let's collaborate and create something extraordinary!        </motion.h4>
       <motion.p
         initial={{ opacity: 0, scale: 0.6 }}
         whileInView={{ opacity: 1, scale: 1 }}

@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ClassRoom from "./Images/ClassRoom.jpg";
-import { Link } from 'react-scroll';
+import { Link } from "react-scroll";
 
 const HeroSection = () => {
   return (
@@ -15,9 +15,10 @@ const HeroSection = () => {
           className="md:text-TopHeading text-TopHeading-sm sm:text-2xl text-center font-bold"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, type: "spring", stiffness: 50 }}>
+          transition={{ delay: 0.2, type: "spring", stiffness: 50 }}
+        >
           MOU Signed with Colleges
-          </motion.h1>
+        </motion.h1>
         <motion.p
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -29,10 +30,7 @@ const HeroSection = () => {
           }}
           className="text-center text-xs md:text-lg text-slate-200 px-4 py-2 sm:px-5 sm:pt-6 font-semibold"
         >
-          "We are excited to announce the signing of a Memorandum of
-          Understanding with leading colleges. This partnership aims to foster
-          collaboration, innovation, and shared opportunities. Together, we are dedicated to elevating educational and 
-          professional experiences, paving the way for a future defined by excellence and growth."
+          "We are excited to announce the signing of a Memorandum of Understanding with leading colleges. This partnership aims to foster collaboration, innovation, and shared opportunities. Together, we are dedicated to elevating educational and professional experiences, paving the way for a future defined by excellence and growth."
         </motion.p>
 
         <motion.div
