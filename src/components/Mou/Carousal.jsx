@@ -50,7 +50,7 @@ const Carousal = ({ images }) => {
             >
               <img
                 src={image.src}
-                className="object-cover w-full h-full rounded-xl shadow-2xl"
+                className="object-cover rounded-xl shadow-2xl"
                 alt={`Slide ${index + 1}`}
               />
             </motion.div>
