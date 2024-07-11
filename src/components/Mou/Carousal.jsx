@@ -61,14 +61,12 @@ const Carousal = ({ images }) => {
           data-carousal-indicators
         >
           {images.map((_, index) => (
-            <button
+            <span
               key={index}
-              type="button"
               className={`w-3 h-3 rounded-full ${
                 index === currentIndex ? "bg-gray-400" : "bg-gray-300"
               } hover:bg-gray-400 focus:outline-none transition`}
-              onClick={() => setCurrentIndex(index)}
-            ></button>
+            ></span>
           ))}
         </div>
         <button
