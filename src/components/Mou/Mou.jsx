@@ -5,8 +5,8 @@ import HeroSection from "./HeroSection";
 import Carousal from "./Carousal";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import Collaborte from "./Collaborte";
-import MarathWadaCLG from "./Images/MarathWadaCLG.jpg";
-import PuneVidyCLG from "./Images/PuneVidyCLG.jpg";
+import {textItems} from "../../../src/functions/Mou_Data"
+
 
 const Mou = ({ Meta_Data }) => {
   const { Title, Description, Link } = Meta_Data;
@@ -14,25 +14,6 @@ const Mou = ({ Meta_Data }) => {
     index: null,
     images: [],
   });
-
-  const textItems = [
-    {
-      text: "Pune Vidhyarthi Griha's College of Engineering and Technology, Pune",
-      images: [
-        {
-          src: PuneVidyCLG,
-        },
-      ],
-    },
-    {
-      text: "The Marathwada Mitramandal’s Institute of Technology, Lohgaon",
-      images: [
-        {
-          src: MarathWadaCLG,
-        },
-      ],
-    },
-  ];
 
   const handleClick = (index, images) => {
     if (selectedImage.index === index) {
