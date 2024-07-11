@@ -30,7 +30,7 @@ const Carousal = ({ images }) => {
         data-carousal="static"
       >
         <div
-          className="relative flex transition-transform duration-700 ease-in-out"
+          className="relative flex justify-center transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           data-carousal-inner
         >
@@ -45,12 +45,12 @@ const Carousal = ({ images }) => {
                 ease: "easeInOut",
               }}
               key={index}
-              className="flex-shrink-0 w-full"
+              className="flex-shrink-0 rounded-xl"
               data-carousal-item
             >
               <img
                 src={image.src}
-                className="object-cover rounded-xl shadow-2xl"
+                className="object-cover h-96 rounded-xl shadow-2xl"
                 alt={`Slide ${index + 1}`}
               />
             </motion.div>
