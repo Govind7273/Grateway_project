@@ -2,6 +2,7 @@ import MarathWadaCLG from "../components/Mou/Images/MarathWadaCLG.jpg";
 import PuneVidyCLG from "../components/Mou/Images/PuneVidyCLG.jpg";
 import ramChandraCLG from "../components/Mou/Images/ramChandraCLG.jpg";
 import DholePatil from "../components/Mou/Images/DholePatil.jpg";
+import SKN from "../components/Mou/Images/SKN.jpg";
 
 
 export const textItems = [
@@ -34,6 +35,14 @@ export const textItems = [
       images: [
         {
           src: DholePatil,
+        }
+      ],
+    },
+    {
+      text: "SKN Sinhgad Institute of Technology & Science, Lonavala",
+      images: [
+        {
+          src: SKN,
         }
       ],
     }
