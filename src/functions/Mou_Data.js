@@ -1,6 +1,7 @@
 import MarathWadaCLG from "../components/Mou/Images/MarathWadaCLG.jpg";
 import PuneVidyCLG from "../components/Mou/Images/PuneVidyCLG.jpg";
 import ramChandraCLG from "../components/Mou/Images/ramChandraCLG.jpg";
+import DholePatil from "../components/Mou/Images/DholePatil.jpg";
 
 
 export const textItems = [
@@ -28,4 +29,12 @@ export const textItems = [
         }
       ],
     },
+    {
+      text: "Dhole Patil College of Engineering, Pune",
+      images: [
+        {
+          src: DholePatil,
+        }
+      ],
+    }
   ];
