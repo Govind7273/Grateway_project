@@ -1,5 +1,5 @@
 // Mou.jsx
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import HeroSection from "./HeroSection";
 import Carousal from "./Carousal";
@@ -34,7 +34,6 @@ const Mou = ({ Meta_Data }) => {
       {/* Second Section of Collages */}
       <section id="targetsection" className="p-3 mb-10">
         <h1
-          if=""
           className="text-center md:text-MainHeading-sm text-CardHeading font-extrabold md:py-2 py-1 capitalize"
         >
            List of Colleges We Have Collaborated With

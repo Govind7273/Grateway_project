@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Carousal = ({ images }) => {
@@ -23,16 +23,16 @@ const Carousal = ({ images }) => {
   }, [images.length]);
 
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="w-full lg:max-w-2xl mx-auto">
       <div
         id="default-carousal"
-        className="relative rounded-lg overflow-hidden shadow-lg"
+        className="relative rounded-lg overflow-hidden"
         data-carousal="static"
       >
         <div
           className="relative flex justify-center transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          data-carousal-inner
+          
         >
           {images.map((image, index) => (
             <motion.div
@@ -56,7 +56,7 @@ const Carousal = ({ images }) => {
             </motion.div>
           ))}
         </div>
-        <div
+        {/* <div
           className="flex absolute bottom-5 left-1/2 z-30 -translate-x-1/2 space-x-2"
           data-carousal-indicators
         >
@@ -106,7 +106,7 @@ const Carousal = ({ images }) => {
               d="M9 5l7 7-7 7"
             ></path>
           </svg>
-        </button>
+        </button> */}
       </div>
     </div>
   );
