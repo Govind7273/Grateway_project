@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 export const CTA = () => {
     return (
-        <div className="relative flex flex-col lg:flex-row items-center justify-center sm:py-[2rem] md:py-[5rem] lg:translate-x-40">
+        <div className="relative flex flex-col md:bottom-8 lg:flex-row items-center justify-center sm:py-[2rem] lg:translate-x-40">
             <div className="relative ">
                 <img className="object-contain opacity-95 cursor-pointer rounded-xl" src={cta}></img>
             </div>

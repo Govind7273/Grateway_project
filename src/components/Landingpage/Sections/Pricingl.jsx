@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Pricingl = () => {
   return (
     <section className="bg-transparent">
-      <div className="py-6 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-6">
+      <div className="py-6 px-4 mx-auto max-w-screen-xl lg:pb-6 lg:px-6">
         <div className="mx-auto max-w-screen-md text-center mb-6 lg:mb-10">
           <h2 className="mb-3 text-MainHeading font-extrabold">
             Designed for business teams like yours
