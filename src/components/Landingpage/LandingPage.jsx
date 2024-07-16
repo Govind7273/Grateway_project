@@ -7,6 +7,7 @@ import Pricingl from "./Sections/Pricingl";
 import Contactl from "./Sections/Contactl";
 import {InfiniteMovingCardsDemo} from "../Home/Clients"
 import { Helmet } from "react-helmet-async";
+import CertifiedLogo from "../ui/CertifiedLogo";
 const LandingPage = ({ Meta_Data }) => {
   const { Title, Description, Link1 } = Meta_Data;
   return (
@@ -22,6 +23,7 @@ const LandingPage = ({ Meta_Data }) => {
         <Servicesl />
         <InfiniteMovingCardsDemo />
         <Chooseusl />
+        <CertifiedLogo />
         <Pricingl />
         <Contactl />
       </main>

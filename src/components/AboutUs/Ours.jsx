@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 export const Ours = () => {
     return (
-        <div className="flex flex-col md:w-[90%] py-10 sm-py-0 sm:p-10 md:p-4 lg:p-10 md:mb-20 md:shadow-blue-950 md:shadow-lg bg-slate-100 ">
+        <div className="flex flex-col md:w-[90%] py-10 sm-py-0 sm:p-10 md:p-4 lg:p-10 md:shadow-blue-950 md:shadow-lg bg-slate-100 ">
             <div className="h-[6px] w-[70px] bg-slate-400 mx-4 rounded-full"></div>
             <div className="text-MainHeading-sm md:text-MainHeading p-4 font-bold">VISION MISSION <span className="text-[#4c9ddc]">VALUES</span></div>
             <div className="flex items-center justify-center gap-4">

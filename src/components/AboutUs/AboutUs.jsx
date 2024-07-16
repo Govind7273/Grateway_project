@@ -8,7 +8,6 @@ import { Ours } from "./Ours";
 import { Info } from "./Info";
 import { CTA } from "./CTA";
 import {CertifiedLogo} from "../ui/CertifiedLogo"
-import ISOLogo from "./ISOLogo";
 
 const AboutUs = ({Meta_Data}) => {
   
@@ -44,9 +43,6 @@ const AboutUs = ({Meta_Data}) => {
 
       {/* Certified Logo */}
       {CertifiedLogo()}
-
-      {/* ISO LOGO */}
-      <ISOLogo />
 
       { CTA ()}
 
