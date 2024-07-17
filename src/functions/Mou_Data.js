@@ -4,6 +4,7 @@ import ramChandraCLG from "../components/Mou/Images/ramChandraCLG.jpg";
 import DholePatil from "../components/Mou/Images/DholePatil.jpg";
 import SKN from "../components/Mou/Images/SKN.jpg";
 import Sinhgad from "../components/Mou/Images/Sinhgad.jpg";
+import DYPatil from "../components/Mou/Images/DYPatil.jpg";
 
 
 export const textItems = [
@@ -52,6 +53,14 @@ export const textItems = [
       images: [
         {
           src: Sinhgad,
+        }
+      ],
+    },
+    {
+      text: "DY Patil School of Engineering, Lohagaon, Pune",
+      images: [
+        {
+          src: DYPatil,
         }
       ],
     }
