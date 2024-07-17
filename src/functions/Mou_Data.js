@@ -5,6 +5,8 @@ import DholePatil from "../components/Mou/Images/DholePatil.jpg";
 import SKN from "../components/Mou/Images/SKN.jpg";
 import Sinhgad from "../components/Mou/Images/Sinhgad.jpg";
 import DYPatil from "../components/Mou/Images/DYPatil.jpg";
+import Abhinav from "../components/Mou/Images/Abhinav.jpg";
+import Government from "../components/Mou/Images/Government.jpg";
 
 
 export const textItems = [
@@ -61,6 +63,22 @@ export const textItems = [
       images: [
         {
           src: DYPatil,
+        }
+      ],
+    },
+    {
+      text: "Abhinav Education Society's College of Engineering & Technology, wadwadi, Satara",
+      images: [
+        {
+          src: Abhinav,
+        }
+      ],
+    },
+    {
+      text: "Government Polytechnic, Chhatrapati Sambhajinagar",
+      images: [
+        {
+          src: Government,
         }
       ],
     }
