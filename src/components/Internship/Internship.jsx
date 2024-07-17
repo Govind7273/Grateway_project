@@ -11,8 +11,16 @@ import { motion } from "framer-motion"
 import { fadein } from "./variant"
 
 const Internship = ({ Meta_Data }) => {
-  const [ModalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedTitle, setSelectedTitle] = useState("");
+
   const { Title, Description, Link1 } = Meta_Data;
+
+  const handleApplyClick = (title) => {
+    setSelectedTitle(title);
+    setModalOpen(true);
+  };
+
   return (
     <>
       <Helmet>
@@ -24,7 +32,7 @@ const Internship = ({ Meta_Data }) => {
         <section className="max-w-full h-full flex justify-center lg:pt-8 sm:pt-6 pt-20 flex-col items-center">
           <motion.div
             animate={{ y: [-100, 0] }}
-            className="flex absolute md:w-[600px] sm:w-fit flex-col   sm:px-10 sm:py-10 z-40">
+            className="flex absolute md:w-[600px] sm:w-fit flex-col sm:px-10 sm:py-10 z-40">
             <div className="sm:pb-6 md:flex hidden justify-start sm:pl-[150px] pl-20">
               <div className="h-2 w-1 bg-white"></div>
               <div className="h-2 w-12 bg-green-300"></div>
@@ -75,7 +83,6 @@ const Internship = ({ Meta_Data }) => {
             </motion.div>
           </motion.div>
 
-
           <div className="md:h-screen h-[40vh] w-full bg-black bg-cover">
             <img
               className="h-full w-full object-fill opacity-45"
@@ -83,10 +90,7 @@ const Internship = ({ Meta_Data }) => {
               alt=""
             />
           </div>
-
-
         </section>
-
 
         <div className="flex absolute z-10 sm:h-20 h-10 sm:w-28 w-12 right-0 rounded-br-full bg-[#4c9ddc]"></div>
 
@@ -125,7 +129,6 @@ const Internship = ({ Meta_Data }) => {
                   </div>
                 </div>
 
-
                 <div className="py-8 sm:px-12 px-3 text-center">
                   <div className="leading-relaxed">
                     <motion.h1
@@ -143,16 +146,12 @@ const Internship = ({ Meta_Data }) => {
                       className="text-Paragraph pt-4">
                       "Providing customized growth opportunities through mentorship, training programs and pathways for advancement. We empower our team to grow professionally, fostering innovation and excellence in software solutions."
                     </motion.p>
-
                   </div>
                 </div>
               </div>
             </section>
-
           </div>
         </section>
-
-
 
         <motion.div
           variants={fadein("right", 0.2)}
@@ -172,8 +171,7 @@ const Internship = ({ Meta_Data }) => {
           className="flex absolute z-10 sm:h-10 h-6 sm:w-20 w-10 items-center rounded-s-3xl right-0 flex-col justify-evenly bg-[#4c9ddc]">
         </motion.div>
 
-        <section id="Cards" className="flex px-4 justify-evenly flex-wrap  py-28 gap-8 bg-slate-50">
-
+        <section id="Cards" className="flex px-4 justify-evenly flex-wrap py-28 gap-8 bg-slate-50">
           {IntershipDetails.map((detail) => {
             return (
               <motion.div
@@ -198,7 +196,7 @@ const Internship = ({ Meta_Data }) => {
                 />
                 <div className="apply_btn w-full pb-3 px-3 flex justify-end flex-col sm:flex-row gap-4">
                   <button
-                    onClick={() => setModalOpen(true)}
+                    onClick={() => handleApplyClick(detail.Post_Name)}
                     className="rounded-xl items-start w-fit bg-cyan-300 px-3 py-1 md:px-4 md:py-2 border boder-[#4c9ddc] font-bold text-slate-800 hover:bg-white hover:text-cyan-700 transition-all 0.2 ease-out capitalize"
                   >
                     Apply
@@ -209,7 +207,7 @@ const Internship = ({ Meta_Data }) => {
             );
           })}
         </section>
-        {ModalOpen && <Modal setModalOpen={setModalOpen} />}
+        {modalOpen && <Modal setModalOpen={setModalOpen} selectedTitle={selectedTitle} />}
       </main>
     </>
   );

@@ -12,11 +12,6 @@ export const InternshipSchema = Yup.object().shape({
     .matches(/^\d{10}$/, 'Number must be exactly 10 digits')
     .required('Number is required'),
   role: Yup.string()
-    .oneOf([
-      'Java Developer - Internship',
-      'Data Science - Internship',
-      'Data Analyst - Internship',
-      'Web Development - Internship'
-    ], 'Invalid role')
+    
     .required('Role is required')
 });
