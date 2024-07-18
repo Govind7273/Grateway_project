@@ -17,10 +17,13 @@ import ChooseUs from "./ChooseUs";
 import Collaboration from "./Collaboration";
 import { motion } from "framer-motion";
 import { fadein } from "../../../src/variants";
+import CertifiedLogo from "../ui/CertifiedLogo";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const VideoComponent = ({ video, title, desc, link, isVisible }) => (
-  <div className={`relative ${isVisible ? "" : "hidden"} h-[30rem] md:h-full w-[100vw]`}>
+  <div className={`relative ${isVisible ? "" : "hidden"} h-[30rem] md:h-full w-[100vw] overflow-hidden`}>
     <video
       className="w-full h-full object-cover opacity-50"
       src={video}
@@ -89,6 +92,9 @@ const Home = ({ Meta_Data }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
+      AOS.init({ offset: 100,
+        duration: 800 ,
+        delay: 100});
       setIndex((prevIndex) => (prevIndex + 1) % Video_Array.length);
     }, 5000);
     return () => clearInterval(interval);
@@ -101,8 +107,8 @@ const Home = ({ Meta_Data }) => {
         <meta name="description" content={Description} />
         <link rel="canonical" href={Link} />
       </Helmet>
-      <main>
-        <section className="flex relative bg-black overflow-x-hidden">
+      <main className="overflow-hidden">
+        <section className="flex relative bg-black overflow-hidden">
           {Video_Array.map((vid, idx) => (
             <VideoComponent
               key={vid.video}
@@ -114,7 +120,7 @@ const Home = ({ Meta_Data }) => {
             />
           ))}
         </section>
-      </main>
+      
       <About />
 
       <Services />
@@ -127,12 +133,15 @@ const Home = ({ Meta_Data }) => {
 
       <ChooseUs />
 
+      <CertifiedLogo />
+
       <InfiniteMovingCardsDemo />
 
       <Collaboration />
 
       {/*technologies used in site */}
       {/* <Tech /> */}
+      </main>
     </>
   );
 };

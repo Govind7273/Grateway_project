@@ -35,7 +35,7 @@ export const TestingAndQAServices={
 
     second:{
         titleName:'Testing And QA',
-        description:"Select Greatway Software for testing and QA and unlock the path to excellence. With our seasoned experts, innovative methodologies and        unwavering dedication, we guarantee your software's reliability,        security and user satisfaction. Trust us to deliver unparalleled        quality and ensure your products shine in today's competitive market        landscape.",
+        description:"Select Greateway Software for testing and QA and unlock the path to excellence. With our seasoned experts, innovative methodologies and        unwavering dedication, we guarantee your software's reliability,        security and user satisfaction. Trust us to deliver unparalleled        quality and ensure your products shine in today's competitive market        landscape.",
         circleItems:[{title:'Full-cycle QA', image:fullqa},{title:'Independent Testing', image:indtesting},{title:'Functional Testing', image:testing}]
     },
 

@@ -7,33 +7,49 @@ import { careerEmail } from "../../functions/EmailSendFunction";
 import { useCareerForm } from "../../utils/useCareerForm";
 import { IoMdClose } from "react-icons/io";
 
-const ModalForm = ({ setModal }) => {
+const ModalForm = ({ setModal, selectedPosition }) => {
   const captch = useRef();
-  const [CaptchValue, setCaptchaValue] = useState("");
+  const [captchaValue, setCaptchaValue] = useState("");
   const [error, setError] = useState({});
   const [contact, setContact] = useState({
     name: "",
     email: "",
     number: "",
-    role: "",
+    role: selectedPosition || "",
   });
   const [resume, setResume] = useState(null);
 
+  const validateField = async (name, value) => {
+    try {
+      await JobSchema.validateAt(name, { ...contact, [name]: value });
+      setError((prevError) => ({ ...prevError, [name]: "" }));
+    } catch (validationError) {
+      setError((prevError) => ({
+        ...prevError,
+        [name]: validationError.message,
+      }));
+    }
+  };
+
   const InputField = (label, name, type, error) => {
+    const handleChange = async (e) => {
+      const { name, value } = e.target;
+      setContact({ ...contact, [name]: value });
+      await validateField(name, value);
+    };
+
     return (
       <div className="w-full">
         <input
-          required
           type={type}
           value={contact[name]}
           name={name}
-          onChange={(e) =>
-            setContact({ ...contact, [e.target.name]: e.target.value })
-          }
+          onChange={handleChange}
           className="border-b-2 outline-none w-full border-slate-300 md:h-10 h-4 pl-2 py-3"
           placeholder={label}
+          maxLength={type === "number" ? 10 : undefined}
         />
-        {error && <div className="text-red-500 text-xs">{error}</div>}
+        {error[name] && <div className="text-red-500 text-xs">{error[name]}</div>}
       </div>
     );
   };
@@ -46,7 +62,7 @@ const ModalForm = ({ setModal }) => {
         name: "",
         email: "",
         number: "",
-        role: "",
+        role: selectedPosition,
       });
       setResume(null);
       setError({});
@@ -62,21 +78,26 @@ const ModalForm = ({ setModal }) => {
   });
 
   const handleSendApplication = async (e) => {
-    const { name, email, number, role } = contact;
     e.preventDefault();
+    const { name, email, number, role } = contact;
+
     try {
       await JobSchema.validate(contact, { abortEarly: false });
       const form = useCareerForm(name, email, number, role, resume);
-      if (!CaptchValue) {
+
+      if (!captchaValue) {
         toast.error("Please fill the captcha");
         return;
       }
+
       if (!resume) {
         toast.error("Please upload resume");
         return;
       }
+
       mutate(form);
     } catch (validationError) {
+      console.log(validationError); // Add this line to log the validation error
       toast.error("Please check the form data");
       const newError = {};
       validationError.inner.forEach((err) => {
@@ -89,55 +110,41 @@ const ModalForm = ({ setModal }) => {
   return (
     <>
       <Toaster />
-      <div className="fixed z-40 px-2 inset-0 flex justify-center items-center bg-opacity-30 backdrop-blur-sm bg-black">
-        <div className="py-8 px-4 relative md:top-[30px] top-[50px] bg-white shadow-[0px_0px_10px] shadow-slate-500 text-black rounded-xl">
+      <div className="fixed z-50 inset-0 flex justify-center items-center bg-opacity-30 backdrop-blur-sm bg-black">
+        <div className="py-4 px-4 relative top-[20px] bg-white shadow-[0px_0px_10px] shadow-slate-500 text-black rounded-xl">
           <span
             onClick={() => setModal(false)}
-            className="absolute right-4 top-2 font-extrabold text-2xl text-blue-800 py-2 hover:bg-slate-200 px-4 hover:cursor-pointer rounded-[5px]"
+            className="absolute top-2 right-4 font-extrabold text-2xl text-blue-800 py-2 hover:bg-slate-200 px-4 cursor-pointer rounded-[5px]"
           >
             <IoMdClose />
           </span>
 
           <form
-            className="flex flex-col lg:gap-4 gap-2 lg:w-[350px] w-[300px] px-2"
+            className="flex flex-col gap-2 lg:w-[350px] w-[300px] px-2"
             onSubmit={handleSendApplication}
           >
             <h2 className="text-center text-lg md:text-2xl text-[#3c4c54] font-headingFont font-bold">
               Application Form
             </h2>
 
-            <div className="flex gap-3 justify-center items-center flex-wrap md:flex-nowrap">
-              <label htmlFor="name" className="text-right lg:w-20 h-3">
-                Name
-              </label>
-              {InputField("Jhon Decos", "name", "text", error.name)}
+            <div className="flex flex-col gap-3">
+              {InputField("Enter your name", "name", "text", error)}
             </div>
 
-            <div className="flex justify-center items-center gap-3 flex-wrap md:flex-nowrap">
-              <label htmlFor="email" className="text-right lg:w-20 h-3">
-                E-mail
-              </label>
-              {InputField("jhon@gmail.com", "email", "email", error.email)}
+            <div className="flex flex-col gap-3">
+              {InputField("Email", "email", "email", error)}
             </div>
 
-            <div className="flex justify-center items-center gap-3 flex-wrap md:flex-nowrap">
-              <label htmlFor="number" className="text-right lg:w-20 h-3">
-                Phone
-              </label>
-              {InputField("xxx-xxxx-xxx", "number", "text", error.number)}
+            <div className="flex flex-col gap-3">
+              {InputField("Mobile number", "number", "number", error)}
             </div>
 
-            <div className="flex justify-center items-center gap-3 flex-wrap md:flex-nowrap">
-              <label htmlFor="Designation" className="text-right lg:w-20 h-3">
-                Job Role
-              </label>
-              {InputField("Job Role", "role", "text", error.role)}
+            <div className="flex flex-col gap-3">
+              {InputField("Job Role", "role", "text", error)}
             </div>
 
-            <div className="grid w-full max-w-xs items-center justify-center gap-1.5">
-              <label className="text-sm text-gray-400 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                Upload Resume
-              </label>
+            <div className="grid w-full max-w-xs items-center justify-center gap-2">
+              <label className="text-sm">Upload Resume</label>
               <input
                 id="resume"
                 type="file"
@@ -145,16 +152,18 @@ const ModalForm = ({ setModal }) => {
                 className="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm text-gray-400 file:border-0 file:bg-transparent file:text-gray-600 file:text-sm file:font-medium"
               />
             </div>
+
             <ReCAPTCHA
               className="flex justify-center"
               ref={captch}
               sitekey={import.meta.env.VITE_RECAPTCHA_KEY}
               onChange={(value) => setCaptchaValue(value)}
             />
+
             <div className="flex justify-center items-center">
               <button
                 type="submit"
-                className="text-white bg-zinc-900 rounded-[7px] tex-white px-5 py-3 font-headingFont text-sm transition-all duration-150 ease-linear hover:bg-zinc-700"
+                className="text-white bg-zinc-900 rounded-[7px] px-5 py-3 font-headingFont text-sm transition-all duration-150 ease-linear hover:bg-zinc-700"
               >
                 {isPending ? "Sending..." : "Submit"}
               </button>

@@ -7,13 +7,14 @@ import { ServiceInfoSection } from "./ServiceInfoSection";
 import { Ours } from "./Ours";
 import { Info } from "./Info";
 import { CTA } from "./CTA";
+import {CertifiedLogo} from "../ui/CertifiedLogo"
 
 const AboutUs = ({Meta_Data}) => {
   
   const { Title, Description, Link } = Meta_Data;
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Helmet>
         <title>{Title}</title>
         <meta name="description" content={Description} />
@@ -40,11 +41,13 @@ const AboutUs = ({Meta_Data}) => {
       {OurValues()} */}
       {Ours()}
 
+      {/* Certified Logo */}
+      {CertifiedLogo()}
 
       { CTA ()}
 
     </div>
-    </>
+    </div>
   );
 };
 
