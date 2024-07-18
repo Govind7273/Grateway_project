@@ -10,12 +10,12 @@ const FeaturesSection = () => {
           <h2
             className="text-MainHeading-sm md:text-MainHeading font-extrabold text-center capitalize">Features of our company</h2>
           <motion.p
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{
               delay: 0.2,
-              y: { type: "spring", stiffness: 30 },
-              opacity: { duration: 0.4 },
+              scale: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.6 },
               ease: "easeInOut"
             }}
             className="max-w-3xl mx-auto mt-4 md:text-SubHeading text-SubHeading-sm text-center font-bold">

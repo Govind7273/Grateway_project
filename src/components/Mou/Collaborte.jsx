@@ -1,4 +1,3 @@
-import React from 'react'
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 const Collaborte = () => {
@@ -6,7 +5,7 @@ const Collaborte = () => {
     <section id='section3'>
       <div className='md:py-12 p-4 text-center md:px-40 overflow-x-hidden'>
       <motion.h1
-        initial={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.2,

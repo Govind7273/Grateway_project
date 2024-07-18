@@ -19,7 +19,7 @@ const About = () => {
                                         opacity: { duration: 0.5 },
                                         ease: "easeInOut"
                                     }}
-                                    className="font-extrabold md:text-MainHeading text-MainHeading-sm py-4">About Us</motion.h2>
+                                    className="font-extrabold md:text-MainHeading text-MainHeading-sm pb-4">About Us</motion.h2>
                                 <motion.h4
                                     initial={{ opacity: 0, x: 100 }}
                                     whileInView={{ opacity: 1, x: 0 }}

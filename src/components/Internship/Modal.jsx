@@ -132,7 +132,7 @@ const Modal = ({ setModalOpen, selectedTitle }) => {
                 value={Candidate.role}
                 name="role"
                 readOnly
-                className="border-2 border-gray-300 bg-slate-100 rounded-xl py-2 w-full px-2 focus:outline-none transition duration-200"
+                className="border-2 border-gray-300 bg-slate-100 rounded-xl py-2 w-full px-2 cursor-default focus:outline-none transition duration-200"
               />
               </div>
             </div>
@@ -144,7 +144,7 @@ const Modal = ({ setModalOpen, selectedTitle }) => {
                 id="resume"
                 type="file"
                 onChange={(e) => setResume(e.target.files[0])}
-                className="border-2 border-gray-300 rounded-xl w-full py-3 px-4 focus:border-blue-500 focus:outline-none transition duration-200"
+                className="border-2 border-gray-300 rounded-xl cursor-pointer w-full py-3 px-4 focus:border-blue-500 focus:outline-none transition duration-200"
               />
             </div>
 

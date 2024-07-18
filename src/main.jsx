@@ -16,7 +16,7 @@ const Root = () => {
     <QueryClientProvider client={queryClient}>
       <HelmetProvider>
         <App location={location} />
-        {/* {!isLandingPage && <Chatbot />} */}
+        {!isLandingPage && <Chatbot />}
       </HelmetProvider>
     </QueryClientProvider>
   );
