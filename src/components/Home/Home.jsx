@@ -18,6 +18,8 @@ import Collaboration from "./Collaboration";
 import { motion } from "framer-motion";
 import { fadein } from "../../../src/variants";
 import CertifiedLogo from "../ui/CertifiedLogo";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const VideoComponent = ({ video, title, desc, link, isVisible }) => (
@@ -90,6 +92,9 @@ const Home = ({ Meta_Data }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
+      AOS.init({ offset: 100,
+        duration: 800 ,
+        delay: 100});
       setIndex((prevIndex) => (prevIndex + 1) % Video_Array.length);
     }, 5000);
     return () => clearInterval(interval);
@@ -115,7 +120,7 @@ const Home = ({ Meta_Data }) => {
             />
           ))}
         </section>
-      </main>
+      
       <About />
 
       <Services />
@@ -136,6 +141,7 @@ const Home = ({ Meta_Data }) => {
 
       {/*technologies used in site */}
       {/* <Tech /> */}
+      </main>
     </>
   );
 };

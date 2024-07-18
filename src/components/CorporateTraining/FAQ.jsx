@@ -27,16 +27,7 @@ const FAQ = ({ Technology_Program }) => {
                         ease: "easeInOut",
                     }} className="md:w-[70%] mx-auto mt-6 divide-y shadow shadow-blue-600 rounded-xl">
                     {FAQ.map((faq) => (
-                        <li
-                            initial={{ opacity: 0, scale: 0.7 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{
-                                delay: 0.2,
-                                scale: { type: "spring", stiffness: 30 },
-                                opacity: { duration: 0.6 },
-                                ease: "easeInOut",
-                            }}
-                            key={faq.ques}>
+                        <li key={faq.ques}>
                             <details className="group">
                                 <summary className="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer">
                                     <svg className="w-5 h-5 text-gray-500 transition group-open:rotate-90" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">

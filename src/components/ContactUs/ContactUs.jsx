@@ -176,7 +176,7 @@ const ContactUs = ({ Meta_Data }) => {
             opacity: { duration: 0.5 },
             ease: "easeInOut"
           }}
-          class="inline-block rounded-lg text-blue-900 my-5 bg-blue-100 px-2  p-2 text-xl relative font-semibold">Let the map be your guide to finding us</motion.span>
+          className="inline-block rounded-lg text-blue-900 my-5 bg-blue-100 px-2  p-2 text-xl relative font-semibold">Let the map be your guide to finding us</motion.span>
 
         <AddressMap />
       </div>

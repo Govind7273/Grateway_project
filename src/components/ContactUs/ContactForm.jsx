@@ -66,8 +66,8 @@ const ContactForm = () => {
     return (
 
       <>
-        <div class="bg-white p-4 rounded-lg">
-          <div class="relative bg-inherit">
+        <div className="bg-white p-4 rounded-lg">
+          <div className="relative bg-inherit">
             <textarea
               id="message"
               name={message}
@@ -86,7 +86,7 @@ const ContactForm = () => {
         focus:outline-none focus:border-rose-600"
               placeholder="Description"
             ></textarea>
-            <label for="message" class="absolute cursor-text 
+            <label htmlFor="message" className="absolute cursor-text 
          left-4 -top-3 text-sm text-gray-500 bg-inherit 
          px-1 peer-placeholder-shown:text-base 
          peer-placeholder-shown:text-gray-500 
@@ -173,8 +173,8 @@ const ContactForm = () => {
           {InputBox("number", "text", error.number)}
 
           <div>
-            <div class="bg-white p-4 rounded-lg">
-              <div class="relative bg-inherit">
+            <div className="bg-white p-4 rounded-lg">
+              <div className="relative bg-inherit">
                 <div
                   className="flex flex-col p-2 h-10 lg:w-72 w-full rounded-xl text-black placeholder-transparent ring-2 px-2 ring-gray-700 focus:ring-sky-600 focus:outline-none focus:border-rose-600 transition-all"
                 >

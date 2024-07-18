@@ -7,6 +7,7 @@ import Sinhgad from "../components/Mou/Images/Sinhgad.jpg";
 import DYPatil from "../components/Mou/Images/DYPatil.jpg";
 import Abhinav from "../components/Mou/Images/Abhinav.jpg";
 import Government from "../components/Mou/Images/Government.jpg";
+import Bhagwant from "../components/Mou/Images/Bhagwant.png";
 
 
 export const textItems = [
@@ -59,7 +60,7 @@ export const textItems = [
       ],
     },
     {
-      text: "DY Patil School of Engineering, Lohagaon, Pune",
+      text: "Ajeenkya DY Patil School of Engineering, Lohagaon, Pune",
       images: [
         {
           src: DYPatil,
@@ -79,6 +80,14 @@ export const textItems = [
       images: [
         {
           src: Government,
+        }
+      ],
+    },
+    {
+      text: "Bhagwant Institute of Technology, Barshi, Solapur",
+      images: [
+        {
+          src: Bhagwant,
         }
       ],
     }
