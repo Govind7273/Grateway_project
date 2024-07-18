@@ -8,17 +8,11 @@ import { Link } from "react-router-dom";
 import facebookIco from "../assets/icon/facebook.svg";
 import instagramIco from "../assets/icon/instagram.svg";
 import linkedin from "../assets/icon/linkedin.svg";
-import logo from "../../src/components/Navbar/images/boxLogoGTW.png";
 
 const Footer = () => {
   return (
     <footer className="px-3 pt-5 lg:px-5 border-t-2 bg-black text-white">
-      {/* <div className="flex items-center py-3">
-        <img src={logo} alt="logo" className="h-10 w-10 bg-slate-200 rounded-full p-1" />
-        <span className="ml-2 text-xl font-bold tracking-wide">Greatway Software Pvt. Ltd.</span>
-      </div> */}
-
-      <div className="grid sm:grid-cols-2 lg:grid-cols-2">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5">
         <div className="lg:max-w-xl flex flex-col md:px-5">
           <p className="text-md text-justify text-slate-200">
             <Link to="/">
@@ -37,7 +31,8 @@ const Footer = () => {
               >
                 <img
                   src={facebookIco}
-                  className="mr-3 size-12 hover:scale-105 transition-all duration-200 ease-linear  hover:cursor-pointer "
+                  className="mr-3 size-12 hover:scale-105 transition-all duration-200 ease-linear  hover:cursor-pointer"
+                  alt="Facebook"
                 />
               </a>
               <a
@@ -46,7 +41,8 @@ const Footer = () => {
               >
                 <img
                   src={instagramIco}
-                  className="mr-3 size-12 hover:scale-105 transition-all duration-200 ease-linear hover:cursor-pointer "
+                  className="mr-3 size-12 hover:scale-105 transition-all duration-200 ease-linear hover:cursor-pointer"
+                  alt="Instagram"
                 />
               </a>
               <a
@@ -55,9 +51,31 @@ const Footer = () => {
               >
                 <img
                   src={linkedin}
-                  className="mr-3 size-12 hover:scale-105 transition-all duration-200 ease-linear  hover:cursor-pointer "
+                  className="mr-3 size-12 hover:scale-105 transition-all duration-200 ease-linear  hover:cursor-pointer"
+                  alt="LinkedIn"
                 />
               </a>
+            </div>
+          </div>
+          <div className="py-4">
+            <div>
+              <span className="text-xl font-semibold mb-4">Corporate Training</span>
+              <hr className="border-white py-2"></hr>
+            </div>
+            <div className="grid md:grid-cols-2 grid-cols-1 text-base gap-x-2 gap-y-1 text-slate-200">
+
+              <Link to="/training-program">
+                <p className="hover:text-[#06b6d4]">Technology Training</p>
+              </Link>
+              <Link to="/management-dev-program">
+                <p className="hover:text-[#06b6d4]">Management Development</p>
+              </Link>
+              <Link to="/enterprise-services">
+                <p className="hover:text-[#06b6d4]">Enterprise Services</p>
+              </Link>
+              <Link to="/microsoft-office">
+                <p className="hover:text-[#06b6d4]">Microsoft Office 365</p>
+              </Link>
             </div>
           </div>
           <div className="py-4">
@@ -65,7 +83,7 @@ const Footer = () => {
               <span className="text-xl font-semibold mb-4">Resources</span>
               <hr className="border-white py-2"></hr>
             </div>
-            <div className="grid md:grid-cols-3 grid-col text-base gap-x-2 gap-y-1 text-slate-200">
+            <div className="grid md:grid-cols-3 grid-cols-1 text-base gap-x-2 gap-y-1 text-slate-200">
               <Link to="/AboutUs">
                 <p className="hover:text-[#06b6d4]">About Us</p>
               </Link>
@@ -128,6 +146,9 @@ const Footer = () => {
               </Link>
               <Link to="/Service-Support">
                 <p className="hover:text-[#06b6d4]">IT Service Support</p>
+              </Link>
+              <Link to="/institute-academy">
+                <p className="hover:text-[#06b6d4]">Institutional Tech Solutions</p>
               </Link>
             </div>
             <div className="md:pt-8 pt-2">

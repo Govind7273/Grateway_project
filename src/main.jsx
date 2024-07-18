@@ -9,26 +9,37 @@ import Chatbot from "./components/Chatbot.jsx";
 const queryClient = new QueryClient();
 
 const Root = () => {
-   const location = useLocation();
- const isLandingPage = location.pathname === "/landingpage";
+  const location = useLocation();
+  const isLandingPage = location.pathname === "/landingpage";
 
   return (
-    <>
-      <QueryClientProvider client={queryClient}>
-        <HelmetProvider>
-          <App location={location} />
-        
-          {!isLandingPage && <Chatbot />}
-        </HelmetProvider>
-      </QueryClientProvider>
-    </>
+    <QueryClientProvider client={queryClient}>
+      <HelmetProvider>
+        <App location={location} />
+        {!isLandingPage && <Chatbot />}
+      </HelmetProvider>
+    </QueryClientProvider>
   );
 };
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Root />
-    </BrowserRouter>
-  </React.StrictMode>
-);
+const container = document.getElementById("root");
+
+if (!container._reactRootContainer) {
+  const root = ReactDOM.createRoot(container);
+  root.render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <Root />
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+  container._reactRootContainer = root; // Save the root to the container element
+} else {
+  container._reactRootContainer.render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <Root />
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+}

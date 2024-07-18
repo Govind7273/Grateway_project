@@ -42,21 +42,54 @@ export const links = [
     desc: "We specialize in cutting-edge Artificial Intelligence services.",
   },
   {
-    id: 11,
+    id: 8,
     name: "Web Development",
     link: "/Service-webDev",
     desc: "Engaging and user-friendly websites.",
   },
   {
-    id: 13,
+    id: 9,
     name: "IT Staffing",
     link: "/Service-Staffing",
     desc: "Comprehensive IT Staffing Solutions for Your Business.",
   },
   {
-    id: 12,
+    id: 10,
     name: "Service Support",
     link: "/Service-Support",
     desc: "IT Support Solutions to Keep Your Business Running Smoothly.",
+  },
+  {
+    id: 11,
+    name: "Institutional Tech Solutions",
+    link: "/institute-academy",
+    desc: "Empowering Institutes and Academies with Cutting-Edge Tools.",
+  },
+];
+
+export const corporateTrainingLinks = [
+  {
+    id: 1,
+    name: "Technology Training",
+    link: "/training-program",
+    desc: "Key skills in software development, cybersecurity, and data analytics.",
+  },
+  {
+    id: 2,
+    name: "Management Development",
+    link: "/management-dev-program",
+    desc: "Critical leadership and strategic skills for advanced management roles.",
+  },
+  {
+    id: 3,
+    name: "Enterprise Services",
+    link: "/enterprise-services",
+    desc: "Skills in managing and optimizing business services for enterprise roles.",
+  },
+  {
+    id: 4,
+    name: "Microsoft Office 365",
+    link: "/microsoft-office",
+    desc: "Skills in Office 365 tools for modern workplace productivity.",
   },
 ];

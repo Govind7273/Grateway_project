@@ -1,4 +1,3 @@
-import React from "react";
 import Quality from "./assets/image/quality.png";
 import Solution from "./assets/image/Solution.png";
 import Team from "./assets/image/Team.png";
@@ -8,7 +7,6 @@ import Track from "./assets/image/Track.png";
 import Methodology from "./assets/image/Methodology.png";
 import Improvement from "./assets/image/Improvement.png";
 import { motion } from "framer-motion";
-import { fadein } from "../../../src/variants";
 
 const best = [
   {
@@ -56,32 +54,26 @@ const best = [
 const Special = () => {
   return (
     <>
-      <section className="text-gray-700 body-font bg-slate-100 md:p-2 p-4">
-        <motion.div variants={fadein("up", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.8 }} className="heading flex justify-center items-center py-5">
-          <h1 className="md:text-MainHeading text-MainHeading-sm font-extrabold">Why we are best</h1>
-        </motion.div>
+      <section className="text-gray-700 body-font bg-slate-100 md:p-2 p-4 overflow-hidden">
+        <div className="heading flex justify-center items-center py-5">
+          <h1
+            className="md:text-MainHeading text-MainHeading-sm font-extrabold capitalize">Why we are best</h1>
+        </div>
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center">
             {best?.map((item) => (
               <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  delay: 0.3,
+                  scale: { type: "spring", stiffness: 30 },
+                  opacity: { duration: 0.4 },
+                  ease: "easeInOut"
+                }}
                 className="md:p-1 md:w-1/4 sm:w-1/2"
                 key={item.id}
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.3,
-                  ease: [0, 0.71, 0.2, 1.01],
-                  scale: {
-                    type: "spring",
-                    damping: 5,
-                    stiffness: 100,
-                    restDelta: 0.001
-                  }
-                }}
-                whileHover={{ scale: 1.1 }}
+
               >
                 <div className="md:px-4 md:py-6">
                   <div className="flex justify-center items-center">
@@ -89,9 +81,7 @@ const Special = () => {
                       src={item.img}
                       alt="Rates"
                       className="mb-3"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 2 }}
-                      transition={{ duration: 0.5 }}
+
                     />
                   </div>
                   <h2 className="md:text-CardHeading text-CardHeading-sm font-bold text-center">

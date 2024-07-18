@@ -1,8 +1,10 @@
-"use client";
 import { motion } from "framer-motion";
 import { fadein } from "../../../src/variants";
+import { useState } from "react";
+import ModalForm from "./ModalForm";
 
-const JobsCard = ({ setModal }) => {
+const JobsCard = () => {
+
   const cardData = [
     {
       position: "Web Developer",
@@ -190,7 +192,12 @@ const JobsCard = ({ setModal }) => {
     },
   ];
 
-  const handleClick = () => {
+ 
+  const [selectedPosition, setSelectedPosition] = useState("");
+  const [isModalOpen, setModal] = useState(false);
+
+  const handleClick = (position) => {
+    setSelectedPosition(position);
     setModal(true);
   };
 
@@ -213,10 +220,18 @@ const JobsCard = ({ setModal }) => {
       </div>
 
       {/* Multiple Cards */}
-      <div className="w-[100%] grid md:grid-cols-3 px-8 sm:grid-cols-2 grid-cols-1 flex-wrap mt-10 gap-x-14 gap-y-10 justify-around items-center">
+      <div className="w-[100%] grid md:grid-cols-3 md:px-8 sm:grid-cols-2 grid-cols-1 flex-wrap mt-10 gap-x-14 gap-y-10 justify-around items-center">
         {/* card info */}
         {cardData.map((cardItem) => (
           <motion.div
+            initial={{ opacity: 0, scale: 0.6 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              delay: 0.2,
+              scale: { type: "spring", stiffness: 30 },
+              opacity: { duration: 0.6 },
+              ease: "easeInOut"
+            }}
             key={cardItem.position}
             className="p-4 bg-opacity-20 bg-slate-50 border rounded-xl flex flex-col gap-4 hover:cursor-pointer transition-all duration-300 shadow-lg ease-linear"
           >
@@ -229,7 +244,7 @@ const JobsCard = ({ setModal }) => {
               {cardItem.jobDescription}
             </p>
 
-            {/* Requirent Types */}
+            {/* Requirement Types */}
             <div className="flex flex-col gap-2 ">
               <h1 className="text-lg font-navlistFont font-semibold text-[#06b6d4]">
                 Requirement:
@@ -261,7 +276,7 @@ const JobsCard = ({ setModal }) => {
             {/* Apply Button */}
             <div className="flex justify-center items-center">
               <button
-                onClick={handleClick}
+                onClick={() => handleClick(cardItem.position)}
                 className="bg-zinc-900 rounded-[7px] tex-white px-5 py-3 font-headingFont text-sm  transition-all duration-150 ease-linear hover:bg-zinc-700"
               >
                 Apply Now
@@ -270,6 +285,15 @@ const JobsCard = ({ setModal }) => {
           </motion.div>
         ))}
       </div>
+
+      {/* Render ModalForm */}
+      {isModalOpen && (
+        <ModalForm
+          setModal={setModal}
+          setSelectedPosition={setSelectedPosition}
+          selectedPosition={selectedPosition}
+        />
+      )}
     </div>
   );
 };

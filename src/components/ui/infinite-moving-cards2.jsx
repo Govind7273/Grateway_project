@@ -74,12 +74,12 @@ export const InfiniteMovingCards2 = ({
       <motion.ul
         ref={scrollerRef}
         whileHover={{ scale: 1.1 }}
-      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
         className={cn(
           "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
           start && "animate-scroll",
           pauseOnHover &&
-            "hover:[animation-play-state:paused] hover:cursor-pointer"
+          "hover:[animation-play-state:paused] hover:cursor-pointer"
         )}
       >
         {items.map((item) => (
@@ -103,7 +103,7 @@ export const InfiniteMovingCards2 = ({
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
-                  <span className="text-sm leading-[1.6] text-[#06b6d4] font-semibold tracking-wider uppercase">
+                  <span className="text-sm leading-[1.6] text-[#4c9ddc] font-semibold tracking-wider uppercase">
                     {item.name}
                   </span>
                   <span className="text-2xl leading-[1.6] text-white font-extrabold uppercase">
