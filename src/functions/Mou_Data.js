@@ -8,6 +8,7 @@ import DYPatil from "../components/Mou/Images/DYPatil.jpg";
 import Abhinav from "../components/Mou/Images/Abhinav.jpg";
 import Government from "../components/Mou/Images/Government.jpg";
 import Bhagwant from "../components/Mou/Images/Bhagwant.png";
+import JSPM from "../components/Mou/Images/JSPM.jpeg";
 
 
 export const textItems = [
@@ -88,6 +89,14 @@ export const textItems = [
       images: [
         {
           src: Bhagwant,
+        }
+      ],
+    },
+    {
+      text: "JSPM Engineering College, Narhe, Pune",
+      images: [
+        {
+          src: JSPM,
         }
       ],
     }
