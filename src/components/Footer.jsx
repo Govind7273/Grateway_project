@@ -8,12 +8,17 @@ import { Link } from "react-router-dom";
 import facebookIco from "../assets/icon/facebook.svg";
 import instagramIco from "../assets/icon/instagram.svg";
 import linkedin from "../assets/icon/linkedin.svg";
+import { useGetVisitorCount } from "../functions/useGetVisitorCount";
 
 const Footer = () => {
+  const { data } = useGetVisitorCount();
+
   return (
     <footer className="px-3 pt-5 lg:px-5 border-t-2 bg-black text-white">
       <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5">
         <div className="lg:max-w-xl flex flex-col md:px-5">
+          {/* enable the count when required */}
+          {/* {data && <p>Visitors - {data.data}</p>} */}
           <p className="text-md text-justify text-slate-200">
             <Link to="/">
               <b className="text-xl">Greateway Software Pvt. Ltd.</b>
@@ -59,11 +64,12 @@ const Footer = () => {
           </div>
           <div className="py-4">
             <div>
-              <span className="text-xl font-semibold mb-4">Corporate Training</span>
+              <span className="text-xl font-semibold mb-4">
+                Corporate Training
+              </span>
               <hr className="border-white py-2"></hr>
             </div>
             <div className="grid md:grid-cols-2 grid-cols-1 text-base gap-x-2 gap-y-1 text-slate-200">
-
               <Link to="/training-program">
                 <p className="hover:text-[#06b6d4]">Technology Training</p>
               </Link>
@@ -148,7 +154,9 @@ const Footer = () => {
                 <p className="hover:text-[#06b6d4]">IT Service Support</p>
               </Link>
               <Link to="/institute-academy">
-                <p className="hover:text-[#06b6d4]">Institutional Tech Solutions</p>
+                <p className="hover:text-[#06b6d4]">
+                  Institutional Tech Solutions
+                </p>
               </Link>
             </div>
             <div className="md:pt-8 pt-2">
