@@ -9,6 +9,7 @@ import Abhinav from "../components/Mou/Images/Abhinav.jpg";
 import Government from "../components/Mou/Images/Government.jpg";
 import Bhagwant from "../components/Mou/Images/Bhagwant.png";
 import JSPM from "../components/Mou/Images/JSPM.jpeg";
+import Godavari from "../components/Mou/Images/Godavari.png";
 
 
 export const textItems = [
@@ -97,6 +98,14 @@ export const textItems = [
       images: [
         {
           src: JSPM,
+        }
+      ],
+    },
+    {
+      text: "Godavari College of Engineering, Jalgaon",
+      images: [
+        {
+          src: Godavari,
         }
       ],
     }
