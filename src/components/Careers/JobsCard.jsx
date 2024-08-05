@@ -18,6 +18,7 @@ const JobsCard = () => {
         "Location :Kharadi",
       ],
       education: "UG: B.Tech/B.E. in Computers, Any Graduate",
+      vacancy: 3,
     },
     {
       position: "Full Stack Developer",
@@ -31,6 +32,7 @@ const JobsCard = () => {
         "Location :Kharadi",
       ],
       education: "UG: B.Tech/B.E. in Computers, Any Graduate",
+      vacancy: 5,
     },
     {
       position: ".Net Developer",
@@ -43,6 +45,7 @@ const JobsCard = () => {
         "Location :Kharadi, Pune",
       ],
       education: "UG: B.Tech/B.E. in Computers, Any Graduate",
+      vacancy: 4,
     },
     {
       position: "Java Developer",
@@ -55,6 +58,7 @@ const JobsCard = () => {
         "Location :Kharadi, Pune",
       ],
       education: "UG: B.Tech/B.E. in Computers, Any Graduate",
+      vacancy: 3,
     },
     {
       position: "Digital Marketing",
@@ -67,6 +71,7 @@ const JobsCard = () => {
         "Location :Kharadi, Pune",
       ],
       education: "Any Graduate",
+      vacancy: 5,
     },
     {
       position: "React Developer",
@@ -79,6 +84,7 @@ const JobsCard = () => {
         "Location :Kharadi, Pune",
       ],
       education: "Any Graduate",
+      vacancy: 4,
     },
     {
       position: "Software Tester",
@@ -94,6 +100,7 @@ const JobsCard = () => {
       ],
       education:
         "Bachelor's degree in Computer Science, Engineering, or a related field",
+        vacancy: 3,
     },
     {
       position: "Data Analyst",
@@ -108,6 +115,7 @@ const JobsCard = () => {
       ],
       education:
         "Bachelor's degree in Statistics, Mathematics or ralated field",
+        vacancy: 3,
     },
     {
       position: "Content Writer",
@@ -121,6 +129,7 @@ const JobsCard = () => {
         "Location :Kharadi, Pune",
       ],
       education: "Bachelor's degree in Journalism, English,or related field",
+      vacancy: 5,
     },
     {
       position: "Data Engineer",
@@ -134,6 +143,7 @@ const JobsCard = () => {
         "Location :Kharadi, Pune",
       ],
       education: "Bachelor's degree in Computer Science",
+      vacancy: 5,
     },
     {
       position: "Cloud Computing",
@@ -147,6 +157,7 @@ const JobsCard = () => {
         "Location :Kharadi, Pune",
       ],
       education: "Bachelor's degree in Computer Science, Engineering.",
+      vacancy: 4,
     },
     {
       position: "Graphic Designer",
@@ -160,6 +171,7 @@ const JobsCard = () => {
         "Location :Kharadi, Pune",
       ],
       education: "Bachelor's degree",
+      vacancy: 3,
     },
     {
       position: "Salesforce Administrator",
@@ -174,6 +186,7 @@ const JobsCard = () => {
       ],
       education:
         "Bachelor's degree,Salesforce Administrator Certification (ADM201) is bonus",
+        vacancy: 5,
     },
     {
       position: "SAP Consultant",
@@ -189,6 +202,7 @@ const JobsCard = () => {
         "Location :Kharadi, Pune",
       ],
       education: "Bachelor's degree,SAP certification(s) is preferred",
+      vacancy: 3,
     },
   ];
 
@@ -269,7 +283,7 @@ const JobsCard = () => {
               </h1>
               <h1 className="text-md font-bold text-[#06b6d4]">
                 {" "}
-                Positions <span className="text-[#3c4c54]">: 5</span>
+                Positions <span className="text-[#3c4c54]">: {cardItem.vacancy}</span>
               </h1>
             </div>
 
