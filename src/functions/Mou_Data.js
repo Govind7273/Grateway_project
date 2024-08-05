@@ -11,6 +11,7 @@ import Bhagwant from "../components/Mou/Images/Bhagwant.png";
 import JSPM from "../components/Mou/Images/JSPM.jpeg";
 import Godavari from "../components/Mou/Images/Godavari.png";
 import GHRaisoni from "../components/Mou/Images/GHRaisoni.png";
+import PVG from "../components/Mou/Images/pvg.png";
 
 export const textItems = [
   {
@@ -114,6 +115,14 @@ export const textItems = [
     images: [
       {
         src: GHRaisoni,
+      },
+    ],
+  },{
+    text: "PVG Science & Commerce College, Pune",
+    images: [
+      {
+        src:PVG ,
+        
       },
     ],
   },
