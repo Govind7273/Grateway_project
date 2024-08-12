@@ -12,6 +12,7 @@ import JSPM from "../components/Mou/Images/JSPM.jpeg";
 import Godavari from "../components/Mou/Images/Godavari.png";
 import GHRaisoni from "../components/Mou/Images/GHRaisoni.png";
 import PVG from "../components/Mou/Images/pvg.png";
+import Walchand from "../components/Mou/Images/Walchand.png";
 
 export const textItems = [
   {
@@ -125,5 +126,13 @@ export const textItems = [
         
       },
     ],
-  },
+  },{
+    text: "Walchand Institute of Technology, Solapur",
+    images: [
+      {
+        src:Walchand ,
+        
+      },
+    ],
+  }
 ];
