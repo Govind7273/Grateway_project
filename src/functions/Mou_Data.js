@@ -13,8 +13,17 @@ import Godavari from "../components/Mou/Images/Godavari.png";
 import GHRaisoni from "../components/Mou/Images/GHRaisoni.png";
 import PVG from "../components/Mou/Images/pvg.png";
 import Walchand from "../components/Mou/Images/Walchand.png";
+import MIT from "../components/Mou/Images/MIT.jpeg";
 
 export const textItems = [
+  {
+    text: "MIT ADT University Loni Kalbhor Campus, Pune",
+    images: [
+      {
+        src: MIT,
+      },
+    ],
+  },
   {
     text: "Pune Vidhyarthi Griha's College of Engineering and Technology, Pune",
     images: [
