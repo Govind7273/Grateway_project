@@ -2,7 +2,7 @@ import React from "react";
 import isoLogo from "./images/isoLogo.jpg";
 import { motion } from "framer-motion";
 
-export const ISOLogo = () => {
+ const ISOLogo = () => {
   return (
     <>
       <section className="py-10 md:py-10 md:px-6 bg-slate-50">

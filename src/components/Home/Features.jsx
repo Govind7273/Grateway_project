@@ -7,8 +7,8 @@ const FeaturesSection = () => {
     <section className="bg-slate-100 overflow-hidden">
       <div className="container max-w-xl p-6 mx-auto space-y-6 lg:px-8 lg:max-w-7xl">
         <div>
-          <h2
-            className="text-MainHeading-sm md:text-MainHeading font-extrabold text-center capitalize">Features of our company</h2>
+          <h1
+            className="text-MainHeading-sm md:text-MainHeading font-extrabold text-center capitalize">Features of our company</h1>
           <motion.p
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -57,7 +57,7 @@ const FeaturesSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h4 className="md:text-lg text-base font-bold leading-6">Compatibility and Integration</h4>
+                  <h2 className="md:text-lg text-base font-bold leading-6">Compatibility and Integration</h2>
                   <p className="mt-2 md:text-lg text-sm">Ensure compatibility across devices/platforms and support integration with third-party services.</p>
                 </div>
               </motion.div>
@@ -94,7 +94,7 @@ const FeaturesSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h4 className="md:text-lg text-base font-bold leading-6">Security and Data Protection</h4>
+                  <h2 className="md:text-lg text-base font-bold leading-6">Security and Data Protection</h2>
                   <p className="mt-2 md:text-lg text-sm">Employing strong security protocols to safeguard user data and prevent unauthorized access.</p>
                 </div>
               </motion.div>
@@ -132,7 +132,7 @@ const FeaturesSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h4 className="md:text-lg text-base font-bold leading-6">Scalability and Performance</h4>
+                  <h2 className="md:text-lg text-base font-bold leading-6">Scalability and Performance</h2>
                   <p className="mt-2 md:text-lg text-sm">Ensure the software can scale efficiently and maintains optimal performance.</p>
                 </div>
               </motion.div>
@@ -169,7 +169,7 @@ const FeaturesSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h4 className="md:text-lg text-base font-bold leading-6">User-Centric Design</h4>
+                  <h2 className="md:text-lg text-base font-bold leading-6">User-Centric Design</h2>
                   <p className="mt-2 md:text-lg text-sm">Focus on intuitive UX/UI design for a positive user experience.</p>
                 </div>
               </motion.div>
@@ -207,7 +207,7 @@ const FeaturesSection = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h4 className="md:text-lg text-base font-bold leading-6">Regular Updates and Support</h4>
+                  <h2 className="md:text-lg text-base font-bold leading-6">Regular Updates and Support</h2>
                   <p className="mt-2 md:text-lg text-sm">Deliver prompt updates, bug fixes and responsive customer assistance.</p>
                 </div>
               </motion.div>
@@ -226,6 +226,7 @@ const FeaturesSection = () => {
                 ease: "easeInOut"
               }}
               src={features}
+              height={1000} width={1000}
               alt="Feature"
               className="mx-auto rounded-lg shadow-lg dark:bg-gray-500 md:h-[85vh]"
               style={{ color: 'transparent' }}

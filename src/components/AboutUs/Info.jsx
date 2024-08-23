@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-export const Info = () => {
+ const Info = () => {
   return (
     <div className="relative md:-top-10 md:z-20">
       <div className="flex flex-col md:flex-row sm:p-4 md:p-16 md:pb-0 -mt-16">
@@ -43,3 +43,4 @@ export const Info = () => {
     </div>
   );
 };
+export default Info;

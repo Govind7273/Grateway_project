@@ -6,7 +6,7 @@ import build1 from "../Indrustry/images/build1.jpg";
 import build2 from "../Indrustry/images/build2.jpg";
 import build3 from "../Indrustry/images/build3.jpg";
 
-export function Firstsection() {
+ const Firstsection = () => {
   const images = [build1, build2, build3];
   return (
     <ImagesSlider className="md:h-[100vh] h-[70vh]" images={images}>
@@ -30,4 +30,5 @@ export function Firstsection() {
       </motion.div>
     </ImagesSlider>
   );
-}
+};
+export default Firstsection;
