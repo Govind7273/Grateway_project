@@ -19,7 +19,7 @@ const AnimatedHamburgerButton = ({ setnav }) => {
         ease: "easeInOut",
       }}
     >
-      <motion.button
+      <motion.button aria-label="Navbar menu"
         initial={false}
         animate={showNav ? "open" : "closed"}
         onClick={() => setshowNav((pv) => !pv)}

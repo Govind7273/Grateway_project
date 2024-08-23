@@ -19,7 +19,7 @@ const Navbar = () => {
     <header className="flex gap-1 bg-white z-50 justify-between px-2 md:justify-evenly fixed w-full">
       <div className="logo">
         <NavLink to={"/"}>
-          <img src={GTW} alt="GreatWay" className="h-[65px]" />
+          <img src={GTW} alt="GreatWay" className="h-[65px]" height={100} width={200} />
         </NavLink>
       </div>
       <span className="md:hidden">

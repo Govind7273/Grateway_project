@@ -11,8 +11,6 @@ import linkedin from "../assets/icon/linkedin.svg";
 import { useGetVisitorCount } from "../functions/useGetVisitorCount";
 
 const Footer = () => {
-  const { data } = useGetVisitorCount();
-
   return (
     <footer className="px-3 pt-5 lg:px-5 border-t-2 bg-black text-white">
       <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5">

@@ -6,7 +6,7 @@ import streamline from "../Indrustry/images/streamline.jpg";
 import regulatory from "../Indrustry/images/regulatory.jpg";
 import infrastructure from "../Indrustry/images/infrastructure.jpg";
 import { Link } from "react-router-dom";
-export const Thirdsection = () => {
+const Thirdsection = () => {
   return (
     <div className="px-3 pt-4">
       {/*Main div */}

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-export const SecondSection = () => {
+ const SecondSection = () => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.6 }}
@@ -26,3 +26,4 @@ export const SecondSection = () => {
     </motion.div>
   );
 };
+export default SecondSection;

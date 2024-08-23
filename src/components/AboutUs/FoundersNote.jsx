@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-export const FoundersNote = () => {
+ const FoundersNote = () => {
   return (
     <div className="w-[100vw] mb-[1rem] sm:mb-[4rem] overflow-hidden bg-opacity-100 sm:pt-12 flex justify-center items-center">
       <div>
@@ -74,3 +74,4 @@ export const FoundersNote = () => {
     </div>
   );
 };
+export default FoundersNote;

@@ -1,14 +1,9 @@
-
-/***************************************/
-
 import { useRef, useState } from "react";
 import { useMutation } from "@tanstack/react-query";
-import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 import { ContactScheama } from "../../Yupschema/ContactUsScheama";
 import ReCAPTCHA from "react-google-recaptcha";
 import { contactEmail } from "../../functions/EmailSendFunction";
-import { useCareerForm } from "../../utils/useCareerForm";
 import { motion } from "framer-motion";
 
 const ContactForm = () => {
@@ -50,21 +45,15 @@ const ContactForm = () => {
           >
             {placeholder}
           </label>
-          {error ? (
-            <div className="text-red-500 text-xs">{error}</div>
-          ) : (
-            ""
-          )}
+          {error ? <div className="text-red-500 text-xs">{error}</div> : ""}
         </div>
       </div>
     );
   };
 
-
   // message are of the form
   const Textarea = (message, error) => {
     return (
-
       <>
         <div className="bg-white p-4 rounded-lg">
           <div className="relative bg-inherit">
@@ -73,7 +62,6 @@ const ContactForm = () => {
               name={message}
               rows="4"
               value={ContactDetails[message]}
-
               onChange={(e) =>
                 setContactDetails({
                   ...ContactDetails,
@@ -86,21 +74,24 @@ const ContactForm = () => {
         focus:outline-none focus:border-rose-600"
               placeholder="Description"
             ></textarea>
-            <label htmlFor="message" className="absolute cursor-text 
+            <label
+              htmlFor="message"
+              className="absolute cursor-text 
          left-4 -top-3 text-sm text-gray-500 bg-inherit 
          px-1 peer-placeholder-shown:text-base 
          peer-placeholder-shown:text-gray-500 
          peer-placeholder-shown:top-2 peer-focus:-top-3 
          peer-focus:text-sky-600 peer-focus:text-sm 
-         transition-all">Description</label>
+         transition-all"
+            >
+              Description
+            </label>
             {error ? <div className="text-red-500 text-xs">{error}</div> : ""}
           </div>
         </div>
       </>
-
     );
   };
-
   // function to send query by mail
   const { mutate: SendQuery, isPending } = useMutation({
     mutationKey: "SendQuery",
@@ -151,16 +142,17 @@ const ContactForm = () => {
           delay: 0.2,
           scale: { type: "spring", stiffness: 30 },
           opacity: { duration: 0.5 },
-          ease: "easeInOut"
+          ease: "easeInOut",
         }}
         onSubmit={(e) => handlesendQuery(e)}
         className="md:w-[60%] justify-top flex gap-2 flex-col w-full font-navlistFont flex-1 px-4 py-6"
       >
-        <h1
-          className="md:text-MainHeading text-MainHeading-sm font-extrabold flex justify-center capitalize">
+        <h1 className="md:text-MainHeading text-MainHeading-sm font-extrabold flex justify-center capitalize">
           Send us message
         </h1>
-        <h1 className="text-Paragraph flex justify-center mb-0">Our friendly team would love to hear from you.</h1>
+        <h1 className="text-Paragraph flex justify-center mb-0">
+          Our friendly team would love to hear from you.
+        </h1>
         <div className="flex w-full md:gap-8 flex-col md:flex-row justify-center">
           {/* Your Full name input box */}
           {InputBox("name", "text", error.name)}
@@ -168,16 +160,13 @@ const ContactForm = () => {
           {InputBox("email", "email", error.email)}
         </div>
         <div className="flex md:gap-8 w-full flex-col md:flex-row justify-center">
-
           {/* number number field */}
           {InputBox("number", "text", error.number)}
 
           <div>
             <div className="bg-white p-4 rounded-lg">
               <div className="relative bg-inherit">
-                <div
-                  className="flex flex-col p-2 h-10 lg:w-72 w-full rounded-xl text-black placeholder-transparent ring-2 px-2 ring-gray-700 focus:ring-sky-600 focus:outline-none focus:border-rose-600 transition-all"
-                >
+                <div className="flex flex-col p-2 h-10 lg:w-72 w-full rounded-xl text-black placeholder-transparent ring-2 px-2 ring-gray-700 focus:ring-sky-600 focus:outline-none focus:border-rose-600 transition-all">
                   <select
                     onChange={(e) =>
                       setContactDetails({
@@ -190,7 +179,9 @@ const ContactForm = () => {
                     className=" text-black"
                   >
                     <option className="text-black hidden" value="">
-                      <span style={{ color: '#f5eacb' }}>How can we Help ?</span>
+                      <span style={{ color: "#f5eacb" }}>
+                        How can we Help ?
+                      </span>
                     </option>
 
                     <option className="text-black" value="About Service">
@@ -233,7 +224,6 @@ const ContactForm = () => {
         >
           {isPending ? "sending..." : "Send Message"}
         </button>
-
       </motion.form>
     </>
   );

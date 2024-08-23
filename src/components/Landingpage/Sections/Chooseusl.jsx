@@ -98,8 +98,6 @@ const Chooseusl = () => {
                   </div>
                 </div>
               </motion.div>
-
-              {/* ---------- */}
               <motion.div
                 variants={fadein("left", 0.2)}
                 initial="hidden"
@@ -130,8 +128,6 @@ const Chooseusl = () => {
           </div>
         </div>
       </div>
-
-      {/*--------------------*/}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-Para flex items-center justify-center font-semibold text-gray-600 border-y border-gray-400">
@@ -172,7 +168,6 @@ const Chooseusl = () => {
           )}
         </div>
       </div>
-      {/*--------------------*/}
     </section>
   );
 };

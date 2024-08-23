@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import head from "./images/head.jpg";
 
-export const ServiceInfoSection = () => {
+const ServiceInfoSection = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className='relative flex mt-[2rem] sm:mt-0 lg:mt-[-10rem] h-full lg:h-[50rem] overflow-hidden items-center justify-center'>
-        <img className='object-fill lg:mt-[20rem]' src={head} ></img>
+        <img className='object-fill lg:mt-[20rem]' src={head} height={1000} width={2000}></img>
         <span className="absolute inset-0 bg-gradient-to-br from-blue-950 via-transparent to-transparent opacity-100"></span>
 
       </div>
@@ -36,3 +36,4 @@ export const ServiceInfoSection = () => {
     </div>
   );
 };
+export default ServiceInfoSection;

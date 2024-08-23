@@ -7,9 +7,9 @@ import tele from "./images/tele.jpg";
 import doc from "./images/doc.jpg";
 import { cn } from "../../utils/cn";
 import { CardStack } from "../ui/Card-Stack";
-import { Firstsection } from "./Firstsection";
-import { Secondsection } from "./Sectionsection";
-import { Thirdsection } from "./Thirdsection";
+import  Firstsection  from "./Firstsection";
+import Secondsection  from "./Sectionsection";
+import  Thirdsection from "./Thirdsection";
 function Highlight({ children, className }) {
   return (
     <span
@@ -130,7 +130,7 @@ const Indrustry = ({ Meta_Data }) => {
                 delay: 0.2,
                 y: { type: "spring", stiffness: 30 },
                 opacity: { duration: 0.5 },
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
               className="md:text-TopHeading text-TopHeading-sm font-extrabold text-wrap"
             >
@@ -143,7 +143,7 @@ const Indrustry = ({ Meta_Data }) => {
                 delay: 0.2,
                 y: { type: "spring", stiffness: 30 },
                 opacity: { duration: 0.5 },
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
               className="text-xl font-bold text-white text-center md:w-[70vw] "
             >
@@ -153,8 +153,6 @@ const Indrustry = ({ Meta_Data }) => {
             </motion.p>
           </div>
         </section>
-
-
         {/*CardsSlider Section*/}{" "}
         <section className="md:h-[50vh] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.1] bg-grid-black/[0.1] relative flex items-center justify-center">
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
@@ -170,7 +168,7 @@ const Indrustry = ({ Meta_Data }) => {
                   delay: 0.2,
                   y: { type: "spring", stiffness: 30 },
                   opacity: { duration: 0.5 },
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
                 className=" text-center font-extrabold py-4 text-MainHeading"
               >
@@ -186,7 +184,7 @@ const Indrustry = ({ Meta_Data }) => {
                   delay: 0.2,
                   y: { type: "spring", stiffness: 30 },
                   opacity: { duration: 0.5 },
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
                 className="text-Paragraph md:text-lg md:text-center w-full md:w-[60vw] px-2"
               >
@@ -199,8 +197,6 @@ const Indrustry = ({ Meta_Data }) => {
             </motion.div>
           </div>
         </section>
-
-
         {/* {Education section} */}
         <section className="h-full w-full">
           <div className="relative h-[40vh] md:h-[70vh] w-full flex items-center justify-center text-white bg-black">
@@ -217,9 +213,10 @@ const Indrustry = ({ Meta_Data }) => {
                   delay: 0.2,
                   y: { type: "spring", stiffness: 30 },
                   opacity: { duration: 0.5 },
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
-                className="relative text-5xl md:text-6xl font-bold text-center pt-3 z-20">
+                className="relative text-5xl md:text-6xl font-bold text-center pt-3 z-20"
+              >
                 Education
               </motion.h1>
               <motion.p
@@ -229,9 +226,14 @@ const Indrustry = ({ Meta_Data }) => {
                   delay: 0.2,
                   y: { type: "spring", stiffness: 30 },
                   opacity: { duration: 0.5 },
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
-                className="md:w-[60%] text-Paragraph font-bold text-white z-20 text-center">Our IT services enhance education with advanced e-learning platforms, secure data management, and customized solutions for seamless, innovative, and efficient learning experiences.</motion.p>
+                className="md:w-[60%] text-Paragraph font-bold text-white z-20 text-center"
+              >
+                Our IT services enhance education with advanced e-learning
+                platforms, secure data management, and customized solutions for
+                seamless, innovative, and efficient learning experiences.
+              </motion.p>
             </div>
           </div>
 
@@ -243,9 +245,10 @@ const Indrustry = ({ Meta_Data }) => {
                 delay: 0.2,
                 y: { type: "spring", stiffness: 30 },
                 opacity: { duration: 0.5 },
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
-              className="text-MainHeading font-extrabold text-center w-full pt-3">
+              className="text-MainHeading font-extrabold text-center w-full pt-3"
+            >
               Services We Serve
             </motion.h2>
           </div>
@@ -262,9 +265,10 @@ const Indrustry = ({ Meta_Data }) => {
                   delay: 0.2,
                   scale: { type: "spring", stiffness: 30 },
                   opacity: { duration: 0.5 },
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
-                className="relative  hover:scale-105 transition-transform text-black bg-slate-100 overflow-hidden border p-2 h-auto md:h-auto shadow-xl">
+                className="relative  hover:scale-105 transition-transform text-black bg-slate-100 overflow-hidden border p-2 h-auto md:h-auto shadow-xl"
+              >
                 <div className="flex flex-col justify-between rounded-md p-6 h-full">
                   <div className="space-y-4">
                     <motion.h3
@@ -300,9 +304,10 @@ const Indrustry = ({ Meta_Data }) => {
                   delay: 0.2,
                   scale: { type: "spring", stiffness: 30 },
                   opacity: { duration: 0.5 },
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
-                className="shadow-lg relative hover:scale-105 transition-transform text-black bg-slate-100 overflow-hidden border p-2 h-auto md:h-auto">
+                className="shadow-lg relative hover:scale-105 transition-transform text-black bg-slate-100 overflow-hidden border p-2 h-auto md:h-auto"
+              >
                 <div className="flex flex-col justify-between rounded-md p-6 h-full">
                   <div className="space-y-4">
                     <motion.h3
@@ -338,9 +343,10 @@ const Indrustry = ({ Meta_Data }) => {
                   delay: 0.2,
                   scale: { type: "spring", stiffness: 30 },
                   opacity: { duration: 0.5 },
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
-                className="shadow-lg relative hover:scale-105 transition-transform text-black bg-slate-100 overflow-hidden border p-2 h-auto md:h-auto">
+                className="shadow-lg relative hover:scale-105 transition-transform text-black bg-slate-100 overflow-hidden border p-2 h-auto md:h-auto"
+              >
                 <div className="flex flex-col justify-between rounded-md p-6 h-full">
                   <div className="space-y-4">
                     <motion.h3
@@ -371,8 +377,6 @@ const Indrustry = ({ Meta_Data }) => {
             </div>
           </section>
         </section>
-
-
         {/*Telecom Section */}
         <section className="h-full w-full bg-white bg-dot-slate-400">
           <div className="relative h-[40vh] md:h-[70vh] w-full flex items-center justify-center text-white bg-black">
@@ -389,9 +393,10 @@ const Indrustry = ({ Meta_Data }) => {
                   delay: 0.2,
                   y: { type: "spring", stiffness: 30 },
                   opacity: { duration: 0.5 },
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
-                className="relative text-5xl md:text-6xl font-bold text-center pt-3 z-20">
+                className="relative text-5xl md:text-6xl font-bold text-center pt-3 z-20"
+              >
                 Telecom Services
               </motion.h1>
               <motion.p
@@ -401,9 +406,14 @@ const Indrustry = ({ Meta_Data }) => {
                   delay: 0.2,
                   y: { type: "spring", stiffness: 30 },
                   opacity: { duration: 0.5 },
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
-                className="md:w-[60%] text-center z-20 font-semibold">Our IT services for telecom enhance network performance, security, and customer engagement with advanced solutions for seamless, reliable, and efficient communication.</motion.p>
+                className="md:w-[60%] text-center z-20 font-semibold"
+              >
+                Our IT services for telecom enhance network performance,
+                security, and customer engagement with advanced solutions for
+                seamless, reliable, and efficient communication.
+              </motion.p>
             </div>
           </div>
           <div>
@@ -414,9 +424,10 @@ const Indrustry = ({ Meta_Data }) => {
                 delay: 0.2,
                 y: { type: "spring", stiffness: 30 },
                 opacity: { duration: 0.5 },
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
-              className="text-MainHeading font-extrabold text-center w-full pt-3">
+              className="text-MainHeading font-extrabold text-center w-full pt-3"
+            >
               Services We Serve
             </motion.h2>
           </div>
@@ -433,9 +444,10 @@ const Indrustry = ({ Meta_Data }) => {
                   delay: 0.3,
                   scale: { type: "spring", stiffness: 30 },
                   opacity: { duration: 0.5 },
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
-                className="shadow-lg relative  hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-2 h-auto">
+                className="shadow-lg relative  hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-2 h-auto"
+              >
                 <div className="flex flex-col justify-between rounded-md p-6 h-full">
                   <div className="space-y-4">
                     <motion.h3
@@ -471,9 +483,10 @@ const Indrustry = ({ Meta_Data }) => {
                   delay: 0.3,
                   scale: { type: "spring", stiffness: 30 },
                   opacity: { duration: 0.5 },
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
-                className="shadow-lg relative  hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-2 h-auto">
+                className="shadow-lg relative  hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-2 h-auto"
+              >
                 <div className="flex flex-col justify-between rounded-md p-6 h-full">
                   <div className="space-y-4">
                     <motion.h3
@@ -509,9 +522,10 @@ const Indrustry = ({ Meta_Data }) => {
                   delay: 0.3,
                   scale: { type: "spring", stiffness: 30 },
                   opacity: { duration: 0.5 },
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
-                className="shadow-lg relative hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-2 h-auto">
+                className="shadow-lg relative hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-2 h-auto"
+              >
                 <div className="flex flex-col justify-between rounded-md p-6 h-full">
                   <div className="space-y-4">
                     <motion.h3
@@ -541,8 +555,6 @@ const Indrustry = ({ Meta_Data }) => {
             </div>
           </section>
         </section>
-
-
         {/* healthcare Section */}
         <section className="h-full w-full bg-white bg-dot-slate-400">
           <div className="md:h-[70vh] h-[40vh] w-full flex items-center justify-center text-white bg-black">
@@ -559,9 +571,10 @@ const Indrustry = ({ Meta_Data }) => {
                   delay: 0.2,
                   y: { type: "spring", stiffness: 30 },
                   opacity: { duration: 0.5 },
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
-                className="relative md:text-6xl text-4xl font-bold text-center pt-3 z-20">
+                className="relative md:text-6xl text-4xl font-bold text-center pt-3 z-20"
+              >
                 Healthcare
               </motion.h1>
               <motion.p
@@ -571,9 +584,14 @@ const Indrustry = ({ Meta_Data }) => {
                   delay: 0.2,
                   y: { type: "spring", stiffness: 30 },
                   opacity: { duration: 0.5 },
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
-                className="md:w-[60%] text-center z-20 font-semibold">Our IT services for healthcare improve patient care, data security, and operational efficiency with advanced, reliable, and secure healthcare technology solutions.</motion.p>
+                className="md:w-[60%] text-center z-20 font-semibold"
+              >
+                Our IT services for healthcare improve patient care, data
+                security, and operational efficiency with advanced, reliable,
+                and secure healthcare technology solutions.
+              </motion.p>
             </div>
           </div>
           <div>
@@ -584,9 +602,10 @@ const Indrustry = ({ Meta_Data }) => {
                 delay: 0.2,
                 y: { type: "spring", stiffness: 30 },
                 opacity: { duration: 0.5 },
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
-              className="text-MainHeading font-extrabold text-center text-3xl w-screen pt-3">
+              className="text-MainHeading font-extrabold text-center text-3xl w-screen pt-3"
+            >
               Services We Serve
             </motion.h2>
           </div>
@@ -603,9 +622,10 @@ const Indrustry = ({ Meta_Data }) => {
                   delay: 0.2,
                   scale: { type: "spring", stiffness: 30 },
                   opacity: { duration: 0.5 },
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
-                className="shadow-lg relative  hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-4 min-h-[30vh]">
+                className="shadow-lg relative  hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-4 min-h-[30vh]"
+              >
                 <div className="flex flex-col justify-between rounded-md p-4">
                   <div className="space-y-4">
                     <motion.h3
@@ -641,9 +661,10 @@ const Indrustry = ({ Meta_Data }) => {
                   delay: 0.2,
                   scale: { type: "spring", stiffness: 30 },
                   opacity: { duration: 0.5 },
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
-                className="shadow-lg relative hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-4 min-h-[30vh]">
+                className="shadow-lg relative hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-4 min-h-[30vh]"
+              >
                 <div className="flex flex-col justify-between rounded-md p-4">
                   <div className="space-y-4">
                     <motion.h3
@@ -680,9 +701,10 @@ const Indrustry = ({ Meta_Data }) => {
                   delay: 0.2,
                   scale: { type: "spring", stiffness: 30 },
                   opacity: { duration: 0.5 },
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
-                className="shadow-lg relative hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-4 min-h-[30vh]">
+                className="shadow-lg relative hover:scale-105 bg-slate-100 text-black transition-all overflow-hidden border p-4 min-h-[30vh]"
+              >
                 <div className="flex flex-col justify-between rounded-md p-4">
                   <div className="space-y-4">
                     <motion.h3

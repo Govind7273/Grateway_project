@@ -129,7 +129,6 @@ const ServicesStaffing = ({ Meta_Data }) => {
                       ease: "easeInOut"
                     }}
                     className="text-sm sm:text-xl mb-10 cursor-pointer">In the ever-evolving world of technology, securing the right talent is essential for achieving your business objectives. We excel in delivering premier IT staffing solutions customized to fit your unique requirements. Whether you need temporary, project-based assistance or permanent placements, our dedicated team is ready to support you.</motion.p>
-                  {/* <button class="bg-green-500 text-white text-2xl font-medium px-4 py-2 rounded shadow">Learn More</button> */}
                 </div>
               </header>
             </div>
@@ -252,7 +251,7 @@ const ServicesStaffing = ({ Meta_Data }) => {
                     opacity: { duration: 0.6 },
                     ease: "easeInOut"
                   }}
-                  key={feat.id} class="flex-start group relative flex lg:flex-col">
+                  key={feat.id} className="flex-start group relative flex lg:flex-col">
                   <span
                     className="absolute left-[18px] top-14 h-[calc(100%_-_32px)] w-px bg-gray-300 lg:right-0 lg:left-auto lg:top-[18px] lg:h-px lg:w-[calc(100%_-_72px)] px-6"
                     aria-hidden="true"></span>

@@ -1,29 +1,33 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import AiMl from "../../assets/videos/AI_ML.mp4";
 import Service from "../../assets/videos/IT_Service.mp4";
 import Crm from "../../assets/videos/CRM.mp4";
 import Testing from "../../assets/videos/Testing.mp4";
 import Staffing from "../../assets/videos/IT_Staffing.mp4";
-import Services from "./Services";
-import Special from "./Special";
 // import Tech from "./Tech";
-import Testimonials from "./Testimonials";
-import Features from "./Features";
-import About from "./About";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom"
-import { InfiniteMovingCardsDemo } from "./Clients";
-import ChooseUs from "./ChooseUs";
-import Collaboration from "./Collaboration";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { fadein } from "../../../src/variants";
 import CertifiedLogo from "../ui/CertifiedLogo";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+// lazy loading
+const About = lazy(() => import("./About"));
+const Services = lazy(() => import("./Services"));
+const Features = lazy(() => import("./Features"));
+const Testimonials = lazy(() => import("./Testimonials"));
+const Special = lazy(() => import("./Special"));
+const ChooseUs = lazy(() => import("./ChooseUs"));
+const InfiniteMovingCardsDemo = lazy(() => import("./Clients"));
+const Collaboration = lazy(() => import("./Collaboration"));
 
 const VideoComponent = ({ video, title, desc, link, isVisible }) => (
-  <div className={`relative ${isVisible ? "" : "hidden"} h-[30rem] md:h-full w-[100vw] overflow-hidden`}>
+  <div
+    className={`relative ${
+      isVisible ? "" : "hidden"
+    } h-[30rem] md:h-full w-[100vw] overflow-hidden`}
+  >
     <video
       className="w-full h-full object-cover opacity-50"
       src={video}
@@ -33,19 +37,28 @@ const VideoComponent = ({ video, title, desc, link, isVisible }) => (
     />
     <div className="absolute items-center left-1 h-full top-0 flex w-full p-2 md:p-5">
       <div className="md:max-w-[45rem] w-full flex flex-col gap-2 space-y-3">
-        <motion.h1 variants={fadein("down", 0.2)}
+        <motion.h1
+          variants={fadein("down", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.8 }} className="loop_video_title md:text-TopHeading text-TopHeading-sm max-w-[50rem] font-extrabold font-headingFont">
+          viewport={{ once: false, amount: 0.8 }}
+          className="loop_video_title md:text-TopHeading text-TopHeading-sm max-w-[50rem] font-extrabold font-headingFont"
+        >
           {title}
         </motion.h1>
-        <motion.p variants={fadein("down", 0.2)}
+        <motion.p
+          variants={fadein("down", 0.2)}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.8 }} className="loop_video_desc max-w-[30rem] text-sm md:text-lg font-medium text-white font-navlistFont">
+          viewport={{ once: false, amount: 0.8 }}
+          className="loop_video_desc max-w-[30rem] text-sm md:text-lg font-medium text-white font-navlistFont"
+        >
           {desc}
         </motion.p>
-        <Link to={link} className="loop_video_btn items-start w-fit bg-cyan-300 px-3 py-1 mt-10 md:px-4 md:py-2 rounded-xl font-bold text-slate-800 hover:bg-white hover:text-cyan-700 transition-all 0.2 ease-out hover:border">
+        <Link
+          to={link}
+          className="loop_video_btn items-start w-fit bg-cyan-300 px-3 py-1 mt-10 md:px-4 md:py-2 rounded-xl font-bold text-slate-800 hover:bg-white hover:text-cyan-700 transition-all 0.2 ease-out hover:border"
+        >
           Explore with us
         </Link>
       </div>
@@ -92,9 +105,7 @@ const Home = ({ Meta_Data }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      AOS.init({ offset: 100,
-        duration: 800 ,
-        delay: 100});
+      AOS.init({ offset: 100, duration: 800, delay: 100 });
       setIndex((prevIndex) => (prevIndex + 1) % Video_Array.length);
     }, 5000);
     return () => clearInterval(interval);
@@ -120,27 +131,42 @@ const Home = ({ Meta_Data }) => {
             />
           ))}
         </section>
-      
-      <About />
 
-      <Services />
+        <Suspense fallback={<div>Loading About...</div>}>
+          <About />
+        </Suspense>
 
-      <Features />
+        <Suspense fallback={<div>Loading Services...</div>}>
+          <Services />
+        </Suspense>
 
-      <Testimonials />
+        <Suspense fallback={<div>Loading Features...</div>}>
+          <Features />
+        </Suspense>
 
-      <Special />
+        <Suspense fallback={<div>Loading Testimonials...</div>}>
+          <Testimonials />
+        </Suspense>
 
-      <ChooseUs />
+        <Suspense fallback={<div>Loading Special...</div>}>
+          <Special />
+        </Suspense>
 
-      <CertifiedLogo />
+        <Suspense fallback={<div>Loading Choose Us...</div>}>
+          <ChooseUs />
+        </Suspense>
 
-      <InfiniteMovingCardsDemo />
+        <Suspense fallback={<div>Loading Certified Logo...</div>}>
+          <CertifiedLogo />
+        </Suspense>
 
-      <Collaboration />
+        <Suspense fallback={<div>Loading Clients...</div>}>
+          <InfiniteMovingCardsDemo />
+        </Suspense>
 
-      {/*technologies used in site */}
-      {/* <Tech /> */}
+        <Suspense fallback={<div>Loading Collaboration...</div>}>
+          <Collaboration />
+        </Suspense>
       </main>
     </>
   );
