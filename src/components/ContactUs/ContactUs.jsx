@@ -1,8 +1,8 @@
 import React, { lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
-import { IoLocation } from "react-icons/io5";
-import { IoMdCall } from "react-icons/io5";
-import { IoMail } from "react-icons/io5";
+import { IoLocationSharp } from "react-icons/io5";
+import { IoIosMail } from "react-icons/io";
+import { IoIosCall } from "react-icons/io";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -11,6 +11,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
 import ContactUs1 from "./image/ContactUs1.jpg";
+
 const AddressMap = lazy(() => import("./AddressMap"));
 const ContactForm = lazy(() => import("./ContactForm"));
 
@@ -68,7 +69,7 @@ const ContactUs = ({ Meta_Data }) => {
             }}
             className="flex gap-2 sm:items-center text-slate-900"
           >
-            <IoLocation className="text-2xl " />
+            <IoLocationSharp className="text-2xl " />
             <p className="text-Paragraph">
               Office No: 503, 06th Floor, Stellar Spaces, <br />
               Opposite Zensar IT Park, Kharadi, Pune 411014
@@ -84,9 +85,9 @@ const ContactUs = ({ Meta_Data }) => {
               opacity: { duration: 0.5 },
               ease: "easeInOut",
             }}
-            className="flex gap-2 sm:items-center text-slate-900"
+            className="flex justify-evenly gap-2 sm:items-center text-slate-900"
           >
-            <IoMdCall className="text-2xl " />
+            <IoIosCall className="text-2xl " />
             <span className="text-Paragraph">+91 9172077273</span>
           </motion.div>
 
@@ -101,13 +102,12 @@ const ContactUs = ({ Meta_Data }) => {
             }}
             className="flex gap-2 sm:items-center text-slate-900"
           >
-            <IoMail className="text-2xl" />
+            <IoIosMail className="text-2xl" />
             <a href="mailto:hr@greateway.com" className="text-Paragraph">
               hr@greateway.com
             </a>
           </motion.div>
         </div>
-
         <hr className="my-4 w-full border-t-2 border-gray-400" />
         <div className="flex w-[100%] overflow-x-hidden mt-4 md:flex-row flex-col flex-wrap justify-center bg-white">
           {/* left section */}
