@@ -85,10 +85,18 @@ const ContactUs = ({ Meta_Data }) => {
               opacity: { duration: 0.5 },
               ease: "easeInOut",
             }}
-            className="flex justify-evenly gap-2 sm:items-center text-slate-900"
+            className="flex gap-2 sm:items-center text-slate-900"
           >
-            <IoIosCall className="text-2xl " />
-            <span className="text-Paragraph">+91 9172077273</span>
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center">
+                <IoIosCall className="text-2xl mt-1 mr-2" />
+                <span className="text-Paragraph">+91 9172077273</span>
+              </div>
+              <div className="flex items-center">
+                <IoIosCall className="text-2xl mt-1 mr-2" />
+                <span className="text-Paragraph">+91 7620446750</span>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div
@@ -102,10 +110,23 @@ const ContactUs = ({ Meta_Data }) => {
             }}
             className="flex gap-2 sm:items-center text-slate-900"
           >
-            <IoIosMail className="text-2xl" />
-            <a href="mailto:hr@greateway.com" className="text-Paragraph">
-              hr@greateway.com
-            </a>
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center">
+                <IoIosMail className="text-2xl mr-2" />
+                <a href="mailto:hr@greateway.com" className="text-Paragraph">
+                  hr@greateway.com
+                </a>
+              </div>
+              <div className="flex items-center">
+                <IoIosMail className="text-2xl mr-2" />
+                <a
+                  href="mailto:Pankaj.kandhare@greateway.com"
+                  className="text-Paragraph"
+                >
+                  Pankaj.kandhare@greateway.com
+                </a>
+              </div>
+            </div>
           </motion.div>
         </div>
         <hr className="my-4 w-full border-t-2 border-gray-400" />
@@ -211,3 +232,6 @@ const ContactUs = ({ Meta_Data }) => {
 };
 
 export default ContactUs;
+
+// Pankaj.kandhare@greateway.com
+// +917620446750
