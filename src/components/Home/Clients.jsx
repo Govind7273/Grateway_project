@@ -19,7 +19,7 @@ import Client21 from "./assets/image/clients/client-21.png";
 import { InfiniteMovingCards } from "../../components/ui/infinite-moving-cards";
 import { motion } from "framer-motion";
 
-export default function InfiniteMovingCardsDemo() {
+ function InfiniteMovingCardsDemo() {
   return (
     <div className="bg-slate-100 p-6">
       <motion.h1
@@ -52,7 +52,7 @@ export default function InfiniteMovingCardsDemo() {
     </div>
   );
 }
-
+export default InfiniteMovingCardsDemo;
 const testimonials = [
   {
     id: 1,
