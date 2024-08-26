@@ -5,7 +5,7 @@ import Chooseusl from "./Sections/Chooseusl";
 import Servicesl from "./Sections/Servicesl";
 import Pricingl from "./Sections/Pricingl";
 import Contactl from "./Sections/Contactl";
-import {InfiniteMovingCardsDemo} from "../Home/Clients"
+import InfiniteMovingCardsDemo from "../Home/Clients"
 import { Helmet } from "react-helmet-async";
 import CertifiedLogo from "../ui/CertifiedLogo";
 const LandingPage = ({ Meta_Data }) => {

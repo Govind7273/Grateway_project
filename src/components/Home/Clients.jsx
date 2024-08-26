@@ -53,6 +53,7 @@ import { motion } from "framer-motion";
   );
 }
 export default InfiniteMovingCardsDemo;
+
 const testimonials = [
   {
     id: 1,
