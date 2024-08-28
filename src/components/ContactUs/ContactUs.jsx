@@ -87,14 +87,18 @@ const ContactUs = ({ Meta_Data }) => {
             }}
             className="flex gap-2 sm:items-center text-slate-900"
           >
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center">
-                <IoIosCall className="text-2xl mt-1 mr-2" />
-                <span className="text-Paragraph">+91 9172077273</span>
+            <div className="flex flex-wrap items-center justify-start gap-4">
+              <div className="flex items-center space-x-2">
+                <IoIosCall className="text-2xl mt-1" />
+                <span className="text-Paragraph  pr-4">
+                  +91 9172077273
+                </span>
               </div>
-              <div className="flex items-center">
-                <IoIosCall className="text-2xl mt-1 mr-2" />
-                <span className="text-Paragraph">+91 7620446750</span>
+              <div className="flex items-center space-x-2">
+                <IoIosCall className="text-2xl mt-1" />
+                <span className="text-Paragraph pr-4">
+                  +91 7620446750
+                </span>
               </div>
             </div>
           </motion.div>
@@ -115,15 +119,6 @@ const ContactUs = ({ Meta_Data }) => {
                 <IoIosMail className="text-2xl mr-2" />
                 <a href="mailto:hr@greateway.com" className="text-Paragraph">
                   hr@greateway.com
-                </a>
-              </div>
-              <div className="flex items-center">
-                <IoIosMail className="text-2xl mr-2" />
-                <a
-                  href="mailto:Pankaj.kandhare@greateway.com"
-                  className="text-Paragraph"
-                >
-                  Pankaj.kandhare@greateway.com
                 </a>
               </div>
             </div>
