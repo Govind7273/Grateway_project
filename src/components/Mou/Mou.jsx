@@ -1,12 +1,12 @@
-// Mou.jsx
-import  { useState } from "react";
+import { useState, Suspense, lazy } from "react";
 import { Helmet } from "react-helmet-async";
-import HeroSection from "./HeroSection";
-import Carousal from "./Carousal";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import Collaborte from "./Collaborte";
-import {textItems} from "../../../src/functions/Mou_Data"
+import { textItems } from "../../../src/functions/Mou_Data";
 
+// Lazy load components
+const HeroSection = lazy(() => import("./HeroSection"));
+const Carousal = lazy(() => import("./Carousal"));
+const Collaborte = lazy(() => import("./Collaborte"));
 
 const Mou = ({ Meta_Data }) => {
   const { Title, Description, Link } = Meta_Data;
@@ -30,15 +30,19 @@ const Mou = ({ Meta_Data }) => {
         <meta name="description" content={Description} />
         <link rel="canonical" href={Link} />
       </Helmet>
-      <HeroSection />
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <HeroSection />
+      </Suspense>
+
       {/* Second Section of Collages */}
       <section id="targetsection" className="p-3 mb-10">
         <h1
           className="text-center md:text-MainHeading-sm text-CardHeading font-extrabold md:py-2 py-1 capitalize"
         >
-           List of Colleges We Have Collaborated With
+          List of Colleges We Have Collaborated With
         </h1>
-        <div className="lg:px-12 ">
+        <div className="lg:px-12">
           {textItems.map((item, index) => (
             <div
               key={index}
@@ -56,15 +60,20 @@ const Mou = ({ Meta_Data }) => {
                 />
               </button>
               {selectedImage.index === index && (
-                <div className="mt-2">
-                  <Carousal images={item.images} />
-                </div>
+                <Suspense fallback={<div>Loading images...</div>}>
+                  <div className="mt-2">
+                    <Carousal images={item.images} />
+                  </div>
+                </Suspense>
               )}
             </div>
           ))}
         </div>
       </section>
-      <Collaborte />
+
+      <Suspense fallback={<div>Loading collaborations...</div>}>
+        <Collaborte />
+      </Suspense>
     </div>
   );
 };

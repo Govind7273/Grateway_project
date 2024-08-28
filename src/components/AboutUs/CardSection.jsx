@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 
-export const CardSection = () => {
+ const CardSection = () => {
   var settings = {
     dots: true,
     infinite: true,
@@ -105,7 +105,7 @@ export const CardSection = () => {
               {item.title}
             </h4>
             <div className="relative flex items-center justify-center rounded-xl group bg-black h-[25rem]">
-              <img className="object-fit h-full w-full rounded-xl opacity-60" src={item.image} ></img>
+              <img className="object-fit h-full w-full rounded-xl opacity-60" src={item.image} height={1000} width={1000} ></img>
               <span className="absolute inset-0 opacity-40 bg-blue-950 rounded-xl"></span>
               <div className="absolute inset-0 opacity-100 duration-300 flex justify-center items-center">
                 <p className="text-Paragraph text-gray-200 p-4 text sm:text-xl">{item.content}</p>
@@ -118,3 +118,4 @@ export const CardSection = () => {
     </div>
   );
 };
+export default CardSection;

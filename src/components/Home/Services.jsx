@@ -9,10 +9,7 @@ import service from "./assets/svg/Service.png";
 import staffing from "./assets/svg/Staffing.png";
 import { Link } from "react-router-dom";
 
-
-
 function Services() {
- 
   const Services_List = [
     {
       logo: software,
@@ -83,8 +80,11 @@ function Services() {
     <main className="bg-white py-5 px-2 overflow-hidden">
       <div className="flex justify-center md:p-5 p-2 text-gray-700">
         <h1
-         data-aos="zoom-out"
-         className="md:text-MainHeading text-MainHeading-sm font-extrabold">Our Services</h1>
+          data-aos="zoom-out"
+          className="md:text-MainHeading text-MainHeading-sm font-extrabold"
+        >
+          Our Services
+        </h1>
       </div>
       <div className="flex flex-wrap  gap-5 justify-center px-4 overflow-hidden bg-white">
         {Services_List.map((service) => {
@@ -103,7 +103,7 @@ function Services() {
                   className={`grid h-16 w-16 place-items-center rounded-full transition-all duration-300`}
                   style={{ backgroundColor: service.theme }}
                 >
-                  <img src={service.logo} width={30} alt="" />
+                  <img src={service.logo} width={30} height={30} alt="" />
                 </span>
                 <div className="space-y-2 transition-all duration-300 group-hover:text-white/90 py-2">
                   <h1 className="text-[24px] p-1 font-bold">{service.title}</h1>

@@ -77,11 +77,11 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item, idx) => (
-          <div key={item.id} className="md:w-[20vw] w-[70vw]">
+          <li key={item.id} className="md:w-[20vw] w-[70vw]">
             <div className="bg-white flex justify-center">
               <img src={item.img} alt="" className="md:h-[25vh] w-full h-[20vh]" />
             </div>
-          </div>
+          </li>
         ))}
       </ul>
     </div>

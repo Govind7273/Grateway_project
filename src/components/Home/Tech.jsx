@@ -40,7 +40,9 @@ const Tech = () => {
   return (
     <main className="w-[100%] bg-gray-700 p-5 flex justify-center items-center flex-col">
       <div className="flex p-12 justify-center text-white">
-        <h1 className="text-4xl font-black">Technologies we are working with</h1>
+        <h1 className="text-4xl font-black">
+          Technologies we are working with
+        </h1>
       </div>
       <div className="Tech_list w-[80%] grid-cols-2 md:grid-cols-4 grid sm:grid-cols-3 lg:grid-cols-6  justify-evenly  justify-items-center items-center gap-x-12 gap-y-8">
         {Tech_list.map((TechIcon) => (
@@ -48,7 +50,7 @@ const Tech = () => {
             key={TechIcon.name}
             className="w-28 h-28 hover:scale-110 hover:cursor-pointer transition-all ease-out bg-white flex-col flex rounded-full justify-center items-center"
           >
-            <img src={TechIcon.logo} width='50px' alt="logo" />
+            <img src={TechIcon.logo} width="50px" alt="logo" />
             {TechIcon.name}
           </div>
         ))}
