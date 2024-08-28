@@ -1,28 +1,30 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import AiMl from "../../assets/videos/AI_ML.mp4";
 import Service from "../../assets/videos/IT_Service.mp4";
 import Crm from "../../assets/videos/CRM.mp4";
 import Testing from "../../assets/videos/Testing.mp4";
 import Staffing from "../../assets/videos/IT_Staffing.mp4";
-import Services from "./Services";
-import Special from "./Special";
+
 // import Tech from "./Tech";
-import Testimonials from "./Testimonials";
-import Features from "./Features";
-import About from "./About";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { InfiniteMovingCardsDemo } from "./Clients";
-import ChooseUs from "./ChooseUs";
-import Collaboration from "./Collaboration";
 import { motion } from "framer-motion";
 import { fadein } from "../../../src/variants";
 import CertifiedLogo from "../ui/CertifiedLogo";
-// import isoLogo from "../../components/AboutUs/images/isoLogo.png";
 import isoLogo from "../../components/AboutUs/images/isoLogo1.jpg";
 import aicteLogo from "../../assets/Images/aicteLogo.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+// lazy loading
+const About = lazy(() => import("./About"));
+const Services = lazy(() => import("./Services"));
+const Features = lazy(() => import("./Features"));
+const Testimonials = lazy(() => import("./Testimonials"));
+const Special = lazy(() => import("./Special"));
+const ChooseUs = lazy(() => import("./ChooseUs"));
+const InfiniteMovingCardsDemo = lazy(() => import("./Clients"));
+const Collaboration = lazy(() => import("./Collaboration"));
 
 const VideoComponent = ({ video, title, desc, link, isVisible }) => (
   <div
@@ -150,23 +152,41 @@ const Home = ({ Meta_Data }) => {
           ))}
         </section>
 
-        <About />
-
-        <Services />
-
-        <Features />
-
-        <Testimonials />
-
-        <Special />
-
-        <ChooseUs />
-
-        <CertifiedLogo />
-
-        <InfiniteMovingCardsDemo />
-
-        <Collaboration />
+        <Suspense fallback={<div>Loading About...</div>}>
+          <About />
+        </Suspense>
+ 
+        <Suspense fallback={<div>Loading Services...</div>}>
+          <Services />
+        </Suspense>
+ 
+        <Suspense fallback={<div>Loading Features...</div>}>
+          <Features />
+        </Suspense>
+ 
+        <Suspense fallback={<div>Loading Testimonials...</div>}>
+          <Testimonials />
+        </Suspense>
+ 
+        <Suspense fallback={<div>Loading Special...</div>}>
+          <Special />
+        </Suspense>
+ 
+        <Suspense fallback={<div>Loading Choose Us...</div>}>
+          <ChooseUs />
+        </Suspense>
+ 
+        <Suspense fallback={<div>Loading Certified Logo...</div>}>
+          <CertifiedLogo />
+        </Suspense>
+ 
+        <Suspense fallback={<div>Loading Clients...</div>}>
+          <InfiniteMovingCardsDemo />
+        </Suspense>
+ 
+        <Suspense fallback={<div>Loading Collaboration...</div>}>
+          <Collaboration />
+        </Suspense>
 
         {/*technologies used in site */}
         {/* <Tech /> */}
