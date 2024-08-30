@@ -14,6 +14,7 @@ import GHRaisoni from "../components/Mou/Images/GHRaisoni.png";
 import PVG from "../components/Mou/Images/pvg.png";
 import Walchand from "../components/Mou/Images/Walchand.png";
 import MIT from "../components/Mou/Images/MIT.jpeg";
+import Anantrao from "../components/Mou/Images/Anantrao.jpeg";
 
 export const textItems = [
   {
@@ -140,6 +141,14 @@ export const textItems = [
     images: [
       {
         src:Walchand ,
+        
+      },
+    ],
+  },{
+    text: "Anantrao Pawar Engineering College, Parvati Pune",
+    images: [
+      {
+        src:Anantrao ,
         
       },
     ],
