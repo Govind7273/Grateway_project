@@ -16,6 +16,8 @@ import Walchand from "../components/Mou/Images/Walchand.png";
 import MIT from "../components/Mou/Images/MIT.jpeg";
 import Anantrao from "../components/Mou/Images/Anantrao.jpeg";
 import Wadiya from "../components/Mou/Images/Wadiya.jpg";
+import Pandharpur from "../components/Mou/Images/Pandharpur.jpg";
+import Takshashila from "../components/Mou/Images/Takshashila.jpg";
 
 export const textItems = [
   {
@@ -158,6 +160,22 @@ export const textItems = [
     images: [
       {
         src:Wadiya ,
+        
+      },
+    ],
+  },{
+    text: "SKN Sinhgad College of Engineering, Korti, Pandharpur",
+    images: [
+      {
+        src:Pandharpur ,
+        
+      },
+    ],
+  },{
+    text: "Takshashila Institute of Engineering and Technology, Darapur",
+    images: [
+      {
+        src:Takshashila ,
         
       },
     ],
