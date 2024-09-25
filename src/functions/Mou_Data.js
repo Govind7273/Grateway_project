@@ -18,6 +18,7 @@ import Anantrao from "../components/Mou/Images/Anantrao.jpeg";
 import Wadiya from "../components/Mou/Images/Wadiya.jpg";
 import Pandharpur from "../components/Mou/Images/Pandharpur.jpg";
 import Takshashila from "../components/Mou/Images/Takshashila.jpg";
+import ISBM from "../components/Mou/Images/ISBM.jpg";
 
 export const textItems = [
   {
@@ -176,6 +177,14 @@ export const textItems = [
     images: [
       {
         src:Takshashila ,
+        
+      },
+    ],
+  },{
+    text: "ISBM College of Engineering, Pune",
+    images: [
+      {
+        src:ISBM ,
         
       },
     ],
