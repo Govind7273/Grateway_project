@@ -8,11 +8,8 @@ import crm from "./assets/svg/Crm.png";
 import service from "./assets/svg/Service.png";
 import staffing from "./assets/svg/Staffing.png";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { fadein } from "../../../src/variants";
 
-const Services = () => {
-
+function Services() {
   const Services_List = [
     {
       logo: software,
@@ -26,115 +23,111 @@ const Services = () => {
       title: "Cloud Computing",
       desc: "Embrace the scalability, flexibility and cost-efficiency of cloud computing with our comprehensive cloud services, which encompass cloud migration, architecture design and managed solutions.",
       link: "/Service-cloud",
-      theme: "#9c6e68"
+      theme: "#9c6e68",
     },
     {
       logo: ai,
       title: "AI & Machine Learning",
       desc: "Utilize AI to automate tasks, extract insights from data and boost operational efficiency. Our AI and machine learning services include natural language processing, computer vision and more.",
       link: "Service-AI",
-      theme: "#ad9171"
+      theme: "#ad9171",
     },
     {
       logo: crm,
       title: "Customer Relationship Management",
       desc: "Improve customer relationships and business performance with our CRM solutions. We offer customized implementations, data management, reporting and ongoing support to maximize satisfaction and retention.",
       link: "/Service-crm",
-      theme: "#518bb5"
+      theme: "#518bb5",
     },
     {
       logo: testing,
       title: "Testing and QA",
       desc: "Ensure the quality and reliability of your software products with our comprehensive testing and QA services. We offer functional testing, performance testing, security testing and more to validate and enhance your software solutions.",
       link: "/Service-testingAndQA",
-      theme: "#688f9c"
+      theme: "#688f9c",
     },
     {
       logo: devop,
       title: "DevOps",
       desc: "Facilitate collaboration between development and operations to accelerate software delivery and improve product quality with our DevOps services, including continuous integration, deployment and infrastructure automation.",
       link: "/Service-devOps",
-      theme: "#689c89"
+      theme: "#689c89",
     },
     {
       logo: service,
       title: "IT Staffing",
       desc: "Enhance your workforce and business outcomes with our IT staffing services. We provide customized staffing solutions, recruitment, onboarding and ongoing support to meet your technology talent needs effectively.",
       link: "/Service-Staffing",
-      theme: "#765f9c"
+      theme: "#765f9c",
     },
     {
       logo: web,
       title: "Web Development",
       desc: "Our web development services are expertly designed to meet the distinct needs of both startups and established businesses. We focus on delivering responsive and user-friendly web applications from concept to deployment.",
       link: "/Service-webDev",
-      theme: "#7b9665"
+      theme: "#7b9665",
     },
     {
       logo: staffing,
       title: "IT Service Support",
       desc: "Boost your team's efficiency and business performance with our comprehensive IT service support. We provide tailored solutions, proactive maintenance and responsive assistance to keep your systems running smoothly.",
       link: "/Service-Support",
-      theme: "#9c5f82"
+      theme: "#9c5f82",
     },
   ];
 
   return (
     <main className="bg-white py-5 px-2 overflow-hidden">
       <div className="flex justify-center md:p-5 p-2 text-gray-700">
-        <motion.h1
-          initial={{ opacity: 0, y: -100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.2,
-            y: { type: "spring", stiffness: 30 },
-            opacity: { duration: 0.5 },
-            ease: "easeInOut"
-          }}
-          className="md:text-MainHeading text-MainHeading-sm font-extrabold">Our Services</motion.h1>
+        <h1
+          data-aos="zoom-out"
+          className="md:text-MainHeading text-MainHeading-sm font-extrabold"
+        >
+          Our Services
+        </h1>
       </div>
-      <div className="flex flex-wrap md:gap-10 gap-5 justify-center px-2 overflow-hidden bg-white">
+      <div className="flex flex-wrap  gap-5 justify-center px-4 overflow-hidden bg-white">
         {Services_List.map((service) => {
-
-          return <motion.div
-            initial={{ opacity: 0, scale: 0.6 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              delay: 0.2,
-              scale: { type: "spring", stiffness: 30 },
-              opacity: { duration: 0.4 },
-              ease: "easeInOut"
-            }}
-            key={service.title} className="group relative overflow-hidden md:p-8 p-2 bg-slate-200 pt-10 md:pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:px-10 rounded-[10px]">
-            <span style={{ background: `${service.theme}` }} className={`absolute top-10 z-0 h-20 w-20 rounded-full bg-${service.theme}-500 transition-all duration-300 group-hover:scale-[10]`}></span>
-            <div className="relative z-10 mx-auto max-w-md">
-              <span className={`grid h-20 w-20 place-items-center rounded-full transition-all duration-300 group-hover:bg-${service.theme}-400`}>
-                <img src={service.logo} width={30} alt="" />
-              </span>
-              <div className="space-y-2 transition-all duration-300 group-hover:text-white/90 py-2">
-                <h1 className="text-[24px]
-                 p-1 font-bold">{service.title}</h1>
-                <p className="md:text-Paragraph text-Paragraph-sm">
-                  {service.desc}
-                </p>
-              </div>
-              <div className="pt-2 font-medium leading-7">
-                <p>
-                  <Link
-                    to={service.link}
-                    className="md:text-hyperlinks text-hyperlinks-sm transition-all duration-300 group-hover:text-white"
-                  >
-                    Read more &rarr;
-                  </Link>
-                </p>
+          return (
+            <div
+              data-aos="zoom-in"
+              key={service.title}
+              className="group relative md:mb-8 overflow-hidden md:p-8 p-4 bg-slate-200 pt-10 md:pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:px-10 rounded-[10px]"
+            >
+              <span
+                style={{ background: `${service.theme}` }}
+                className={`absolute z-0 h-16 w-16 rounded-full transition-all duration-300 group-hover:scale-[20]`}
+              ></span>
+              <div className="relative z-10 mx-auto max-w-md">
+                <span
+                  className={`grid h-16 w-16 place-items-center rounded-full transition-all duration-300`}
+                  style={{ backgroundColor: service.theme }}
+                >
+                  <img src={service.logo} width={30} height={30} alt="" />
+                </span>
+                <div className="space-y-2 transition-all duration-300 group-hover:text-white/90 py-2">
+                  <h1 className="text-[24px] p-1 font-bold">{service.title}</h1>
+                  <p className="md:text-Paragraph text-Paragraph-sm">
+                    {service.desc}
+                  </p>
+                </div>
+                <div className="pt-2 font-medium leading-7">
+                  <p>
+                    <Link
+                      to={service.link}
+                      className="md:text-hyperlinks text-hyperlinks-sm transition-all duration-300 group-hover:text-white"
+                    >
+                      Read more &rarr;
+                    </Link>
+                  </p>
+                </div>
               </div>
             </div>
-          </motion.div>
-        })
-        }
+          );
+        })}
       </div>
     </main>
   );
-};
+}
 
 export default Services;

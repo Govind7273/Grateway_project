@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { InternshipSchema } from "../../Yupschema/InternshipSchema";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useMutation } from "@tanstack/react-query";
@@ -6,7 +6,8 @@ import toast, { Toaster } from "react-hot-toast";
 import { careerEmail } from "../../functions/EmailSendFunction";
 import { useCareerForm } from "../../utils/useCareerForm";
 
-const Modal = ({ setModalOpen }) => {
+// Added selectedTitle prop
+const Modal = ({ setModalOpen, selectedTitle }) => {
   const captch = useRef();
   const [CaptchaValue, setCaptchaValue] = useState(null);
   const [error, setError] = useState({});
@@ -14,7 +15,7 @@ const Modal = ({ setModalOpen }) => {
     name: "",
     email: "",
     number: "",
-    role: "",
+    role: selectedTitle || "",
   });
   const [resume, setResume] = useState(null);
 
@@ -125,29 +126,17 @@ const Modal = ({ setModalOpen }) => {
               {InputField("Full Name", "name", "text", error.name)}
               {InputField("Email", "email", "email", error.email)}
               {InputField("Mobile number", "number", "number", error.number)}
-              <div className="w-full">
-                <select
-                  onChange={(e) =>
-                    setCandidate({
-                      ...Candidate,
-                      [e.target.name]: e.target.value,
-                    })
-                  }
-                  id="role"
-                  name="role"
-                  className="border-2 border-gray-300 rounded-xl w-full py-2 px-2 focus:border-blue-500 focus:outline-none transition duration-200"
-                >
-                  <option value="" disabled selected>
-                    Select Internship Domain
-                  </option>
-                  <option value="Java Developer - Internship">Java Developer</option>
-                  <option value="Data Science - Internship">Data Science</option>
-                  <option value="Data Analyst - Internship">Data Analyst</option>
-                  <option value="Web Development - Internship">Web Development</option>
-                </select>
-                {Candidate.role && error.role && <div className="text-red-500 text-xs mt-1">{error.role}</div>}
+              <div className="w-full mb-4">
+              <input
+                type="text"
+                value={Candidate.role}
+                name="role"
+                readOnly
+                className="border-2 border-gray-300 bg-slate-100 rounded-xl py-2 w-full px-2 cursor-default focus:outline-none transition duration-200"
+              />
               </div>
             </div>
+           
 
             <div className="w-full mb-4">
               <label className="text-sm block font-bold">Upload Resume</label>
@@ -155,7 +144,7 @@ const Modal = ({ setModalOpen }) => {
                 id="resume"
                 type="file"
                 onChange={(e) => setResume(e.target.files[0])}
-                className="border-2 border-gray-300 rounded-xl w-full py-3 px-4 focus:border-blue-500 focus:outline-none transition duration-200"
+                className="border-2 border-gray-300 rounded-xl cursor-pointer w-full py-3 px-4 focus:border-blue-500 focus:outline-none transition duration-200"
               />
             </div>
 

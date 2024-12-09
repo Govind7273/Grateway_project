@@ -104,9 +104,11 @@ const Corporate_why_choose_us = ({ Technology_Program }) => {
                         </motion.p>
                     </div>
                     <div className="flex flex-wrap -mx-4 mt-10 md:px-4">
-                        {whychooseus?.map((feat) => {
+                        {whychooseus?.map((feat,index) => {
                             return (
-                                <div className="w-full  md:w-1/3 px-4 mb-8 transition-all ease-linear">
+                                <div
+                                key={index}
+                                 className="w-full  md:w-1/3 px-4 mb-8 transition-all ease-linear">
                                     <motion.div
                                         initial={{ opacity: 0, scale: 0.7 }}
                                         whileInView={{ opacity: 1, scale: 1 }}

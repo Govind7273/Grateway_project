@@ -19,6 +19,12 @@ const Meta_Data = {
       "Explore industry-specific solutions tailored to meet the unique challenges and requirements of various sectors",
     Link: "http://www.greateway.com/Indrustry",
   },
+  Mou: {
+    Title: "Mou - GreateWay Software Solution",
+    Description:
+      "We have signed a Memorandum of Understanding with leading colleges to foster collaboration and innovation.",
+    Link: "http://www.greateway.com/Mou",
+  },
 
   career: {
     Title: "Career - GreateWay Software Solution",

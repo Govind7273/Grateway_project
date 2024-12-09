@@ -1,4 +1,3 @@
-import React from "react";
 import Quality from "./assets/image/quality.png";
 import Solution from "./assets/image/Solution.png";
 import Team from "./assets/image/Team.png";
@@ -8,7 +7,6 @@ import Track from "./assets/image/Track.png";
 import Methodology from "./assets/image/Methodology.png";
 import Improvement from "./assets/image/Improvement.png";
 import { motion } from "framer-motion";
-import { fadein } from "../../../src/variants";
 
 const best = [
   {

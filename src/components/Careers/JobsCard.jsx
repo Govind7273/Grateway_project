@@ -1,8 +1,10 @@
-"use client";
 import { motion } from "framer-motion";
 import { fadein } from "../../../src/variants";
+import { useState } from "react";
+import ModalForm from "./ModalForm";
 
-const JobsCard = ({ setModal }) => {
+const JobsCard = () => {
+
   const cardData = [
     {
       position: "Web Developer",
@@ -16,6 +18,7 @@ const JobsCard = ({ setModal }) => {
         "Location :Kharadi",
       ],
       education: "UG: B.Tech/B.E. in Computers, Any Graduate",
+      vacancy: 3,
     },
     {
       position: "Full Stack Developer",
@@ -29,6 +32,7 @@ const JobsCard = ({ setModal }) => {
         "Location :Kharadi",
       ],
       education: "UG: B.Tech/B.E. in Computers, Any Graduate",
+      vacancy: 5,
     },
     {
       position: ".Net Developer",
@@ -41,6 +45,7 @@ const JobsCard = ({ setModal }) => {
         "Location :Kharadi, Pune",
       ],
       education: "UG: B.Tech/B.E. in Computers, Any Graduate",
+      vacancy: 4,
     },
     {
       position: "Java Developer",
@@ -53,6 +58,7 @@ const JobsCard = ({ setModal }) => {
         "Location :Kharadi, Pune",
       ],
       education: "UG: B.Tech/B.E. in Computers, Any Graduate",
+      vacancy: 3,
     },
     {
       position: "Digital Marketing",
@@ -65,6 +71,7 @@ const JobsCard = ({ setModal }) => {
         "Location :Kharadi, Pune",
       ],
       education: "Any Graduate",
+      vacancy: 5,
     },
     {
       position: "React Developer",
@@ -77,6 +84,7 @@ const JobsCard = ({ setModal }) => {
         "Location :Kharadi, Pune",
       ],
       education: "Any Graduate",
+      vacancy: 4,
     },
     {
       position: "Software Tester",
@@ -92,6 +100,7 @@ const JobsCard = ({ setModal }) => {
       ],
       education:
         "Bachelor's degree in Computer Science, Engineering, or a related field",
+        vacancy: 3,
     },
     {
       position: "Data Analyst",
@@ -106,6 +115,7 @@ const JobsCard = ({ setModal }) => {
       ],
       education:
         "Bachelor's degree in Statistics, Mathematics or ralated field",
+        vacancy: 3,
     },
     {
       position: "Content Writer",
@@ -119,6 +129,7 @@ const JobsCard = ({ setModal }) => {
         "Location :Kharadi, Pune",
       ],
       education: "Bachelor's degree in Journalism, English,or related field",
+      vacancy: 5,
     },
     {
       position: "Data Engineer",
@@ -132,6 +143,7 @@ const JobsCard = ({ setModal }) => {
         "Location :Kharadi, Pune",
       ],
       education: "Bachelor's degree in Computer Science",
+      vacancy: 5,
     },
     {
       position: "Cloud Computing",
@@ -145,6 +157,7 @@ const JobsCard = ({ setModal }) => {
         "Location :Kharadi, Pune",
       ],
       education: "Bachelor's degree in Computer Science, Engineering.",
+      vacancy: 4,
     },
     {
       position: "Graphic Designer",
@@ -158,6 +171,7 @@ const JobsCard = ({ setModal }) => {
         "Location :Kharadi, Pune",
       ],
       education: "Bachelor's degree",
+      vacancy: 3,
     },
     {
       position: "Salesforce Administrator",
@@ -172,6 +186,7 @@ const JobsCard = ({ setModal }) => {
       ],
       education:
         "Bachelor's degree,Salesforce Administrator Certification (ADM201) is bonus",
+        vacancy: 5,
     },
     {
       position: "SAP Consultant",
@@ -187,10 +202,16 @@ const JobsCard = ({ setModal }) => {
         "Location :Kharadi, Pune",
       ],
       education: "Bachelor's degree,SAP certification(s) is preferred",
+      vacancy: 3,
     },
   ];
 
-  const handleClick = () => {
+ 
+  const [selectedPosition, setSelectedPosition] = useState("");
+  const [isModalOpen, setModal] = useState(false);
+
+  const handleClick = (position) => {
+    setSelectedPosition(position);
     setModal(true);
   };
 
@@ -237,7 +258,7 @@ const JobsCard = ({ setModal }) => {
               {cardItem.jobDescription}
             </p>
 
-            {/* Requirent Types */}
+            {/* Requirement Types */}
             <div className="flex flex-col gap-2 ">
               <h1 className="text-lg font-navlistFont font-semibold text-[#06b6d4]">
                 Requirement:
@@ -262,14 +283,14 @@ const JobsCard = ({ setModal }) => {
               </h1>
               <h1 className="text-md font-bold text-[#06b6d4]">
                 {" "}
-                Positions <span className="text-[#3c4c54]">: 5</span>
+                Positions <span className="text-[#3c4c54]">: {cardItem.vacancy}</span>
               </h1>
             </div>
 
             {/* Apply Button */}
             <div className="flex justify-center items-center">
               <button
-                onClick={handleClick}
+                onClick={() => handleClick(cardItem.position)}
                 className="bg-zinc-900 rounded-[7px] tex-white px-5 py-3 font-headingFont text-sm  transition-all duration-150 ease-linear hover:bg-zinc-700"
               >
                 Apply Now
@@ -278,6 +299,15 @@ const JobsCard = ({ setModal }) => {
           </motion.div>
         ))}
       </div>
+
+      {/* Render ModalForm */}
+      {isModalOpen && (
+        <ModalForm
+          setModal={setModal}
+          setSelectedPosition={setSelectedPosition}
+          selectedPosition={selectedPosition}
+        />
+      )}
     </div>
   );
 };

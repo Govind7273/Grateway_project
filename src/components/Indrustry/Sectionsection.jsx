@@ -136,7 +136,7 @@ function TruckIcon(props) {
     </svg>
   );
 }
-export const Secondsection = () => {
+ const Secondsection = () => {
   return (
     <>
       {/*Our Solutions*/}

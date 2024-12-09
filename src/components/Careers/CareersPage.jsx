@@ -1,9 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import { InfiniteMovingCards2 } from "../ui/infinite-moving-cards2";
 import { Helmet } from "react-helmet-async";
-import JobsCard from "./JobsCard";
-import ModalForm from "./ModalForm";
+const JobsCard = lazy(() => import("./JobsCard"));
+const ModalForm = lazy(() => import("./ModalForm"));
 import { motion } from "framer-motion";
 import { animateScroll as scroll } from "react-scroll";
 import { Link } from "react-router-dom";
@@ -127,7 +127,9 @@ const CareersPage = ({ Meta_Data }) => {
             {images.map((image, index) => (
               <motion.div
                 key={index}
-                className={`absolute inset-0 flex items-center justify-center ${index === currentIndex ? "block" : "hidden"}`}
+                className={`absolute inset-0 flex items-center justify-center ${
+                  index === currentIndex ? "block" : "hidden"
+                }`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
@@ -141,7 +143,6 @@ const CareersPage = ({ Meta_Data }) => {
             ))}
           </div>
         </section>
-
 
         {/* Second Section */}
         <section className="py-8">
@@ -223,8 +224,7 @@ const CareersPage = ({ Meta_Data }) => {
                     viewport={{ once: false, amount: 0.8 }}
                     className="text-MainHeading font-extrabold capitalize pb-4"
                   >
-                    Step into the Future of{" "}
-                    Technology
+                    Step into the Future of Technology
                   </motion.h1>
                   <motion.p
                     variants={fadein("up", 0.2)}
@@ -289,12 +289,16 @@ const CareersPage = ({ Meta_Data }) => {
         {/* Fifth Section */}
         <section>
           <div className="w-full flex flex-wrap justify-center items-center   ">
+            <Suspense fallback={<div>Loading JobsCard....</div>}>
             <JobsCard setModal={setIsOpen} />
+            </Suspense>
           </div>
         </section>
 
         {/* Modal Code */}
+        <Suspense fallback = {<div>Loading ModalForm....</div>}>
         {isOpen && <ModalForm setModal={setIsOpen} />}
+        </Suspense>
       </div>
     </>
   );
