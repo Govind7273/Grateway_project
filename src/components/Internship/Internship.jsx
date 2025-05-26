@@ -232,7 +232,6 @@ const Internship = ({ Meta_Data }) => {
             );
           })}
         </section>
-        //
         {modalOpen && (
           <Suspense fallback={<div>Loading Modal...</div>}>
             <Modal setModalOpen={setModalOpen} selectedTitle={selectedTitle} />

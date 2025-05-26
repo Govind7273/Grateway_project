@@ -176,7 +176,7 @@ const Footer = () => {
               <div className="flex items-center mb-2 text-base">
                 <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />
                 <span className="">
-                  Office No: 503, 06th Floor, Stellar Spaces, Opposite Zensar
+                  Office No: 504, 06th Floor, Stellar Spaces, Opposite Zensar
                   Company, Kharadi, Pune - 411014
                 </span>
               </div>

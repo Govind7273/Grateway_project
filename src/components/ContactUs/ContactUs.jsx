@@ -71,7 +71,7 @@ const ContactUs = ({ Meta_Data }) => {
           >
             <IoLocationSharp className="text-2xl " />
             <p className="text-Paragraph">
-              Office No: 503, 06th Floor, Stellar Spaces, <br />
+              Office No: 504, 06th Floor, Stellar Spaces, <br />
               Opposite Zensar IT Park, Kharadi, Pune 411014
             </p>
           </motion.div>
